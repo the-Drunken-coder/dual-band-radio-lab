@@ -4,7 +4,7 @@
 
 ## Motivation
 
-The current dual-band concept needs to support both LoRa and FLRC on both ~915 MHz and 2.4 GHz. A single transceiver can only be configured for one PHY/mode at a time, which creates a discovery and coordination problem: a node can be physically in range but fail to hear a packet because its radio is listening with the wrong PHY.
+The current dual-band concept needs to support both LoRa and FLRC on both ~915 MHz and 2.4 GHz. A single transceiver can only be configured for one PHY/mode at a time, which creates a receive-coordination problem: a node can be physically in range but fail to hear a packet because its radio is listening with the wrong PHY.
 
 This proposal reduces that failure mode by separating reception from transmission and keeping a dedicated receive path assigned to each target band/PHY combination.
 
@@ -31,17 +31,17 @@ Nominal receiver assignments:
 
 | Receiver | Band | PHY | Normal state |
 |---|---|---|---|
-| RX A | ~915 MHz | LoRa | Continuous RX on the canonical 915-LoRa rendezvous profile |
-| RX B | ~915 MHz | FLRC | Continuous RX on the canonical 915-FLRC rendezvous profile |
-| RX C | 2.4 GHz | LoRa | Continuous RX on the canonical 2.4-LoRa rendezvous profile |
-| RX D | 2.4 GHz | FLRC | Continuous RX on the canonical 2.4-FLRC rendezvous profile |
+| RX A | ~915 MHz | LoRa | Continuous RX on the canonical 915-LoRa receive profile |
+| RX B | ~915 MHz | FLRC | Continuous RX on the canonical 915-FLRC receive profile |
+| RX C | 2.4 GHz | LoRa | Continuous RX on the canonical 2.4-LoRa receive profile |
+| RX D | 2.4 GHz | FLRC | Continuous RX on the canonical 2.4-FLRC receive profile |
 | TX | ~915 MHz / 2.4 GHz | LoRa / FLRC | Changes as commanded; one transmission at a time |
 
-The four receive paths are deliberately fixed most of the time. They remove band/PHY guessing only for the standardized rendezvous profiles described below; they do not decode every possible LoRa or FLRC configuration automatically.
+The four receive paths are deliberately fixed during normal operation. They remove band/PHY guessing only for the standardized receive profiles described below; they do not decode every possible LoRa or FLRC configuration automatically.
 
-## Rendezvous Profile Contract
+## Persistent Receive Profile Contract
 
-Band and PHY alone are not enough to define a decodable link. Each receiver must be configured to a known network rendezvous profile, and transmitting nodes must use that same profile when they expect the dedicated listener to hear them.
+Band and PHY alone are not enough to define a decodable link. Each receiver must be configured to a known network receive profile, and transmitting nodes must use that same profile when they expect the dedicated listener to hear them.
 
 The exact numeric profiles are intentionally not finalized yet, but the contract must define at least:
 
@@ -53,7 +53,11 @@ The exact numeric profiles are intentionally not finalized yet, but the contract
 - LoRa sync word / header-mode assumptions as applicable
 - FLRC bitrate, coding, sync-word, and packet-format assumptions as applicable
 
-The initial architecture therefore means **four continuously monitored rendezvous profiles**, not four receivers capable of hearing arbitrary traffic anywhere in each band. Peers may move to other channels/profiles for data transfer after discovery, but returning to a known rendezvous profile must remain possible unless a later design adds scanning or additional parallel receive paths.
+The initial architecture therefore means **four continuously monitored network receive profiles**, not four receivers capable of hearing arbitrary traffic anywhere in each band.
+
+These are not merely discovery channels used to negotiate a later move. They are the normal receive planes of the network. A sending node selects whichever of the four profiles is appropriate for the destination and traffic, and the destination already has a receiver listening on that profile. No additional receiver negotiation or retuning step is required for normal communication.
+
+A future design could add optional alternate channels, scanning, or additional parallel receive paths if testing shows a need, but the baseline architecture does not depend on that behavior.
 
 ## Receiver Hardware Baseline
 
@@ -116,6 +120,8 @@ However, LoRa and FLRC transmissions are not automatically orthogonal. Two stron
 
 The current design uses **one agile transmitter**, independent of the four receive assignments. The host selects the transmit band and PHY based on destination, link state, traffic type, or routing policy.
 
+Although an LR2021 used for the fifth radio is physically a transceiver, the baseline architecture does not assign it a receive role. The four dedicated receivers are the node's receiving side. Keeping the fifth device logically transmit-only avoids reintroducing receiver retuning and coordination into a design intended to eliminate that problem.
+
 Because there is one TX chain, 915 MHz and 2.4 GHz transmissions are serialized. **Simultaneous dual-band transmission is not a requirement for this prototype architecture.** The receiver bank can still monitor both bands simultaneously whenever local TX isolation permits.
 
 The transmitter must have an RF/antenna arrangement capable of safely supporting both target bands, such as appropriate antenna switching, separate per-band antenna paths, or another validated dual-band arrangement. The fact that the LR2021 silicon supports both bands does not by itself make a single-band antenna suitable for both.
@@ -129,14 +135,14 @@ Robust short-range 2.4 GHz   -> 2.4 LoRa
 High-rate burst              -> 2.4 FLRC
 ```
 
-These mappings are intentionally not final. The purpose of the receiver-bank architecture is to make experimenting with and changing link-selection policy easier without sacrificing the standardized discovery paths.
+These mappings are intentionally not final. The purpose of the receiver-bank architecture is to make experimenting with and changing transmit-link selection easier without sacrificing continuous receive coverage on the standardized profiles.
 
 ## Why This Helps
 
 With a conventional single agile radio:
 
 ```text
-Node A transmits the canonical 915-FLRC rendezvous profile
+Node A transmits the canonical 915-FLRC profile
 Node B happens to be in 915-LoRa RX
 -> packet is never detected
 ```
@@ -144,14 +150,14 @@ Node B happens to be in 915-LoRa RX
 With the receiver bank:
 
 ```text
-Node A transmits the canonical 915-FLRC rendezvous profile
+Node A transmits the canonical 915-FLRC profile
 RX B is permanently listening for that profile
 -> packet is detected
 -> host learns source / link information
--> dedicated TX answers using the selected band and PHY
+-> dedicated TX can answer on whichever fixed receive profile Node A is already monitoring
 ```
 
-This moves much of the problem from **PHY rendezvous/synchronization** into **link selection and routing**, while retaining a defined profile contract that both peers must follow.
+No listener negotiation is required. Every node already exposes the same four continuously monitored receive planes, so communication selection is primarily a question of **which transmit profile to use**, not which receiver the peer must retune.
 
 ## Host Interface
 
@@ -178,7 +184,7 @@ The software should treat each receiver as an independent link-observation sourc
 - source/node ID after packet decode
 - band
 - PHY
-- rendezvous profile ID
+- receive profile ID
 - channel/frequency
 - RSSI
 - SNR or equivalent quality information where available
@@ -204,7 +210,7 @@ Likely approaches to investigate:
 
 Before any full-power local TX test, the prototype must establish either a validated protected RF path or a safely attenuated/conducted test arrangement. Initial characterization should begin at low power and verify coupled power at receiver inputs before increasing transmit power.
 
-The first goal is **not** true same-band full duplex. It is to remain continuously aware of all four rendezvous profiles whenever the node is not actively transmitting, while minimizing how much of the receive bank must be blanked during TX.
+The first goal is **not** true same-band full duplex. It is to remain continuously aware of all four receive profiles whenever the node is not actively transmitting, while minimizing how much of the receive bank must be blanked during TX.
 
 ## U.S. Transmission Validation Gate
 
@@ -227,7 +233,7 @@ This architecture document does not attempt to select the final regulatory rule 
 
 - 4x Waveshare Core2021-HF-M modules, SKU 34523
 - one host MCU/SBC
-- define one temporary canonical rendezvous profile for each receiver:
+- define one temporary canonical receive profile for each receiver:
   - 915 LoRa
   - 915 FLRC
   - 2.4 LoRa
@@ -244,7 +250,7 @@ This architecture document does not attempt to select the final regulatory rule 
 
 ### Phase 3 - Protected dedicated transmitter
 
-- add a fifth independent LR2021 transceiver as the single agile TX
+- add a fifth independent LR2021 transceiver and use it as the single agile TX
 - establish receiver protection and TX/RX switching/blanking before live local TX characterization
 - use a conducted/attenuated path or minimum-power test first and verify receiver-input coupling before increasing TX power
 - complete the U.S. transmission validation gate for each transmit profile before normal over-the-air testing
@@ -254,13 +260,13 @@ This architecture document does not attempt to select the final regulatory rule 
 ### Phase 4 - Link-selection experiments
 
 - track per-peer reception by band/PHY/profile
-- test automatic PHY/band selection using only validated transmit profiles
+- test automatic selection of which persistent receive profile to transmit into for each peer, using only validated transmit profiles
 - evaluate fallback behavior
 - characterize latency, range, throughput, packet loss, and interference
 
 ## Open Questions
 
-1. What exact rendezvous profile should be standardized for each band/PHY combination?
+1. What exact network receive profile should be standardized for each band/PHY combination?
 2. How much practical range is lost from the per-band two-way split?
 3. How much channel separation is required for simultaneous LoRa and FLRC reception under realistic near/far conditions?
 4. How badly does local TX desensitize the opposite-band receivers as well as the same-band receivers?
@@ -273,6 +279,6 @@ This architecture document does not attempt to select the final regulatory rule 
 
 This is a proposed architecture to test, not a claim that every RF detail is solved. The core design intent is:
 
-> **Keep four inexpensive Core2021-HF-M/LR2021 receive paths continuously assigned to four standardized band/PHY rendezvous profiles, and use one separate agile transmitter so nodes do not become deaf simply because their only radio is listening in the wrong mode.**
+> **Keep four inexpensive Core2021-HF-M/LR2021 receive paths continuously assigned to four standardized network receive profiles, and use one separate agile transmitter that selects among those same profiles for outgoing traffic. The node should not require receiver negotiation or retuning during normal communication.**
 
 The cost of the receiver bank is a first-order requirement. The design should prefer solving coexistence, antenna sharing, protection, and control problems around the inexpensive Core2021-HF-M modules rather than replacing them with substantially more expensive receiver hardware.
