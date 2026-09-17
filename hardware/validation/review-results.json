@@ -1,0 +1,57 @@
+{
+  "date": "2026-09-17",
+  "scope": "Schematic review only. No PCB/manufacturing release.",
+  "erc": [
+    {
+      "project": "core2021-hf-m-rev-a",
+      "pdf": 0,
+      "netlist": 0,
+      "erc": 0
+    },
+    {
+      "project": "e22-900m30s-rev-a",
+      "pdf": 0,
+      "netlist": 0,
+      "erc": 0
+    },
+    {
+      "project": "e28-2g4m27s-rev-a",
+      "pdf": 0,
+      "netlist": 0,
+      "erc": 0
+    },
+    {
+      "project": "carrier-rev-a",
+      "pdf": 0,
+      "netlist": 0,
+      "erc": 0
+    }
+  ],
+  "netlist_check": "PASS",
+  "gpio_used": 18,
+  "gpio_spare": 8,
+  "input_target_a": 4,
+  "calculated_running_current_a": 3.225,
+  "inrush_stress_total_a": 3.865,
+  "external_condition": "Assembler must accept E28 IPEX selector configuration before procurement.",
+  "artifacts": {
+    "carrier-rev-a/carrier-rev-a.kicad_sch": "4b328055069b04efb490eee90b7376ce4531a1ec5104e759350a19b64ac90a7f",
+    "adapters/e28-2g4m27s-rev-a/e28-2g4m27s-rev-a.kicad_sch": "4395f246109a260d057c097ab53c05d148c7ceb52aa0f0b92773522163ff7381",
+    "adapters/e22-900m30s-rev-a/e22-900m30s-rev-a.kicad_sch": "0da77b678134edc1beaf3ff0fb12b66d500ce098d18aa71b5d2ae782514b5bf4",
+    "adapters/core2021-hf-m-rev-a/core2021-hf-m-rev-a.kicad_sch": "bb1f703ff0b5b3aff00cfae440ca010ac6a2bcb2ae690b10b0351bda2b6a01f6",
+    "carrier-rev-a/BOM.csv": "d4e8b4a61ecb0cabfa970a55b60a07782bf9c0b07d9ec40dbe506f3e80628f4b",
+    "adapters/e28-2g4m27s-rev-a/BOM.csv": "9b85f9fd9f92a47aa9f0290be2e7cac4390b84373d04372ce61e6b21441fa287",
+    "adapters/e22-900m30s-rev-a/BOM.csv": "b0da514d99790bd1531e0de16f8a14e55afbf7e0775ca890a298c2a98271ce67",
+    "adapters/core2021-hf-m-rev-a/BOM.csv": "7f5008e74a860e5b41803e92c072db670f174f4fce7d725d7534fad3927839e6",
+    "Rev-A-electrical-studies.pdf": "b47ab775159e33f3743c4d648633928a6e1d3a0472a5a15b09af95e133cacfc4",
+    "DESIGN_REVIEW.md": "514b0579ba40d7f4c38e97574e17c03bdd57a8a1caea5dbcd9c95ff0d35a5fc9",
+    "GPIO_MAP.md": "9d20fe91e7b2c9f6f07958cc180f1c521459059541129d43d424df4a0750062b",
+    "POWER_BUDGET.md": "d9417406fbb9329e0f27a36f38daadb87b89073b319231f47f9b084d80d48236",
+    "FOOTPRINT_REVIEW.md": "cdaf33bfe5181c03b0ec4ccfd9ac0960c2e3e3b207c6460d8e8a86212d05fc10",
+    "ASSEMBLY_NOTES.md": "c4d4bd694ba369bc5d0317d4c5f339ed85b3eac20bb91012c888a2c4219b363e",
+    "radio-slot-v0.1.md": "e1240c0787e4cd454bcf09605de18d060ae081f86a5ec73a7b564b341d4702b9",
+    "LAYOUT_REQUIREMENTS.md": "87f8107eafb6ab28661f0304f755e905a58641d8ea5cac05cea7663f2c5877f8",
+    "README.md": "e3668c696e0cd066c7c99c5a8a8928a263f885894caccf9c52653719ce11986e"
+  },
+  "documentation_update": "Rev A prioritizes radio separation, generous power copper and probe access; compact switcher loops. Schematics unchanged; layout remains on hold."
+}

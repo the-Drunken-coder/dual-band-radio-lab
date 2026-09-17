@@ -1,0 +1,13 @@
+reference,value,mpn,supplier,quantity,purpose,assembly,footprint,source
+J1,TSW-110-07-G-S,TSW-110-07-G-S,,1,Slot A,factory,RadioLab:TSW_1x10,Samtec tsw/ssq-drawing.pdf and footprint.pdf
+J2,TSW-108-07-G-S,TSW-108-07-G-S,,1,Slot B,factory,RadioLab:TSW_1x8,Samtec tsw/ssq-drawing.pdf and footprint.pdf
+U1,Core2021-HF-M plug-in,Core2021-HF-M,Waveshare SKU 34523,1,915 MHz FLRC,User plugs into factory-soldered sockets,,"Waveshare Core2021-HF schematic, sheet 1, U2"
+J3,SSQ-108-01-G-S,SSQ-108-01-G-S,,1,Core socket pins 1-8,factory,RadioLab:SSQ_1x8,Samtec tsw/ssq-drawing.pdf and footprint.pdf
+J4,SSQ-108-01-G-S,SSQ-108-01-G-S,,1,Core socket pins 9-16,factory,RadioLab:SSQ_1x8,Samtec tsw/ssq-drawing.pdf and footprint.pdf
+U2,AP2112K-3.3TRG1,AP2112K-3.3TRG1,,1,Local 3.3 V supply,factory,Package_TO_SOT_SMD:SOT-23-5,"DS39724 Rev 2-2, pages 1-3"
+C1,22uF,C3225X7R1E226M250AB,,1,LDO/module ceramic decoupling,factory,Capacitor_SMD:C_1210_3225Metric,TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md
+C2,22uF,C3225X7R1E226M250AB,,1,LDO/module ceramic decoupling,factory,Capacitor_SMD:C_1210_3225Metric,TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md
+C3,100nF,GRM188R71H104KA93D,,1,LDO/module ceramic decoupling,factory,Capacitor_SMD:C_0603_1608Metric,Murata; 100 nF 50 V X7R 10%
+C4,22uF,C3225X7R1E226M250AB,,1,LDO/module ceramic decoupling,factory,Capacitor_SMD:C_1210_3225Metric,TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md
+R1,10k,RC0603FR-0710KL,,1,"Default deselected, radio-domain pull-up",factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R2,10k,RC0603FR-0710KL,,1,Default released; PA/LNA stay disabled and CS stays high until host initializes,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W

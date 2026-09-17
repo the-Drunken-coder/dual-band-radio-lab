@@ -1,0 +1,301 @@
+[
+  {
+    "file": "e22-900m30s-manual.pdf",
+    "url": "https://www.cdebyte.com/pdf-down.aspx?id=4216",
+    "retrieved_date": "2026-09-17",
+    "sha256": "d782f25790ebb534e91d8e6c14ac6dc1784f1bd03f9ad1fa39c87ec7ccbb3813",
+    "bytes": 1729331,
+    "status": "downloaded"
+  },
+  {
+    "file": "e28-2g4m27s-manual.pdf",
+    "url": "https://www.cdebyte.com/pdf-down.aspx?id=3077",
+    "retrieved_date": "2026-09-17",
+    "sha256": "460c8dda70087bd53ae02b85c112507dd1deacc2a935fec49aa134b803e2e75d",
+    "bytes": 1034400,
+    "status": "downloaded"
+  },
+  {
+    "file": "core2021-hf-schematic.pdf",
+    "url": "https://raw.githubusercontent.com/waveshareteam/Core2021-XF/main/hardware/schematics/Core2021-HF-Schematics.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "d3c0c9d8224478cec2cd2d51b0ca5f227aa73aba94bbd4ddb244e74df6150bac",
+    "bytes": 207701,
+    "status": "downloaded"
+  },
+  {
+    "file": "core2021-xf-drawing.pdf",
+    "url": "https://raw.githubusercontent.com/waveshareteam/Core2021-XF/main/hardware/dimensions/core2021-xf-2D.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "6e552e98aea5c2f33d357dab35666ac4519dec9543277de1464e22fafee61cec",
+    "bytes": 7426,
+    "status": "downloaded"
+  },
+  {
+    "file": "pico-2-datasheet.pdf",
+    "url": "https://datasheets.raspberrypi.com/pico/pico-2-datasheet.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "cbcfaf881018c686495a2e53c7bd281e7e0a8217d79447d73eda7c8f74b7f675",
+    "bytes": 3016817,
+    "status": "downloaded"
+  },
+  {
+    "file": "ebyte-e22-footprints.zip",
+    "url": "https://www.cdebyte.com/pdf-down.aspx?id=2872",
+    "retrieved_date": "2026-09-17",
+    "sha256": "d789503e2bd19fb2adaddfe2f3a48b37dc18157445ecf805d871a717a9e78382",
+    "bytes": 4901463,
+    "status": "downloaded"
+  },
+  {
+    "file": "ebyte-e28-footprints.zip",
+    "url": "https://www.cdebyte.com/Uploadfiles/Files/2022-1-12/20221121415103510.zip",
+    "retrieved_date": "2026-09-17",
+    "sha256": "89510b3b1d7df132e8ed831be49092f53c54955648250a730249886912b90c40",
+    "bytes": 1610524,
+    "status": "downloaded"
+  },
+  {
+    "file": "ebyte-application-note.pdf",
+    "url": "https://www.cdebyte.com/pdf-down.aspx?id=2349",
+    "retrieved_date": "2026-09-17",
+    "sha256": "88e125fbb1e7c9a3857e5ab6eb3f05b655bf14b1b47006736ec09b5892499a3d",
+    "bytes": 523101,
+    "status": "downloaded"
+  },
+  {
+    "file": "ap63203.pdf",
+    "url": "https://www.diodes.com/datasheet/download/AP63200-AP63201-AP63203-AP63205.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "ef99daa3789d835bc025dfcb4c605c5c2e6d3e7223e86d40b33e6b497ea5a722",
+    "bytes": 1226090,
+    "status": "downloaded"
+  },
+  {
+    "file": "ap2112.pdf",
+    "url": "https://www.diodes.com/datasheet/download/AP2112.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "ef8d376f2ec356e29172eb9e053819a0ebdcc576dba7fc9ab0505c568427920f",
+    "bytes": 755270,
+    "status": "downloaded"
+  },
+  {
+    "file": "ssq-drawing.pdf",
+    "url": "https://suddendocs.samtec.com/prints/ssq-1xx-xx-xxx-x-xx-xxx-xx-x-mkt.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "3609be190ef021cc260abf423296449d797dd474fe1618dcf0fec719e2a05141",
+    "bytes": 368190,
+    "status": "downloaded"
+  },
+  {
+    "file": "ssq-footprint.pdf",
+    "url": "https://suddendocs.samtec.com/prints/ssq-1xx-xx-xx-x-xx-xxx-xx-xx.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "22412225a71a963f7337ba8057011971d161901832198f98770636aa7912b19c",
+    "bytes": 25534,
+    "status": "downloaded"
+  },
+  {
+    "file": "core2021-page.html",
+    "url": "https://docs.waveshare.com/Core2021-XF",
+    "retrieved_date": "2026-09-17",
+    "sha256": "32728505408ac4f94c3503871bd2b3c4a32d0a2457fe957e02e1177cdd9dc3dc",
+    "bytes": 28304,
+    "status": "downloaded"
+  },
+  {
+    "file": "core2021-interface.webp",
+    "url": "https://docs.waveshare.com/assets/images/Core2021-HF-Product-introduce-02-8055d4bcd0081527f6cc924f00d8c3b0.webp",
+    "retrieved_date": "2026-09-17",
+    "sha256": "f6f0af3d01bb98bc8a37aaf26b2bddbbcd2175d176125acac92e823f8dfc319f",
+    "bytes": 33312,
+    "status": "downloaded"
+  },
+  {
+    "file": "lr20xx-datasheet-v2.1.pdf",
+    "url": "https://raw.githubusercontent.com/waveshareteam/Core2021-XF/main/hardware/datasheet/LR20xxDatasheet_V2_1.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "0d9051db78b243bf89db7ff00bc549ff1fe3ffedc6e08649c9081e8393ef00b7",
+    "bytes": 5809234,
+    "status": "downloaded"
+  },
+  {
+    "file": "semtech-lr2021-page.html",
+    "url": "https://www.semtech.com/products/wireless-rf/lora-plus/lr2021",
+    "retrieved_date": "2026-09-17",
+    "sha256": "53b53156eb2e37377bb9ed6325874b43d0e23f41a70149075515ee1f5025be5e",
+    "bytes": 225990,
+    "status": "downloaded"
+  },
+  {
+    "file": "lr20xx-v2.2-download-viewer.html",
+    "url": "https://semtech.my.salesforce.com/sfc/p/E0000000JelG/a/RQ00000EZ5fu/L1sOvqDN_QMyCWYAAychIL5ygPsQw1AEq7xzcvpGNZg",
+    "retrieved_date": "2026-09-17",
+    "sha256": "ffa14a830ee0be6d34d2e383274197e5e15fff89c684fce9353d7a79fdf9920e",
+    "bytes": 1359,
+    "status": "HTML_VIEWER_NOT_DATASHEET"
+  },
+  {
+    "file": "tps25947.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/tps25947.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "8f96de389903091650d4f462dcfad3210071c3ae7093623a7978f34baf8a65b4",
+    "bytes": 5316794,
+    "status": "downloaded"
+  },
+  {
+    "file": "sn74lvc8t245.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/sn74lvc8t245.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "a2493b65471e5c873e3f71afbe152ac4d0f9233045c5ec289bda602a4b453cf0",
+    "bytes": 1855672,
+    "status": "downloaded"
+  },
+  {
+    "file": "sn74lvc1t45.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1t45.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "e6fbd8400161399554fe905326e73236e74bb3af0b546ea1942deed14310536e",
+    "bytes": 1678649,
+    "status": "downloaded"
+  },
+  {
+    "file": "mcp23s17.pdf",
+    "url": "https://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "14159c6f5655e943e93ed1e34947e46844f114ec893f305a889898828e4055cb",
+    "bytes": 865289,
+    "status": "downloaded"
+  },
+  {
+    "file": "dmg2305ux.pdf",
+    "url": "https://www.diodes.com/datasheet/download/DMG2305UX.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "7421a75157a2e700a217d1a20d075216abed29e81192bf7609d3df6dbb08eb2d",
+    "bytes": 420887,
+    "status": "downloaded"
+  },
+  {
+    "file": "tsw-drawing.pdf",
+    "url": "https://suddendocs.samtec.com/prints/tsw-xxx-xx-xxx-x-xx-xxx-mkt.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "047ecedcc921fb0aed7127f08b9ba0fc1200d92d33fb7ded1b311d0ed8f42063",
+    "bytes": 1075572,
+    "status": "downloaded"
+  },
+  {
+    "file": "tsw-footprint.pdf",
+    "url": "https://suddendocs.samtec.com/prints/tsw-xxx-xx-x-x-xx-xxx-footprint.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "264658121ff2dad25ebd6259e726b123bf1ea31f9145bc695607999181af028f",
+    "bytes": 16100,
+    "status": "downloaded"
+  },
+  {
+    "file": "tsw-ssq-current.pdf",
+    "url": "https://suddendocs.samtec.com/testreports/tc0838-1975_reportrev2_pwr.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "7735c53dd56eb836d0f600796bb4f11c2e85623e695b6b2e2c85582a9fbea104",
+    "bytes": 353371,
+    "status": "downloaded"
+  },
+  {
+    "file": "xal50xx.pdf",
+    "url": "https://www.coilcraft.com/getmedia/49bc46c8-4b2c-45b9-9b6c-2eaa235ea698/xal50xx.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "398076aa6efec9860d440a00fc4c37e28d535c130e68f9362da491a75d236ce4",
+    "bytes": 256341,
+    "status": "downloaded"
+  },
+  {
+    "file": "grm22u.pdf",
+    "url": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM32ER61C226KE20-01A.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "063100b7649564e4f7bfa7f93f79fc0638b6b7c76c143dbada9b7466747f7b4e",
+    "bytes": 1988632,
+    "status": "downloaded",
+    "note": "Earlier 16 V capacitor candidate; superseded by TDK C3225X7R1E226M250AB in all BOMs."
+  },
+  {
+    "file": "grm1u.pdf",
+    "url": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71C105KA01-01A.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "43362b26fa50fc0b6fdd58691a6d3efa3d7789cf96f636eea21c8a41a59cb9cd",
+    "bytes": 1985524,
+    "status": "downloaded"
+  },
+  {
+    "file": "grm10n.pdf",
+    "url": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71H103KA01-01.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "f164fbe0a83fd244a413bda28141ba1f5b1bb5234b750e24b2268534cb634878",
+    "bytes": 870448,
+    "status": "downloaded"
+  },
+  {
+    "file": "grm100n.pdf",
+    "url": "https://docs.rs-online.com/7176/0900766b813885cc.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "71ce7aa4ec49e6f6c5a5053ccaac5207966c456b73af011c9d91acd94cda8533",
+    "bytes": 101690,
+    "status": "downloaded"
+  },
+  {
+    "file": "panasonic-fk.pdf",
+    "url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/RDE0000COL98.pdf",
+    "retrieved_date": "2026-09-17",
+    "sha256": "baacdbf45f798798e9e6e95550f46170914be8afc3353a9476ec8b1d21568a59",
+    "bytes": 6605254,
+    "status": "downloaded"
+  },
+  {
+    "file": "yageo-rc.pdf",
+    "url": "https://www.yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L",
+    "retrieved_date": "2026-09-17",
+    "sha256": "7b6f0ae72708ca4b38126f84b5407a3e970a94cb60bc1a0afdaeb25a23d839bb",
+    "bytes": 542969,
+    "status": "downloaded"
+  },
+  {
+    "file": "yageo-rt.pdf",
+    "url": "https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L",
+    "retrieved_date": "2026-09-17",
+    "sha256": "00a9148c2958122200e8a93292e389392a795adcfe40562d6ca4f690d1e5d7d1",
+    "bytes": 547014,
+    "status": "downloaded"
+  },
+  {
+    "file": "jlc-c411294.html",
+    "url": "https://jlcpcb.com/partdetail/E22-900M30S/C411294",
+    "retrieved_date": "2026-09-17",
+    "sha256": "756ce5f9696ac1e52f13b727cfec0b410b17a2b60a78473b523f14431fb24633",
+    "bytes": 391678,
+    "status": "downloaded"
+  },
+  {
+    "file": "jlc-c411312.html",
+    "url": "https://jlcpcb.com/partdetail/Chengdu_Ebyte_ElecTech-E282G4M27S/C411312",
+    "retrieved_date": "2026-09-17",
+    "sha256": "7961df8c8219a415e030abecd3018efcb0c27d86d6b5c18e329695dac28c6e54",
+    "bytes": 387485,
+    "status": "downloaded"
+  },
+  {
+    "file": "jlc-c411294-photo.jpg",
+    "url": "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtComponentImageFile/8583458792923140096-C411294/C411294-%E6%AD%A3%E9%9D%A2.jpg",
+    "retrieved_date": "2026-09-17",
+    "sha256": "8cd033ea21ad3f3c7b75d8f33f8fd1496bb2546fc14e2fbf50636b0d0944739f",
+    "bytes": 151937,
+    "status": "downloaded",
+    "note": "Downloaded with the temporary public signed URL provided by the exact product page; URL above omits expiring query parameters."
+  },
+  {
+    "file": "jlc-c411312-photo.jpg",
+    "url": "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtComponentImageFile/8583459125393575936-C411312/C411312-%E6%AD%A3%E9%9D%A2.jpg",
+    "retrieved_date": "2026-09-17",
+    "sha256": "8342892bfc5fe8c2092a6fc2e85c3c7d599f6cdc6cc906afbbb3e705f654b9a9",
+    "bytes": 123447,
+    "status": "downloaded",
+    "note": "Downloaded with the temporary public signed URL provided by the exact product page; URL above omits expiring query parameters."
+  }
+]

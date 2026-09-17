@@ -1,0 +1,208 @@
+[
+  {
+    "reference": "J1",
+    "value": "TSW-110-07-G-S",
+    "symbol": "Header_1x10",
+    "mpn": "TSW-110-07-G-S",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Slot A",
+    "assembly": "factory",
+    "source": "Samtec tsw/ssq-drawing.pdf and footprint.pdf",
+    "footprint": "RadioLab:TSW_1x10",
+    "nets": {
+      "1": "GND",
+      "2": "SLOT_5V",
+      "3": "SLOT_5V",
+      "4": "GND",
+      "5": "SPI_SCK",
+      "6": "SPI_MOSI",
+      "7": "SPI_MISO",
+      "8": "CS_N",
+      "9": "RESET_N",
+      "10": "GND"
+    }
+  },
+  {
+    "reference": "J2",
+    "value": "TSW-108-07-G-S",
+    "symbol": "Header_1x8",
+    "mpn": "TSW-108-07-G-S",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Slot B",
+    "assembly": "factory",
+    "source": "Samtec tsw/ssq-drawing.pdf and footprint.pdf",
+    "footprint": "RadioLab:TSW_1x8",
+    "nets": {
+      "1": "BUSY",
+      "2": "IRQ",
+      "3": "TX_EN",
+      "4": "RX_EN",
+      "5": "AUX0",
+      "6": null,
+      "7": "IOREF_3V3",
+      "8": "GND"
+    }
+  },
+  {
+    "reference": "U1",
+    "value": "E22-900M30S",
+    "symbol": "E22_900M30S",
+    "mpn": "E22-900M30S",
+    "supplier": "C411294",
+    "quantity": 1,
+    "purpose": "915 MHz LoRa",
+    "assembly": "factory",
+    "source": "E22-M manual section 3.3, PDF pages 10-11",
+    "footprint": "RadioLab:E22_900M30S",
+    "nets": {
+      "1": "GND",
+      "2": "GND",
+      "3": "GND",
+      "4": "GND",
+      "5": "GND",
+      "11": "GND",
+      "12": "GND",
+      "20": "GND",
+      "22": "GND",
+      "6": "RX_EN",
+      "7": "TX_EN",
+      "8": "AUX0",
+      "9": "SLOT_5V",
+      "10": "SLOT_5V",
+      "13": "IRQ",
+      "14": "BUSY",
+      "15": "RESET_N",
+      "16": "SPI_MISO",
+      "17": "SPI_MOSI",
+      "18": "SPI_SCK",
+      "19": "CS_N"
+    }
+  },
+  {
+    "reference": "C1",
+    "value": "220uF",
+    "symbol": "Capacitor_polarized",
+    "mpn": "EEEFK1A221P",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Local TX transient reservoir; 10 V polarized",
+    "assembly": "factory",
+    "source": "Panasonic; 220 uF 10 V 20%; panasonic-fk.pdf",
+    "footprint": "RadioLab:Panasonic_FK_E_8x6.2",
+    "nets": {
+      "1": "SLOT_5V",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "C2",
+    "value": "22uF",
+    "symbol": "Capacitor_value_only",
+    "mpn": "C3225X7R1E226M250AB",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Local supply decoupling",
+    "assembly": "factory",
+    "source": "TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md",
+    "footprint": "Capacitor_SMD:C_1210_3225Metric",
+    "nets": {
+      "1": "SLOT_5V",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "C3",
+    "value": "100nF",
+    "symbol": "Capacitor_value_only",
+    "mpn": "GRM188R71H104KA93D",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Local ceramic decoupling",
+    "assembly": "factory",
+    "source": "Murata; 100 nF 50 V X7R 10%",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "nets": {
+      "1": "SLOT_5V",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "R1",
+    "value": "10k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0710KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Default deselected, radio-domain pull-up",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "IOREF_3V3",
+      "2": "CS_N"
+    }
+  },
+  {
+    "reference": "R2",
+    "value": "10k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0710KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Default released; PA/LNA stay disabled and CS stays high until host initializes",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "IOREF_3V3",
+      "2": "RESET_N"
+    }
+  },
+  {
+    "reference": "R3",
+    "value": "10k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0710KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Default PA/LNA inactive",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "TX_EN",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "R4",
+    "value": "10k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0710KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Default PA/LNA inactive",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "RX_EN",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "H1",
+    "value": "M3 alignment hole",
+    "symbol": "Mechanical",
+    "mpn": "MECH-NPTH-3.4",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Required daughtercard post clearance; 3.4 mm NPTH, 7 mm keepout",
+    "assembly": "factory",
+    "source": "radio-slot-v0.1.md; Accu SSCF-M3-25-A2 dimensions",
+    "footprint": "RadioLab:Alignment_M3_3.4mm",
+    "nets": {}
+  }
+]

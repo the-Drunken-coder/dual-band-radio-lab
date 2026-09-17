@@ -1,0 +1,36 @@
+{
+  "scope": "Schematic netlist, ERC, BOM and interface arithmetic. No PCB validation.",
+  "checks": [
+    {
+      "board": "e22-900m30s-rev-a",
+      "checked_pin_assignments": 21,
+      "isolated_pins": 2,
+      "result": "PASS"
+    },
+    {
+      "board": "e28-2g4m27s-rev-a",
+      "checked_pin_assignments": 25,
+      "isolated_pins": 3,
+      "result": "PASS"
+    },
+    {
+      "board": "core2021-hf-m-rev-a",
+      "checked_pin_assignments": 28,
+      "isolated_pins": 9,
+      "result": "PASS"
+    },
+    {
+      "board": "carrier-rev-a",
+      "checked_pin_assignments": 198,
+      "isolated_pins": 26,
+      "result": "PASS"
+    },
+    {
+      "check": "mechanical post first-engagement margin",
+      "margin_mm": 5.35,
+      "result": "PASS",
+      "scope": "normal straight mating, solid capture zones required; no board or physical fit test"
+    }
+  ],
+  "result": "PASS"
+}

@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/lanearaujo/Documents/Codex/dual-band-radio-lab/hardware/adapters/core2021-hf-m-rev-a/core2021-hf-m-rev-a.kicad_sch</source>
+    <date>2026-09-17T03:11:22</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>915 MHz FLRC socket adapter</title>
+        <company/>
+        <rev>A-schematic</rev>
+        <date>2026-09-17</date>
+        <source>core2021-hf-m-rev-a.kicad_sch</source>
+        <comment number="1" value="SCHEMATIC REVIEW - NOT FOR FABRICATION"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>22uF</value>
+      <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <fields>
+        <field name="MPN">C3225X7R1E226M250AB</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md</field>
+        <field name="Assembly">factory</field>
+        <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Capacitor_value_only" description=""/>
+      <property name="MPN" value="C3225X7R1E226M250AB"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md"/>
+      <property name="Assembly" value="factory"/>
+      <property name="Sheetname" value="core2021-hf-m-rev-a"/>
+      <property name="Sheetfile" value="core2021-hf-m-rev-a.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f36363b3-97b7-5461-98fe-f932830cc82d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>22uF</value>
+      <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <fields>
+        <field name="MPN">C3225X7R1E226M250AB</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md</field>
+        <field name="Assembly">factory</field>
+        <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Capacitor_value_only" description=""/>
+      <property name="MPN" value="C3225X7R1E226M250AB"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md"/>
+      <property name="Assembly" value="factory"/>
+      <property name="Sheetname" value="core2021-hf-m-rev-a"/>
+      <property name="Sheetfile" value="core2021-hf-m-rev-a.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bddb9ad7-75c4-51d1-9fb5-0636e873a2a1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">Murata; 100 nF 50 V X7R 10%</field>
+        <field name="Assembly">factory</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Capacitor_value_only" description=""/>
+      <property name="MPN" value="GRM188R71H104KA93D"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="Murata; 100 nF 50 V X7R 10%"/>
+      <property name="Assembly" value="factory"/>
+      <property name="Sheetname" value="core2021-hf-m-rev-a"/>
+      <property name="Sheetfile" value="core2021-hf-m-rev-a.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>51e9e70d-6266-57d1-9705-cd4d609e9c46</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>22uF</value>
+      <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <fields>
+        <field name="MPN">C3225X7R1E226M250AB</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md</field>
+        <field name="Assembly">factory</field>
+        <field name="Footprint">Capacitor_SMD:C_1210_3225Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Capacitor_value_only" description=""/>
+      <property name="MPN" value="C3225X7R1E226M250AB"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md"/>
+      <property name="Assembly" value="factory"/>
+      <property name="Sheetname" value="core2021-hf-m-rev-a"/>
+      <property name="Sheetfile" value="core2021-hf-m-rev-a.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f0f4faf0-3cc9-56a0-a526-385a8a7e78b2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H1">
+      <value>M3 alignment hole</value>
+      <footprint>RadioLab:Alignment_M3_3.4mm</footprint>
+      <fields>
+        <field name="MPN">MECH-NPTH-3.4</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">radio-slot-v0.1.md; Accu SSCF-M3-25-A2 dimensions</field>
+        <field name="Assembly">factory</field>
+        <field name="Footprint">RadioLab:Alignment_M3_3.4mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Mechanical" description=""/>
+      <property name="MPN" value="MECH-NPTH-3.4"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="radio-slot-v0.1.md; Accu SSCF-M3-25-A2 dimensions"/>
+      <property name="Assembly" value="factory"/>
+      <property name="Sheetname" value="core2021-hf-m-rev-a"/>
+      <property name="Sheetfile" value="core2021-hf-m-rev-a.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8b165f49-7bd1-5bae-8e28-0e058431b18d</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>TSW-110-07-G-S</value>
+      <footprint>RadioLab:TSW_1x10</footprint>
+      <fields>
+        <field name="MPN">TSW-110-07-G-S</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">Samtec tsw/ssq-drawing.pdf and footprint.pdf</field>
+        <field name="Assembly">factory</field>
+        <field name="Footprint">RadioLab:TSW_1x10</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Header_1x10" description=""/>
+      <property name="MPN" value="TSW-110-07-G-S"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="Samtec tsw/ssq-drawing.pdf and footprint.pdf"/>
+      <property name="Assembly" value="factory"/>
+      <property name="Sheetname" value="core2021-hf-m-rev-a"/>
+      <property name="Sheetfile" value="core2021-hf-m-rev-a.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>10ebc790-7368-5363-97f3-af4c065ae5b5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>TSW-108-07-G-S</value>
+      <footprint>RadioLab:TSW_1x8</footprint>
+      <fields>
+        <field name="MPN">TSW-108-07-G-S</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">Samtec tsw/ssq-drawing.pdf and footprint.pdf</field>
+        <field name="Assembly">factory</field>
+        <field name="Footprint">RadioLab:TSW_1x8</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Header_1x8" description=""/>
+      <property name="MPN" value="TSW-108-07-G-S"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="Samtec tsw/ssq-drawing.pdf and footprint.pdf"/>
+      <property name="Assembly" value="factory"/>
+      <property name="Sheetname" value="core2021-hf-m-rev-a"/>
+      <property name="Sheetfile" value="core2021-hf-m-rev-a.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7856f605-0fd7-5f04-8851-3f0446e2212f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J3">
+      <value>SSQ-108-01-G-S</value>
+      <footprint>RadioLab:SSQ_1x8</footprint>
+      <fields>
+        <field name="MPN">SSQ-108-01-G-S</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">Samtec tsw/ssq-drawing.pdf and footprint.pdf</field>
+        <field name="Assembly">factory</field>
+        <field name="Footprint">RadioLab:SSQ_1x8</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Header_1x8" description=""/>
+      <property name="MPN" value="SSQ-108-01-G-S"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="Samtec tsw/ssq-drawing.pdf and footprint.pdf"/>
+      <property name="Assembly" value="factory"/>
+      <property name="Sheetname" value="core2021-hf-m-rev-a"/>
+      <property name="Sheetfile" value="core2021-hf-m-rev-a.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>30feac07-40b5-532d-9f43-04cd03e672b9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J4">
+      <value>SSQ-108-01-G-S</value>
+      <footprint>RadioLab:SSQ_1x8</footprint>
+      <fields>
+        <field name="MPN">SSQ-108-01-G-S</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">Samtec tsw/ssq-drawing.pdf and footprint.pdf</field>
+        <field name="Assembly">factory</field>
+        <field name="Footprint">RadioLab:SSQ_1x8</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Header_1x8" description=""/>
+      <property name="MPN" value="SSQ-108-01-G-S"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="Samtec tsw/ssq-drawing.pdf and footprint.pdf"/>
+      <property name="Assembly" value="factory"/>
+      <property name="Sheetname" value="core2021-hf-m-rev-a"/>
+      <property name="Sheetfile" value="core2021-hf-m-rev-a.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>13a5fa77-7075-5d13-8091-32b944560f49</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">Yageo RC0603; 1% 0.1 W</field>
+        <field name="Assembly">factory</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Resistor_value_only" description=""/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="Yageo RC0603; 1% 0.1 W"/>
+      <property name="Assembly" value="factory"/>
+      <property name="Sheetname" value="core2021-hf-m-rev-a"/>
+      <property name="Sheetfile" value="core2021-hf-m-rev-a.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3d9a3f73-82f6-5932-8819-a051ec3f87e3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">Yageo RC0603; 1% 0.1 W</field>
+        <field name="Assembly">factory</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Resistor_value_only" description=""/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="Yageo RC0603; 1% 0.1 W"/>
+      <property name="Assembly" value="factory"/>
+      <property name="Sheetname" value="core2021-hf-m-rev-a"/>
+      <property name="Sheetfile" value="core2021-hf-m-rev-a.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1a29f51f-a98b-5390-8d80-06587e76bc37</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>Core2021-HF-M plug-in</value>
+      <fields>
+        <field name="MPN">Core2021-HF-M</field>
+        <field name="Supplier">Waveshare SKU 34523</field>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">Waveshare Core2021-HF schematic, sheet 1, U2</field>
+        <field name="Assembly">User plugs into factory-soldered sockets</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Core2021_HF_M" description=""/>
+      <property name="MPN" value="Core2021-HF-M"/>
+      <property name="Supplier" value="Waveshare SKU 34523"/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="Waveshare Core2021-HF schematic, sheet 1, U2"/>
+      <property name="Assembly" value="User plugs into factory-soldered sockets"/>
+      <property name="Sheetname" value="core2021-hf-m-rev-a"/>
+      <property name="Sheetfile" value="core2021-hf-m-rev-a.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d30bf5bd-5495-57a8-a4a6-581690382f49</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>AP2112K-3.3TRG1</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <fields>
+        <field name="MPN">AP2112K-3.3TRG1</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">DS39724 Rev 2-2, pages 1-3</field>
+        <field name="Assembly">factory</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="AP2112K_3_3TRG1" description=""/>
+      <property name="MPN" value="AP2112K-3.3TRG1"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="DS39724 Rev 2-2, pages 1-3"/>
+      <property name="Assembly" value="factory"/>
+      <property name="Sheetname" value="core2021-hf-m-rev-a"/>
+      <property name="Sheetfile" value="core2021-hf-m-rev-a.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fdc40fdb-1870-5ace-a0cb-16e0ce2dd2e7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="RadioLab" part="AP2112K_3_3TRG1">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AP2112K_3_3TRG1</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="NC" type="no_connect"/>
+        <pin num="5" name="VOUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadioLab" part="Capacitor_value_only">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Capacitor_value_only</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadioLab" part="Core2021_HF_M">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Core2021_HF_M</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="ANT_2G4" type="passive"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="DIO11" type="bidirectional"/>
+        <pin num="4" name="DIO8" type="bidirectional"/>
+        <pin num="5" name="DIO7" type="bidirectional"/>
+        <pin num="6" name="NC" type="no_connect"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="3V3" type="power_in"/>
+        <pin num="9" name="BUSY" type="output"/>
+        <pin num="10" name="RESET" type="input"/>
+        <pin num="11" name="MISO" type="tri_state"/>
+        <pin num="12" name="MOSI" type="input"/>
+        <pin num="13" name="SCK" type="input"/>
+        <pin num="14" name="NSS" type="input"/>
+        <pin num="15" name="GND" type="power_in"/>
+        <pin num="16" name="ANT_SUBG" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadioLab" part="Header_1x10">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Header_1x10</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="10" name="10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadioLab" part="Header_1x8">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Header_1x8</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadioLab" part="Mechanical">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Mechanical</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+    </libpart>
+    <libpart lib="RadioLab" part="Resistor_value_only">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Resistor_value_only</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="RadioLab">
+      <uri>${KIPRJMOD}/../../libraries/RadioLab.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/AUX0" class="Default">
+      <node ref="J2" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="J3" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="DIO8_4" pintype="bidirectional"/>
+    </net>
+    <net code="2" name="/BUSY" class="Default">
+      <node ref="J2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="BUSY_9" pintype="output"/>
+    </net>
+    <net code="3" name="/CS_N" class="Default">
+      <node ref="J1" pin="8" pinfunction="8_8" pintype="passive"/>
+      <node ref="J4" pin="6" pinfunction="6_6" pintype="passive"/>
+      <node ref="R1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="NSS_14" pintype="input"/>
+    </net>
+    <net code="4" name="/GND" class="Default">
+      <node ref="C1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C4" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J1" pin="10" pinfunction="10_10" pintype="passive"/>
+      <node ref="J1" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="J2" pin="8" pinfunction="8_8" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J3" pin="7" pinfunction="7_7" pintype="passive"/>
+      <node ref="J4" pin="7" pinfunction="7_7" pintype="passive"/>
+      <node ref="U1" pin="15" pinfunction="GND_15" pintype="power_in"/>
+      <node ref="U1" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U1" pin="7" pinfunction="GND_7" pintype="power_in"/>
+      <node ref="U2" pin="2" pinfunction="GND_2" pintype="power_in"/>
+    </net>
+    <net code="5" name="/IRQ" class="Default">
+      <node ref="J2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J3" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="DIO11_3" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="/RADIO_3V3" class="Default">
+      <node ref="C2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J3" pin="8" pinfunction="8_8" pintype="passive"/>
+      <node ref="R1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="3V3_8" pintype="power_in"/>
+      <node ref="U2" pin="5" pinfunction="VOUT_5" pintype="power_out"/>
+    </net>
+    <net code="7" name="/RESET_N" class="Default">
+      <node ref="J1" pin="9" pinfunction="9_9" pintype="passive"/>
+      <node ref="J4" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="RESET_10" pintype="input"/>
+    </net>
+    <net code="8" name="/SLOT_5V" class="Default">
+      <node ref="C1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="VIN_1" pintype="power_in"/>
+      <node ref="U2" pin="3" pinfunction="EN_3" pintype="input"/>
+    </net>
+    <net code="9" name="/SPI_MISO" class="Default">
+      <node ref="J1" pin="7" pinfunction="7_7" pintype="passive"/>
+      <node ref="J4" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="MISO_11" pintype="tri_state"/>
+    </net>
+    <net code="10" name="/SPI_MOSI" class="Default">
+      <node ref="J1" pin="6" pinfunction="6_6" pintype="passive"/>
+      <node ref="J4" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="MOSI_12" pintype="input"/>
+    </net>
+    <net code="11" name="/SPI_SCK" class="Default">
+      <node ref="J1" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="J4" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="SCK_13" pintype="input"/>
+    </net>
+    <net code="12" name="unconnected-(J2-Pad3)" class="Default">
+      <node ref="J2" pin="3" pinfunction="3_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="13" name="unconnected-(J2-Pad4)" class="Default">
+      <node ref="J2" pin="4" pinfunction="4_4" pintype="passive+no_connect"/>
+    </net>
+    <net code="14" name="unconnected-(J2-Pad6)" class="Default">
+      <node ref="J2" pin="6" pinfunction="6_6" pintype="passive+no_connect"/>
+    </net>
+    <net code="15" name="unconnected-(J2-Pad7)" class="Default">
+      <node ref="J2" pin="7" pinfunction="7_7" pintype="passive+no_connect"/>
+    </net>
+    <net code="16" name="unconnected-(J3-Pad1)" class="Default">
+      <node ref="J3" pin="1" pinfunction="1_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="17" name="unconnected-(J3-Pad5)" class="Default">
+      <node ref="J3" pin="5" pinfunction="5_5" pintype="passive+no_connect"/>
+    </net>
+    <net code="18" name="unconnected-(J3-Pad6)" class="Default">
+      <node ref="J3" pin="6" pinfunction="6_6" pintype="passive+no_connect"/>
+    </net>
+    <net code="19" name="unconnected-(J4-Pad8)" class="Default">
+      <node ref="J4" pin="8" pinfunction="8_8" pintype="passive+no_connect"/>
+    </net>
+    <net code="20" name="unconnected-(U1-ANT_2G4-Pad1)" class="Default">
+      <node ref="U1" pin="1" pinfunction="ANT_2G4_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="21" name="unconnected-(U1-ANT_SUBG-Pad16)" class="Default">
+      <node ref="U1" pin="16" pinfunction="ANT_SUBG_16" pintype="passive+no_connect"/>
+    </net>
+    <net code="22" name="unconnected-(U1-DIO7-Pad5)" class="Default">
+      <node ref="U1" pin="5" pinfunction="DIO7_5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="23" name="unconnected-(U1-NC-Pad6)" class="Default">
+      <node ref="U1" pin="6" pinfunction="NC_6" pintype="no_connect"/>
+    </net>
+    <net code="24" name="unconnected-(U2-NC-Pad4)" class="Default">
+      <node ref="U2" pin="4" pinfunction="NC_4" pintype="no_connect"/>
+    </net>
+  </nets>
+</export>

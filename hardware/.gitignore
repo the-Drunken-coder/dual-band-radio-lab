@@ -1,0 +1,5 @@
+# Per-user KiCad window and session state.
+*.kicad_prl
+~*.lck
+*-backups/
+__pycache__/

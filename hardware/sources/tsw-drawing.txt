@@ -1,0 +1,481 @@
+
+--- PDF page 1 ---
+REVISION DS                                                                                                                                         TSW-XXX-XX-XXX-X-XX-XXX
+                                                                                                                                                                                                                        OPTION #2
+                                                                                                                                                                                                                     -POLARIZING SPECIFICATION
+           DO NOT                                                                                                  TERMINAL SPACE SPEC.                                                                   OPTION #1XXX INDICATES POS. TO BE OMITTED (SEE FIG 3)
+       SCALE FROM                                                                                             (SEE ASSEMBLY INSTRUCTIONS)                                                                -BLANK= STRAIGHT
+          THIS PRINT                                                                                          -1=.100[2.54] FILL EVERY POSITION                                                          -RA= RIGHT ANGLE (SEE TABLE 3 & 5, FIG 5)(-RA OPTION WITH -LL OPTION
+                                                                                                              -2= .200[5.08] FILL EVERY OTHER POS.
+                                                                                                                    STARTING W/ 1ST & ENDING                                                              EQUALS TO -LA OPTION)
+                                                                                                                    W/ LAST POS. IN BODY)                                                                -RE= EXTENDED RIGHT ANGLE (SEE TABLE 3 & 5, FIG 5)(SINGLE ROW ONLY)
+                                                                                                                   BODY LENGTH SPEC.                                                                     -NA= RA OPTION WITH STRAIGHT OPTION BODY(-NA OPTION WITH -LL
+                                                                                                                EXPRESSED IN # OF POS                                                                     OPTION IS VALID)
+                                                                                                                -1: -01 THRU -50 (-S, -D, -T)                                                            -NE= RE OPTION WITH STRAIGHT OPTION BODY
+                                                                                                                "A" = NO. OF POS. x .100[2.54]                                                           -LC= LOCKING CLIP (USE LTC-01 FOR -S ROW AND
+                                                                                                                -2: -02 THRU -25 (-S, -D, -T)                                                              LTC-02 FOR -D ROW)(STYLES 08 THRU 13 & 22 ONLY) (SEE FIG 2)
+                                                                                                                "A" = NO OF POS. x .200[5.08] - .100[2.54]                                               (N/A IN -RA OR -RE OPTION AND/OR LESS THAN 4 POSITIONS)
+                                                                                                                                                                                                         (N/A IN -T OR -Q)
+                                                                                                                                     LEAD STYLE                                                          -LA= -RA OPTION WITH -LL OPTION (SEE FIG 5)
+                                                                                                                                     SEE TABLE 1                                                         -LL= LOCKING LEAD (SEE FIG 4)
+                                                                                                                                                                                                         (N/A WITH -RE OR -NE OPTION)
+                                                                                                           PLATING SPECIFICATION                                                                         (N/A IN SINGLE ROW, 1 OR 2 POSITIONS)
+                                                                                                          -G: 10µ" GOLD IN CONTACT AREA, 3µ" GOLD ON TAIL                                                             ROW SPECIFICATION (SEE TABLE 2)
+                                                                                                          -T: MATTE TIN CONTACT AND TAIL                                                                              -S: SINGLE
+                                                                                                          -S: 30µ" SELECTIVE GOLD IN CONTACT AREA, MATTE TIN ON TAIL                                                  -D: DOUBLE
+                                                                                                          -H: 30µ" HEAVY GOLD IN CONTACT AREA, 3µ" GOLD ON TAIL                                                       -T: TRIPLE
+                                                                                                          -L: 10µ" LIGHT SELECTIVE GOLD IN CONTACT AREA, MATTE TIN ON TAIL                                            -Q: TRIPLE ROW, FILL OUTER ROWS ONLY
+                                                                                                          -F: 3µ" FLASH SELECTIVE GOLD IN CONTACT AREA, MATTE TIN ON TAIL
+                                                                                                          -E: 50µ" EXTRA HEAVY GOLD IN CONTACT AREA, 3µ" GOLD ON TAIL
+                                                                                                               (-07, -08, -09, -13, -14, -15, -16, -20, -21 ONLY)
+                                                                                                          -TL: TIN/LEAD (90/10 +/-5%) CONTACT AND TAIL
+                                                                                                                (AVAILABLE ONLY ON LEAD STYLES -07, -08 & -09)
+                                                                                                          -STL: 30µ" SELECTIVE GOLD IN CONTACT AREA, TIN/LEAD (90/10 +/-5%) TAIL
+                                                                                                                  (AVAILABLE ONLY ON LEAD STYLES -07, -08, -10, -15, -16, -17, -21, -23 & -24)
+                                                                                                          -TM: MATTE TIN CONTACT AND TAIL
+                                                                                                          -SM: 30µ" SELECTIVE GOLD IN CONTACT AREA, MATTE TIN ON TAIL
+                                                                                                          -LM: 10µ" LIGHT SELECTIVE GOLD IN CONTACT AREA, MATTE TIN ON TAIL
+                                                                                                          -FM: 3µ" FLASH SELECTIVE GOLD IN CONTACT AREA, MATTE TIN ON TAIL
+                                                                                                          -SS: 30µ" STRIPE SELECTIVE GOLD IN CONTACT AREA, MATTE TIN ON  TAIL (SEE NOTE 13)
+                                                                                                          -GF: 3µ" GOLD OVER THE ENTIRE PIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                NOTES:
+                                 1.       REPRESENTS CRITICAL DIMENSION.C
+                                 2. MINIMUM TERMINAL PUSHOUT: 3 LBS.
+                                 3. MAXIMUM HEIGHT VARIATION: .005[0.13] (-RA TAIL N/A).
+                                 4. ASSEMBLE GOLD PLATE END AS SHOWN.
+                                 5. STYLE -26: ROUND END TO APPEAR ON BOTTOM.                                                                                    UNLESS  OTHERWISE  SPECIFIED,          *                                                                                                                                                                                                                                                                                                             *PROPRIETARY NOTE
+                                 6. 'C'±          FOR STYLE -08, OPTION -LA & -RA ONLY..005[0.13]                                                                DIMENSIONS ARE IN INCHES.                                                                       THIS DOCUMENT CONTAINS CONFIDENTIAL AND
+                                           .008[0.20]                                                                                                                                                  PROPRIETARY INFORMATION AND ALL DESIGN,
+                                 7. TOW & SWAY SPEC. OF 2° APPLIES TO ALL                                                                                        TOLERANCES  ARE:                      MANUFACTURING, REPRODUCTION, USE, PATENT RIGHTS
+                                     POSITIONS, POST & TAIL, IN ALL DIRECTIONS.                                                                                  DECIMALS                     ANGLES   AND SALES RIGHTS ARE EXPRESSLY RESERVED BY SAMTEC,
+                                                                                                                                                                                                       INC. THIS DOCUMENT SHALL NOT BE DISCLOSED, IN WHOLE
+                                 8. ALL DIMENSIONS TO BE ABOUT CL WITHIN ±.005[0.13].                                                                             .XX:                .01[0.3]              2 OR PART, TO ANY UNAUTHORIZED PERSON OR ENTITY NOR 520 PARK EAST BLVD, NEW ALBANY, IN 47150
+                                 9. MEASURE FROM THE BEND RADIUS OF THE TERMINALS .                                                                               .XXX:                 .005[0.13]     REPRODUCED, TRANSFERRED OR INCORPORATED IN ANY
+                                                                                                                                                                                                       OTHER PROJECT IN ANY MANNER WITHOUT THE EXPRESS    PHONE: 812-944-6733       FAX: 812-948-5047
+                                10. TSW-50-D  BODY CAN BE USED IF RTSW-50-D IS UNAVAILABLE                                                                        .XXXX:                 .0020[0.051]  WRITTEN CONSENT OF SAMTEC, INC.                    e-Mail   info@SAMTEC.com        code  55322
+                            C   11. ORIENTATE PINS TO PREVENT BANDOLIER MARKS FROM SHOWING                                                                       MATERIAL:             DO  NOT  SCALE  DRAWING             SHEET SCALE: 3:1    DESCRIPTION:
+                                      IN THE POST AREA. (SEE TABLE 7)                                                                                             BODIES: DUPONT PBT, UL 94 VO, COLOR: BLACK                                    .025[0.64] SQ. POST TERMINAL STRIP ASSEMBLY
+                                12. MAXIMUM CUT FLASH: .020[0.50]                                                                                                 TERMINALS: PHOS BRONZE                                                       DWG.  NO.
+                                13. -SS OPTION ONLY AVAILABLE IN STRAIGHT LEAD STYLES -07, -08 &                                                                                                                                                 TSW-XXX-XX-XXX-X-XX-XXX
+                                      -09, -RA STYLE -08 ONLY.  CAN ONLY MATE WITH SSW, SSQ, SSM,
+                                      ESW, ESQ AND BCS.                                                                                                                                                                                        BY:     KOLB                                                                                                 08/24/1988                                                                                                                                                                                                            6SHEET     OF1
+                                                                                                                                                                c:\enterprisevault\DWG\MISC\MKTG\TSW-XXX-XX-XXX-X-XX-XXX-MKT.SLDDRW
+
+--- PDF page 2 ---
+REVISION  DS
+
+                                                                           C         SEE TABLE 8
+                                                                                  (SEE CALLOUT)
+
+
+
+
+
+
+
+
+                                                                                -1XX=.100[2.54]
+                                                                                 -2XX=.200[5.08]                                                                                    C      "C"±.008[0.20]                                                                            .100            2.54
+                                                                                                                                                                                      (SEE TABLE 1, SHT 6)                                                                                                                                                                      .200                5.08                                      .200                5.08
+                                                                                                                                2              MAX SWAY                              (SEE NOTE 3 AND 6)                                                         2              MAX SWAY
+                                                                                                                          (EITHER DIRECTION)                                                                                                             (EITHER DIRECTION)                                                                .100                2.54
+
+
+
+
+
+
+
+                                                                                                                                                                                                          "L"
+      .100            2.54                                                                                                                                                             (SEE TABLE 4, SHT 5)
+             REF
+                                                                                                                                                                                                                                                                    .100                2.54
+                                                                                                                                                                                                                                                                             REF
+
+
+  SEE NOTE 5                                     2              MAX SWAY                                                                                                                                                                                                                                        .200                5.08                                        .300                7.62                                      .300                7.62
+                                           (EITHER DIRECTION)                                                                                                                                   (EITHER DIRECTION)2              MAX SWAY                                                                                REF                                                             REF                                                           REF
+
+
+                                                                                                                                                         FIG 1                                                                            -S                                                                            -D                                                               -T                                                           -Q
+                                                                                                                                  (TSW-1XX-XX-XX-S SHOWN)
+
+
+                                                                                                                                                                                                                            "G" REF
+
+
+
+
+
+
+
+
+             .596                15.15
+                       REF
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                   *                                                                                                                                                                                                                                                                                                             *PROPRIETARY NOTE
+                                                                                                                                                                                                                                                                                                                  THIS DOCUMENT CONTAINS CONFIDENTIAL AND
+                                                                                                                                                                                                                                                                                                                  PROPRIETARY INFORMATION AND ALL DESIGN,
+                                                                                                                                                                                                                                                                                                                  MANUFACTURING, REPRODUCTION, USE, PATENT RIGHTS
+                                                                                                                                                                                                                                                                                                                  AND SALES RIGHTS ARE EXPRESSLY RESERVED BY SAMTEC,
+                                                                                                                                                                                                                                                                                                                  INC. THIS DOCUMENT SHALL NOT BE DISCLOSED, IN WHOLE
+                                                                                                                                                                                                                                                                                                                  OR PART, TO ANY UNAUTHORIZED PERSON OR ENTITY NOR                                520 PARK EAST BLVD, NEW ALBANY, IN 47150
+                                                                                                                                                                                                                                                                                                                  REPRODUCED, TRANSFERRED OR INCORPORATED IN ANY                                   PHONE: 812-944-6733       FAX: 812-948-5047
+                                                                                                                                                                                                                                                                                                                  OTHER PROJECT IN ANY MANNER WITHOUT THE EXPRESS
+                                                                                                                                                                                                                                                                                                                  WRITTEN CONSENT OF SAMTEC, INC.                                                  e-Mail   info@SAMTEC.com        code  55322
+                                                                                                                                                                                                                                                                                                                                                                                DESCRIPTION:
+                                                                                                        "F"                                                                                                                                                                                                              DO  NOT  SCALE  DRAWING                                 .025[0.64] SQ. POST TERMINAL STRIP ASSEMBLY
+
+                                                                                                                                                                                                                                                                                                                                 SHEET SCALE: 3:1                               DWG.  NO.
+                                                                                                                             FIG 2                                                                                                                                                                                                                                                  TSW-XXX-XX-XXX-X-XX-XXX
+                                                                                                  (TSW-1XX-XX-XX-S-LC SHOWN)
+                                                                                        (SAME AS FIG 1, DIFFERENT AS SHOWN)                                                             c:\enterprisevault\DWG\MISC\MKTG\TSW-XXX-XX-XXX-X-XX-XXX-MKT.SLDDRW                                                                                                                     BY:         KOLB                                                                                                 08/24/1988                                                                                                                                                                                                            6SHEET     OF2
+
+--- PDF page 3 ---
+REVISION  DS                                                                                                                                                                                                      FIG 3
+                                                                                                                                                      -1: .100[2.54] TERMINAL SPACING                                                                                                                                                                                                                                                                                                                                                              01                                                                                                                                                                                      01
+                                                                                                                                        (SAME AS FIG 1, DIFFERENT AS SHOWN)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             01                                                                                                                                                                                              01
+
+                50                                                                                    01                                                                        02                                                                                                                                                                                                                                                                                                              03010103
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     01
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           01
+                02                                                                                                                                                                                                                                                                                                                                                                                                                                                                               SINGLES                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              SINGLESDOUBLES                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              DOUBLESTRIPLES                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          TRIPLES
+                01                                                                                     99                                                                                                                                                                                     100                                                                                                                                                                                                                                                                                        150148148                                                                                                                                                                                                                                            150
+                                 SINGLES                                                                                        DOUBLES                                                                                                           TRIPLES                                                                                                                 -Q:                                                                                                                                                                 STRAIGHT VERSION
+                                                                                                                                                                                                                                                                                                                        (FILL OUTER ROWS ONLY)                                                                                                                                                                                                                    ODD POSITIONS                                                                                                                                                                                                                                                                                                                                                                                                                                                                              STRAIGHT VERSIONEVEN POSITIONS
+
+
+                25                                                                                     01                                                                       02                      01                                                                                      03                      01                                                                                              03                                                                                                                                                  01                                                                                                                                                                                                     01                                            01                                                                                                                                                                                             01
+
+
+
+                                                                                                       03                                                                                               04                                                                                                              04
+
+
+                02
+
+
+                01                                                                                     49                                                                       50                      73                                                                                                                                                                                                                                  7573                                                                                                                                                                                                                                                75                                                                            01
+                                SINGLES                                                                                         DOUBLES                                                                                                           TRIPLES                                                                                                                   -Q:                                                                                                                                 01
+                                                                                                                                                                                                                                                                                                                          (FILL OUTER ROWS ONLY)                                                                                                                                                               SINGLES                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            SINGLESDOUBLESTRIPLESDOUBLESTRIPLES
+                                                                                                                                              -2: .200[5.08] TERMINAL SPACING                                                                                                                                                                                                                                                                                                                                                     RIGHT ANGLE VERSION                                                                                                                                                                                                                                       RIGHT ANGLE VERSION
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ODD POSITIONS                                                                                                                                                                                                                                             EVEN POSITIONS
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           LOCKING LEAD
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                = CRIMP LOCATION
+                                                                                                                                                                                                                                                                     FIG 4                                                                                                                                                                                                                                                                                                                                                                 TWO CENTER MOST PINS TO BE CRIMPED.
+                                                                                                                                                                                                                                                 LOCKING LEAD                                                                                                                                                                                                                                                                                        ODD POSITIONS, CRIMP CENTER POSITION AND POSITION CLOSEST TO PIN ONE.
+                                                                                                                                                                                                                      (NOTE: END VIEWS SHOWN)                                                                                                                                                                                                                                                                                                                 IF CRIMP POSITION IS POLARIZED, MOVE ONE POSITION TOWARDS PIN ONE.
+                                                                                                                                                                                            (SAME AS FIG 1, DIFFERENT AS SHOWN)
+
+        LTC-01                                                                                                                            LTC-02
+
+
+
+                                                                                                                                                                                                             SEE CRIMP DETAIL
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      .017            0.43                              C
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    MIN                                                            *                                                                                                                                                                                                                                                                                                             *PROPRIETARY NOTE
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                THIS DOCUMENT CONTAINS CONFIDENTIAL AND
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                PROPRIETARY INFORMATION AND ALL DESIGN,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                MANUFACTURING, REPRODUCTION, USE, PATENT RIGHTS
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                AND SALES RIGHTS ARE EXPRESSLY RESERVED BY SAMTEC,
+                                                                                                                                                                      .04            1.0                                                                                                                                                                                                                                                                                                                                                                                                                                        INC. THIS DOCUMENT SHALL NOT BE DISCLOSED, IN WHOLE
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                OR PART, TO ANY UNAUTHORIZED PERSON OR ENTITY NOR                                                                                                                 520 PARK EAST BLVD, NEW ALBANY, IN 47150
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                REPRODUCED, TRANSFERRED OR INCORPORATED IN ANY
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           .0080            0.203                                       C                       OTHER PROJECT IN ANY MANNER WITHOUT THE EXPRESS                                                                                                                   PHONE: 812-944-6733       FAX: 812-948-5047
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                WRITTEN CONSENT OF SAMTEC, INC.                                                                                                                                   e-Mail   info@SAMTEC.com        code  55322
+                                                            SINGLE                                                                       DOUBLE                                                  SINGLE STRAIGHT                                                                            DOUBLE STRAIGHT                                                                                  TRIPLE  STRAIGHT                                                                                                                                               (TYP)                                                                                                                                                                                           DESCRIPTION:
+                                                               -LC-LL                                                                         -LC-LL                                                                             -LL                                                                                           -LL                                                                                           -LL                                                                                                                                                                                                                 DO  NOT  SCALE  DRAWING                                                                                     .025[0.64] SQ. POST TERMINAL STRIP ASSEMBLY
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   CRIMP DETAIL                                                                                                                                                                                                                                                             DWG.  NO.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    SCALE: 4:1                                                                                                                                                   SHEET SCALE: 2:1                                                                                   TSW-XXX-XX-XXX-X-XX-XXX
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     (TYP ALL CRIMPS)
+
+                                                                                                                                                                                                                                                                                                                                                                                    c:\enterprisevault\DWG\MISC\MKTG\TSW-XXX-XX-XXX-X-XX-XXX-MKT.SLDDRW                                                                                                                                                                                                                                                                                                      BY:                   KOLB                                                                                                 08/24/1988                                                                                                                                                                                                            6SHEET     OF3
+
+--- PDF page 4 ---
+REVISION  DS                                                                                                                       FIG 5
+                                                                                                                         (RIGHT ANGLE)                                                                                                                                                                                                                                                                  PIN #3
+                                                                                      (-LA OPTION IS SHOWN ON ALL RIGHT ANGLES
+                                                                                    FOR DIMENSIONAL AND LOCATION PURPOSES.)                                                                                                                                                                                                                                                                PIN #2
+                                                                                                       (SEE CRIMP DETAIL VIEW, SHT 3)
+                                                                                              (SAME AS FIG 1, DIFFERENT AS SHOWN)                                                                                                               PIN #2                                                                                                                           PIN #1
+
+                                     PIN #1                                                                                                                                    PIN #1                                                                                                                                                                                                                                                                                 .320                8.13
+                                                                                                                                                                                                                                              .219                5.56                                                                                                                                                                                                         REF
+                                                                                        .119                3.02                                                                                                                                       REF                                                                                                           .04                1.0
+                                                                                                 REF                                                          .04                1.0
+                     .04                1.0
+                                                                                                                                                                             90°                                                                                                                                                                                                 C      90°
+                                          90°                                                                                                                          C
+                                   C                                                                                                                                                                                                                                                                                                                                                                                                                       .06                1.5
+                                                                                                                                                                                                                                       .06                1.5                                                                                               C     .100                2.54
+                                                                                                                                  C     .100                2.54                                                                                                                                       C       .200                5.08
+             "E" REF                                                                                                                   (SEE NOTE 9)                                                                                                                                                          (SEE NOTE 9)
+       (SEE TABLE 5)                                                                    .060            1.52
+                                                                                                                                                                                                                     "E" REF
+                                            -S-RA/-NA                                                                                                                                                         (SEE TABLE 5)                                                                                                                                     "E" REF
+                                                                                                                                                                                                                                                                                                                                                          (SEE TABLE 5)
+
+                                                                                                                                                                                                           -D                                                                                                                                                       -T
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                         .160            4.06
+
+
+
+                                                -S-RE/-NE
+     (SAME AS -S-RA/-NA VIEW, DIFFERENT AS SHOWN)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                   *                                                                                                                                                                                                                                                                                                             *PROPRIETARY NOTE
+                                                                                                                                                                                                                                                                                                                  THIS DOCUMENT CONTAINS CONFIDENTIAL AND
+                                                                                                                                                                                                                                                                                                                  PROPRIETARY INFORMATION AND ALL DESIGN,
+                                                                                                                                                                                                                                                                                                                  MANUFACTURING, REPRODUCTION, USE, PATENT RIGHTS
+                                                                                                                                                                                                                                                                                                                  AND SALES RIGHTS ARE EXPRESSLY RESERVED BY SAMTEC,
+                                                                                                                                                                                                                                                                                                                  INC. THIS DOCUMENT SHALL NOT BE DISCLOSED, IN WHOLE
+                                                                                                                                                                                                                                                                                                                  OR PART, TO ANY UNAUTHORIZED PERSON OR ENTITY NOR                                 520 PARK EAST BLVD, NEW ALBANY, IN 47150
+                                                                                                                                                                                                                                                                                                                  REPRODUCED, TRANSFERRED OR INCORPORATED IN ANY                                    PHONE: 812-944-6733       FAX: 812-948-5047
+                                                                                                                                                                                                                                                                                                                  OTHER PROJECT IN ANY MANNER WITHOUT THE EXPRESS
+                                                                                                                                                                                                                                                                                                                  WRITTEN CONSENT OF SAMTEC, INC.                                                   e-Mail   info@SAMTEC.com        code  55322
+                                                                                                                                                                                                                                                                                                                                                                                 DESCRIPTION:
+                                                                                                                                                                                                                                                                                                                           DO  NOT  SCALE  DRAWING                                 .025[0.64] SQ. POST TERMINAL STRIP ASSEMBLY
+
+                                                                                                                                                                                                                                                                                                                                   SHEET SCALE: 3:1                              DWG.  NO.
+                                                                                                                                                                                                                                                                                                                                                                                     TSW-XXX-XX-XXX-X-XX-XXX
+
+                                                                                                                                                                                           c:\enterprisevault\DWG\MISC\MKTG\TSW-XXX-XX-XXX-X-XX-XXX-MKT.SLDDRW                                                                                                                    BY:        KOLB                                                                                                 08/24/1988                                                                                                                                                                                                            6SHEET     OF4
+
+--- PDF page 5 ---
+REVISION  DS
+
+
+                                                                                                                                                                                                                                                                                                                                                                              POST AREA
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                BANDOLIER (REF)
+
+
+                                                                                                                                                                                                                                                                                                                                                                              TAIL AREA
+
+
+                                                                                                                                                                                                                                                                                                                                    IN PROCESS 1
+                                                                                                                                                                                                                                                                                                         (SAME AS FIG 1, DIFFERENT AS SHOWN)
+                                                                                                                                                                                                                                                                                                                                      -T PLATING ONLY
+                                                                                                                                                                                                                                                                                                                                 C        (SEE NOTE 11)
+                                                                                                                                                                                                                                                                                                                                           (SEE TABLE 7)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                            *                                                                                                                                                                                                                                                                                                             *PROPRIETARY NOTE
+                                                                                                                                                                                                                                                                                                                                                           THIS DOCUMENT CONTAINS CONFIDENTIAL AND
+                                                                                                                                                                                                                                                                                                                                                           PROPRIETARY INFORMATION AND ALL DESIGN,
+                                                                                                                                                                                                                                                                                                                                                           MANUFACTURING, REPRODUCTION, USE, PATENT RIGHTS
+                                                                                                                                                                                                                                                                                                                                                           AND SALES RIGHTS ARE EXPRESSLY RESERVED BY SAMTEC,
+                                                                                                                                                                                                                                                                                                                                                           INC. THIS DOCUMENT SHALL NOT BE DISCLOSED, IN WHOLE
+                                                                                                                                                                                                                                                                                                                                                           OR PART, TO ANY UNAUTHORIZED PERSON OR ENTITY NOR                                         520 PARK EAST BLVD, NEW ALBANY, IN 47150
+                                                                                                                                                                                                                                                                                                                                                           REPRODUCED, TRANSFERRED OR INCORPORATED IN ANY                                            PHONE: 812-944-6733       FAX: 812-948-5047
+                                                                                                                                                                                                                                                                                                                                                           OTHER PROJECT IN ANY MANNER WITHOUT THE EXPRESS
+                                                                                                                                                                                                                                                                                                                                                           WRITTEN CONSENT OF SAMTEC, INC.                                                           e-Mail   info@SAMTEC.com        code  55322
+                                                                                                                                                                                                                                                                                                                                                                                                                                DESCRIPTION:
+                                                                                                                                                                                                                                                                                                                                                                  DO  NOT  SCALE  DRAWING                                         .025[0.64] SQ. POST TERMINAL STRIP ASSEMBLY
+
+                                                                                                                                                                                                                                                                                                                                                                           SHEET SCALE: 3:1                                     DWG.  NO.
+                                                                                                                                                                                                                                                                                                                                                                                                                                    TSW-XXX-XX-XXX-X-XX-XXX
+
+                                                                                                                                                      c:\enterprisevault\DWG\MISC\MKTG\TSW-XXX-XX-XXX-X-XX-XXX-MKT.SLDDRW                                                                                                                                                                                                       BY:          KOLB                                                                                                 08/24/1988                                                                                                                                                                                                            6SHEET     OF5
+
+--- PDF page 6 ---
+REVISION  DS
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                .025                                                                                       SQ0.64
+                                                                                                                                                                                                                                                                                                                                                                       REF (TYP)
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                        .018                0.46
+                                                                                                                                                                                                                                                                                                                                                                          REF (TYP)
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                         FIG 6
+                                                                                                                                                                                                                                                                                                                                                                                              (-26 LEAD STYLE)
+                                                                                                                                                                                                                                                                                                                                                                   (SAME AS FIG. 1, DIFFERENT AS SHOWN)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   (1) .230[5.84] POST FOR -RA OR -RE OPTION                                                                          (5) AVAILABLE IN -LL OPTION
+                   (2) OMIT WITH -Q ROW SPECIFICATION                                                                                 (6) AVAILABLE IN -LA OPTION                                                              .005[0.13]
+                   (3) NOT AVAILABLE IN -RA OR -RE OPTION                                                                             (7) ON STYLE -08 -LA, RA: "C" =  .230[5.84]±    .008[0.20]
+                   (4) NOT AVAILABLE IN -RE OPTION                                                                                    (8) 1.220[30.99] POST FOR STRAIGHT PIN VERSION                                                                                                                           *                                                                                                                                                                                                                                                                                                             *PROPRIETARY NOTE
+                                                                                                                                                                                                                                                                                                              THIS DOCUMENT CONTAINS CONFIDENTIAL AND
+                                                                                                                                                                                                                                                                                                              PROPRIETARY INFORMATION AND ALL DESIGN,
+                  * SQUARE END OF PIN (T-1RS7-01-XXX-2 SHOULD BE LOCATED AT "C" DIMENSION DURING FILL PROCESS.                                                                                                                                                                                                MANUFACTURING, REPRODUCTION, USE, PATENT RIGHTS
+                  (SEE FIG. 6)                                                                                                                                                                                                                                                                                AND SALES RIGHTS ARE EXPRESSLY RESERVED BY SAMTEC,
+                                                                                                                                                                                                                                                                                                              INC. THIS DOCUMENT SHALL NOT BE DISCLOSED, IN WHOLE
+                                                                                                                                                                                                                                                                                                              OR PART, TO ANY UNAUTHORIZED PERSON OR ENTITY NOR                               520 PARK EAST BLVD, NEW ALBANY, IN 47150
+                                                                                                                                                                                                                                                                                                              REPRODUCED, TRANSFERRED OR INCORPORATED IN ANY                                  PHONE: 812-944-6733       FAX: 812-948-5047
+                                                                                                                                                                                                                                                                                                              OTHER PROJECT IN ANY MANNER WITHOUT THE EXPRESS
+                                                                                                                                                                                                                                                                                                              WRITTEN CONSENT OF SAMTEC, INC.                                                 e-Mail   info@SAMTEC.com        code  55322
+                                                                                                                                                                                                                                                                                                                                                                           DESCRIPTION:
+                                                                                                                                                                                                                                                                                                                      DO  NOT  SCALE  DRAWING                                .025[0.64] SQ. POST TERMINAL STRIP ASSEMBLY
+
+                                                                                                                                                                                                                                                                                                                              SHEET SCALE: 3:1                             DWG.  NO.
+                                                                                                                                                                                                                                                                                                                                                                             TSW-XXX-XX-XXX-X-XX-XXX
+
+                                                                                                                                                       c:\enterprisevault\DWG\MISC\MKTG\TSW-XXX-XX-XXX-X-XX-XXX-MKT.SLDDRW                                                                                                                                                 BY:         KOLB                                                                                                 08/24/1988                                                                                                                                                                                                            6SHEET     OF6

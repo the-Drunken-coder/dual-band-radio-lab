@@ -1,0 +1,18 @@
+reference,value,mpn,supplier,quantity,purpose,assembly,footprint,source
+J1,TSW-110-07-G-S,TSW-110-07-G-S,,1,Slot A,factory,RadioLab:TSW_1x10,Samtec tsw/ssq-drawing.pdf and footprint.pdf
+J2,TSW-108-07-G-S,TSW-108-07-G-S,,1,Slot B,factory,RadioLab:TSW_1x8,Samtec tsw/ssq-drawing.pdf and footprint.pdf
+U1,E28-2G4M27S,E28-2G4M27S,C411312,1,2.4 GHz lane; mandatory IPEX antenna variant,"Factory: populate IPEX; selector link in manual 9.2 IPEX position, PCB-antenna branch open; no user rework",RadioLab:E28_2G4M27S,"E28 manual section 3, PDF page 5"
+U2,AP63203WU-7,AP63203WU-7,,1,"5 V to 3.3 V buck, 2 A part rating",factory,Package_TO_SOT_SMD:TSOT-23-6,"DS41326 Rev 3-2, pages 2, 13, 15, 17"
+L1,4.7uH,XAL5030-472MEC,,1,"6.7 A saturation, 40 mOhm maximum DCR",factory,Inductor_SMD:L_Coilcraft_XAL5030-XXX,"Coilcraft; 4.7 uH 20%, 6.7 A Isat, 40 mOhm max; xal50xx.pdf"
+C1,22uF,C3225X7R1E226M250AB,,1,Buck input capacitor,factory,Capacitor_SMD:C_1210_3225Metric,TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md
+C2,22uF,C3225X7R1E226M250AB,,1,Buck output capacitor 1,factory,Capacitor_SMD:C_1210_3225Metric,TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md
+C3,22uF,C3225X7R1E226M250AB,,1,Buck output capacitor 2,factory,Capacitor_SMD:C_1210_3225Metric,TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md
+C4,100nF,GRM188R71H104KA93D,,1,Bootstrap capacitor,factory,Capacitor_SMD:C_0603_1608Metric,Murata; 100 nF 50 V X7R 10%
+C5,220uF,EEEFK1A221P,,1,Local slot input bulk; eFuse controlled ramp on carrier,factory,RadioLab:Panasonic_FK_E_8x6.2,Panasonic; 220 uF 10 V 20%; panasonic-fk.pdf
+C6,100nF,GRM188R71H104KA93D,,1,Module ceramic decoupling,factory,Capacitor_SMD:C_0603_1608Metric,Murata; 100 nF 50 V X7R 10%
+C7,22uF,C3225X7R1E226M250AB,,1,Buck output capacitor 3; DC-bias margin,factory,Capacitor_SMD:C_1210_3225Metric,TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md
+C8,22uF,C3225X7R1E226M250AB,,1,Buck input capacitor 2; DC-bias margin,factory,Capacitor_SMD:C_1210_3225Metric,TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md
+R1,10k,RC0603FR-0710KL,,1,"Default deselected, radio-domain pull-up",factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R2,10k,RC0603FR-0710KL,,1,Default released; PA/LNA stay disabled and CS stays high until host initializes,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R3,10k,RC0603FR-0710KL,,1,Default PA/LNA inactive,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R4,10k,RC0603FR-0710KL,,1,Default PA/LNA inactive,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W

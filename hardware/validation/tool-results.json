@@ -1,0 +1,26 @@
+[
+  {
+    "project": "core2021-hf-m-rev-a",
+    "pdf": 0,
+    "netlist": 0,
+    "erc": 0
+  },
+  {
+    "project": "e22-900m30s-rev-a",
+    "pdf": 0,
+    "netlist": 0,
+    "erc": 0
+  },
+  {
+    "project": "e28-2g4m27s-rev-a",
+    "pdf": 0,
+    "netlist": 0,
+    "erc": 0
+  },
+  {
+    "project": "carrier-rev-a",
+    "pdf": 0,
+    "netlist": 0,
+    "erc": 0
+  }
+]

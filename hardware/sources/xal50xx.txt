@@ -1,0 +1,314 @@
+
+--- PDF page 1 ---
+  Web                        Sample                       Tools &                       Suppor t                                                                                             Document 908-1
+  page                       & bu                       y software                      & FA                       Q
+Shielded Power Inductors – X AL50xx
+
+
+
+
+
+                                                                                                                    •  High current; ver y low DCR; soft saturation
+                                                                                                                    •  AEC-Q200 qualified
+
+
+
+                                                                                                                    Designer’s Kit C445 contains 3 of each value
+                                                                                                                    Core materialComposite
+                                                                                                                    Environmental       RoHS compliant, halogen free
+                                                                                                                    Terminations       RoHS compliant tin-silver (96.5/3.5) over copper
+                                                                                                                    Other terminations available at additional cost.
+                                                                                                                    WeightXAL5030               : 0.44 – 0.51g;         XAL5050: 0.74 – 0.80g
+                                                                                                                    Operating voltage:               60V    7
+                                                                                                                    Ambient temperature       –40°C to +125°C with (40°C rise) Irms current.
+                                                                                                                    Maximum part temperature       +165°C (ambient + temp rise). Derating.
+                                                                                                                    Storage temperature       Component: –55°C to +165°C.
+                                                                                                                    Tape and reel packaging: –55°C to +80°C
+                                                                                                                    Resistance to soldering heat                      Max three 40 second reflows at
+                                                                                                                    +260°C, par ts cooled to room temperature between cycles
+                                                                                                                    Moisture Sensitivity Level (MSL)       1 (unlimited floor life at <30°C /
+                                                                                                                    85% relative humidity)
+                                                                                                                    PCB washing      Tested to MIL-STD-202 Method 215 plus an additional
+                                                                                                                    aqueous wash. See Doc787_PCB_Washing.pdf.
+
+
+                               Inductance2  DCR (mOhms)3                                     SRF          typ4      Isat5  Irms (A)6
+   Part number1                                                 ±20% (µH)                                                                                                                                                                                                                         typ                                                                                            max                                                                                                                                                              (MHz)                                                                                                                                                                      (A)                                                                                   20°C rise                                                                                                                                                 40°C rise
+XAL5030-161ME_                           0.16            2.152.36                        183          31.0        14.2         22.2
+XAL5030-331ME_                           0.33            3.203.52                        108          26.0        13.8         19.2
+XAL5030-601ME_                           0.60            4.114.52                          75        19.8        13.6         17.7
+XAL5030-801ME_                           0.80            5.145.65                          63        18.5        10.0         13.0
+XAL5030-102ME_                           1.0            8.509.40                          68        14.0          8.7       11.1
+XAL5030-122ME_                                    1.2               11.4012.40                                      45            12.5              7.9           10.4
+XAL5030-222ME_                                    2.2               13.2014.50                                      38              9.2            7.2              9.7
+XAL5030-332ME_                                    3.3               21.2023.30                                      28              8.7            5.9              8.1
+XAL5030-472ME_                                    4.7               36.0040.00                                      23              6.7            4.3              5.9
+XAL5050-472ME_                                    4.7               21.9524.15                                      29              6.6            6.1              8.2
+XAL5050-562ME_                                    5.6               23.4525.80                                      25              6.3            5.3              7.2
+XAL5050-682ME_                                    6.8               26.7529.45                                      21              6.0            4.7              6.4
+XAL5050-822ME_                                    8.2               31.7534.95                                      18              5.6            4.5              6.1
+XAL5050-103ME_                                  10                 40.9045.00                                      15              4.9            3.6              4.9
+XAL5050-153ME_                                  15                 69.7076.70                                      13              3.7            2.9              3.9
+XAL5050-223ME_                                  22                 90.6099.65                                      11              3.6            2.5              3.4
+
+1.      When ordering, please specify termination and packaging codes:                                              2.                               Inductance tested at 1 MHz, 0.1                Vrms, 0                                                                                                         Adc.
+                                XAL5050-223MEC                                                                      3.      DCR measured on a micro-ohmmeter.
+    Termination: E           =         Halogen free component. RoHS compliant tin-silver                            4.      SRF measured using Agilent/HP 4395A or equivalent.
+                                over copper terminations.                                                           5.      DC current at 25°C that causes an inductance drop of 30% (typ) from
+                                Special order: T = RoHS tin-silver-copper                                               its value without current.
+                                (95.5/4/0.5) or S = non-RoHS tin-lead (63/37).                                          Click for temperature derating information.
+    Packaging:           C   =    7″ machine-ready reel. EIA-481 embossed plastic                                   6.      Current that causes the specified temperature rise from 25°C ambient.
+                                tape.Quantities less than full reel available: in tape                                  This information is for reference only and does not represent absolute
+                                (not machine ready) or with leader and trailer ($25                                     maximum ratings. Temperature rise is highly dependent on many
+                                charge).                                                                                factors including pcb land pattern, trace size, air flow, and proximity
+      B                      =  Less than full reel. In an effor t to simplify our par t                                to other components. Therefore temperature rise should be verified in
+                                numbering system, Coilcraft is eliminating the need                                     application conditions. Click for temperature derating information.
+                                for multiple packaging codes. When ordering, simply                                 7.      Voltage capability varies by par t number and in many cases may be
+                                change the last letter of your par t number from B to C.                                higher than the listed voltage.
+                       D     =13″ machine-ready reel. EIA-481 embossed plastic                                      8.      Electrical specifications at 25°C.
+                                tape. Factory order only, not stocked                                               Refer to Doc 362 “Soldering Surface Mount Components” before soldering.
+
+
+                                                                                                                                                                       Document 908-1                                                                                                                                                                                                                                          Revised 02/26/26
+
+--- PDF page 2 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Document 908-2
+
+
+
+
+L vs Current
+
+             0.30                                                                                                                                                                                                                                                                                                                                                2.0
+             0.25                                                                                                                                                                                                                                                                                                                                                1.6
+             0.20                                                                                                                                           0.16 µH                                                                                                                                                                                              1.2
+              0.15                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           1.2 µH
+               0.10                                                                                                                                                                                                                                                                                                                                              0.8
+
+              0.05                                                                                                                                                                                                                                                                                                                                               0.4
+        Inductance (µH)   0                                                                                                                                                                                                                                                                                                                           Inductance (µH)   0
+                                 0                                     5101520253035                                                                                                                                                                                                                                                                                           0                1                 2                  3                 4                                     56                                     798                            10                  11               12                 13                14            15
+                                                                                                                                               Current (A)                                                                                                                                                                                                                                                                                                                                   Current (A)
+
+
+                  0.6                                                                                                                                                                                                                                                                                                                                            4.0
+                  0.5                                                                                                                                                                                                                                                                                                                                            3.5
+                                                                                                                                                                                                                                                                                                                                                                 3.0
+                  0.4                                                                                                                                                                                                                                                                                                                                            2.5                                                                                                                                         2.2 µH
+                  0.3                                                                                                                                       0.33 µH                                                                                                                                                                                              2.0
+                  0.2                                                                                                                                                                                                                                                                                                                                            1.5
+                    0.1                                                                                                                                                                                                                                                                                                                                          1.0
+        Inductance (µH)                                                                                                                                                                                                                                                                                                                               Inductance (µH)0.5
+                          0                                                                                                                                                                                                                                                                                                                                             0
+                                 0                                           5                                                                                                            10                                                                                                     15                                                                                                     20                                                                                                     253002                                                  34                                                  57                                                  89                                           10                                    111612
+                                                                                                                                               Current (A)                                                                                                                                                                                                                                                                                                                                   Current (A)
+
+
+
+                  1.0                                                                                                                                                                                                                                                                                                                                                   5
+                  0.8                                                                                                                                                                                                                                                                                                                                                   4
+
+                  0.6                                                                                                                                       0.60 µH                                                                                                                                                                                                     3
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             3.3 µH
+                  0.4                                                                                                                                                                                                                                                                                                                                                   2
+
+                  0.2                                                                                                                                                                                                                                                                                                                                                   1
+        Inductance (µH)   0                                                                                                                                                                                                                                                                                                                           Inductance (µH)   0
+                                 0                                                                                                                                          5                                                                                                                                     10                                                                                                                              15                                                                                                                              202502                                                  34                                                  57                                                  89                                           10                                    111612
+                                                                                                                                               Current (A)                                                                                                                                                                                                                                                                                                                                   Current (A)
+
+
+                  1.2                                                                                                                                                                                                                                                                                                                                                   6                                                                                                                                                                                                                                                    XAL5030
+                  1.0                                                                                                                                                                                                                                                                                                                                                   5
+                  0.8                                                                                                                                                                                                                                                                                                                                                   4                                                                                                                                    4.7 µH
+                  0.6                                                                                                                                       0.80 µH                                                                                                                                                                                                     3
+                  0.4                                                                                                                                                                                                                                                                                                                                                   2
+        Inductance (µH)0.2                                                                                                                                                                                                                                                                                                                            Inductance (µH)   1
+                          0                                                                                                                                                                                                                                                                                                                                             0
+                                 0                                                          24                                                               68                                                        10                                                 12                                                 14                                                 16                                                 182002                                                               34                                                               57                                                               8916             10
+                                                                                                                                               Current (A)                                                                                                                                                                                                                                                                                                                                   Current (A)
+
+
+                  1.6                                                                                                                                                                                                                                                                                                                                                   8
+                                                                                                                                                                                                                                                                                                                                                                        7                                                                                                                                                                                                                                                    XAL5050
+                  1.2                                                                                                                                                                                                                                                                                                                                                   6
+                                                                                                                                                               1.0 µH                                                                                                                                                                                                   5                                                                                                                                    4.7 µH
+                  0.8                                                                                                                                                                                                                                                                                                                                                   4
+                                                                                                                                                                                                                                                                                                                                                                        3
+                  0.4                                                                                                                                                                                                                                                                                                                                                   2
+        Inductance (µH)                                                                                                                                                                                                                                                                                                                               Inductance (µH)   1
+                          0                       1                 2                 3                  4                                     56                                     798                                                                                                                                                                               0
+                                 0                                                                                                                                                                                   10                 11                12                13                 14           15                                                                 0                                                                                                                                                                                                                                                                    3.00.51.01.52.02.5                                                                                                                 4.03.5                                                                                                                 5.04.5                                                                                                                 6.05.56.57.0             7.58.0
+                                                                                                                                               Current (A)                                                                                                                                                                                                                                                                                                                                   Current (A)
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Document 908-2                                                                                                                                                                                                                                          Revised 02/26/26
+
+--- PDF page 3 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Document 908-3
+
+
+
+
+L vs Current
+
+                          8                                                                                                                                                                                                                                                                                                                                                   30
+                           7                                                                                                                                                                                                                                                                                                                                                  25
+                           6                                                                                                                                                                                                                                                                                                                                                  20
+                           5                                                                                                                                        5.6 µH
+                           4                                                                                                                                                                                                                                                                                                                                                  15                                                                                                                                             22 µH
+                           3                                                                                                                                                                                                                                                                                                                                                  10
+                          2                                                                                                                                                                                                                                                                                                                                                        5
+        Inductance (µH)   1                                                                                                                                                                                                                                                                                                                                      Inductance (µH)
+                          0                                                                                                                                                                                                                                                                                                                                                        0
+                                  02                                                                                  341                                                                                         57                                                                             86                                                                                       0                              0.5                                1.0                                 1.5                                                              2.0                                                              2.5                                                              3.03.54.0
+                                                                                                                                                   Current (A)                                                                                                                                                                                                                                                                                                                                              Current (A)
+
+
+                      10
+                          8
+
+                          6
+                          4                                                                                                                                         6.8 µH
+
+                           2
+        Inductance (µH)   0
+                                  02                                                                                  341                                                                                         57                                                                             86
+                                                                                                                                                   Current (A)
+
+
+                     12
+                     10
+                          8
+                          6                                                                                                                                         8.2 µH
+
+                          4
+        Inductance (µH)    2
+                          0
+                                  0                                                                                                     1.0                             1.5                             2.0                             2.5                                                                                              3.5                             4.0                             4.5                             5.0                             5.50.53.06.0
+                                                                                                                                                   Current (A)
+
+
+                     16
+
+                     12
+
+                          8                                                                                                                                          10 µH
+
+                          4
+        Inductance (µH)   0
+                                  0                                                0.5                                          1.0                                          1.5                                                                                                                        2.5                                          3.0                                          3.5                                          4.0                                          4.52.05.0
+                                                                                                                                                   Current (A)
+
+
+                     20
+                     16
+
+                     12                                                                                                                                              15 µH
+
+                           8
+
+                          4
+        Inductance (µH)   0
+                                  0                              0.5                                1.0                                1.5                                                              2.0                                                              2.5                                                              3.03.54.0
+                                                                                                                                                   Current (A)
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Document 908-3                                                                                                                                                                                                                                          Revised 02/26/26
+
+--- PDF page 4 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                Document 908-4
+
+
+
+
+
+Typical L vs Frequency
+
+          100
+
+                                                                                                                                                    22 µH             15 µH
+
+                                                                                                                                                                             10 µH
+                                                                                                                                                                                        6.8 µH
+              10                                                                                                                                                                          4.7 µH
+                                                                                                                                                                                               3.3 µH
+                                                                                                                                                                                                           2.2 µH
+                                                                                                                                                                                                                1.0 µH
+                                                                                                                                                                                                                     0.80 µH
+
+      Inductance (µH)1
+
+                                                                                                                                                                                      0.60 µH
+                                                                                                                                                                                            0.33 µH
+
+            0.1                                                                                                                                                                                    0.16 µH
+                        0.1                                                                                                                                                                                                                              1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   10010
+                                                                                                 Frequency (MHz)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                Packaging
+                                                                                                                                                                                                                                                                XAL5030                                  400/7″ reel; 1500/13″ reel                                                                               Plastic tape:       16 mm wide,
+                                                                                                                                                                                                                                                                0.3mm thick, 12 mm pocket spacing, 3.18 mm pocket depth
+                                                                                                                                                                                                                                                                XAL5050                                  250/7″ reel; 750/13″ reel                                                                               Plastic tape:       16 mm wide,
+                                                                                                                                                                                                                                                                0.3mm thick, 12 mm pocket spacing, 5.21 mm pocket depth
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                Document 908-4                                                                                                                                                                                                                                          Revised 02/26/26

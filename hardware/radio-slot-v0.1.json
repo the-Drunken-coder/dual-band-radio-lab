@@ -1,0 +1,25 @@
+{
+  "status": "SCHEMATIC_REVIEW_NO_LAYOUT",
+  "A": {
+    "1": "GND",
+    "2": "SLOT_5V",
+    "3": "SLOT_5V",
+    "4": "GND",
+    "5": "SPI_SCK",
+    "6": "SPI_MOSI",
+    "7": "SPI_MISO",
+    "8": "CS_N",
+    "9": "RESET_N",
+    "10": "GND"
+  },
+  "B": {
+    "1": "BUSY",
+    "2": "IRQ",
+    "3": "TX_EN",
+    "4": "RX_EN",
+    "5": "AUX0",
+    "6": "AUX1",
+    "7": "IOREF_3V3",
+    "8": "GND"
+  }
+}

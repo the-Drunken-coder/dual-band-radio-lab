@@ -1,0 +1,245 @@
+[
+  {
+    "reference": "J1",
+    "value": "TSW-110-07-G-S",
+    "symbol": "Header_1x10",
+    "mpn": "TSW-110-07-G-S",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Slot A",
+    "assembly": "factory",
+    "source": "Samtec tsw/ssq-drawing.pdf and footprint.pdf",
+    "footprint": "RadioLab:TSW_1x10",
+    "nets": {
+      "1": "GND",
+      "2": "SLOT_5V",
+      "3": "SLOT_5V",
+      "4": "GND",
+      "5": "SPI_SCK",
+      "6": "SPI_MOSI",
+      "7": "SPI_MISO",
+      "8": "CS_N",
+      "9": "RESET_N",
+      "10": "GND"
+    }
+  },
+  {
+    "reference": "J2",
+    "value": "TSW-108-07-G-S",
+    "symbol": "Header_1x8",
+    "mpn": "TSW-108-07-G-S",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Slot B",
+    "assembly": "factory",
+    "source": "Samtec tsw/ssq-drawing.pdf and footprint.pdf",
+    "footprint": "RadioLab:TSW_1x8",
+    "nets": {
+      "1": "BUSY",
+      "2": "IRQ",
+      "3": null,
+      "4": null,
+      "5": "AUX0",
+      "6": null,
+      "7": null,
+      "8": "GND"
+    }
+  },
+  {
+    "reference": "U1",
+    "value": "Core2021-HF-M plug-in",
+    "symbol": "Core2021_HF_M",
+    "mpn": "Core2021-HF-M",
+    "supplier": "Waveshare SKU 34523",
+    "quantity": 1,
+    "purpose": "915 MHz FLRC",
+    "assembly": "User plugs into factory-soldered sockets",
+    "source": "Waveshare Core2021-HF schematic, sheet 1, U2",
+    "footprint": "",
+    "nets": {
+      "2": "GND",
+      "3": "IRQ",
+      "4": "AUX0",
+      "7": "GND",
+      "8": "RADIO_3V3",
+      "9": "BUSY",
+      "10": "RESET_N",
+      "11": "SPI_MISO",
+      "12": "SPI_MOSI",
+      "13": "SPI_SCK",
+      "14": "CS_N",
+      "15": "GND"
+    }
+  },
+  {
+    "reference": "J3",
+    "value": "SSQ-108-01-G-S",
+    "symbol": "Header_1x8",
+    "mpn": "SSQ-108-01-G-S",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Core socket pins 1-8",
+    "assembly": "factory",
+    "source": "Samtec tsw/ssq-drawing.pdf and footprint.pdf",
+    "footprint": "RadioLab:SSQ_1x8",
+    "nets": {
+      "1": null,
+      "2": "GND",
+      "3": "IRQ",
+      "4": "AUX0",
+      "5": null,
+      "6": null,
+      "7": "GND",
+      "8": "RADIO_3V3"
+    }
+  },
+  {
+    "reference": "J4",
+    "value": "SSQ-108-01-G-S",
+    "symbol": "Header_1x8",
+    "mpn": "SSQ-108-01-G-S",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Core socket pins 9-16",
+    "assembly": "factory",
+    "source": "Samtec tsw/ssq-drawing.pdf and footprint.pdf",
+    "footprint": "RadioLab:SSQ_1x8",
+    "nets": {
+      "1": "BUSY",
+      "2": "RESET_N",
+      "3": "SPI_MISO",
+      "4": "SPI_MOSI",
+      "5": "SPI_SCK",
+      "6": "CS_N",
+      "7": "GND",
+      "8": null
+    }
+  },
+  {
+    "reference": "U2",
+    "value": "AP2112K-3.3TRG1",
+    "symbol": "AP2112K_3_3TRG1",
+    "mpn": "AP2112K-3.3TRG1",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Local 3.3 V supply",
+    "assembly": "factory",
+    "source": "DS39724 Rev 2-2, pages 1-3",
+    "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+    "nets": {
+      "1": "SLOT_5V",
+      "2": "GND",
+      "3": "SLOT_5V",
+      "5": "RADIO_3V3"
+    }
+  },
+  {
+    "reference": "C1",
+    "value": "22uF",
+    "symbol": "Capacitor_value_only",
+    "mpn": "C3225X7R1E226M250AB",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "LDO/module ceramic decoupling",
+    "assembly": "factory",
+    "source": "TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md",
+    "footprint": "Capacitor_SMD:C_1210_3225Metric",
+    "nets": {
+      "1": "SLOT_5V",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "C2",
+    "value": "22uF",
+    "symbol": "Capacitor_value_only",
+    "mpn": "C3225X7R1E226M250AB",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "LDO/module ceramic decoupling",
+    "assembly": "factory",
+    "source": "TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md",
+    "footprint": "Capacitor_SMD:C_1210_3225Metric",
+    "nets": {
+      "1": "RADIO_3V3",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "C3",
+    "value": "100nF",
+    "symbol": "Capacitor_value_only",
+    "mpn": "GRM188R71H104KA93D",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "LDO/module ceramic decoupling",
+    "assembly": "factory",
+    "source": "Murata; 100 nF 50 V X7R 10%",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "nets": {
+      "1": "RADIO_3V3",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "C4",
+    "value": "22uF",
+    "symbol": "Capacitor_value_only",
+    "mpn": "C3225X7R1E226M250AB",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "LDO/module ceramic decoupling",
+    "assembly": "factory",
+    "source": "TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md",
+    "footprint": "Capacitor_SMD:C_1210_3225Metric",
+    "nets": {
+      "1": "RADIO_3V3",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "R1",
+    "value": "10k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0710KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Default deselected, radio-domain pull-up",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "RADIO_3V3",
+      "2": "CS_N"
+    }
+  },
+  {
+    "reference": "R2",
+    "value": "10k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0710KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Default released; PA/LNA stay disabled and CS stays high until host initializes",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "RADIO_3V3",
+      "2": "RESET_N"
+    }
+  },
+  {
+    "reference": "H1",
+    "value": "M3 alignment hole",
+    "symbol": "Mechanical",
+    "mpn": "MECH-NPTH-3.4",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Required daughtercard post clearance; 3.4 mm NPTH, 7 mm keepout",
+    "assembly": "factory",
+    "source": "radio-slot-v0.1.md; Accu SSCF-M3-25-A2 dimensions",
+    "footprint": "RadioLab:Alignment_M3_3.4mm",
+    "nets": {}
+  }
+]

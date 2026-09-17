@@ -1,0 +1,60 @@
+reference,value,mpn,supplier,quantity,purpose,assembly,footprint,source
+U1,"Pico 2 with headers, SC1632",SC1632,,1,Removable controller,User plug-in,,Pico 2 datasheet sections 5.2 and 5.5
+J10,SSQ-120-01-G-S,SSQ-120-01-G-S,,1,"Pico left socket, physical pins 1-20",factory,RadioLab:SSQ_1x20,Samtec tsw/ssq-drawing.pdf and footprint.pdf
+J11,SSQ-120-01-G-S,SSQ-120-01-G-S,,1,"Pico right socket, physical pins 21-40",factory,RadioLab:SSQ_1x20,Samtec tsw/ssq-drawing.pdf and footprint.pdf
+J1,SSQ-110-01-G-S,SSQ-110-01-G-S,,1,S1 slot A,factory,RadioLab:SSQ_1x10,Samtec tsw/ssq-drawing.pdf and footprint.pdf
+J2,SSQ-108-01-G-S,SSQ-108-01-G-S,,1,S1 slot B,factory,RadioLab:SSQ_1x8,Samtec tsw/ssq-drawing.pdf and footprint.pdf
+J3,SSQ-110-01-G-S,SSQ-110-01-G-S,,1,S2 slot A,factory,RadioLab:SSQ_1x10,Samtec tsw/ssq-drawing.pdf and footprint.pdf
+J4,SSQ-108-01-G-S,SSQ-108-01-G-S,,1,S2 slot B,factory,RadioLab:SSQ_1x8,Samtec tsw/ssq-drawing.pdf and footprint.pdf
+J5,SSQ-110-01-G-S,SSQ-110-01-G-S,,1,S3 slot A,factory,RadioLab:SSQ_1x10,Samtec tsw/ssq-drawing.pdf and footprint.pdf
+J6,SSQ-108-01-G-S,SSQ-108-01-G-S,,1,S3 slot B,factory,RadioLab:SSQ_1x8,Samtec tsw/ssq-drawing.pdf and footprint.pdf
+J7,SSQ-110-01-G-S,SSQ-110-01-G-S,,1,S4 slot A,factory,RadioLab:SSQ_1x10,Samtec tsw/ssq-drawing.pdf and footprint.pdf
+J8,SSQ-108-01-G-S,SSQ-108-01-G-S,,1,S4 slot B,factory,RadioLab:SSQ_1x8,Samtec tsw/ssq-drawing.pdf and footprint.pdf
+J9,5 V / 4 A INPUT,1757242,,1,12 A keyed input header; mating 1757019 plug,factory,"Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal",Phoenix Contact 1757242 manufacturer page
+U2,TPS259470LRPWR,TPS259470LRPWR,,1,"Reverse polarity/current, OV/UV, current limit and inrush; latch off",factory,RadioLab:TPS25947_RPW0010A,"SLVSFC9C May 2026 sections 5,7,8"
+Q1,DMG2305UX-7,DMG2305UX-7,,1,"Pico documented external-source ORing: D=external, S=VSYS, G=VBUS",factory,Package_TO_SOT_SMD:SOT-23,Pico 2 figure 9; DMG2305UX DS36196
+U3,AP2112K-3.3TRG1,AP2112K-3.3TRG1,,1,External-only radio interface and expander supply,factory,Package_TO_SOT_SMD:SOT-23-5,AP2112 DS39724
+U4,MCP23S17-E/SO,MCP23S17-E/SO,,1,Noncritical reset and pre-command RF-switch state,factory,Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm,Microchip DS20001952C; SOIC pin table
+U5,SN74LVC8T245PWR,SN74LVC8T245PWR,,1,Dual-supply power-off isolation; fixed direction,factory,Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm,"SCES584D May 2026 sections 4,7.3.3,8.3"
+U6,SN74LVC8T245PWR,SN74LVC8T245PWR,,1,Dual-supply power-off isolation; fixed direction,factory,Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm,"SCES584D May 2026 sections 4,7.3.3,8.3"
+U7,SN74LVC1T45DBVR,SN74LVC1T45DBVR,,1,MISO radio-to-Pico power-off isolation,factory,Package_TO_SOT_SMD:SOT-23-6,SCES515N June 2024 sections 4 and 7
+R1,267k,RC0603FR-07267KL,,1,UVLO upper,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R2,100k,RC0603FR-07100KL,,1,UVLO lower,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R3,340k 0.1%,RT0603BRD07340KL,,1,OVLO upper,factory,Resistor_SMD:R_0603_1608Metric,Yageo RT0603; 0.1% 25 ppm/K
+R4,100k 0.1%,RT0603BRD07100KL,,1,OVLO lower,factory,Resistor_SMD:R_0603_1608Metric,Yageo RT0603; 0.1% 25 ppm/K
+R5,715,RC0603FR-07715RL,,1,4.66 A nominal current limit,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+C1,10nF,GRM188R71H103KA01D,,1,25 ms nominal 5 V ramp,factory,Capacitor_SMD:C_0603_1608Metric,Murata; 10 nF 50 V X7R 10%
+C2,1uF,GRM21BR71C105KA01L,,1,Input HF bypass,factory,Capacitor_SMD:C_0805_2012Metric,Murata; 1 uF 16 V X7R 10%
+C3,220uF,EEEFK1A221P,,1,Protected bus bulk,factory,RadioLab:Panasonic_FK_E_8x6.2,Panasonic; 220 uF 10 V 20%; panasonic-fk.pdf
+C4,22uF,C3225X7R1E226M250AB,,1,U3 input bypass,factory,Capacitor_SMD:C_1210_3225Metric,TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md
+C5,22uF,C3225X7R1E226M250AB,,1,U3 output bypass,factory,Capacitor_SMD:C_1210_3225Metric,TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md
+C6,100nF,GRM188R71H104KA93D,,1,U4 bypass,factory,Capacitor_SMD:C_0603_1608Metric,Murata; 100 nF 50 V X7R 10%
+C7,100nF,GRM188R71H104KA93D,,1,U5 VCCA bypass,factory,Capacitor_SMD:C_0603_1608Metric,Murata; 100 nF 50 V X7R 10%
+C8,100nF,GRM188R71H104KA93D,,1,U5 VCCB bypass,factory,Capacitor_SMD:C_0603_1608Metric,Murata; 100 nF 50 V X7R 10%
+C9,100nF,GRM188R71H104KA93D,,1,U6 VCCA bypass,factory,Capacitor_SMD:C_0603_1608Metric,Murata; 100 nF 50 V X7R 10%
+C10,100nF,GRM188R71H104KA93D,,1,U6 VCCB bypass,factory,Capacitor_SMD:C_0603_1608Metric,Murata; 100 nF 50 V X7R 10%
+C11,100nF,GRM188R71H104KA93D,,1,U7 VCCA bypass,factory,Capacitor_SMD:C_0603_1608Metric,Murata; 100 nF 50 V X7R 10%
+C12,100nF,GRM188R71H104KA93D,,1,U7 VCCB bypass,factory,Capacitor_SMD:C_0603_1608Metric,Murata; 100 nF 50 V X7R 10%
+R6,10k,RC0603FR-0710KL,,1,Interface disabled during Pico reset,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R7,100k,RC0603FR-07100KL,,1,P-MOS gate discharge with USB absent,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R8,10k,RC0603FR-0710KL,,1,Expander held reset if interface disabled,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R9,10k,RC0603FR-0710KL,,1,Expander deselect default,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R10,100k,RC0603FR-07100KL,,1,Defined idle shared MISO,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R11,1k,RC0603FR-071KL,,1,Bus discharge: 5 mA at 5 V,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R12,1k,RC0603FR-071KL,,1,Logic discharge: 3.3 mA,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R13,10k,RC0603FR-0710KL,,1,Boot-safe expander reset,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R14,10k,RC0603FR-0710KL,,1,Pico-side deselect before enabling U5,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R15,10k,RC0603FR-0710KL,,1,Pico-side deselect before enabling U5,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R16,10k,RC0603FR-0710KL,,1,Pico-side deselect before enabling U5,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R17,10k,RC0603FR-0710KL,,1,Pico-side deselect before enabling U5,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R18,10k,RC0603FR-0710KL,,1,Pico-side deselect before enabling U5,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+R19,100,RC0603FR-07100RL,,1,TI recommended series damping for CdVdt above 10 nF including tolerance,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+H1,Captive M3 x 25 alignment post,SSCF-M3-25-A2,,1,"S1 anti-offset and anti-reversal post, installed from below",factory,RadioLab:Alignment_M3_3.4mm,Accu product datasheet 642039; radio-slot-v0.1.md
+MP1,M3 captive-post clamp nut,HPN-M3-A2,,1,Factory threadlocked clamp nut for H1,factory,,"Accu HPN-M3-A2, 5.5 mm AF, 2.4 mm thick"
+H2,Captive M3 x 25 alignment post,SSCF-M3-25-A2,,1,"S2 anti-offset and anti-reversal post, installed from below",factory,RadioLab:Alignment_M3_3.4mm,Accu product datasheet 642039; radio-slot-v0.1.md
+MP2,M3 captive-post clamp nut,HPN-M3-A2,,1,Factory threadlocked clamp nut for H2,factory,,"Accu HPN-M3-A2, 5.5 mm AF, 2.4 mm thick"
+H3,Captive M3 x 25 alignment post,SSCF-M3-25-A2,,1,"S3 anti-offset and anti-reversal post, installed from below",factory,RadioLab:Alignment_M3_3.4mm,Accu product datasheet 642039; radio-slot-v0.1.md
+MP3,M3 captive-post clamp nut,HPN-M3-A2,,1,Factory threadlocked clamp nut for H3,factory,,"Accu HPN-M3-A2, 5.5 mm AF, 2.4 mm thick"
+H4,Captive M3 x 25 alignment post,SSCF-M3-25-A2,,1,"S4 anti-offset and anti-reversal post, installed from below",factory,RadioLab:Alignment_M3_3.4mm,Accu product datasheet 642039; radio-slot-v0.1.md
+MP4,M3 captive-post clamp nut,HPN-M3-A2,,1,Factory threadlocked clamp nut for H4,factory,,"Accu HPN-M3-A2, 5.5 mm AF, 2.4 mm thick"
+MP5,External cable mating plug,1757019,,1,"Mates J9; 18 AWG or larger supply pair, factory terminated",factory,,Phoenix Contact manufacturer mating table

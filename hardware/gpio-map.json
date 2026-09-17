@@ -1,0 +1,74 @@
+{
+  "0": {
+    "net": "S1_IRQ",
+    "pico_pin": 1
+  },
+  "1": {
+    "net": "S1_BUSY",
+    "pico_pin": 2
+  },
+  "2": {
+    "net": "S2_IRQ",
+    "pico_pin": 4
+  },
+  "3": {
+    "net": "S2_BUSY",
+    "pico_pin": 5
+  },
+  "4": {
+    "net": "SPI_MISO",
+    "pico_pin": 6
+  },
+  "5": {
+    "net": "S1_CS_N",
+    "pico_pin": 7
+  },
+  "6": {
+    "net": "SPI_SCK",
+    "pico_pin": 9
+  },
+  "7": {
+    "net": "SPI_MOSI",
+    "pico_pin": 10
+  },
+  "8": {
+    "net": "S3_IRQ",
+    "pico_pin": 11
+  },
+  "9": {
+    "net": "S3_BUSY",
+    "pico_pin": 12
+  },
+  "10": {
+    "net": "S4_IRQ",
+    "pico_pin": 14
+  },
+  "11": {
+    "net": "S4_BUSY",
+    "pico_pin": 15
+  },
+  "12": {
+    "net": "S2_CS_N",
+    "pico_pin": 16
+  },
+  "13": {
+    "net": "S3_CS_N",
+    "pico_pin": 17
+  },
+  "14": {
+    "net": "S4_CS_N",
+    "pico_pin": 19
+  },
+  "15": {
+    "net": "EXP_CS_N",
+    "pico_pin": 20
+  },
+  "16": {
+    "net": "EXP_RESET_N",
+    "pico_pin": 21
+  },
+  "17": {
+    "net": "IO_OE_N",
+    "pico_pin": 22
+  }
+}
