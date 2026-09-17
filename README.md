@@ -4,30 +4,53 @@ Notes and experiments for a portable dual-band radio system.
 
 ## Vision
 
-Explore a man-portable radio, roughly walkie-talkie-sized or slightly larger, with two or more antennas and simultaneous receive coverage across 915 MHz and 2.4 GHz.
+Explore a man-portable radio, roughly walkie-talkie-sized or slightly larger, with four persistent RF lanes:
 
-The current architecture under evaluation uses dedicated receive paths for fixed LoRa and FLRC network receive profiles on both bands, plus one separate agile transmitter that switches band/PHY as commanded. The receiver side is intended to remain aware of all four profiles at once; simultaneous 915 MHz and 2.4 GHz transmission is not currently required.
+- ~915 MHz LoRa
+- ~915 MHz FLRC
+- 2.4 GHz LoRa
+- 2.4 GHz FLRC
+
+The current architecture under evaluation gives each lane its own dedicated transceiver. Each radio normally listens continuously on its fixed network profile and may transmit on that same profile when commanded. The radios do not normally retune between bands or PHYs.
+
+This removes the need for a separate fifth agile transmitter and also removes the requirement that all four lanes use the same radio family. Each lane can instead use hardware optimized for its own band, PHY, power, receiver performance, cost, and regulatory constraints.
 
 The goal is to combine higher-bandwidth links with lower-rate, longer-range options for essential traffic, emergency communication, backup connectivity, and experimentation with automatic link selection. Relaying and automatic failover are possible future software features. This is the intended direction, not a demonstrated capability.
 
 ## Confirmed hardware requirements
 
 - **U.S. operation:** Must be usable legally in the United States without an amateur-radio license.
-- **Budget:** Up to $150 per radio, with a stretch ceiling of $175.
-- **Concurrent reception:** The node should be able to monitor the required 915 MHz and 2.4 GHz receive profiles simultaneously rather than relying on one receiver to switch between bands or PHYs.
-- **Current TX architecture:** One independent agile transmitter may switch between 915 MHz and 2.4 GHz and between LoRa/FLRC profiles. Transmissions are serialized; simultaneous dual-band TX is not a current requirement.
+- **Budget:** Up to $150 per complete node, with a stretch ceiling of $175.
+- **Persistent receive coverage:** The node should normally monitor all four fixed network receive profiles at once rather than switching one receiver between bands or PHYs.
+- **Fixed-role radios:** One transceiver is assigned to each band/PHY lane. A radio may switch between RX and TX, but does not normally change to another lane.
+- **Transmission concurrency:** Simultaneous transmission on 915 MHz and 2.4 GHz is worth evaluating because the transmitters are independent. Same-band simultaneous TX/RX is not assumed to work and may require receiver blanking, filtering, protection, or additional isolation.
 - **Portability:** Battery-powered and roughly walkie-talkie-sized or slightly larger. Exact dimensions, weight, and runtime are undecided.
 
 Compute and USB/laptop connectivity remain undecided. An onboard single-board computer, such as a Raspberry Pi Zero, is an option rather than a requirement or an exclusion.
 
 ## Hardware direction
 
-The dedicated receiver-bank architecture currently under evaluation uses low-cost Waveshare Core2021-HF-M (LR2021) modules because the same module can cover the intended 850-930 MHz region and 2.4 GHz and can operate with LoRa or FLRC. The baseline proposal is four fixed receive paths plus one agile TX. See `docs/dedicated-receiver-bank.md` for the architecture and prototype plan.
+The architecture no longer requires every lane to use an LR2021. The earlier all-LR2021 design was attractive because one inexpensive chip could cover sub-GHz, 2.4 GHz, LoRa, and FLRC. With four fixed-role radios, that flexibility is no longer necessary.
 
-Other radio hardware remains useful for comparison and experimentation, but replacing the inexpensive receiver bank with substantially more expensive SDR or RF hardware would conflict with the current cost target.
+Current candidate direction:
+
+| Lane | Candidate hardware direction | Reason to investigate |
+|---|---|---|
+| ~915 MHz LoRa | high-power SX1262-based SPI module | mature sub-GHz LoRa hardware; 30 dBm / 1 W-capable modules exist |
+| ~915 MHz FLRC | LR2021-based module | sub-GHz FLRC is an unusual LR2021 capability; high-power variants can also be evaluated |
+| 2.4 GHz LoRa | high-power SX1280- or LR1121-based module | dedicated 2.4 GHz LoRa lane can prioritize link budget rather than multi-band flexibility |
+| 2.4 GHz FLRC | high-power SX1280-based module or LR2021 | SX1280 is a mature 2.4 GHz FLRC/LoRa device and amplified modules exist |
+
+These are candidates, not finalized purchases. Maximum module output power is a hardware capability, not an assumption that the maximum setting is legal for every LoRa or FLRC profile. Final frequencies, bandwidths, power, antenna gain, EIRP, and spectral limits must be validated for license-free U.S. operation before normal over-the-air testing.
+
+The initial physical prototype may use four separate antennas, one per transceiver. This avoids the passive splitter loss and RF switching complexity of the earlier shared-antenna concept and makes each RF lane easier to characterize independently. Shared antennas, splitters, filters, LNAs, or duplexing can be reconsidered later if size or antenna count becomes more important.
+
+See `docs/dedicated-receiver-bank.md` for the architecture and prototype plan.
 
 ## Example deployment
 
-A person inside a house connects through a rooftop relay to a drone roughly one mile away. The node can keep standardized 915 MHz and 2.4 GHz receive paths available at the same time, while its single transmitter selects the appropriate band/PHY/profile for each outgoing transmission. The receiving node does not need to negotiate a listener or retune after discovery because the four receive profiles are persistent parts of the network architecture.
+A person inside a house connects through a rooftop relay to a drone roughly one mile away. Every node normally keeps the four standardized receive profiles active. For outgoing traffic, the host selects the appropriate lane and that lane's transceiver temporarily changes from RX to TX.
 
-This is a scenario to test, not a confirmed range claim or a commitment to specific relaying or failover software. Terrain or obstructions could interrupt both links; 915 MHz is not assumed to guarantee coverage behind a hill.
+A transmission on one band may require the other receiver on that same band to be blanked or protected from local transmitter leakage. Opposite-band receivers may be able to continue receiving during transmission, and simultaneous 915 MHz plus 2.4 GHz transmission is an experiment enabled by the independent radios rather than a guaranteed capability.
+
+This is a scenario to test, not a confirmed range claim or a commitment to specific relaying or failover software. Terrain or obstructions could interrupt multiple links; 915 MHz is not assumed to guarantee coverage behind a hill.
