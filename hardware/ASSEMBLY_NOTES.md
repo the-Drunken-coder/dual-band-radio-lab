@@ -28,3 +28,7 @@ E22 uses its populated IPEX; external ANT pad 21 stays NC. No undocumented selec
 Install all ordinary TSW and SSQ headers, including the underside daughtercard headers and two Pico/Core sockets. They are through-hole assembly work, not covered merely by a catalog's SMT label. Install each captive M3 x 25 alignment post and its threadlocked clamp nut before delivery. The user only plugs in modules/cards/cables. Follow the mating orientation and required solid capture regions in `radio-slot-v0.1.md`; perform its unpowered offset/reversal acceptance checks.
 
 The 1757019 power plug must be supplied preterminated with an 18 AWG or larger lead pair and marked polarity. No source selection or connection to the Pico VBUS pin is permitted on that cable. Follow each manufacturer's soldering profile and moisture sensitivity requirements. Electrolytic pin 1 is positive. Do not substitute shorter posts, narrower copper ratings, unpopulated IPEX variants or smaller/bias-weaker ceramic capacitors without review.
+
+## SPI resistor population
+
+Initially populate carrier R20/R21/R22, E22 R5, Core2021 R3 and R5 on both E28 cards with 22-ohm RC0603FR-0722RL. All use the existing 0603 footprint. RC0603JR-070RL is the explicit 0-ohm configuration option, subject to bring-up measurement and recording the selected configuration. Do not populate both alternatives or omit the resistor: DNP opens that signal. See DESIGN_REVIEW.md for source placement and oscilloscope/IBIS verification.

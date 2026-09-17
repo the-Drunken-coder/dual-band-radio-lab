@@ -39,3 +39,7 @@ Reset is infrequent. External PA/LNA selection is moved only before a radio mode
 Pico 2 datasheet section 5.2 warns that ADC-capable GPIO26-29 have a diode to IOVDD. **GP26-28 have no carrier traces to daughtercard outputs, pull-ups, test points or expander signals.** Exported-netlist checks verify NC at Pico physical pins 31, 32 and 34 and socket J11 pins 11, 12 and 14. GP29 remains onboard and is not brought to this interface.
 
 Every used signal crosses U5/U6/U7 between PICO_3V3 and externally powered IOREF_3V3. Their documented VCC isolation and Ioff prevent USB-only signal drive into the radio domain and radio-domain drive into an unpowered Pico. U5/U6 OE defaults disabled. No firmware sequencing claim substitutes for the ADC-pin NC guarantee. See TI SCES584D and SCES515N and the power-state table in POWER_BUDGET.md.
+
+## SPI source termination
+
+GPIO allocation is unchanged. U5's radio-side SCK/MOSI outputs now reach the shared bus through carrier R20/R21. Each radio MISO output reaches slot A7 through its own card resistor, and MCP23S17 SO reaches the bus through carrier R22. All initially use 22 ohms with a same-footprint 0-ohm option. Verify values and supported SPI speed by oscilloscope/IBIS during bring-up; see DESIGN_REVIEW.md.

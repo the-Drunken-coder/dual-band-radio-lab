@@ -391,7 +391,7 @@
       "11": "EXP_CS_N",
       "12": "SPI_SCK",
       "13": "SPI_MOSI",
-      "14": "SPI_MISO",
+      "14": "EXP_MISO_SRC",
       "15": "GND",
       "16": "GND",
       "17": "GND",
@@ -429,9 +429,9 @@
       "23": "IOREF_3V3",
       "24": "IOREF_3V3",
       "3": "P_SPI_SCK",
-      "21": "SPI_SCK",
+      "21": "SPI_SCK_SRC",
       "4": "P_SPI_MOSI",
-      "20": "SPI_MOSI",
+      "20": "SPI_MOSI_SRC",
       "5": "P_S1_CS_N",
       "19": "S1_CS_N",
       "6": "P_S2_CS_N",
@@ -502,6 +502,54 @@
       "4": "SPI_MISO",
       "5": "GND",
       "6": "IOREF_3V3"
+    }
+  },
+  {
+    "reference": "R20",
+    "value": "22",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0722RL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Source-series termination; place immediately at U5 B1 pin 21 before any bus branch; no long stubs",
+    "assembly": "Initially 22 ohm; configurable 0 ohm alternate RC0603JR-070RL in same footprint; verify by oscilloscope/IBIS during bring-up; DNP opens signal",
+    "source": "Yageo RC0603; 22 ohm 1% 0.1 W; yageo-rc.pdf",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "SPI_SCK_SRC",
+      "2": "SPI_SCK"
+    }
+  },
+  {
+    "reference": "R21",
+    "value": "22",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0722RL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Source-series termination; place immediately at U5 B2 pin 20 before any bus branch; no long stubs",
+    "assembly": "Initially 22 ohm; configurable 0 ohm alternate RC0603JR-070RL in same footprint; verify by oscilloscope/IBIS during bring-up; DNP opens signal",
+    "source": "Yageo RC0603; 22 ohm 1% 0.1 W; yageo-rc.pdf",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "SPI_MOSI_SRC",
+      "2": "SPI_MOSI"
+    }
+  },
+  {
+    "reference": "R22",
+    "value": "22",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0722RL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Source-series termination; place immediately at U4 SO pin 14 before any bus branch; no long stubs",
+    "assembly": "Initially 22 ohm; configurable 0 ohm alternate RC0603JR-070RL in same footprint; verify by oscilloscope/IBIS during bring-up; DNP opens signal",
+    "source": "Yageo RC0603; 22 ohm 1% 0.1 W; yageo-rc.pdf",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "EXP_MISO_SRC",
+      "2": "SPI_MISO"
     }
   },
   {

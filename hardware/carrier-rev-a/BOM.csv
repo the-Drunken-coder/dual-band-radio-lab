@@ -18,6 +18,9 @@ U4,MCP23S17-E/SO,MCP23S17-E/SO,,1,Noncritical reset and pre-command RF-switch st
 U5,SN74LVC8T245PWR,SN74LVC8T245PWR,,1,Dual-supply power-off isolation; fixed direction,factory,Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm,"SCES584D May 2026 sections 4,7.3.3,8.3"
 U6,SN74LVC8T245PWR,SN74LVC8T245PWR,,1,Dual-supply power-off isolation; fixed direction,factory,Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm,"SCES584D May 2026 sections 4,7.3.3,8.3"
 U7,SN74LVC1T45DBVR,SN74LVC1T45DBVR,,1,MISO radio-to-Pico power-off isolation,factory,Package_TO_SOT_SMD:SOT-23-6,SCES515N June 2024 sections 4 and 7
+R20,22,RC0603FR-0722RL,,1,Source-series termination; place immediately at U5 B1 pin 21 before any bus branch; no long stubs,Initially 22 ohm; configurable 0 ohm alternate RC0603JR-070RL in same footprint; verify by oscilloscope/IBIS during bring-up; DNP opens signal,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 22 ohm 1% 0.1 W; yageo-rc.pdf
+R21,22,RC0603FR-0722RL,,1,Source-series termination; place immediately at U5 B2 pin 20 before any bus branch; no long stubs,Initially 22 ohm; configurable 0 ohm alternate RC0603JR-070RL in same footprint; verify by oscilloscope/IBIS during bring-up; DNP opens signal,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 22 ohm 1% 0.1 W; yageo-rc.pdf
+R22,22,RC0603FR-0722RL,,1,Source-series termination; place immediately at U4 SO pin 14 before any bus branch; no long stubs,Initially 22 ohm; configurable 0 ohm alternate RC0603JR-070RL in same footprint; verify by oscilloscope/IBIS during bring-up; DNP opens signal,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 22 ohm 1% 0.1 W; yageo-rc.pdf
 R1,267k,RC0603FR-07267KL,,1,UVLO upper,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
 R2,100k,RC0603FR-07100KL,,1,UVLO lower,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
 R3,340k 0.1%,RT0603BRD07340KL,,1,OVLO upper,factory,Resistor_SMD:R_0603_1608Metric,Yageo RT0603; 0.1% 25 ppm/K

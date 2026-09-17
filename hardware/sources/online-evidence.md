@@ -8,3 +8,7 @@ Read 2026-09-17. These entries deliberately do not claim a successfully saved PD
 - [Accu HPN-M3-A2](https://www.accu.co.uk/hexagon-nuts/7888-HPN-M3-A2): M3, 0.5 mm pitch, 5.5 mm across flats +0/-0.18, 2.4 mm height +0/-0.25. No stock commitment is inferred from the page's dynamic purchase controls.
 
 Murata GRM32ER61C226KE20L and GRM32ER61E226KE15L were considered, but subsequent lifecycle/discontinuation evidence and unavailable reference-sheet URLs led to selecting the currently listed TDK part instead. They are not substitute BOM entries.
+
+## SPI resistor options
+
+Read 2026-09-17 from Yageo's exact part sheets: [RC0603FR-0722RL](https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0722RL) is 22 ohms, 1%, 0.1 W; [RC0603JR-070RL](https://yageogroup.com/component-documentation/download/specsheet/RC0603JR-070RL) is the matching 0-ohm jumper. Both specify a 1.6 +/-0.1 by 0.8 +/-0.1 mm body, 0.45 +/-0.1 mm thick, compatible with the selected 0603 footprint. These primary online sheets supplement the saved RC-series datasheet.

@@ -35,23 +35,32 @@
   "inrush_stress_total_a": 3.865,
   "external_condition": "Assembler must accept E28 IPEX selector configuration before procurement.",
   "artifacts": {
-    "carrier-rev-a/carrier-rev-a.kicad_sch": "4b328055069b04efb490eee90b7376ce4531a1ec5104e759350a19b64ac90a7f",
-    "adapters/e28-2g4m27s-rev-a/e28-2g4m27s-rev-a.kicad_sch": "4395f246109a260d057c097ab53c05d148c7ceb52aa0f0b92773522163ff7381",
-    "adapters/e22-900m30s-rev-a/e22-900m30s-rev-a.kicad_sch": "0da77b678134edc1beaf3ff0fb12b66d500ce098d18aa71b5d2ae782514b5bf4",
-    "adapters/core2021-hf-m-rev-a/core2021-hf-m-rev-a.kicad_sch": "bb1f703ff0b5b3aff00cfae440ca010ac6a2bcb2ae690b10b0351bda2b6a01f6",
-    "carrier-rev-a/BOM.csv": "d4e8b4a61ecb0cabfa970a55b60a07782bf9c0b07d9ec40dbe506f3e80628f4b",
-    "adapters/e28-2g4m27s-rev-a/BOM.csv": "9b85f9fd9f92a47aa9f0290be2e7cac4390b84373d04372ce61e6b21441fa287",
-    "adapters/e22-900m30s-rev-a/BOM.csv": "b0da514d99790bd1531e0de16f8a14e55afbf7e0775ca890a298c2a98271ce67",
-    "adapters/core2021-hf-m-rev-a/BOM.csv": "7f5008e74a860e5b41803e92c072db670f174f4fce7d725d7534fad3927839e6",
-    "Rev-A-electrical-studies.pdf": "b47ab775159e33f3743c4d648633928a6e1d3a0472a5a15b09af95e133cacfc4",
-    "DESIGN_REVIEW.md": "514b0579ba40d7f4c38e97574e17c03bdd57a8a1caea5dbcd9c95ff0d35a5fc9",
-    "GPIO_MAP.md": "9d20fe91e7b2c9f6f07958cc180f1c521459059541129d43d424df4a0750062b",
+    "carrier-rev-a/carrier-rev-a.kicad_sch": "4a06bf0ff24ca8f99285d4e2693d47a09ca344a8081dac578572d2e2af8e0983",
+    "adapters/e28-2g4m27s-rev-a/e28-2g4m27s-rev-a.kicad_sch": "beddb112608f76fbb4eeb59f54494555673db024aecc34c39b6b62af92eff867",
+    "adapters/e22-900m30s-rev-a/e22-900m30s-rev-a.kicad_sch": "5373ad810395281f62910b7579000a6e7a201b831c5e72e44db871de162adf78",
+    "adapters/core2021-hf-m-rev-a/core2021-hf-m-rev-a.kicad_sch": "6333cc0a24a5da90d5caf9a4a0769ca957787d68551bdd294a05bb9ca284c71a",
+    "carrier-rev-a/BOM.csv": "9a82f0c022b65933cc0d51acec1fa2c31b8768b1a27822a80c86619bda3b3822",
+    "adapters/e28-2g4m27s-rev-a/BOM.csv": "6aaecd351d5e3e88d30eee65e3465fb80897192854d09e0a7e6758ded0a1faf9",
+    "adapters/e22-900m30s-rev-a/BOM.csv": "0735d8a7c84bf3691735245b0a3ed725f9c59e12c1afe366825855ab8def3eb9",
+    "adapters/core2021-hf-m-rev-a/BOM.csv": "4d754f0c083a043aa7ee0353bf482acef440745f0bf47ca5008fd04204944260",
+    "Rev-A-electrical-studies.pdf": "e3d0c566e3d03c22c6c2103533ba779f685aa1b9092b0c655e08fb5742eef0e1",
+    "DESIGN_REVIEW.md": "4665f7db6f5d3d8554a777c19957ca43ed9099739a2d53993d06c79a5aa735fd",
+    "GPIO_MAP.md": "05c291a5b5d0985e5465368bc5f8d34baf19b9f1c4255fae99c8801cbc2fc152",
     "POWER_BUDGET.md": "d9417406fbb9329e0f27a36f38daadb87b89073b319231f47f9b084d80d48236",
-    "FOOTPRINT_REVIEW.md": "cdaf33bfe5181c03b0ec4ccfd9ac0960c2e3e3b207c6460d8e8a86212d05fc10",
-    "ASSEMBLY_NOTES.md": "c4d4bd694ba369bc5d0317d4c5f339ed85b3eac20bb91012c888a2c4219b363e",
+    "FOOTPRINT_REVIEW.md": "bf18263f3755c8b10fb7024577d497c298aa6ff0779c3153b0a3edc4662574ed",
+    "ASSEMBLY_NOTES.md": "71cfa59286475580e7aac73fd4969fc6e4e81b0f2b8eda68968b673328280e8b",
     "radio-slot-v0.1.md": "e1240c0787e4cd454bcf09605de18d060ae081f86a5ec73a7b564b341d4702b9",
-    "LAYOUT_REQUIREMENTS.md": "87f8107eafb6ab28661f0304f755e905a58641d8ea5cac05cea7663f2c5877f8",
-    "README.md": "e3668c696e0cd066c7c99c5a8a8928a263f885894caccf9c52653719ce11986e"
+    "LAYOUT_REQUIREMENTS.md": "22d9d53b26a6f4d76daff9796275ed2e6a171c9403f724f7874ea4a8cbc135fd",
+    "README.md": "d3e232b6eb6215bcb732772ba42680ca872c2d2ef6e63de2431c2464b601daba",
+    "MANUFACTURING.md": "fea623e9d8f9ebeed03d2d249dd0a5ebf6aa30b72f72d28349b13a8be263db35",
+    "validation/connectivity-check.json": "3e6e6c03d7fc95d362d0bb09e1e5b16dc6e7d94ed03f2e59ba12b21f9644a076"
   },
-  "documentation_update": "Rev A prioritizes radio separation, generous power copper and probe access; compact switcher loops. Schematics unchanged; layout remains on hold."
+  "documentation_update": "Configurable source termination added; source proximity and no-long-stub requirements recorded. Stopped for review before PCB layout.",
+  "series_termination": {
+    "initial_ohms": 22,
+    "alternate_ohms": 0,
+    "schematic_positions": 6,
+    "assembled_quantity": 7,
+    "validation": "Exact exported-netlist source/bus membership, native component values/footprints and BOM alternate population verified; physical placement and oscilloscope/IBIS pending."
+  }
 }

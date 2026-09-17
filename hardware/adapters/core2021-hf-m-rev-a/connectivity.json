@@ -64,7 +64,7 @@
       "8": "RADIO_3V3",
       "9": "BUSY",
       "10": "RESET_N",
-      "11": "SPI_MISO",
+      "11": "SPI_MISO_SRC",
       "12": "SPI_MOSI",
       "13": "SPI_SCK",
       "14": "CS_N",
@@ -107,7 +107,7 @@
     "nets": {
       "1": "BUSY",
       "2": "RESET_N",
-      "3": "SPI_MISO",
+      "3": "SPI_MISO_SRC",
       "4": "SPI_MOSI",
       "5": "SPI_SCK",
       "6": "CS_N",
@@ -195,6 +195,22 @@
     "nets": {
       "1": "RADIO_3V3",
       "2": "GND"
+    }
+  },
+  {
+    "reference": "R3",
+    "value": "22",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0722RL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Source-series termination; place immediately at J4 pin 3, nearest accessible Core U1 MISO pin 11 before any bus branch; no long stubs",
+    "assembly": "Initially 22 ohm; configurable 0 ohm alternate RC0603JR-070RL in same footprint; verify by oscilloscope/IBIS during bring-up; DNP opens signal",
+    "source": "Yageo RC0603; 22 ohm 1% 0.1 W; yageo-rc.pdf",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "SPI_MISO_SRC",
+      "2": "SPI_MISO"
     }
   },
   {

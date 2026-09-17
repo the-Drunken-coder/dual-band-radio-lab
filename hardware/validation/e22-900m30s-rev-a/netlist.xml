@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/lanearaujo/Documents/Codex/dual-band-radio-lab/hardware/adapters/e22-900m30s-rev-a/e22-900m30s-rev-a.kicad_sch</source>
-    <date>2026-09-17T03:11:25</date>
+    <date>2026-09-17T17:35:25</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -356,6 +356,38 @@
         </unit>
       </units>
     </comp>
+    <comp ref="R5">
+      <value>22</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RC0603FR-0722RL</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">Yageo RC0603; 22 ohm 1% 0.1 W; yageo-rc.pdf</field>
+        <field name="Assembly">Initially 22 ohm; configurable 0 ohm alternate RC0603JR-070RL in same footprint; verify by oscilloscope/IBIS during bring-up; DNP opens signal</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Resistor_value_only" description=""/>
+      <property name="MPN" value="RC0603FR-0722RL"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="Yageo RC0603; 22 ohm 1% 0.1 W; yageo-rc.pdf"/>
+      <property name="Assembly" value="Initially 22 ohm; configurable 0 ohm alternate RC0603JR-070RL in same footprint; verify by oscilloscope/IBIS during bring-up; DNP opens signal"/>
+      <property name="Sheetname" value="e22-900m30s-rev-a"/>
+      <property name="Sheetfile" value="e22-900m30s-rev-a.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ae7a120e-6b5f-58d4-bc48-28b1b64ae113</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="U1">
       <value>E22-900M30S</value>
       <footprint>RadioLab:E22_900M30S</footprint>
@@ -601,25 +633,29 @@
     </net>
     <net code="10" name="/SPI_MISO" class="Default">
       <node ref="J1" pin="7" pinfunction="7_7" pintype="passive"/>
+      <node ref="R5" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="11" name="/SPI_MISO_SRC" class="Default">
+      <node ref="R5" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="16" pinfunction="MISO_16" pintype="output"/>
     </net>
-    <net code="11" name="/SPI_MOSI" class="Default">
+    <net code="12" name="/SPI_MOSI" class="Default">
       <node ref="J1" pin="6" pinfunction="6_6" pintype="passive"/>
       <node ref="U1" pin="17" pinfunction="MOSI_17" pintype="input"/>
     </net>
-    <net code="12" name="/SPI_SCK" class="Default">
+    <net code="13" name="/SPI_SCK" class="Default">
       <node ref="J1" pin="5" pinfunction="5_5" pintype="passive"/>
       <node ref="U1" pin="18" pinfunction="SCK_18" pintype="input"/>
     </net>
-    <net code="13" name="/TX_EN" class="Default">
+    <net code="14" name="/TX_EN" class="Default">
       <node ref="J2" pin="3" pinfunction="3_3" pintype="passive"/>
       <node ref="R3" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="7" pinfunction="TXEN_7" pintype="input"/>
     </net>
-    <net code="14" name="unconnected-(J2-Pad6)" class="Default">
+    <net code="15" name="unconnected-(J2-Pad6)" class="Default">
       <node ref="J2" pin="6" pinfunction="6_6" pintype="passive+no_connect"/>
     </net>
-    <net code="15" name="unconnected-(U1-ANT-Pad21)" class="Default">
+    <net code="16" name="unconnected-(U1-ANT-Pad21)" class="Default">
       <node ref="U1" pin="21" pinfunction="ANT_21" pintype="passive+no_connect"/>
     </net>
   </nets>

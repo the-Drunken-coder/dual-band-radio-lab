@@ -12,4 +12,6 @@ Each project directory contains its editable `.kicad_pro` / `.kicad_sch`, select
 
 `tools/build_studies.py` and `tools/build_footprints.py` are deterministic generators. Do not rerun after manual KiCad changes without reconciling them. `tools/validate_schematics.py` runs only schematic exports/ERC; `tools/check_studies.py` checks their exported connectivity. Nothing invokes PCB creation or fabrication export.
 
+Configurable source-series resistors are included on buffered SCK/MOSI and every independent MISO source, including the expander. Initial population is 22 ohms with a 0-ohm option; values require oscilloscope/IBIS verification during bring-up. See DESIGN_REVIEW.md.
+
 No files are ready for ordering. Later PCB layout, thermal/fit testing, factory process acceptance and manufacturing release are separate work. Existing prototype work is unchanged.

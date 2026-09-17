@@ -23,3 +23,7 @@ python3 hardware/tools/check_studies.py
 ```
 
 The validation script currently uses this host's installed KiCad path. No PCB command runs. DRC, power measurements, physical fit, RF testing and manufacturing-preview checks have not been performed. PDF/fontconfig diagnostic messages, if any, are retained in per-project logs and are distinct from schematic ERC.
+
+## Source-series connectivity checks
+
+The updated checks verify carrier U5 SCK/MOSI and MCP23S17 SO source segments, and MISO source segments on all three card designs. Exact net membership must put the 22-ohm resistor between each source and its shared bus. Core's logical module and real socket are checked together. The checks also compare native XML component values/footprints and BOM initial/alternate population metadata. The E28 design is used twice, yielding five MISO source resistors and two clock/data resistors in the complete system. ERC and netlists were regenerated after adding these parts. Physical placement, oscilloscope measurements and IBIS analysis have not been performed.

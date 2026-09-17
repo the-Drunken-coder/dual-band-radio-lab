@@ -118,6 +118,7 @@ symbol("Header_1x20", [(str(i), str(i), "passive") for i in range(1,21)])
 
 # Each entry is a selected orderable part, not a value-only placeholder.
 PASSIVES = {
+ "22": ("RC0603FR-0722RL", "Resistor_SMD:R_0603_1608Metric", "Yageo RC0603; 22 ohm 1% 0.1 W; yageo-rc.pdf"),
  "100nF": ("GRM188R71H104KA93D", "Capacitor_SMD:C_0603_1608Metric", "Murata; 100 nF 50 V X7R 10%"),
  "10nF": ("GRM188R71H103KA01D", "Capacitor_SMD:C_0603_1608Metric", "Murata; 10 nF 50 V X7R 10%"),
  "1uF": ("GRM21BR71C105KA01L", "Capacitor_SMD:C_0805_2012Metric", "Murata; 1 uF 16 V X7R 10%"),
@@ -199,6 +200,13 @@ class Study:
         self.part(ref, f"Header_1x{count}", mpn, x, y, nets, mpn=mpn, purpose=purpose,
                   source="Samtec tsw/ssq-drawing.pdf and footprint.pdf", footprint=fp)
 
+    def series(self, ref, x, y, source_net, bus_net, location):
+        mpn, footprint, source = PASSIVES['22']
+        self.part(ref, 'Resistor_value_only', '22', x, y, {'1': source_net, '2': bus_net},
+                  mpn=mpn, footprint=footprint, source=source,
+                  purpose='Source-series termination; place immediately at '+location+' before any bus branch; no long stubs',
+                  assembly='Initially 22 ohm; configurable 0 ohm alternate RC0603JR-070RL in same footprint; verify by oscilloscope/IBIS during bring-up; DNP opens signal')
+
     def power_declaration(self, ref, net, x, y):
         before = len(self.items)
         self.part(ref, "External_power_declaration", "POWER DECLARATION: " + net, x, y, {"1": net}, purpose="ERC power-source model")
@@ -240,14 +248,14 @@ def adapter(kind):
     b.slots(kind)
     if kind == 'e22':
         nets = {str(i): 'GND' for i in [1,2,3,4,5,11,12,20,22]}
-        nets.update({'6':'RX_EN','7':'TX_EN','8':'AUX0','9':'SLOT_5V','10':'SLOT_5V','13':'IRQ','14':'BUSY','15':'RESET_N','16':'SPI_MISO','17':'SPI_MOSI','18':'SPI_SCK','19':'CS_N'})
+        nets.update({'6':'RX_EN','7':'TX_EN','8':'AUX0','9':'SLOT_5V','10':'SLOT_5V','13':'IRQ','14':'BUSY','15':'RESET_N','16':'SPI_MISO_SRC','17':'SPI_MOSI','18':'SPI_SCK','19':'CS_N'})
         b.part('U1',E22,'E22-900M30S',185,45,nets,'E22-900M30S','C411294',purpose='915 MHz LoRa',source='E22-M manual section 3.3, PDF pages 10-11')
         b.passive('C1','Capacitor','220uF',65,140,'SLOT_5V','GND','Local TX transient reservoir; 10 V polarized')
         b.passive('C2','Capacitor','22uF',185,140,'SLOT_5V','GND','Local supply decoupling')
         b.passive('C3','Capacitor','100nF',305,140,'SLOT_5V','GND','Local ceramic decoupling')
         b.text('Module pad 21 ANT: NC, use module IPEX. Both pads 9 and 10 are VCC. H1 is the mandatory alignment-post hole.\nDIO2 is AUX0 for a local test point only; do not connect it to a Pico GPIO.\nAUX1 is reserved. DIO3 is internal TCXO control, configured to 2.2 V.',140,100)
     elif kind == 'e28':
-        nets={'1':'RADIO_3V3','2':'GND','3':'SPI_MISO','4':'SPI_MOSI','5':'SPI_SCK','6':'CS_N','7':'GND','8':'RX_EN','9':'TX_EN','10':'GND','11':'RESET_N','12':'BUSY','13':'IRQ','14':'AUX0','16':'GND'}
+        nets={'1':'RADIO_3V3','2':'GND','3':'SPI_MISO_SRC','4':'SPI_MOSI','5':'SPI_SCK','6':'CS_N','7':'GND','8':'RX_EN','9':'TX_EN','10':'GND','11':'RESET_N','12':'BUSY','13':'IRQ','14':'AUX0','16':'GND'}
         b.part('U1',E28,'E28-2G4M27S',185,45,nets,'E28-2G4M27S','C411312',purpose='2.4 GHz lane; mandatory IPEX antenna variant',assembly='Factory: populate IPEX; selector link in manual 9.2 IPEX position, PCB-antenna branch open; no user rework',source='E28 manual section 3, PDF page 5')
         b.part('U2',BUCK,'AP63203WU-7',305,45,{'1':'RADIO_3V3','2':'SLOT_5V','3':'SLOT_5V','4':'GND','5':'SW','6':'BST'},'AP63203WU-7',purpose='5 V to 3.3 V buck, 2 A part rating',source='DS41326 Rev 3-2, pages 2, 13, 15, 17')
         b.power_declaration('#FLG03', 'RADIO_3V3', 305, 115)
@@ -262,7 +270,7 @@ def adapter(kind):
         b.passive('C8','Capacitor','22uF',185,185,'SLOT_5V','GND','Buck input capacitor 2; DC-bias margin')
         b.text('ASSEMBLY VARIANT: IPEX ONLY. Selector MUST match manual section 9.2 right image.\nMCP23S17 controls TX_EN/RX_EN before RF commands. No automatic RX/TX modes.\nBuck PCB layout must follow figure 25, 2 oz copper on both layers.',140,100)
     else:
-        nets={'2':'GND','3':'IRQ','4':'AUX0','7':'GND','8':'RADIO_3V3','9':'BUSY','10':'RESET_N','11':'SPI_MISO','12':'SPI_MOSI','13':'SPI_SCK','14':'CS_N','15':'GND'}
+        nets={'2':'GND','3':'IRQ','4':'AUX0','7':'GND','8':'RADIO_3V3','9':'BUSY','10':'RESET_N','11':'SPI_MISO_SRC','12':'SPI_MOSI','13':'SPI_SCK','14':'CS_N','15':'GND'}
         b.part('U1',CORE,'Core2021-HF-M plug-in',185,45,nets,'Core2021-HF-M','Waveshare SKU 34523',purpose='915 MHz FLRC',assembly='User plugs into factory-soldered sockets',source='Waveshare Core2021-HF schematic, sheet 1, U2', on_board=False)
         b.socket('J3',8,65,165,{str(i):nets.get(str(i)) for i in range(1,9)},'Core socket pins 1-8')
         b.socket('J4',8,185,165,{str(i):nets.get(str(i+8)) for i in range(1,9)},'Core socket pins 9-16')
@@ -270,6 +278,9 @@ def adapter(kind):
         for ref,val,x,y,rail in [('C1','22uF',65,140,'SLOT_5V'),('C2','22uF',185,140,'RADIO_3V3'),('C3','100nF',305,140,'RADIO_3V3'),('C4','22uF',305,170,'RADIO_3V3')]:
             b.passive(ref,'Capacitor',val,x,y,rail,'GND','LDO/module ceramic decoupling')
         b.text('U1 represents the plug-in module, not a soldered module footprint.\nSocket contacts for module pins 1, 5, 6 and 16 are isolated.\nTX_EN/RX_EN slot contacts unused. No external RF switch added.\nJ3/J4: 15.24 mm row spacing; top/bottom numbering in FOOTPRINT_REVIEW.md.',140,100)
+    source_location={'e22':'U1 MISO pad 16', 'e28':'U1 MISO pad 3', 'core':'J4 pin 3, nearest accessible Core U1 MISO pin 11'}[kind]
+    b.series('R3' if kind=='core' else 'R5',305,75,'SPI_MISO_SRC','SPI_MISO',source_location)
+    b.text('MISO: source -> 22R -> slot A7. Fit 0R option; scope/IBIS verify.\nPlace at module output/socket, before shared bus. No long stubs.',20.32,252,1.1)
     pull_rail='IOREF_3V3' if kind=='e22' else 'RADIO_3V3'
     b.passive('R1','Resistor','10k',65,210,pull_rail,'CS_N','Default deselected, radio-domain pull-up')
     b.passive('R2','Resistor','10k',185,210,pull_rail,'RESET_N','Default released; PA/LNA stay disabled and CS stays high until host initializes')
@@ -309,16 +320,22 @@ def carrier():
     b.part('U2',EFUSE,'TPS259470LRPWR',545,45,{'1':'UVLO','2':'OVLO','5':'EXT_5V','6':'RADIO_5V','7':'DVDT','8':'GND','9':'ILIM'},'TPS259470LRPWR',purpose='Reverse polarity/current, OV/UV, current limit and inrush; latch off',source='SLVSFC9C May 2026 sections 5,7,8')
     b.part('Q1',MOS,'DMG2305UX-7',665,45,{'1':'USB_VBUS','2':'PICO_VSYS','3':'RADIO_5V'},'DMG2305UX-7',purpose='Pico documented external-source ORing: D=external, S=VSYS, G=VBUS',source='Pico 2 figure 9; DMG2305UX DS36196')
     b.part('U3',LDO,'AP2112K-3.3TRG1',425,105,{'1':'RADIO_5V','2':'GND','3':'RADIO_5V','5':'IOREF_3V3'},'AP2112K-3.3TRG1',purpose='External-only radio interface and expander supply',source='AP2112 DS39724')
-    exp={'9':'IOREF_3V3','10':'GND','11':'EXP_CS_N','12':'SPI_SCK','13':'SPI_MOSI','14':'SPI_MISO','15':'GND','16':'GND','17':'GND','18':'EXP_RESET_N'}
+    exp={'9':'IOREF_3V3','10':'GND','11':'EXP_CS_N','12':'SPI_SCK','13':'SPI_MOSI','14':'EXP_MISO_SRC','15':'GND','16':'GND','17':'GND','18':'EXP_RESET_N'}
     exp.update({str(i):f'S{i}_RESET_N' for i in range(1,5)})
     exp.update({str(21+i):net for i,net in enumerate(['S1_TX_EN','S1_RX_EN','S3_TX_EN','S3_RX_EN','S4_TX_EN','S4_RX_EN'])})
     b.part('U4',EXPANDER,'MCP23S17-E/SO',545,120,exp,'MCP23S17-E/SO',purpose='Noncritical reset and pre-command RF-switch state',source='Microchip DS20001952C; SOIC pin table')
     for ref,x,direction,signals in [('U5',185,'PICO_3V3',['SPI_SCK','SPI_MOSI','S1_CS_N','S2_CS_N','S3_CS_N','S4_CS_N','EXP_CS_N','EXP_RESET_N']),
         ('U6',305,'GND',['S1_BUSY','S1_IRQ','S2_BUSY','S2_IRQ','S3_BUSY','S3_IRQ','S4_BUSY','S4_IRQ'])]:
         ns={'1':'PICO_3V3','2':direction,'11':'GND','12':'GND','13':'GND','22':'P_IO_OE_N','23':'IOREF_3V3','24':'IOREF_3V3'}
-        for i,n in enumerate(signals): ns[str(3+i)]='P_'+n;ns[str(21-i)]=n
+        for i,n in enumerate(signals):
+            ns[str(3+i)]='P_'+n
+            ns[str(21-i)]=n+'_SRC' if ref=='U5' and n in ['SPI_SCK','SPI_MOSI'] else n
         b.part(ref,TRANS,'SN74LVC8T245PWR',x,250,ns,'SN74LVC8T245PWR',purpose='Dual-supply power-off isolation; fixed direction',source='SCES584D May 2026 sections 4,7.3.3,8.3')
     b.part('U7',TRANS1,'SN74LVC1T45DBVR',425,250,{'1':'PICO_3V3','2':'GND','3':'P_SPI_MISO','4':'SPI_MISO','5':'GND','6':'IOREF_3V3'},'SN74LVC1T45DBVR',purpose='MISO radio-to-Pico power-off isolation',source='SCES515N June 2024 sections 4 and 7')
+    b.series('R20',185,305,'SPI_SCK_SRC','SPI_SCK','U5 B1 pin 21')
+    b.series('R21',305,305,'SPI_MOSI_SRC','SPI_MOSI','U5 B2 pin 20')
+    b.series('R22',665,135,'EXP_MISO_SRC','SPI_MISO','U4 SO pin 14')
+    b.text('R20/R21: immediately after U5 SCK/MOSI outputs. R22: at U4 SO before shared MISO.\n22R initial; 0R population option. Verify by oscilloscope/IBIS. No long stubs.\nEach radio card has its own MISO source resistor before slot A7.',425,300)
     b.power_declaration('#FLG01','EXT_5V',425,190)
     b.power_declaration('#FLG02','GND',545,190)
     b.power_declaration('#FLG03','PICO_VSYS',665,190)

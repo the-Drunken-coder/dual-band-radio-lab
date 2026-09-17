@@ -74,7 +74,7 @@
       "13": "IRQ",
       "14": "BUSY",
       "15": "RESET_N",
-      "16": "SPI_MISO",
+      "16": "SPI_MISO_SRC",
       "17": "SPI_MOSI",
       "18": "SPI_SCK",
       "19": "CS_N"
@@ -126,6 +126,22 @@
     "nets": {
       "1": "SLOT_5V",
       "2": "GND"
+    }
+  },
+  {
+    "reference": "R5",
+    "value": "22",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0722RL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Source-series termination; place immediately at U1 MISO pad 16 before any bus branch; no long stubs",
+    "assembly": "Initially 22 ohm; configurable 0 ohm alternate RC0603JR-070RL in same footprint; verify by oscilloscope/IBIS during bring-up; DNP opens signal",
+    "source": "Yageo RC0603; 22 ohm 1% 0.1 W; yageo-rc.pdf",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "SPI_MISO_SRC",
+      "2": "SPI_MISO"
     }
   },
   {

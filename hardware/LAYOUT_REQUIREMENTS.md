@@ -16,6 +16,12 @@ Rev A prioritizes probing, debugging and replaceable modules. **Do not optimize 
 - Keep each buck's input ceramic capacitors, IC, switching connections and return path together, following the AP63203 reference layout. Keep the bootstrap connection short and feedback away from the switch node. Spread out the radio subsystems while keeping each switcher's high-current loops compact.
 - Make regulator input, output and local ground easy to probe without enlarging the switching loop. A switch-node measurement pad must sit on the existing local copper; do not run that node out to a remote header or wire loop.
 
+## SPI source-series placement
+
+Fit carrier R20 immediately after U5 pin 21 for SCK and R21 after U5 pin 20 for MOSI, before fanout. Fit carrier R22 immediately at MCP23S17 U4 SO pin 14 before its MISO branch joins the bus. Fit E22/E28 R5 at each module MISO output and Core R3 beside socket J4 pin 3. Both E28 card instances need their own R5. Use short inline connections with no parallel bypass or long test-point/header stubs.
+
+All start at 22 ohms; the same 0603 footprint accepts the documented 0-ohm alternate. Confirm values by oscilloscope/IBIS during bring-up. See DESIGN_REVIEW.md for the exact endpoint table and measurement requirements. These parts are now in the schematics; their physical placement remains pending PCB layout.
+
 ## Required probe coverage
 
 Provide clearly labeled test points at the following locations. These are requirements for the next schematic/layout revision, not a claim that test-point components have already been added to the current schematics.
