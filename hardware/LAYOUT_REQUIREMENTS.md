@@ -18,6 +18,10 @@ Rev A prioritizes probing, debugging and replaceable modules. **Do not optimize 
 
 ## SPI source-series placement
 
+Keep B.Cu as close as practical to a continuous GND reference. Route SPI and other fast signals on F.Cu wherever practical, avoiding reference-plane voids and long ground cuts. Where a fast signal must change layers, place a GND stitching via immediately beside its signal via. Apply this to all daughtercards, particularly E28, while preserving every mechanical capture area and antenna keepout.
+
+After every routing change, refill zones and audit non-GND B.Cu count/length, every SPI transition and its nearest GND via, and every SPI portion without opposite-layer GND. Report residual gaps explicitly for review. A single connected ground pour and clean DRC alone do not demonstrate a good high-frequency return path. The current pass's maximum measured SPI-to-GND-via distance is recorded in DESIGN_REVIEW.md.
+
 Fit carrier R20 immediately after U5 pin 21 for SCK and R21 after U5 pin 20 for MOSI, before fanout. Fit carrier R22 immediately at MCP23S17 U4 SO pin 14 before its MISO branch joins the bus. Fit E22/E28 R5 at each module MISO output and Core R3 beside socket J4 pin 3. Both E28 card instances need their own R5. Use short inline connections with no parallel bypass or long test-point/header stubs.
 
 All start at 22 ohms; the same 0603 footprint accepts the documented 0-ohm alternate. Confirm values by oscilloscope/IBIS during bring-up. See DESIGN_REVIEW.md for the exact endpoint table and measurement requirements. These parts are now in the schematics; their physical placement and routed lengths are recorded in DESIGN_REVIEW.md.

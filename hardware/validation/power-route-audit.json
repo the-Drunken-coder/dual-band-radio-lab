@@ -191,5 +191,23 @@
       "positive_length_mm": 39.641,
       "shared_positive_drop_V": 0.0104
     }
+  },
+  "E22_decision": {
+    "supply_architecture_changed": false,
+    "nominal_J9_voltage_V": 5,
+    "nominal_total_input_A": 1.8057,
+    "nominal_E22_current_A": 0.65,
+    "nominal_copper_temperature_C": 20,
+    "nominal_efuse_ohm": 0.0283,
+    "estimated_nominal_module_voltage_V": 4.867,
+    "conservative_J9_voltage_V": 4.75,
+    "conservative_total_input_A": 3.225,
+    "conservative_E22_current_A": 0.85,
+    "conservative_copper_temperature_C": 60,
+    "conservative_module_voltage_V": 4.459,
+    "four_amp_stress_module_voltage_V": 4.394,
+    "module_at_least_5V_guaranteed": false,
+    "full_30dBm_guaranteed": false,
+    "decision": "Accept reduced/unspecified maximum RF output for Rev A. Do not raise the shared input or redesign power solely for 30 dBm. Nominal model assumes 5.000 V at J9; upstream cable/source drop further reduces it. Transient droop, thermal and RF output require measurement."
   }
 }

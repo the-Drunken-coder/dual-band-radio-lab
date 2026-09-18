@@ -1,0 +1,46 @@
+{
+  "e28-2g4m27s-rev-a": {
+    "result": "PASS",
+    "baseline_board_sha256": "b040660c279a1655fae0cb713a66c4f048709e391a1b5497d7782c0f84f22212",
+    "current_board_sha256": "0d6f4b72e5a321f0629ca04169d62bf6ff4b9655384eeaccd0b6f2d8326e42f4",
+    "unchanged_footprints": 39,
+    "unchanged_original_GND_vias": 108,
+    "unchanged_files": [
+      "adapters/e28-2g4m27s-rev-a/e28-2g4m27s-rev-a.kicad_sch",
+      "adapters/e28-2g4m27s-rev-a/BOM.csv"
+    ]
+  },
+  "e22-900m30s-rev-a": {
+    "result": "PASS",
+    "baseline_board_sha256": "e6eb3e46e58072e86e6807c0f44f02412f5278c4819a3d430798b0e49083937f",
+    "current_board_sha256": "4c813119fb4adb4ebd6e7108d4af49b6434fc0286f6beb0a7c5413e0f3c27974",
+    "unchanged_footprints": 27,
+    "unchanged_original_GND_vias": 105,
+    "unchanged_files": [
+      "adapters/e22-900m30s-rev-a/e22-900m30s-rev-a.kicad_sch",
+      "adapters/e22-900m30s-rev-a/BOM.csv"
+    ]
+  },
+  "core2021-hf-m-rev-a": {
+    "result": "PASS",
+    "baseline_board_sha256": "f68b35bbb2cdc492bcad3530f2664ae06a2918c40190e0e6f7e30987cf25513a",
+    "current_board_sha256": "43bf3d6d9ca33813d2a135b3996e672eb400146dfc387e86f297bc321b7c8513",
+    "unchanged_footprints": 28,
+    "unchanged_original_GND_vias": 111,
+    "unchanged_files": [
+      "adapters/core2021-hf-m-rev-a/core2021-hf-m-rev-a.kicad_sch",
+      "adapters/core2021-hf-m-rev-a/BOM.csv"
+    ]
+  },
+  "carrier-rev-a": {
+    "result": "PASS",
+    "baseline_board_sha256": "a8cdfa2c8a93a2575f107cbba04d160307cc93d9a5c83a6faed58248291db20d",
+    "current_board_sha256": "65f006887162d37038c0215254cd91fff91637425dbf48ad6acab402bcbd1b55",
+    "unchanged_footprints": 107,
+    "unchanged_original_GND_vias": 406,
+    "unchanged_files": [
+      "carrier-rev-a/carrier-rev-a.kicad_sch",
+      "carrier-rev-a/BOM.csv"
+    ]
+  }
+}

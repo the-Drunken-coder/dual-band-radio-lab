@@ -42,6 +42,7 @@ for name,pts in corridors.items():
     q=p.VECTOR2I(p.FromMM(x),p.FromMM(y))
     if not any(pp.Contains(q) for pp in poly):missing.append((round(x,3),round(y,3)))
  checks[name]={'centerline':pts,'width_mm':width,'length_mm':round(length,3),'missing_samples':missing[:10],'missing_count':len(missing)}
+assert all(row['missing_count']==0 for row in checks.values()),{name:row for name,row in checks.items() if row['missing_count']}
 # Corridor lengths bound the geometric return distance; shared-segment currents are applied below.
 return_lengths={'S1':7+103.92+180+7.5+2.5,'S3':7+103.92+80+7.5+2.5,'S2':7+119.08+62.22+45+2.52,'S4':7+119.08+145+43+17.22+2+2.52}
 r_per_mm=.01724*.001/(4*.07)*1.1572
@@ -70,3 +71,17 @@ for n,(dest,current) in loads.items():
   row.update(return_length_bound_mm=round(return_lengths[n],3),return_drop_bound_V=round(ground_drop,4),return_drop_4A_stress_V=round(ground_drop4,4),contact_drop_allowance_V=round(contact_drop,4),adapter_positive_ohm=adapter_r,module_input_floor_at_J9_4_75V=round(4.75-total,3),floor_with_4A_shared_trunk_stress=round(4.75-total4,3))
  result['loads'][n]=row
 (ROOT/'validation/power-route-audit.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
+# E22 output-power decision, using the actual routed network rather than 5 V
+# at J9 as a proxy for the module voltage. Typical eFuse R is not a guarantee.
+nominal={'S1':.650,'S2':.105,'S3':3.3*.580/(.85*5),'S4':3.3*.580/(.85*5),'Pico':.120,'logic':.030}
+ni=sum(nominal.values());nc=collections.defaultdict(float)
+for n,path in paths.items():
+ for a,c,ll,r in path:nc[tuple(sorted([a,c]))]+=nominal[n]
+rtemp=1.1572
+positive_nom=sum(r/rtemp*nc[tuple(sorted([a,c]))] for a,c,ll,r in paths['S1'])
+return_nom=ni*(7*r_per_mm/rtemp+.005)+(103.92+80)*(nominal['S1']+nominal['S3']+.15)*r_per_mm/rtemp*4/10+100*(nominal['S1']+.15)*r_per_mm/rtemp*4/10+nominal['S1']*10*r_per_mm/rtemp
+adapter_r=audit['e22-900m30s-rev-a']['power']['slot_to_load']['resistance_60C_ohm']
+nom_drop=ni*(input_r/rtemp+.0283)+positive_nom+return_nom+nominal['S1']*(.015+adapter_r/rtemp+80*r_per_mm/rtemp)
+result['E22_decision']={'supply_architecture_changed':False,'nominal_J9_voltage_V':5,'nominal_total_input_A':round(ni,4),'nominal_E22_current_A':.65,'nominal_copper_temperature_C':20,'nominal_efuse_ohm':.0283,'estimated_nominal_module_voltage_V':round(5-nom_drop,3),'conservative_J9_voltage_V':4.75,'conservative_total_input_A':3.225,'conservative_E22_current_A':.85,'conservative_copper_temperature_C':60,'conservative_module_voltage_V':result['loads']['S1']['module_input_floor_at_J9_4_75V'],'four_amp_stress_module_voltage_V':result['loads']['S1']['floor_with_4A_shared_trunk_stress'],'module_at_least_5V_guaranteed':False,'full_30dBm_guaranteed':False,'decision':'Accept reduced/unspecified maximum RF output for Rev A. Do not raise the shared input or redesign power solely for 30 dBm. Nominal model assumes 5.000 V at J9; upstream cable/source drop further reduces it. Transient droop, thermal and RF output require measurement.'}
+(ROOT/'validation/power-route-audit.json').write_text(json.dumps(result,indent=2)+'\n')
+print(json.dumps(result['E22_decision'],indent=2))

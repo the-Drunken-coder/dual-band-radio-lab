@@ -1,6 +1,6 @@
 # Rev A schematic and PCB review
 
-2026-09-17. **Four routed native PCBs pass KiCad 10.0.6 DRC with zero findings, zero unconnected items and zero schematic-parity findings. All four schematics also pass ERC with zero errors/warnings.** Stopped for board review. No Gerbers, drills, placement/order packages or orders were produced. One E28 design is instantiated twice.
+2026-09-18. **Four routed native PCBs pass KiCad 10.0.6 DRC with zero findings, zero unconnected items and zero schematic-parity findings. All four schematics also pass ERC with zero errors/warnings.** Stopped for board review. No Gerbers, drills, placement/order packages or orders were produced. One E28 design is instantiated twice.
 
 | Requested blocker | Implemented disposition |
 | --- | --- |
@@ -100,17 +100,17 @@ The carrier uses a shared branched tree with two slot columns, not four isolated
 
 | Carrier path from resistor pad 2 | S1 | S2 | S3 | S4 | Local endpoint |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| SPI_SCK (R20) | 228.1 mm | 82.4 mm | 170.7 mm | 84.8 mm | 60.3 mm (U4.12) |
-| SPI_MOSI (R21) | 372.7 mm | 102.9 mm | 260.7 mm | 96.5 mm | 164.4 mm (U4.13) |
-| SPI_MISO (R22) | 172.0 mm | 62.4 mm | 104.3 mm | 122.1 mm | 62.6 mm (U7.4) |
+| SPI_SCK (R20) | 176.7 mm | 132.8 mm | 157.0 mm | 62.1 mm | 59.9 mm (U4.12) |
+| SPI_MOSI (R21) | 255.0 mm | 121.6 mm | 145.3 mm | 60.0 mm | 58.0 mm (U4.13) |
+| SPI_MISO (R22) | 196.0 mm | 72.7 mm | 90.8 mm | 114.0 mm | 49.1 mm (U7.4) |
 
 For MISO the reference above is the expander's bus-side resistor. Each card has its own source resistor; only the selected source may drive the shared bus. U7 is the receiving buffer.
 
 | Card: slot to module/socket (MISO to resistor pad 2) | SCK | MOSI | MISO |
 | --- | ---: | ---: | ---: |
-| e22-900m30s-rev-a | 55.3 mm | 40.8 mm | 47.5 mm |
-| core2021-hf-m-rev-a | 59.5 mm | 59.5 mm | 66.0 mm |
-| e28-2g4m27s-rev-a | 48.9 mm | 52.1 mm | 44.5 mm |
+| e22-900m30s-rev-a | 50.7 mm | 41.8 mm | 35.8 mm |
+| core2021-hf-m-rev-a | 59.5 mm | 59.4 mm | 64.9 mm |
+| e28-2g4m27s-rev-a | 55.6 mm | 52.1 mm | 46.1 mm |
 
 Every card SPI probe is now only **2.0 mm from its header contact**, on the existing path or a short local branch. Longer probe detours found during review were removed. Bare pads are used instead of wire-loop SPI probes. The long shared interconnect is intentional for separated bench slots and is not impedance-qualified: use the actual tree and connector loading for IBIS/oscilloscope work. No maximum SPI rate or successful simultaneous-radio operation is claimed from DRC.
 
@@ -120,11 +120,54 @@ The carrier has 6 mm horizontal protected-power runs, an **8 mm right-hand trunk
 
 The tiny eFuse package necessarily has a local fanout exception: its 0.30 mm power strips continue about 1 mm beyond the land, then expand through short 1.5 mm fanouts into >=4 mm copper. The longest 1.5 mm entry fanout is 3.7 mm; the output fanout is about 4.0 mm before widening. No thermal spokes are used. This exception is included in the extracted resistance and requires the documented full-load thermal check; it is not represented as 4 mm copper through a 0.30 mm land. Broad board copper surrounds the device, and 4 A remains a design target pending hardware thermal qualification.
 
-[POWER_BUDGET.md](POWER_BUDGET.md) records extracted route lengths, the shared-current voltage-drop estimate and explicit ground/contact assumptions. At 4.75 V at J9, the modeled E28 inputs are 4.47 V at the running allocation and **4.41 / 4.40 V** in the 4 A common-trunk stress calculation. The latter is an engineering estimate with little remaining modeled margin, not a measured supply guarantee. Verify at the slot/regulator probes under startup and load steps. E22's 30 dBm requirement still cannot be guaranteed from exactly 5 V at J9.
+[POWER_BUDGET.md](POWER_BUDGET.md) records extracted route lengths, the shared-current voltage-drop estimate and explicit ground/contact assumptions. At 4.75 V at J9, the modeled E28 inputs are 4.47 V at the running allocation and **4.41 / 4.40 V** in the 4 A common-trunk stress calculation. The latter is an engineering estimate with little remaining modeled margin, not a measured supply guarantee. Verify at the slot/regulator probes under startup and load steps. E22's estimated module voltage is 4.867 V nominally, 4.459 V at the conservative allocation and 4.394 V in the 4 A trunk stress case. Neither at least 5.0 V at the module nor full 30 dBm is guaranteed. POWER_BUDGET.md records the explicit decision to accept this Rev-A limitation and keep the approved supply architecture.
 
-The E28 buck was compared with AP63203 datasheet **DS41326 Rev 3-2, Figure 25** and the manufacturer's evaluation-board layout. VIN-to-C1 is 3.30 mm pad-centre; SW-to-L1 is 2.77 mm. C1/C8, U2, L1 and C2/C3/C7 form one local cluster. Bootstrap C4 is above U2: BST is 3.76 mm and its SW branch 7.29 mm. SW is confined to this cluster, has no plane pour and never enters the SPI/control field. Its 0.6 mm probe pad adds less than 0.9 mm of local trace. TP20 provides an exposed ground-spring pad 4.2 mm away, so SW probing does not require a long ground lead. Eighteen ground vias within x=0..20, y=35..57 stitch the IC/capacitor returns to bottom ground. Feedback senses the output capacitor bank on B.Cu, routed around the input/SW cluster, with a 43.7 mm pad-to-pad sense path. It is a quiet sense route, not part of the load-current path. This follows the reference's short VIN/hot-loop, small SW, grounded underside and separated feedback principles; it is not claimed to be an exact copied evaluation board.
+The E28 buck was compared with AP63203 datasheet **DS41326 Rev 3-2, Figure 25** and the manufacturer's evaluation-board layout. VIN-to-C1 is 3.30 mm pad-centre; SW-to-L1 is 2.77 mm. C1/C8, U2, L1 and C2/C3/C7 form one local cluster. Bootstrap C4 is above U2: BST is 3.76 mm and its SW branch 7.29 mm. SW is confined to this cluster, has no plane pour and never enters the SPI/control field. Its 0.6 mm probe pad adds less than 0.9 mm of local trace. TP20 provides an exposed ground-spring pad 4.2 mm away, so SW probing does not require a long ground lead. Eighteen ground vias within x=0..20, y=35..57 stitch the IC/capacitor returns to bottom ground. The feedback branch now terminates directly at C2.1, the local output-capacitor node. Its pad-centre path is 23.79 mm including two 1.6 mm via transitions, reduced from 43.7 mm. Planar sense copper is 20.59 mm. It exits the FB side of U2, follows x=5 mm outside the VIN/SW cluster, then passes along y=48.4 mm south of the closest input capacitor C1 and output capacitor C2 before meeting C2.1. The low-current Kelvin branch remains on B.Cu so it does not cross the front-layer SW/bootstrap or inductor-current connections. It does not carry module load current. The primary C1/U2/C2 current-return region north of that sense segment remains GND; additional input capacitance C8 is south of it. This is an explicit two-layer compromise, not a claim that a 24 mm feedback path is ideal. The layout keeps VIN/SW connections compact, senses at the local output capacitor and separates the feedback branch from SW, following the reference-layout principles. Verify ripple and transient response at bring-up.
 
 References: [AP63203 datasheet](https://www.diodes.com/datasheet/download/AP63200-AP63201-AP63203-AP63205.pdf), [AP63203 evaluation-board guide](https://www.diodes.com/assets/Evaluation-Boards/AP63203-EVB-User-Guide.pdf). Thermal rise, ripple, startup and loop stability still require powered measurements.
+
+## Ground-reference pass, 2026-09-18
+
+The four boards retain two 70 um copper layers, the original footprints and slot geometry, the approved electrical schematics/BOMs, all source-side series-resistor copper and the 5 V distribution. `layout-invariants.json` compares those items against the pre-pass boards. No power architecture or GPIO assignment changed.
+
+Bottom routing was replaced with front-layer routes and short bottom crossings where the fixed pinout and existing copper prevent a practical front-only path. SPI received routing priority. Longer front-only detours were rejected when a short crossing with a nearby return via preserved a much shorter interconnect. The source-resistor connections were not moved or branched.
+
+| Board | Before: non-GND B.Cu segments / length | After: non-GND B.Cu segments / length | Length reduction | After: signals only, segments / length |
+| --- | ---: | ---: | ---: | ---: |
+| carrier-rev-a | 364 / 3027.4 mm | 516 / 621.6 mm | 79.5% | 419 / 480.9 mm |
+| e22-900m30s-rev-a | 48 / 148.1 mm | 36 / 26.6 mm | 82.0% | 17 / 19.6 mm |
+| core2021-hf-m-rev-a | 19 / 98.4 mm | 6 / 12.9 mm | 86.8% | 4 / 10.2 mm |
+| e28-2g4m27s-rev-a | 81 / 326.0 mm | 68 / 100.8 mm | 69.1% | 64 / 80.2 mm |
+
+The all-net totals include power and switch nodes. The signals-only column excludes those nets; the JSON lists the exclusion names and every per-net count. Segment counts are native KiCad primitives, including short bends and fanouts. A higher primitive count does not mean less total bottom copper; both quantities are reported without substituting one for the other.
+
+| Board | Before: SPI on B.Cu | After: SPI on B.Cu | SPI via transitions | Greatest nearest-GND-via distance |
+| --- | ---: | ---: | ---: | ---: |
+| carrier-rev-a | 790.4 mm | 37.8 mm | 18 | 1.579 mm |
+| e22-900m30s-rev-a | 0.0 mm | 0.0 mm | 0 | No transitions |
+| core2021-hf-m-rev-a | 0.0 mm | 0.0 mm | 0 | No transitions |
+| e28-2g4m27s-rev-a | 92.3 mm | 22.3 mm | 10 | 1.100 mm |
+
+The audit includes shared SPI, Pico-side SPI and the local source nets. Every transition has its coordinates, net, UUID, nearest GND via and distance recorded. Through-hole back-layer escapes are reported separately. Added return vias pass native connectivity checks on both layers. Close same-net redundant drills were consolidated; no drill-spacing finding was waived.
+
+### Remaining reference interruptions
+
+The layouts have one continuous filled B.Cu GND region per board, but they do **not** provide an uninterrupted opposite-layer reference beneath every millimetre of SPI. Connector/via antipads, local crossovers and crowded buffer/expander escapes still produce interruptions. These remain explicit human-review items. Clean DRC does not approve them electrically.
+
+| Board | Before: SPI length with sampled reference gaps | After: SPI length with sampled reference gaps | Connected B.Cu GND regions | Filled B.Cu GND area |
+| --- | ---: | ---: | ---: | ---: |
+| carrier-rev-a | 326.2 mm | 172.1 mm | 1 | 50184.1 mm2 |
+| e22-900m30s-rev-a | 9.6 mm | 5.8 mm | 1 | 6436.5 mm2 |
+| core2021-hf-m-rev-a | 19.3 mm | 6.8 mm | 1 | 6399.5 mm2 |
+| e28-2g4m27s-rev-a | 78.5 mm | 28.4 mm | 1 | 6030.1 mm2 |
+
+`audit_return_paths.py` subtracts native opposite-layer GND copper from each SPI track's full copper outline, retaining the missing polygons and areas. Polygonized arcs use a 0.005 mm error bound. The length summary samples the centre and both trace edges at intervals no longer than 0.1 mm; it includes terminal antipads rather than hiding them. Exact polygon findings can therefore exist even where a short gap falls between length samples. Nearby pads and crossing nets are recorded to locate each finding. This is a geometric audit, not a field solver or impedance certification.
+
+The [carrier reference map](renders/carrier-rev-a-return-reference.svg), [E22 map](renders/e22-900m30s-rev-a-return-reference.svg), [Core map](renders/core2021-hf-m-rev-a-return-reference.svg) and [E28 map](renders/e28-2g4m27s-rev-a-return-reference.svg) show bottom ground, SPI layers and missing reference copper. Magenta regions must be reviewed with the actual source/loading and intended clock speed. Do not interpret a large ground-area percentage as proof that a particular signal has a good return path.
+
+The 10 mm carrier main ground-return corridors and 4 mm terminal corridors were rechecked after refill. A RESET transition that intruded into the left corridor was rerouted; the audit rejects any missing sample instead of retaining the old voltage-drop estimate. The high-current positive traces remain unchanged. The E22 voltage and 30 dBm limitation are explicit in POWER_BUDGET.md.
+
+Native top/bottom and assembled 3D images were regenerated. Footprint positions, card insertion geometry, alignment-post capture, USB/BOOTSEL access, IPEX access and probe access remain unchanged and pass the geometric audit. The original physical-fit, thermal, inrush, RF coexistence and oscilloscope/IBIS qualification steps remain pending. This package stops for human review and is not a fabrication release.
 
 ## Final checks and stop point
 

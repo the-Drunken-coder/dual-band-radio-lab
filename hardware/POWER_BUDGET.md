@@ -104,3 +104,17 @@ Header allowance: 20 mOhm per contact, with two parallel +5 V contacts and four 
 The stress calculation scales shared positive drops by 4/3.225, applies the extra 0.775 A to every main ground corridor as an upper allowance, and holds each radio's stated branch load. It is a 4 A total-distribution check, not authorization to put 4 A through a slot. Both E28 inputs remain above the 4.4 V budget point in this estimate, although S4's stress margin is small. Confirm copper thickness, connector resistance, regulator efficiency, rail droop and transient recovery on the prototype. No field/thermal model or oscilloscope measurement has been substituted by DRC. E22 is above its operating minimum but still below the >=5 V condition for guaranteed full 30 dBm.
 
 The 6 A fault-path check is transient only: a 223 mm x 6 mm feeder is about 10.59 mOhm at 60 C, dissipating 0.38 W if all 6 A traversed it. The 8 mm trunk has lower resistance per unit length. The eFuse's 4.11–5.13 A estimated current-limit range and thermal shutdown, rather than a 6 A continuous-board rating, constrain a sustained fault. The previously specified 4 A load/thermal and 3.865 A startup tests remain mandatory.
+
+## E22 maximum-power decision, 2026-09-18
+
+Keep the approved protected 5 V architecture for Rev A. Ebyte's E22 manual requires at least 5.0 V at the module for its full-power specification. Voltage at J9 is not voltage at U1: the eFuse, carrier copper, two supply contacts, return contacts and daughtercard copper all introduce loss.
+
+| Case | Assumptions | Estimated E22 module voltage |
+| --- | --- | ---: |
+| Nominal | 5.000 V at J9, E22 0.650 A, total 1.806 A, 20 C copper, typical 28.3 milliohm eFuse | 4.867 V |
+| Conservative running allocation | 4.75 V at J9, E22 0.850 A, total 3.225 A, 60 C copper, maximum 45 milliohm eFuse | 4.459 V |
+| Shared-trunk stress | 4.75 V at J9 and 4 A common-trunk stress, with E22 at 0.850 A | 4.394 V |
+
+These estimates come from `audit_power.py` using the actual routed network and the existing contact/return allowances. The nominal model assumes 5 V has reached J9; cable or source sag lowers the module voltage further. It is a typical estimate, not a lower bound. The conservative numbers do not cover every transient; the capacitor/load-step and thermal tests remain required.
+
+**At least 5.0 V at the E22 is not guaranteed. Full 30 dBm operation is therefore not guaranteed.** Accept reduced or unspecified maximum RF output as an explicit Rev-A limitation. Do not raise the shared input or alter protection thresholds to chase RF power. Any later supply redesign must first be reviewed against Pico, E28, Core2021 and protection limits. No power-architecture change is made in this layout pass.

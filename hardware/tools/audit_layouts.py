@@ -81,7 +81,7 @@ def main():
   for ref,pin,res in pairs:
    pad=next(a for a in fps[ref].Pads() if a.GetNumber()==pin);net=pad.GetNetname();g=NetGraph(b,net)
    members=sorted(g.pads);assert members==sorted([(ref,pin),(res,'1')]),(name,net,members)
-   route=g.path((ref,pin),(res,'1'));out['sources'].append(dict(net=net,source=ref+'.'+pin,resistor=res,**route,total_source_copper_mm=round(g.total,3)))
+   route=g.path((ref,pin),(res,'1'));assert 'length_mm' in route and abs(g.total-route['length_mm'])<.01,(name,net,'extra source copper or layer transition');out['sources'].append(dict(net=net,source=ref+'.'+pin,resistor=res,**route,total_source_copper_mm=round(g.total,3)))
   for net,res in [('SPI_SCK','R20'),('SPI_MOSI','R21'),('SPI_MISO','R22')]:
    g=NetGraph(b,'/'+net)
    if name=='carrier-rev-a':

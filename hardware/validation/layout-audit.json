@@ -36,21 +36,21 @@
     ],
     "spi": {
       "SPI_SCK": {
-        "total_trace_mm": 55.298,
+        "total_trace_mm": 50.769,
         "header_to_load": {
-          "length_mm": 55.298,
-          "resistance_60C_ohm": 0.080447
+          "length_mm": 50.709,
+          "resistance_60C_ohm": 0.071011
         },
         "probe_to_header": {
-          "length_mm": 2.0,
-          "resistance_60C_ohm": 0.00285
+          "length_mm": 2.002,
+          "resistance_60C_ohm": 0.002708
         }
       },
       "SPI_MOSI": {
-        "total_trace_mm": 42.77,
+        "total_trace_mm": 43.911,
         "header_to_load": {
-          "length_mm": 40.77,
-          "resistance_60C_ohm": 0.062142
+          "length_mm": 41.812,
+          "resistance_60C_ohm": 0.05782
         },
         "probe_to_header": {
           "length_mm": 2.0,
@@ -58,14 +58,14 @@
         }
       },
       "SPI_MISO": {
-        "total_trace_mm": 47.549,
+        "total_trace_mm": 37.816,
         "header_to_load": {
-          "length_mm": 47.549,
-          "resistance_60C_ohm": 0.067758
+          "length_mm": 35.771,
+          "resistance_60C_ohm": 0.050336
         },
         "probe_to_header": {
-          "length_mm": 2.0,
-          "resistance_60C_ohm": 0.00285
+          "length_mm": 2.002,
+          "resistance_60C_ohm": 0.002708
         }
       }
     },
@@ -213,8 +213,8 @@
       }
     ],
     "ground_area_mm2": {
-      "F.Cu": 5704.12,
-      "B.Cu": 6367.48
+      "F.Cu": 5475.01,
+      "B.Cu": 6436.51
     },
     "drc_findings": {
       "violations": 0,
@@ -259,21 +259,21 @@
     ],
     "spi": {
       "SPI_SCK": {
-        "total_trace_mm": 47.706,
+        "total_trace_mm": 45.978,
         "header_to_load": {
-          "length_mm": 48.906,
-          "resistance_60C_ohm": 0.068132
+          "length_mm": 55.558,
+          "resistance_60C_ohm": 0.073943
         },
         "probe_to_header": {
-          "length_mm": 2.0,
-          "resistance_60C_ohm": 0.00285
+          "length_mm": 2.002,
+          "resistance_60C_ohm": 0.002708
         }
       },
       "SPI_MOSI": {
-        "total_trace_mm": 51.925,
+        "total_trace_mm": 48.927,
         "header_to_load": {
-          "length_mm": 52.053,
-          "resistance_60C_ohm": 0.072644
+          "length_mm": 52.109,
+          "resistance_60C_ohm": 0.072377
         },
         "probe_to_header": {
           "length_mm": 2.0,
@@ -281,14 +281,14 @@
         }
       },
       "SPI_MISO": {
-        "total_trace_mm": 44.939,
+        "total_trace_mm": 42.915,
         "header_to_load": {
-          "length_mm": 44.539,
-          "resistance_60C_ohm": 0.062688
+          "length_mm": 46.068,
+          "resistance_60C_ohm": 0.062947
         },
         "probe_to_header": {
-          "length_mm": 2.0,
-          "resistance_60C_ohm": 0.00285
+          "length_mm": 2.002,
+          "resistance_60C_ohm": 0.002708
         }
       }
     },
@@ -481,8 +481,8 @@
       }
     ],
     "ground_area_mm2": {
-      "F.Cu": 5391.46,
-      "B.Cu": 5896.86
+      "F.Cu": 5224.49,
+      "B.Cu": 6030.08
     },
     "drc_findings": {
       "violations": 0,
@@ -527,21 +527,21 @@
     ],
     "spi": {
       "SPI_SCK": {
-        "total_trace_mm": 61.516,
+        "total_trace_mm": 59.533,
         "header_to_load": {
-          "length_mm": 59.516,
-          "resistance_60C_ohm": 0.084811
+          "length_mm": 59.461,
+          "resistance_60C_ohm": 0.08346
         },
         "probe_to_header": {
-          "length_mm": 2.0,
-          "resistance_60C_ohm": 0.00285
+          "length_mm": 2.002,
+          "resistance_60C_ohm": 0.002708
         }
       },
       "SPI_MOSI": {
-        "total_trace_mm": 61.516,
+        "total_trace_mm": 59.515,
         "header_to_load": {
-          "length_mm": 59.516,
-          "resistance_60C_ohm": 0.084811
+          "length_mm": 59.449,
+          "resistance_60C_ohm": 0.083603
         },
         "probe_to_header": {
           "length_mm": 2.0,
@@ -549,14 +549,14 @@
         }
       },
       "SPI_MISO": {
-        "total_trace_mm": 67.953,
+        "total_trace_mm": 64.886,
         "header_to_load": {
-          "length_mm": 65.953,
-          "resistance_60C_ohm": 0.093983
+          "length_mm": 64.878,
+          "resistance_60C_ohm": 0.091974
         },
         "probe_to_header": {
-          "length_mm": 2.0,
-          "resistance_60C_ohm": 0.00285
+          "length_mm": 2.002,
+          "resistance_60C_ohm": 0.002708
         }
       }
     },
@@ -704,8 +704,8 @@
       }
     ],
     "ground_area_mm2": {
-      "F.Cu": 5689.12,
-      "B.Cu": 6354.5
+      "F.Cu": 5689.72,
+      "B.Cu": 6399.51
     },
     "drc_findings": {
       "violations": 0,
@@ -814,77 +814,77 @@
     ],
     "spi": {
       "SPI_SCK": {
-        "total_trace_mm": 366.304,
+        "total_trace_mm": 417.391,
         "paths": {
           "J1.5": {
-            "length_mm": 228.143,
-            "resistance_60C_ohm": 0.322765
+            "length_mm": 176.746,
+            "resistance_60C_ohm": 0.335656
           },
           "J3.5": {
-            "length_mm": 82.382,
-            "resistance_60C_ohm": 0.115835
+            "length_mm": 132.778,
+            "resistance_60C_ohm": 0.241575
           },
           "J5.5": {
-            "length_mm": 170.685,
-            "resistance_60C_ohm": 0.240887
+            "length_mm": 157.0,
+            "resistance_60C_ohm": 0.284436
           },
           "J7.5": {
-            "length_mm": 84.752,
-            "resistance_60C_ohm": 0.113026
+            "length_mm": 62.098,
+            "resistance_60C_ohm": 0.117798
           },
           "U4.12": {
-            "length_mm": 60.319,
-            "resistance_60C_ohm": 0.084395
+            "length_mm": 59.949,
+            "resistance_60C_ohm": 0.10455
           }
         }
       },
       "SPI_MOSI": {
-        "total_trace_mm": 413.645,
+        "total_trace_mm": 372.342,
         "paths": {
           "J1.6": {
-            "length_mm": 372.736,
-            "resistance_60C_ohm": 0.51157
+            "length_mm": 254.999,
+            "resistance_60C_ohm": 0.476641
           },
           "J3.6": {
-            "length_mm": 102.945,
-            "resistance_60C_ohm": 0.138771
+            "length_mm": 121.587,
+            "resistance_60C_ohm": 0.221726
           },
           "J5.6": {
-            "length_mm": 260.718,
-            "resistance_60C_ohm": 0.351943
+            "length_mm": 145.263,
+            "resistance_60C_ohm": 0.271411
           },
           "J7.6": {
-            "length_mm": 96.483,
-            "resistance_60C_ohm": 0.129563
+            "length_mm": 60.004,
+            "resistance_60C_ohm": 0.113201
           },
           "U4.13": {
-            "length_mm": 164.386,
-            "resistance_60C_ohm": 0.214018
+            "length_mm": 58.047,
+            "resistance_60C_ohm": 0.101099
           }
         }
       },
       "SPI_MISO": {
-        "total_trace_mm": 349.709,
+        "total_trace_mm": 356.967,
         "paths": {
           "J1.7": {
-            "length_mm": 172.038,
-            "resistance_60C_ohm": 0.244375
+            "length_mm": 195.968,
+            "resistance_60C_ohm": 0.371855
           },
           "J3.7": {
-            "length_mm": 62.384,
-            "resistance_60C_ohm": 0.088898
+            "length_mm": 72.669,
+            "resistance_60C_ohm": 0.137138
           },
           "J5.7": {
-            "length_mm": 104.308,
-            "resistance_60C_ohm": 0.14786
+            "length_mm": 90.752,
+            "resistance_60C_ohm": 0.172167
           },
           "J7.7": {
-            "length_mm": 122.126,
-            "resistance_60C_ohm": 0.17325
+            "length_mm": 113.994,
+            "resistance_60C_ohm": 0.211694
           },
           "U7.4": {
-            "length_mm": 62.638,
-            "resistance_60C_ohm": 0.087598
+            "length_mm": 49.107,
+            "resistance_60C_ohm": 0.088438
           }
         }
       }
@@ -1373,8 +1373,8 @@
       }
     ],
     "ground_area_mm2": {
-      "F.Cu": 41492.71,
-      "B.Cu": 48466.84
+      "F.Cu": 37643.89,
+      "B.Cu": 50184.14
     },
     "drc_findings": {
       "violations": 0,

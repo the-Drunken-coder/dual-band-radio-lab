@@ -6,6 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 CLI='/Users/lanearaujo/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli'
 def check(board):
  out=ROOT/'validation'/board.stem;out.mkdir(exist_ok=True)
+ (out/'drc.json').unlink(missing_ok=True)
  r=subprocess.run([CLI,'pcb','drc','--format','json','--schematic-parity','--severity-all','--refill-zones','--save-board','--exit-code-violations','-o',str(out/'drc.json'),str(board)],capture_output=True,text=True)
  (out/'drc.log').write_text(r.stdout+r.stderr)
  if not (out/'drc.json').exists():return {'board':board.stem,'exit':r.returncode,'error':r.stderr}
