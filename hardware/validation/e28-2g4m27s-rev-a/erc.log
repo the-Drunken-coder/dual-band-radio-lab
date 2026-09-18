@@ -1,7 +1,2 @@
 Found 0 violations
 Saved ERC Report to /Users/lanearaujo/Documents/Codex/dual-band-radio-lab/hardware/validation/e28-2g4m27s-rev-a/erc.json
-
-Fontconfig error: No writable cache directories
-	/opt/homebrew/var/cache/fontconfig
-	/Users/lanearaujo/.cache/fontconfig
-	/Users/lanearaujo/.fontconfig

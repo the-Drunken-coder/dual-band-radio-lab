@@ -113,6 +113,7 @@ EFUSE = symbol("TPS259470L_RPW", [(str(i),n,t) for i,n,t in [(1,"EN_UVLO","input
     (7,"DVDT","passive"),(8,"GND","power_in"),(9,"ILM","passive"),(10,"ITIMER","passive")]])
 MOS = symbol("DMG2305UX", [("1","G","input"),("2","S","passive"),("3","D","passive")])
 symbol("Mechanical", [])
+symbol("Probe_point", [("1", "PROBE", "passive")])
 symbol("Capacitor_polarized", [("1", "+", "passive"), ("2", "-", "passive")])
 symbol("Header_1x20", [(str(i), str(i), "passive") for i in range(1,21)])
 
@@ -168,7 +169,7 @@ class Study:
                  f'(property "Value" {q(value)} (at {x} {y-2.54} 0) (effects (font (size 1.27 1.27))))']
         for name, val in [("Footprint", footprint), ("MPN", mpn), ("Supplier", supplier), ("Status", "UNRELEASED"), ("Source", source), ("Assembly", assembly)]:
             props.append(f'(property {q(name)} {q(val)} (at {x} {y} 0) (effects (font (size 1.27 1.27)) hide))')
-        self.items.append(f'(symbol (lib_id {q("RadioLab:"+sym)}) (at {x} {y} 0) (unit 1) (in_bom {"no" if mpn=="MECH-NPTH-3.4" else "yes"}) (on_board {"yes" if on_board else "no"}) (dnp no) '
+        self.items.append(f'(symbol (lib_id {q("RadioLab:"+sym)}) (at {x} {y} 0) (unit 1) (in_bom {"no" if mpn in ["MECH-NPTH-3.4","PCB-PROBE-PAD"] else "yes"}) (on_board {"yes" if on_board else "no"}) (dnp no) '
             f'(uuid {q(part_id)}) {" ".join(props)} '
             f'(instances (project {q(self.name)} (path {q("/"+self.uuid)} (reference {q(ref)}) (unit 1)))))')
         rows = (len(SYMBOLS[sym]) + 1) // 2
@@ -221,25 +222,43 @@ class Study:
         self.power_declaration("#FLG02", "GND", 185, 115)
 
     def finish(self):
+        from layout_plan import BOARDS as LAYOUTS
+        for i, (ref, t) in enumerate(LAYOUTS[self.name]['testpoints'].items()):
+            carrier = self.name == 'carrier-rev-a'
+            x = 70 + (i % 8)*130 if carrier else 440 + (i % 2)*105
+            y = 615 + (i // 8)*25 if carrier else 45 + (i // 2)*32
+            self.part(ref, 'Probe_point', t['label'], x, y, {'1':t['net']},
+                mpn='5011' if t['clip'] else 'PCB-PROBE-PAD',
+                footprint='TestPoint:TestPoint_Keystone_5010-5014_Multipurpose' if t['clip'] else 'RadioLab:Probe_Pad_D0.6mm' if t['net']=='SW' else 'RadioLab:Probe_Pad_D1.0mm',
+                purpose='Accessible ground clip' if t['clip'] else 'Inline probe pad, no source-side stub',
+                assembly='Factory fitted' if t['clip'] else 'Bare copper PCB feature; no purchased component',
+                source='Keystone 5011 drawing and manufacturer category 748' if t['clip'] else ('0.6 mm round exposed copper pad on the local switch node' if t['label']=='SW' else '1 mm round exposed copper pad'))
         self.path.mkdir(parents=True, exist_ok=True)
-        self.text("REV A SCHEMATIC REVIEW. NO PCB LAYOUT OR FABRICATION RELEASE.", 20.32, 15.24, 2)
+        self.text("REV A LAYOUT REVIEW. NOT FOR FABRICATION.", 20.32, 15.24, 2)
         self.text(self.title, 20.32, 22.86, 1.6)
         self.text("Local labels connect equal names. NC marks deliberate unused module pins.\nSelected parts: see BOM, FOOTPRINT_REVIEW.md and ASSEMBLY_NOTES.md.", 20.32, 30.48)
-        text = f'(kicad_sch (version 20250114) (generator "eeschema") (uuid {q(self.uuid)}) (paper {q("A1" if self.name=="carrier-rev-a" else "A3")}) '
+        text = f'(kicad_sch (version 20250114) (generator "eeschema") (uuid {q(self.uuid)}) (paper {q("A0" if self.name=="carrier-rev-a" else "A2")}) '
         text += f'(title_block (title {q(self.title)}) (date "2026-09-17") (rev "A-schematic") (comment 1 "SCHEMATIC REVIEW - NOT FOR FABRICATION")) '
         text += '(lib_symbols ' + "\n".join(symbol_text(n) for n in sorted(self.used)) + ')\n'
         text += "\n".join(self.items) + '\n(embedded_fonts no))\n'
         (self.path / (self.name + '.kicad_sch')).write_text(text)
-        (self.path / (self.name + '.kicad_pro')).write_text(json.dumps({"meta": {"filename": self.name+'.kicad_pro', "version": 1}}, indent=2)+'\n')
+        project = self.path / (self.name + '.kicad_pro')
+        settings = json.loads(project.read_text()) if project.exists() else {}
+        settings['meta'] = {'filename':self.name+'.kicad_pro','version':1}
+        project.write_text(json.dumps(settings, indent=2)+'\n')
         rel = '../libraries' if self.path.parent == ROOT else '../../libraries'
         (self.path / 'sym-lib-table').write_text(f'(sym_lib_table (version 7) (lib (name "RadioLab") (type "KiCad") (uri "${{KIPRJMOD}}/{rel}/RadioLab.kicad_sym") (options "") (descr "Unreleased electrical study symbols")))\n')
         (self.path / 'fp-lib-table').write_text(f'(fp_lib_table (version 7) (lib (name "RadioLab") (type "KiCad") (uri "${{KIPRJMOD}}/{rel}/RadioLab.pretty") (options "") (descr "Schematic footprint selections")))\n')
+        fp_entries = [f'(lib (name "RadioLab") (type "KiCad") (uri "${{KIPRJMOD}}/{rel}/RadioLab.pretty") (options "") (descr "Rev A"))']
+        for family in sorted({p['footprint'].split(':')[0] for p in self.parts if p['footprint'] and not p['footprint'].startswith('RadioLab:')}):
+            fp_entries.append(f'(lib (name "{family}") (type "KiCad") (uri "${{KICAD10_FOOTPRINT_DIR}}/{family}.pretty") (options "") (descr "KiCad standard library"))')
+        (self.path / 'fp-lib-table').write_text('(fp_lib_table (version 7) '+ ' '.join(fp_entries)+')\n')
         columns = ['reference', 'value', 'mpn', 'supplier', 'quantity', 'purpose', 'assembly', 'footprint', 'source']
         with (self.path / 'BOM.csv').open('w', newline='') as f:
-            w=csv.DictWriter(f,fieldnames=columns,extrasaction='ignore');w.writeheader();w.writerows(p for p in self.parts if p["mpn"]!="MECH-NPTH-3.4")
+            w=csv.DictWriter(f,fieldnames=columns,extrasaction='ignore');w.writeheader();w.writerows(p for p in self.parts if p["mpn"] not in ["MECH-NPTH-3.4","PCB-PROBE-PAD"])
         (self.path / 'connectivity.json').write_text(json.dumps(self.parts,indent=2)+'\n')
         (self.path / 'fabrication').mkdir(exist_ok=True)
-        (self.path / 'fabrication' / 'DO_NOT_FABRICATE.md').write_text('# No fabrication release\n\nNo Gerbers, drills, placement files or PCB layouts are released. Schematic review only. See `hardware/DESIGN_REVIEW.md`.\n')
+        (self.path / 'fabrication' / 'DO_NOT_FABRICATE.md').write_text('# No fabrication release\n\nPCB layout review only. No Gerbers, drills, placement files or ordering release. See `hardware/DESIGN_REVIEW.md`.\n')
 
 
 def adapter(kind):
@@ -288,7 +307,7 @@ def adapter(kind):
         for ref,net,x in [('R3','TX_EN',65),('R4','RX_EN',185)]:
             b.passive(ref,'Resistor','10k',x,235,net,'GND','Default PA/LNA inactive')
     if kind=='e22': b.power_declaration('#FLG03','IOREF_3V3',305,115)
-    b.text('KEYED SLOT: H1 engages the carrier M3 x 25 post before electrical contact.\nAll headers and passives factory fitted. No user soldering or antenna-selector rework.\nPower declarations describe power arriving through the slot and buck output after L1.\nNo PCB layout is authorized. Footprint and assembly evidence: see DESIGN_REVIEW.md.',20.32,267)
+    b.text('KEYED SLOT: H1 engages the carrier M3 x 25 post before electrical contact.\nAll headers and passives factory fitted. No user soldering or antenna-selector rework.\nPower declarations describe power arriving through the slot and buck output after L1.\nLayout authorized; no fabrication release. See DESIGN_REVIEW.md.',20.32,267)
     b.part('H1','Mechanical','M3 alignment hole',305,235,{},'MECH-NPTH-3.4',purpose='Required daughtercard post clearance; 3.4 mm NPTH, 7 mm keepout',source='radio-slot-v0.1.md; Accu SSCF-M3-25-A2 dimensions',footprint='RadioLab:Alignment_M3_3.4mm')
     b.finish()
 
@@ -373,7 +392,7 @@ def main():
     (ROOT/'libraries').mkdir(exist_ok=True)
     (ROOT/'libraries'/'RadioLab.kicad_sym').write_text('(kicad_symbol_lib (version 20231120) (generator "kicad_symbol_editor")\n' + '\n'.join(symbol_text(n, True) for n in sorted(SYMBOLS)) + ')\n')
     (ROOT/'gpio-map.json').write_text(json.dumps({str(k):{'net':v,'pico_pin':PICO_NAMES.index('GP'+str(k))+1} for k,v in GPIO.items()},indent=2)+'\n')
-    (ROOT/'radio-slot-v0.1.json').write_text(json.dumps({'status':'SCHEMATIC_REVIEW_NO_LAYOUT','A':dict(enumerate(SLOT_A,1)),'B':dict(enumerate(SLOT_B,1))},indent=2)+'\n')
+    (ROOT/'radio-slot-v0.1.json').write_text(json.dumps({'status':'LAYOUT_REVIEW_NO_FABRICATION','A':dict(enumerate(SLOT_A,1)),'B':dict(enumerate(SLOT_B,1))},indent=2)+'\n')
     print('Created four Rev-A schematics. No PCB/fabrication generation.')
 
 

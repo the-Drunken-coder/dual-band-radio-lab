@@ -17,3 +17,4 @@ R1,10k,RC0603FR-0710KL,,1,"Default deselected, radio-domain pull-up",factory,Res
 R2,10k,RC0603FR-0710KL,,1,Default released; PA/LNA stay disabled and CS stays high until host initializes,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
 R3,10k,RC0603FR-0710KL,,1,Default PA/LNA inactive,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
 R4,10k,RC0603FR-0710KL,,1,Default PA/LNA inactive,factory,Resistor_SMD:R_0603_1608Metric,Yageo RC0603; 1% 0.1 W
+TP11,CLIP_GND,5011,,1,Accessible ground clip,Factory fitted,TestPoint:TestPoint_Keystone_5010-5014_Multipurpose,Keystone 5011 drawing and manufacturer category 748

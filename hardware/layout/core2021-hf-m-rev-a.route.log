@@ -1,0 +1,45 @@
+WARNING: Could not create user-data directory '/Users/lanearaujo/Library/Application Support/freerouting' (source: default (OS standard user-data path)). Freerouting will attempt to create it when writing files. If this persists, check permissions for the specified path.
+2026-09-17 18:52:43.958 INFO   Freerouting v2.4.1 (build-date: 2026-09-03)
+2026-09-17 18:52:43.974 WARN   Failed to save freerouting.json to '/Users/lanearaujo/Library/Application Support/freerouting/freerouting.json': Failed to create the user-data directory '/Users/lanearaujo/Library/Application Support/freerouting': /Users/lanearaujo/Library/Application Support/freerouting: Operation not permitted. freerouting.json cannot be saved.. Settings won't be persisted across restarts.
+2026-09-17 18:52:43.997 WARN   Couldn't get screen resolution. If you are running in a headless environment, disable the GUI by setting gui.enabled to false.
+2026-09-17 18:52:46.672 INFO   [0D0951\691CEE] Loading board file 'core2021-hf-m-rev-a.dsn'...
+2026-09-17 18:52:47.757 INFO   [0D0951\691CEE] Job '0D0951\691CEE' started at 2026-09-17T22:52:47.756442Z.
+2026-09-17 18:52:48.602 INFO   [0D0951\691CEE] Fanout stage started on board 'a51105b766e2d7dc67482169ed5cb3d9' with 24 of 33 SMD pins needing fanout (9 already connected, 0 netless).
+2026-09-17 18:52:51.075 INFO   [0D0951\691CEE] Fanout pass #1 on board '33479d82ff921063eb7c6a716f64a5b5' completed in 2.33 seconds with 20 SMD pins fanouted, 0 not routed, 0 insert errors, +9 extra vias (0 SMD pins still to check in pass, ripup costs=100).
+2026-09-17 18:52:51.378 INFO   [0D0951\691CEE] Fanout pass #2 on board '33479d82ff921063eb7c6a716f64a5b5' completed in 0.30 seconds with 7 SMD pins fanouted, 0 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=200).
+2026-09-17 18:52:51.415 INFO   [0D0951\691CEE] Fanout stage completed: started with 33 total SMD pins, completed in 2.69 seconds, escaped pins: 28/33 (84.8%), using 0.87 total CPU seconds, 2.26 GB total allocated, and 275.7 MB peak heap usage.
+2026-09-17 18:52:51.420 INFO   [0D0951\691CEE] Auto-routing stage started on board '33479d82ff921063eb7c6a716f64a5b5' for 22 unrouted items.
+2026-09-17 18:52:52.599 INFO   [0D0951\691CEE] Auto-routing pass #1 on board '33479d82ff921063eb7c6a716f64a5b5' was completed in 0.87 seconds with score 857.14 (7 unrouted and 0 violations), using 1.21 CPU seconds and the job allocated 3.26 GB of memory so far.
+2026-09-17 18:52:53.899 INFO   [0D0951\691CEE] Auto-routing pass #2 on board '5f228ad3bd40b7e605f231a78365fa63' was completed in 1.19 seconds with score 918.36 (4 unrouted and 0 violations), using 2.32 CPU seconds and the job allocated 9.28 GB of memory so far.
+2026-09-17 18:52:54.176 INFO   [0D0951\691CEE] Auto-routing pass #3 on board '45cd9f98d5d697fdb5b5f9d67da725d8' was completed in 0.21 seconds with score 918.36 (4 unrouted and 0 violations), using 2.32 CPU seconds and the job allocated 9.28 GB of memory so far.
+2026-09-17 18:52:54.744 INFO   [0D0951\691CEE] Auto-routing pass #4 on board '261ee115af993ca3407f8ad754050f63' was completed in 0.36 seconds with score 918.36 (4 unrouted and 0 violations), using 2.32 CPU seconds and the job allocated 9.28 GB of memory so far.
+2026-09-17 18:52:55.219 INFO   [0D0951\691CEE] Auto-routing pass #5 on board '7ee139674fe5d066de79fcbf75cdabda' was completed in 0.30 seconds with score 918.36 (4 unrouted and 0 violations), using 2.95 CPU seconds and the job allocated 14.03 GB of memory so far.
+2026-09-17 18:52:55.465 INFO   [0D0951\691CEE] Auto-routing pass #6 on board '6590d232992da4a24421a7a0e9318897' was completed in 0.18 seconds with score 918.36 (4 unrouted and 0 violations), using 2.95 CPU seconds and the job allocated 14.03 GB of memory so far.
+2026-09-17 18:52:55.791 INFO   [0D0951\691CEE] Auto-routing pass #7 on board '07728de51abdcf6db3edcaea55871d8a' was completed in 0.25 seconds with score 918.36 (4 unrouted and 0 violations), using 2.95 CPU seconds and the job allocated 14.03 GB of memory so far.
+2026-09-17 18:52:56.248 INFO   [0D0951\691CEE] Auto-routing pass #8 on board '008de6c85b828ad0a51fba8839b0dc6c' was completed in 0.38 seconds with score 918.36 (4 unrouted and 0 violations), using 3.65 CPU seconds and the job allocated 20.13 GB of memory so far.
+2026-09-17 18:52:57.316 INFO   [0D0951\691CEE] Auto-routing pass #9 on board '1b5191273ca8ddbc5c2e89d7c250578a' was completed in 0.90 seconds with score 918.36 (4 unrouted and 0 violations), using 4.03 CPU seconds and the job allocated 23.13 GB of memory so far.
+2026-09-17 18:52:58.334 INFO   [0D0951\691CEE] Auto-routing pass #10 on board 'b9282a2fbb3bca1a71890425cfaf02c9' was completed in 0.69 seconds with score 918.36 (4 unrouted and 0 violations), using 4.29 CPU seconds and the job allocated 24.62 GB of memory so far.
+2026-09-17 18:52:59.926 INFO   [0D0951\691CEE] Auto-routing pass #11 on board 'c6ec82524a8aca1e41716e8b287c1d67' was completed in 1.48 seconds with score 918.36 (4 unrouted and 0 violations), using 4.74 CPU seconds and the job allocated 27.25 GB of memory so far.
+2026-09-17 18:53:00.330 INFO   [0D0951\691CEE] Auto-routing pass #12 on board '714befd625f2709c031e6c4a131c1a3c' was completed in 0.18 seconds with score 918.36 (4 unrouted and 0 violations), using 4.94 CPU seconds and the job allocated 27.95 GB of memory so far.
+2026-09-17 18:53:00.636 INFO   [0D0951\691CEE] Auto-routing pass #13 on board 'eb76acfbfd48b9a653c10896e3181fc4' was completed in 0.23 seconds with score 918.36 (4 unrouted and 0 violations), using 4.94 CPU seconds and the job allocated 27.95 GB of memory so far.
+2026-09-17 18:53:00.936 INFO   [0D0951\691CEE] Auto-routing pass #14 on board 'b67cba47e9298271b0b396430faec421' was completed in 0.23 seconds with score 918.36 (4 unrouted and 0 violations), using 4.94 CPU seconds and the job allocated 27.95 GB of memory so far.
+2026-09-17 18:53:01.268 INFO   [0D0951\691CEE] Auto-routing pass #15 on board '9ee8728f5c0f715714f84d6ea10de373' was completed in 0.23 seconds with score 918.36 (4 unrouted and 0 violations), using 5.72 CPU seconds and the job allocated 34.52 GB of memory so far.
+2026-09-17 18:53:01.512 INFO   [0D0951\691CEE] Auto-routing pass #16 on board '80a01abac0be785fcb3e37f375ff3d6b' was completed in 0.15 seconds with score 918.36 (4 unrouted and 0 violations), using 5.72 CPU seconds and the job allocated 34.52 GB of memory so far.
+2026-09-17 18:53:01.856 INFO   [0D0951\691CEE] Auto-routing pass #17 on board '869546fd7f392024576d95d7016d499c' was completed in 0.28 seconds with score 918.36 (4 unrouted and 0 violations), using 5.72 CPU seconds and the job allocated 34.52 GB of memory so far.
+2026-09-17 18:53:02.125 INFO   [0D0951\691CEE] Auto-routing pass #18 on board '771813a20442528ed04c2fb5ae340043' was completed in 0.19 seconds with score 918.36 (4 unrouted and 0 violations), using 6.49 CPU seconds and the job allocated 41.39 GB of memory so far.
+2026-09-17 18:53:02.136 INFO   [0D0951\691CEE] The router's best score (918.36) has not improved by more than 0.5 points since pass #8. Stopping the auto-router after 18 passes (4 items still unconnected).
+The following connections could not be routed -- please review your design (e.g. check pad clearances, trace width rules, and available routing space):
+  Net '/RADIO_3V3' (2 unrouted connections):
+    - C4-1  ->  J3-8
+    - C3-1  ->  C4-1
+  Net '/SLOT_5V' (2 unrouted connections):
+    - U2-3  ->  U2-1
+    - C1-1  ->  TP13-1
+2026-09-17 18:53:02.255 INFO   [0D0951\691CEE] Auto-routing stage completed: started with 27 unrouted nets, completed in 14.05 seconds, final score: 918.36 (4 unrouted and 0 violations), using 6.49 total CPU seconds, 41.39 GB total allocated, and 756.9 MB peak heap usage.
+2026-09-17 18:53:02.367 INFO   [0D0951\691CEE] Optimization stage started on board 'ad57c153226cb47edfa2a954a1d883af' with score 918.36 (4 unrouted and 0 violations).
+2026-09-17 18:53:04.591 INFO   [0D0951\691CEE] Optimizer pass #1 on board '30ea03795d853b0a98a9097913850101' was completed in 1.99 seconds with the score of 918.36 (4 unrouted and 0 violations).
+2026-09-17 18:53:04.623 INFO   [0D0951\691CEE] Stopping optimizer because the improvement in this pass (0.0000%) is below the threshold (1.00%).
+2026-09-17 18:53:04.656 INFO   [0D0951\691CEE] Optimization stage completed: started with score 918.36 (4 unrouted and 0 violations), completed in 2.26 seconds, final score: 918.36 (4 unrouted and 0 violations), using 1.65 total CPU seconds, 15.34 GB total allocated, and 691.0 MB peak heap usage.
+2026-09-17 18:53:04.663 INFO   [0D0951\691CEE] Job '0D0951\691CEE' finished with state: COMPLETED (elapsed: 16.90 seconds, finished at UTC: 2026-09-17T22:53:04.659311Z).
+2026-09-17 18:53:04.903 INFO   Saving output file '/Users/lanearaujo/Documents/Codex/dual-band-radio-lab/hardware/layout/core2021-hf-m-rev-a.ses' (SES)...
+2026-09-17 18:53:04.906 INFO   Successfully saved output file '/Users/lanearaujo/Documents/Codex/dual-band-radio-lab/hardware/layout/core2021-hf-m-rev-a.ses' (9891 bytes).

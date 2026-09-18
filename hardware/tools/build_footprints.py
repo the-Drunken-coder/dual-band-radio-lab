@@ -47,5 +47,16 @@ pads += [pad(5,-.25,0,.3,2.4),pad(6,.25,0,.3,2.4)]
 build('TPS25947_RPW0010A',pads,(-1,-1,1,1),'TI RPW0010A 2 x 2 mm; long IN5/OUT6 pads and L-shaped corner pads; no exposed pad','tps25947.pdf p73, drawing 4225183/A')
 build('Panasonic_FK_E_8x6.2',[pad(1,-3.1,0,4,1.6),pad(2,3.1,0,4,1.6)],(-4.15,-4.15,4.15,4.15),'Panasonic FK size E, 8 mm can, 6.2 mm nominal height; manufacturer 2.2 mm gap and 4 x 1.6 mm lands; pad 1 positive','panasonic-fk.pdf p12 land-pattern table')
 build('Alignment_M3_3.4mm',['(pad "" np_thru_hole circle (at 0 0) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))'],(-3.5,-3.5,3.5,3.5),'M3 post clearance, 3.4 mm NPTH; no copper within radius 3.5 mm on any layer','Accu SSCF-M3-25-A2 / HPN-M3-A2; radio-slot-v0.1.md')
+# Bare probe pad has no component body or assembly courtyard. Copper clearances still apply.
+(OUT/'Probe_Pad_D1.0mm.kicad_mod').write_text('''(footprint "Probe_Pad_D1.0mm" (version 20240108) (generator "pcbnew") (layer "F.Cu")
+ (attr exclude_from_bom exclude_from_pos_files)
+ (property "Reference" "REF**" (at 0 -1.5 0) (layer "F.SilkS") (effects (font (size 0.8 0.8) (thickness 0.12))))
+ (property "Value" "Probe" (at 0 1.5 0) (layer "F.Fab") (effects (font (size 0.8 0.8) (thickness 0.12))))
+ (pad "1" smd circle (at 0 0) (size 1 1) (layers "F.Cu" "F.Mask")))
+''')
+small=OUT/'Probe_Pad_D0.6mm.kicad_mod'
+small.write_text((OUT/'Probe_Pad_D1.0mm.kicad_mod').read_text().replace('D1.0mm','D0.6mm').replace('(size 1 1)','(size 0.6 0.6)'))
+hole=OUT/'Alignment_M3_3.4mm.kicad_mod'
+hole.write_text(hole.read_text().replace('(start -5.0 -4.0) (end 5.0 4.0)', '(start -3.5 -3.5) (end 3.5 3.5)'))
 (ROOT/'validation'/'footprint-sources.json').write_text(json.dumps(records,indent=2)+'\n')
 print(f'{len(records)} library footprints; no PCB files generated')

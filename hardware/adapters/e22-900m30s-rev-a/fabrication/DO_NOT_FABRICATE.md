@@ -1,3 +1,3 @@
 # No fabrication release
 
-No Gerbers, drills, placement files or PCB layouts are released. Schematic review only. See `hardware/DESIGN_REVIEW.md`.
+PCB layout review only. No Gerbers, drills, placement files or ordering release. See `hardware/DESIGN_REVIEW.md`.

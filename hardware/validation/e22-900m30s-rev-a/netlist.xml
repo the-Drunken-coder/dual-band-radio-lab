@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/lanearaujo/Documents/Codex/dual-band-radio-lab/hardware/adapters/e22-900m30s-rev-a/e22-900m30s-rev-a.kicad_sch</source>
-    <date>2026-09-17T17:35:25</date>
+    <date>2026-09-17T20:01:12</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -388,6 +388,485 @@
         </unit>
       </units>
     </comp>
+    <comp ref="TP1">
+      <value>SPI_SCK</value>
+      <footprint>RadioLab:Probe_Pad_D1.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB-PROBE-PAD</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">1 mm round exposed copper pad</field>
+        <field name="Assembly">Bare copper PCB feature; no purchased component</field>
+        <field name="Footprint">RadioLab:Probe_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Probe_point" description=""/>
+      <property name="MPN" value="PCB-PROBE-PAD"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="1 mm round exposed copper pad"/>
+      <property name="Assembly" value="Bare copper PCB feature; no purchased component"/>
+      <property name="Sheetname" value="e22-900m30s-rev-a"/>
+      <property name="Sheetfile" value="e22-900m30s-rev-a.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b7a4fe5e-221f-5181-9426-7a329d358401</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>SPI_MOSI</value>
+      <footprint>RadioLab:Probe_Pad_D1.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB-PROBE-PAD</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">1 mm round exposed copper pad</field>
+        <field name="Assembly">Bare copper PCB feature; no purchased component</field>
+        <field name="Footprint">RadioLab:Probe_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Probe_point" description=""/>
+      <property name="MPN" value="PCB-PROBE-PAD"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="1 mm round exposed copper pad"/>
+      <property name="Assembly" value="Bare copper PCB feature; no purchased component"/>
+      <property name="Sheetname" value="e22-900m30s-rev-a"/>
+      <property name="Sheetfile" value="e22-900m30s-rev-a.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d0ff5cde-fc6b-5477-897a-9e5c46536d5c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP3">
+      <value>SPI_MISO</value>
+      <footprint>RadioLab:Probe_Pad_D1.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB-PROBE-PAD</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">1 mm round exposed copper pad</field>
+        <field name="Assembly">Bare copper PCB feature; no purchased component</field>
+        <field name="Footprint">RadioLab:Probe_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Probe_point" description=""/>
+      <property name="MPN" value="PCB-PROBE-PAD"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="1 mm round exposed copper pad"/>
+      <property name="Assembly" value="Bare copper PCB feature; no purchased component"/>
+      <property name="Sheetname" value="e22-900m30s-rev-a"/>
+      <property name="Sheetfile" value="e22-900m30s-rev-a.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7b564655-b05c-5914-9425-92f06cfa7b42</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP4">
+      <value>CS_N</value>
+      <footprint>RadioLab:Probe_Pad_D1.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB-PROBE-PAD</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">1 mm round exposed copper pad</field>
+        <field name="Assembly">Bare copper PCB feature; no purchased component</field>
+        <field name="Footprint">RadioLab:Probe_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Probe_point" description=""/>
+      <property name="MPN" value="PCB-PROBE-PAD"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="1 mm round exposed copper pad"/>
+      <property name="Assembly" value="Bare copper PCB feature; no purchased component"/>
+      <property name="Sheetname" value="e22-900m30s-rev-a"/>
+      <property name="Sheetfile" value="e22-900m30s-rev-a.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>372a65c6-8069-5492-b830-d42244605ced</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP5">
+      <value>RESET_N</value>
+      <footprint>RadioLab:Probe_Pad_D1.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB-PROBE-PAD</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">1 mm round exposed copper pad</field>
+        <field name="Assembly">Bare copper PCB feature; no purchased component</field>
+        <field name="Footprint">RadioLab:Probe_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Probe_point" description=""/>
+      <property name="MPN" value="PCB-PROBE-PAD"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="1 mm round exposed copper pad"/>
+      <property name="Assembly" value="Bare copper PCB feature; no purchased component"/>
+      <property name="Sheetname" value="e22-900m30s-rev-a"/>
+      <property name="Sheetfile" value="e22-900m30s-rev-a.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b1923f3c-7f41-5a06-b12f-ae3827d5abda</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP6">
+      <value>BUSY</value>
+      <footprint>RadioLab:Probe_Pad_D1.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB-PROBE-PAD</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">1 mm round exposed copper pad</field>
+        <field name="Assembly">Bare copper PCB feature; no purchased component</field>
+        <field name="Footprint">RadioLab:Probe_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Probe_point" description=""/>
+      <property name="MPN" value="PCB-PROBE-PAD"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="1 mm round exposed copper pad"/>
+      <property name="Assembly" value="Bare copper PCB feature; no purchased component"/>
+      <property name="Sheetname" value="e22-900m30s-rev-a"/>
+      <property name="Sheetfile" value="e22-900m30s-rev-a.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d49864c5-15b0-5005-b00a-0b264c6cac90</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP7">
+      <value>IRQ</value>
+      <footprint>RadioLab:Probe_Pad_D1.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB-PROBE-PAD</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">1 mm round exposed copper pad</field>
+        <field name="Assembly">Bare copper PCB feature; no purchased component</field>
+        <field name="Footprint">RadioLab:Probe_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Probe_point" description=""/>
+      <property name="MPN" value="PCB-PROBE-PAD"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="1 mm round exposed copper pad"/>
+      <property name="Assembly" value="Bare copper PCB feature; no purchased component"/>
+      <property name="Sheetname" value="e22-900m30s-rev-a"/>
+      <property name="Sheetfile" value="e22-900m30s-rev-a.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>161d677c-b584-5e85-9ac1-c4728fef0bc8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP8">
+      <value>TX_EN</value>
+      <footprint>RadioLab:Probe_Pad_D1.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB-PROBE-PAD</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">1 mm round exposed copper pad</field>
+        <field name="Assembly">Bare copper PCB feature; no purchased component</field>
+        <field name="Footprint">RadioLab:Probe_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Probe_point" description=""/>
+      <property name="MPN" value="PCB-PROBE-PAD"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="1 mm round exposed copper pad"/>
+      <property name="Assembly" value="Bare copper PCB feature; no purchased component"/>
+      <property name="Sheetname" value="e22-900m30s-rev-a"/>
+      <property name="Sheetfile" value="e22-900m30s-rev-a.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9f38c619-d561-59df-8a2e-2b73c5143d27</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP9">
+      <value>RX_EN</value>
+      <footprint>RadioLab:Probe_Pad_D1.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB-PROBE-PAD</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">1 mm round exposed copper pad</field>
+        <field name="Assembly">Bare copper PCB feature; no purchased component</field>
+        <field name="Footprint">RadioLab:Probe_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Probe_point" description=""/>
+      <property name="MPN" value="PCB-PROBE-PAD"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="1 mm round exposed copper pad"/>
+      <property name="Assembly" value="Bare copper PCB feature; no purchased component"/>
+      <property name="Sheetname" value="e22-900m30s-rev-a"/>
+      <property name="Sheetfile" value="e22-900m30s-rev-a.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ca365cc0-6422-565c-9df3-982f3fd673b7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP10">
+      <value>IN_5V</value>
+      <footprint>RadioLab:Probe_Pad_D1.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB-PROBE-PAD</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">1 mm round exposed copper pad</field>
+        <field name="Assembly">Bare copper PCB feature; no purchased component</field>
+        <field name="Footprint">RadioLab:Probe_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Probe_point" description=""/>
+      <property name="MPN" value="PCB-PROBE-PAD"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="1 mm round exposed copper pad"/>
+      <property name="Assembly" value="Bare copper PCB feature; no purchased component"/>
+      <property name="Sheetname" value="e22-900m30s-rev-a"/>
+      <property name="Sheetfile" value="e22-900m30s-rev-a.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f6fcb9ca-d66f-573b-beef-918f3455556b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP11">
+      <value>CLIP_GND</value>
+      <footprint>TestPoint:TestPoint_Keystone_5010-5014_Multipurpose</footprint>
+      <fields>
+        <field name="MPN">5011</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">Keystone 5011 drawing and manufacturer category 748</field>
+        <field name="Assembly">Factory fitted</field>
+        <field name="Footprint">TestPoint:TestPoint_Keystone_5010-5014_Multipurpose</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Probe_point" description=""/>
+      <property name="MPN" value="5011"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="Keystone 5011 drawing and manufacturer category 748"/>
+      <property name="Assembly" value="Factory fitted"/>
+      <property name="Sheetname" value="e22-900m30s-rev-a"/>
+      <property name="Sheetfile" value="e22-900m30s-rev-a.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>15123501-398a-59bf-ada3-fd3edbf04928</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP12">
+      <value>AUX0</value>
+      <footprint>RadioLab:Probe_Pad_D1.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB-PROBE-PAD</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">1 mm round exposed copper pad</field>
+        <field name="Assembly">Bare copper PCB feature; no purchased component</field>
+        <field name="Footprint">RadioLab:Probe_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Probe_point" description=""/>
+      <property name="MPN" value="PCB-PROBE-PAD"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="1 mm round exposed copper pad"/>
+      <property name="Assembly" value="Bare copper PCB feature; no purchased component"/>
+      <property name="Sheetname" value="e22-900m30s-rev-a"/>
+      <property name="Sheetfile" value="e22-900m30s-rev-a.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0f2ead7a-8060-5d28-80d4-264d2d2d70df</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP13">
+      <value>MOD_5V</value>
+      <footprint>RadioLab:Probe_Pad_D1.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB-PROBE-PAD</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">1 mm round exposed copper pad</field>
+        <field name="Assembly">Bare copper PCB feature; no purchased component</field>
+        <field name="Footprint">RadioLab:Probe_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Probe_point" description=""/>
+      <property name="MPN" value="PCB-PROBE-PAD"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="1 mm round exposed copper pad"/>
+      <property name="Assembly" value="Bare copper PCB feature; no purchased component"/>
+      <property name="Sheetname" value="e22-900m30s-rev-a"/>
+      <property name="Sheetfile" value="e22-900m30s-rev-a.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>906a5a69-e320-5aff-a859-cd4976d808c9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP14">
+      <value>MOD_GND</value>
+      <footprint>RadioLab:Probe_Pad_D1.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB-PROBE-PAD</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">1 mm round exposed copper pad</field>
+        <field name="Assembly">Bare copper PCB feature; no purchased component</field>
+        <field name="Footprint">RadioLab:Probe_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Probe_point" description=""/>
+      <property name="MPN" value="PCB-PROBE-PAD"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="1 mm round exposed copper pad"/>
+      <property name="Assembly" value="Bare copper PCB feature; no purchased component"/>
+      <property name="Sheetname" value="e22-900m30s-rev-a"/>
+      <property name="Sheetfile" value="e22-900m30s-rev-a.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4ea0b4a1-a2eb-515b-9376-36c9f82a55f1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP15">
+      <value>IOREF</value>
+      <footprint>RadioLab:Probe_Pad_D1.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB-PROBE-PAD</field>
+        <field name="Supplier"/>
+        <field name="Status">UNRELEASED</field>
+        <field name="Source">1 mm round exposed copper pad</field>
+        <field name="Assembly">Bare copper PCB feature; no purchased component</field>
+        <field name="Footprint">RadioLab:Probe_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadioLab" part="Probe_point" description=""/>
+      <property name="MPN" value="PCB-PROBE-PAD"/>
+      <property name="Supplier" value=""/>
+      <property name="Status" value="UNRELEASED"/>
+      <property name="Source" value="1 mm round exposed copper pad"/>
+      <property name="Assembly" value="Bare copper PCB feature; no purchased component"/>
+      <property name="Sheetname" value="e22-900m30s-rev-a"/>
+      <property name="Sheetfile" value="e22-900m30s-rev-a.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ea290f0d-1d87-5f1b-a51c-fe62bcec0d24</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="U1">
       <value>E22-900M30S</value>
       <footprint>RadioLab:E22_900M30S</footprint>
@@ -550,6 +1029,18 @@
         <field name="Description"/>
       </fields>
     </libpart>
+    <libpart lib="RadioLab" part="Probe_point">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Probe_point</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="PROBE" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="RadioLab" part="Resistor_value_only">
       <fields>
         <field name="Reference">U</field>
@@ -572,15 +1063,18 @@
   <nets>
     <net code="1" name="/AUX0" class="Default">
       <node ref="J2" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="TP12" pin="1" pinfunction="PROBE_1" pintype="passive"/>
       <node ref="U1" pin="8" pinfunction="DIO2_8" pintype="bidirectional"/>
     </net>
     <net code="2" name="/BUSY" class="Default">
       <node ref="J2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP6" pin="1" pinfunction="PROBE_1" pintype="passive"/>
       <node ref="U1" pin="14" pinfunction="BUSY_14" pintype="output"/>
     </net>
     <net code="3" name="/CS_N" class="Default">
       <node ref="J1" pin="8" pinfunction="8_8" pintype="passive"/>
       <node ref="R1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="TP4" pin="1" pinfunction="PROBE_1" pintype="passive"/>
       <node ref="U1" pin="19" pinfunction="NSS_19" pintype="input"/>
     </net>
     <net code="4" name="/GND" class="Default">
@@ -593,6 +1087,8 @@
       <node ref="J2" pin="8" pinfunction="8_8" pintype="passive"/>
       <node ref="R3" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="R4" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="TP11" pin="1" pinfunction="PROBE_1" pintype="passive"/>
+      <node ref="TP14" pin="1" pinfunction="PROBE_1" pintype="passive"/>
       <node ref="U1" pin="1" pinfunction="GND_1" pintype="power_in"/>
       <node ref="U1" pin="11" pinfunction="GND_11" pintype="power_in"/>
       <node ref="U1" pin="12" pinfunction="GND_12" pintype="power_in"/>
@@ -607,19 +1103,23 @@
       <node ref="J2" pin="7" pinfunction="7_7" pintype="passive"/>
       <node ref="R1" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="R2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP15" pin="1" pinfunction="PROBE_1" pintype="passive"/>
     </net>
     <net code="6" name="/IRQ" class="Default">
       <node ref="J2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="TP7" pin="1" pinfunction="PROBE_1" pintype="passive"/>
       <node ref="U1" pin="13" pinfunction="DIO1_13" pintype="bidirectional"/>
     </net>
     <net code="7" name="/RESET_N" class="Default">
       <node ref="J1" pin="9" pinfunction="9_9" pintype="passive"/>
       <node ref="R2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="TP5" pin="1" pinfunction="PROBE_1" pintype="passive"/>
       <node ref="U1" pin="15" pinfunction="NRST_15" pintype="input"/>
     </net>
     <net code="8" name="/RX_EN" class="Default">
       <node ref="J2" pin="4" pinfunction="4_4" pintype="passive"/>
       <node ref="R4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP9" pin="1" pinfunction="PROBE_1" pintype="passive"/>
       <node ref="U1" pin="6" pinfunction="RXEN_6" pintype="input"/>
     </net>
     <net code="9" name="/SLOT_5V" class="Default">
@@ -628,12 +1128,15 @@
       <node ref="C3" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="J1" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="J1" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="TP10" pin="1" pinfunction="PROBE_1" pintype="passive"/>
+      <node ref="TP13" pin="1" pinfunction="PROBE_1" pintype="passive"/>
       <node ref="U1" pin="10" pinfunction="VCC_10" pintype="power_in"/>
       <node ref="U1" pin="9" pinfunction="VCC_9" pintype="power_in"/>
     </net>
     <net code="10" name="/SPI_MISO" class="Default">
       <node ref="J1" pin="7" pinfunction="7_7" pintype="passive"/>
       <node ref="R5" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="TP3" pin="1" pinfunction="PROBE_1" pintype="passive"/>
     </net>
     <net code="11" name="/SPI_MISO_SRC" class="Default">
       <node ref="R5" pin="1" pinfunction="1_1" pintype="passive"/>
@@ -641,15 +1144,18 @@
     </net>
     <net code="12" name="/SPI_MOSI" class="Default">
       <node ref="J1" pin="6" pinfunction="6_6" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="PROBE_1" pintype="passive"/>
       <node ref="U1" pin="17" pinfunction="MOSI_17" pintype="input"/>
     </net>
     <net code="13" name="/SPI_SCK" class="Default">
       <node ref="J1" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="PROBE_1" pintype="passive"/>
       <node ref="U1" pin="18" pinfunction="SCK_18" pintype="input"/>
     </net>
     <net code="14" name="/TX_EN" class="Default">
       <node ref="J2" pin="3" pinfunction="3_3" pintype="passive"/>
       <node ref="R3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP8" pin="1" pinfunction="PROBE_1" pintype="passive"/>
       <node ref="U1" pin="7" pinfunction="TXEN_7" pintype="input"/>
     </net>
     <net code="15" name="unconnected-(J2-Pad6)" class="Default">

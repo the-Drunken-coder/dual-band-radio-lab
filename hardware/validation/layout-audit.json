@@ -1,0 +1,1385 @@
+{
+  "e22-900m30s-rev-a": {
+    "dimensions_mm": [
+      84,
+      80
+    ],
+    "copper_layers": 2,
+    "board_thickness_mm": 1.6,
+    "slots": [
+      {
+        "slot": 0,
+        "A1": [
+          0,
+          0
+        ],
+        "B1": [
+          30.48,
+          0.0
+        ],
+        "post": [
+          7.62,
+          5.08
+        ],
+        "result": "PASS"
+      }
+    ],
+    "sources": [
+      {
+        "net": "/SPI_MISO_SRC",
+        "source": "U1.16",
+        "resistor": "R5",
+        "length_mm": 2.575,
+        "resistance_60C_ohm": 0.003669,
+        "total_source_copper_mm": 2.575
+      }
+    ],
+    "spi": {
+      "SPI_SCK": {
+        "total_trace_mm": 55.298,
+        "header_to_load": {
+          "length_mm": 55.298,
+          "resistance_60C_ohm": 0.080447
+        },
+        "probe_to_header": {
+          "length_mm": 2.0,
+          "resistance_60C_ohm": 0.00285
+        }
+      },
+      "SPI_MOSI": {
+        "total_trace_mm": 42.77,
+        "header_to_load": {
+          "length_mm": 40.77,
+          "resistance_60C_ohm": 0.062142
+        },
+        "probe_to_header": {
+          "length_mm": 2.0,
+          "resistance_60C_ohm": 0.00285
+        }
+      },
+      "SPI_MISO": {
+        "total_trace_mm": 47.549,
+        "header_to_load": {
+          "length_mm": 47.549,
+          "resistance_60C_ohm": 0.067758
+        },
+        "probe_to_header": {
+          "length_mm": 2.0,
+          "resistance_60C_ohm": 0.00285
+        }
+      }
+    },
+    "power": {
+      "slot_to_load": {
+        "length_mm": 96.927,
+        "resistance_60C_ohm": 0.018416
+      }
+    },
+    "testpoints": [
+      {
+        "reference": "TP1",
+        "label": "SPI_SCK",
+        "net": "/SPI_SCK",
+        "xy": [
+          -2.0,
+          10.16
+        ]
+      },
+      {
+        "reference": "TP2",
+        "label": "SPI_MOSI",
+        "net": "/SPI_MOSI",
+        "xy": [
+          -2.0,
+          12.7
+        ]
+      },
+      {
+        "reference": "TP3",
+        "label": "SPI_MISO",
+        "net": "/SPI_MISO",
+        "xy": [
+          -2.0,
+          15.24
+        ]
+      },
+      {
+        "reference": "TP4",
+        "label": "CS_N",
+        "net": "/CS_N",
+        "xy": [
+          -4.0,
+          17.78
+        ]
+      },
+      {
+        "reference": "TP5",
+        "label": "RESET_N",
+        "net": "/RESET_N",
+        "xy": [
+          -4.0,
+          20.32
+        ]
+      },
+      {
+        "reference": "TP6",
+        "label": "BUSY",
+        "net": "/BUSY",
+        "xy": [
+          34.5,
+          0.0
+        ]
+      },
+      {
+        "reference": "TP7",
+        "label": "IRQ",
+        "net": "/IRQ",
+        "xy": [
+          34.5,
+          2.54
+        ]
+      },
+      {
+        "reference": "TP8",
+        "label": "TX_EN",
+        "net": "/TX_EN",
+        "xy": [
+          34.5,
+          5.08
+        ]
+      },
+      {
+        "reference": "TP9",
+        "label": "RX_EN",
+        "net": "/RX_EN",
+        "xy": [
+          34.5,
+          7.62
+        ]
+      },
+      {
+        "reference": "TP10",
+        "label": "IN_5V",
+        "net": "/SLOT_5V",
+        "xy": [
+          -4.0,
+          3.0
+        ]
+      },
+      {
+        "reference": "TP11",
+        "label": "CLIP_GND",
+        "net": "/GND",
+        "xy": [
+          -4.0,
+          60.0
+        ]
+      },
+      {
+        "reference": "TP12",
+        "label": "AUX0",
+        "net": "/AUX0",
+        "xy": [
+          34.5,
+          37.0
+        ]
+      },
+      {
+        "reference": "TP13",
+        "label": "MOD_5V",
+        "net": "/SLOT_5V",
+        "xy": [
+          66.5,
+          0.0
+        ]
+      },
+      {
+        "reference": "TP14",
+        "label": "MOD_GND",
+        "net": "/GND",
+        "xy": [
+          70.0,
+          -3.0
+        ]
+      },
+      {
+        "reference": "TP15",
+        "label": "IOREF",
+        "net": "/IOREF_3V3",
+        "xy": [
+          34.5,
+          30.0
+        ]
+      }
+    ],
+    "ground_area_mm2": {
+      "F.Cu": 5704.12,
+      "B.Cu": 6367.48
+    },
+    "drc_findings": {
+      "violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity": 0
+    }
+  },
+  "e28-2g4m27s-rev-a": {
+    "dimensions_mm": [
+      84,
+      80
+    ],
+    "copper_layers": 2,
+    "board_thickness_mm": 1.6,
+    "slots": [
+      {
+        "slot": 0,
+        "A1": [
+          0,
+          0
+        ],
+        "B1": [
+          30.48,
+          0.0
+        ],
+        "post": [
+          7.62,
+          5.08
+        ],
+        "result": "PASS"
+      }
+    ],
+    "sources": [
+      {
+        "net": "/SPI_MISO_SRC",
+        "source": "U1.3",
+        "resistor": "R5",
+        "length_mm": 2.575,
+        "resistance_60C_ohm": 0.003669,
+        "total_source_copper_mm": 2.575
+      }
+    ],
+    "spi": {
+      "SPI_SCK": {
+        "total_trace_mm": 47.706,
+        "header_to_load": {
+          "length_mm": 48.906,
+          "resistance_60C_ohm": 0.068132
+        },
+        "probe_to_header": {
+          "length_mm": 2.0,
+          "resistance_60C_ohm": 0.00285
+        }
+      },
+      "SPI_MOSI": {
+        "total_trace_mm": 51.925,
+        "header_to_load": {
+          "length_mm": 52.053,
+          "resistance_60C_ohm": 0.072644
+        },
+        "probe_to_header": {
+          "length_mm": 2.0,
+          "resistance_60C_ohm": 0.00285
+        }
+      },
+      "SPI_MISO": {
+        "total_trace_mm": 44.939,
+        "header_to_load": {
+          "length_mm": 44.539,
+          "resistance_60C_ohm": 0.062688
+        },
+        "probe_to_header": {
+          "length_mm": 2.0,
+          "resistance_60C_ohm": 0.00285
+        }
+      }
+    },
+    "power": {
+      "slot_to_load": {
+        "length_mm": 55.585,
+        "resistance_60C_ohm": 0.011502
+      }
+    },
+    "testpoints": [
+      {
+        "reference": "TP1",
+        "label": "SPI_SCK",
+        "net": "/SPI_SCK",
+        "xy": [
+          2.0,
+          10.16
+        ]
+      },
+      {
+        "reference": "TP2",
+        "label": "SPI_MOSI",
+        "net": "/SPI_MOSI",
+        "xy": [
+          2.0,
+          12.7
+        ]
+      },
+      {
+        "reference": "TP3",
+        "label": "SPI_MISO",
+        "net": "/SPI_MISO",
+        "xy": [
+          2.0,
+          15.24
+        ]
+      },
+      {
+        "reference": "TP4",
+        "label": "CS_N",
+        "net": "/CS_N",
+        "xy": [
+          -4.0,
+          17.78
+        ]
+      },
+      {
+        "reference": "TP5",
+        "label": "RESET_N",
+        "net": "/RESET_N",
+        "xy": [
+          -4.0,
+          20.32
+        ]
+      },
+      {
+        "reference": "TP6",
+        "label": "BUSY",
+        "net": "/BUSY",
+        "xy": [
+          34.5,
+          0.0
+        ]
+      },
+      {
+        "reference": "TP7",
+        "label": "IRQ",
+        "net": "/IRQ",
+        "xy": [
+          34.5,
+          2.54
+        ]
+      },
+      {
+        "reference": "TP8",
+        "label": "TX_EN",
+        "net": "/TX_EN",
+        "xy": [
+          34.5,
+          5.08
+        ]
+      },
+      {
+        "reference": "TP9",
+        "label": "RX_EN",
+        "net": "/RX_EN",
+        "xy": [
+          34.5,
+          7.62
+        ]
+      },
+      {
+        "reference": "TP10",
+        "label": "IN_5V",
+        "net": "/SLOT_5V",
+        "xy": [
+          -4.0,
+          3.0
+        ]
+      },
+      {
+        "reference": "TP11",
+        "label": "CLIP_GND",
+        "net": "/GND",
+        "xy": [
+          -4.0,
+          60.0
+        ]
+      },
+      {
+        "reference": "TP12",
+        "label": "AUX0",
+        "net": "/AUX0",
+        "xy": [
+          34.5,
+          37.0
+        ]
+      },
+      {
+        "reference": "TP13",
+        "label": "OUT_3V3",
+        "net": "/RADIO_3V3",
+        "xy": [
+          17.0,
+          51.0
+        ]
+      },
+      {
+        "reference": "TP14",
+        "label": "REG_GND",
+        "net": "/GND",
+        "xy": [
+          17.0,
+          54.0
+        ]
+      },
+      {
+        "reference": "TP15",
+        "label": "EN_5V",
+        "net": "/SLOT_5V",
+        "xy": [
+          3.5,
+          41.0
+        ]
+      },
+      {
+        "reference": "TP16",
+        "label": "SW",
+        "net": "/SW",
+        "xy": [
+          10.1,
+          39.7
+        ]
+      },
+      {
+        "reference": "TP17",
+        "label": "FB",
+        "net": "/RADIO_3V3",
+        "xy": [
+          5.0,
+          38.7
+        ]
+      },
+      {
+        "reference": "TP18",
+        "label": "MOD_3V3",
+        "net": "/RADIO_3V3",
+        "xy": [
+          39.5,
+          -2.0
+        ]
+      },
+      {
+        "reference": "TP19",
+        "label": "MOD_GND",
+        "net": "/GND",
+        "xy": [
+          36.0,
+          -2.0
+        ]
+      },
+      {
+        "reference": "TP20",
+        "label": "SW_GND",
+        "net": "/GND",
+        "xy": [
+          12.8,
+          36.5
+        ]
+      }
+    ],
+    "ground_area_mm2": {
+      "F.Cu": 5391.46,
+      "B.Cu": 5896.86
+    },
+    "drc_findings": {
+      "violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity": 0
+    }
+  },
+  "core2021-hf-m-rev-a": {
+    "dimensions_mm": [
+      84,
+      80
+    ],
+    "copper_layers": 2,
+    "board_thickness_mm": 1.6,
+    "slots": [
+      {
+        "slot": 0,
+        "A1": [
+          0,
+          0
+        ],
+        "B1": [
+          30.48,
+          0.0
+        ],
+        "post": [
+          7.62,
+          5.08
+        ],
+        "result": "PASS"
+      }
+    ],
+    "sources": [
+      {
+        "net": "/SPI_MISO_SRC",
+        "source": "J4.3",
+        "resistor": "R3",
+        "length_mm": 3.735,
+        "resistance_60C_ohm": 0.005322,
+        "total_source_copper_mm": 3.735
+      }
+    ],
+    "spi": {
+      "SPI_SCK": {
+        "total_trace_mm": 61.516,
+        "header_to_load": {
+          "length_mm": 59.516,
+          "resistance_60C_ohm": 0.084811
+        },
+        "probe_to_header": {
+          "length_mm": 2.0,
+          "resistance_60C_ohm": 0.00285
+        }
+      },
+      "SPI_MOSI": {
+        "total_trace_mm": 61.516,
+        "header_to_load": {
+          "length_mm": 59.516,
+          "resistance_60C_ohm": 0.084811
+        },
+        "probe_to_header": {
+          "length_mm": 2.0,
+          "resistance_60C_ohm": 0.00285
+        }
+      },
+      "SPI_MISO": {
+        "total_trace_mm": 67.953,
+        "header_to_load": {
+          "length_mm": 65.953,
+          "resistance_60C_ohm": 0.093983
+        },
+        "probe_to_header": {
+          "length_mm": 2.0,
+          "resistance_60C_ohm": 0.00285
+        }
+      }
+    },
+    "power": {
+      "slot_to_load": {
+        "length_mm": 50.514,
+        "resistance_60C_ohm": 0.013798
+      }
+    },
+    "testpoints": [
+      {
+        "reference": "TP1",
+        "label": "SPI_SCK",
+        "net": "/SPI_SCK",
+        "xy": [
+          2.0,
+          10.16
+        ]
+      },
+      {
+        "reference": "TP2",
+        "label": "SPI_MOSI",
+        "net": "/SPI_MOSI",
+        "xy": [
+          2.0,
+          12.7
+        ]
+      },
+      {
+        "reference": "TP3",
+        "label": "SPI_MISO",
+        "net": "/SPI_MISO",
+        "xy": [
+          2.0,
+          15.24
+        ]
+      },
+      {
+        "reference": "TP4",
+        "label": "CS_N",
+        "net": "/CS_N",
+        "xy": [
+          -4.0,
+          17.78
+        ]
+      },
+      {
+        "reference": "TP5",
+        "label": "RESET_N",
+        "net": "/RESET_N",
+        "xy": [
+          -4.0,
+          20.32
+        ]
+      },
+      {
+        "reference": "TP6",
+        "label": "BUSY",
+        "net": "/BUSY",
+        "xy": [
+          34.5,
+          0.0
+        ]
+      },
+      {
+        "reference": "TP7",
+        "label": "IRQ",
+        "net": "/IRQ",
+        "xy": [
+          34.5,
+          2.54
+        ]
+      },
+      {
+        "reference": "TP8",
+        "label": "IN_5V",
+        "net": "/SLOT_5V",
+        "xy": [
+          -4.0,
+          3.0
+        ]
+      },
+      {
+        "reference": "TP9",
+        "label": "CLIP_GND",
+        "net": "/GND",
+        "xy": [
+          -4.0,
+          60.0
+        ]
+      },
+      {
+        "reference": "TP10",
+        "label": "AUX0",
+        "net": "/AUX0",
+        "xy": [
+          34.5,
+          37.0
+        ]
+      },
+      {
+        "reference": "TP11",
+        "label": "OUT_3V3",
+        "net": "/RADIO_3V3",
+        "xy": [
+          17.0,
+          47.0
+        ]
+      },
+      {
+        "reference": "TP12",
+        "label": "REG_GND",
+        "net": "/GND",
+        "xy": [
+          17.0,
+          50.0
+        ]
+      },
+      {
+        "reference": "TP13",
+        "label": "EN_5V",
+        "net": "/SLOT_5V",
+        "xy": [
+          3.5,
+          41.0
+        ]
+      },
+      {
+        "reference": "TP14",
+        "label": "MOD_3V3",
+        "net": "/RADIO_3V3",
+        "xy": [
+          48.0,
+          26.0
+        ]
+      },
+      {
+        "reference": "TP15",
+        "label": "MOD_GND",
+        "net": "/GND",
+        "xy": [
+          51.0,
+          26.0
+        ]
+      }
+    ],
+    "ground_area_mm2": {
+      "F.Cu": 5689.12,
+      "B.Cu": 6354.5
+    },
+    "drc_findings": {
+      "violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity": 0
+    }
+  },
+  "carrier-rev-a": {
+    "dimensions_mm": [
+      250,
+      210
+    ],
+    "copper_layers": 2,
+    "board_thickness_mm": 1.6,
+    "slots": [
+      {
+        "slot": 1,
+        "A1": [
+          20,
+          25
+        ],
+        "B1": [
+          50.48,
+          25.0
+        ],
+        "post": [
+          27.62,
+          30.08
+        ],
+        "result": "PASS"
+      },
+      {
+        "slot": 2,
+        "A1": [
+          155,
+          125
+        ],
+        "B1": [
+          185.48,
+          125.0
+        ],
+        "post": [
+          162.62,
+          130.08
+        ],
+        "result": "PASS"
+      },
+      {
+        "slot": 3,
+        "A1": [
+          20,
+          125
+        ],
+        "B1": [
+          50.48,
+          125.0
+        ],
+        "post": [
+          27.62,
+          130.08
+        ],
+        "result": "PASS"
+      },
+      {
+        "slot": 4,
+        "A1": [
+          155,
+          25
+        ],
+        "B1": [
+          185.48,
+          25.0
+        ],
+        "post": [
+          162.62,
+          30.08
+        ],
+        "result": "PASS"
+      }
+    ],
+    "sources": [
+      {
+        "net": "/SPI_SCK_SRC",
+        "source": "U5.21",
+        "resistor": "R20",
+        "length_mm": 2.312,
+        "resistance_60C_ohm": 0.003295,
+        "total_source_copper_mm": 2.312
+      },
+      {
+        "net": "/SPI_MOSI_SRC",
+        "source": "U5.20",
+        "resistor": "R21",
+        "length_mm": 4.457,
+        "resistance_60C_ohm": 0.006352,
+        "total_source_copper_mm": 4.457
+      },
+      {
+        "net": "/EXP_MISO_SRC",
+        "source": "U4.14",
+        "resistor": "R22",
+        "length_mm": 2.225,
+        "resistance_60C_ohm": 0.003171,
+        "total_source_copper_mm": 2.225
+      }
+    ],
+    "spi": {
+      "SPI_SCK": {
+        "total_trace_mm": 366.304,
+        "paths": {
+          "J1.5": {
+            "length_mm": 228.143,
+            "resistance_60C_ohm": 0.322765
+          },
+          "J3.5": {
+            "length_mm": 82.382,
+            "resistance_60C_ohm": 0.115835
+          },
+          "J5.5": {
+            "length_mm": 170.685,
+            "resistance_60C_ohm": 0.240887
+          },
+          "J7.5": {
+            "length_mm": 84.752,
+            "resistance_60C_ohm": 0.113026
+          },
+          "U4.12": {
+            "length_mm": 60.319,
+            "resistance_60C_ohm": 0.084395
+          }
+        }
+      },
+      "SPI_MOSI": {
+        "total_trace_mm": 413.645,
+        "paths": {
+          "J1.6": {
+            "length_mm": 372.736,
+            "resistance_60C_ohm": 0.51157
+          },
+          "J3.6": {
+            "length_mm": 102.945,
+            "resistance_60C_ohm": 0.138771
+          },
+          "J5.6": {
+            "length_mm": 260.718,
+            "resistance_60C_ohm": 0.351943
+          },
+          "J7.6": {
+            "length_mm": 96.483,
+            "resistance_60C_ohm": 0.129563
+          },
+          "U4.13": {
+            "length_mm": 164.386,
+            "resistance_60C_ohm": 0.214018
+          }
+        }
+      },
+      "SPI_MISO": {
+        "total_trace_mm": 349.709,
+        "paths": {
+          "J1.7": {
+            "length_mm": 172.038,
+            "resistance_60C_ohm": 0.244375
+          },
+          "J3.7": {
+            "length_mm": 62.384,
+            "resistance_60C_ohm": 0.088898
+          },
+          "J5.7": {
+            "length_mm": 104.308,
+            "resistance_60C_ohm": 0.14786
+          },
+          "J7.7": {
+            "length_mm": 122.126,
+            "resistance_60C_ohm": 0.17325
+          },
+          "U7.4": {
+            "length_mm": 62.638,
+            "resistance_60C_ohm": 0.087598
+          }
+        }
+      }
+    },
+    "power": {
+      "S1": {
+        "length_mm": 593.031,
+        "resistance_60C_ohm": 0.030924
+      },
+      "S2": {
+        "length_mm": 372.031,
+        "resistance_60C_ohm": 0.022196
+      },
+      "S3": {
+        "length_mm": 507.031,
+        "resistance_60C_ohm": 0.028609
+      },
+      "S4": {
+        "length_mm": 458.031,
+        "resistance_60C_ohm": 0.024512
+      },
+      "external_to_efuse": {
+        "length_mm": 20.25,
+        "resistance_60C_ohm": 0.003903
+      }
+    },
+    "testpoints": [
+      {
+        "reference": "TP1",
+        "label": "S1_5V",
+        "net": "/RADIO_5V",
+        "xy": [
+          97.0,
+          26.0
+        ]
+      },
+      {
+        "reference": "TP2",
+        "label": "S1_CS_N",
+        "net": "/S1_CS_N",
+        "xy": [
+          97.0,
+          33.0
+        ]
+      },
+      {
+        "reference": "TP3",
+        "label": "S1_BUSY",
+        "net": "/S1_BUSY",
+        "xy": [
+          97.0,
+          38.0
+        ]
+      },
+      {
+        "reference": "TP4",
+        "label": "S1_IRQ",
+        "net": "/S1_IRQ",
+        "xy": [
+          97.0,
+          43.0
+        ]
+      },
+      {
+        "reference": "TP5",
+        "label": "S1_RESET_N",
+        "net": "/S1_RESET_N",
+        "xy": [
+          97.0,
+          48.0
+        ]
+      },
+      {
+        "reference": "TP6",
+        "label": "S1_TX_EN",
+        "net": "/S1_TX_EN",
+        "xy": [
+          97.0,
+          53.0
+        ]
+      },
+      {
+        "reference": "TP7",
+        "label": "S1_RX_EN",
+        "net": "/S1_RX_EN",
+        "xy": [
+          97.0,
+          58.0
+        ]
+      },
+      {
+        "reference": "TP8",
+        "label": "S1_GND",
+        "net": "/GND",
+        "xy": [
+          97.0,
+          69.0
+        ]
+      },
+      {
+        "reference": "TP9",
+        "label": "S2_5V",
+        "net": "/RADIO_5V",
+        "xy": [
+          138.0,
+          126.0
+        ]
+      },
+      {
+        "reference": "TP10",
+        "label": "S2_CS_N",
+        "net": "/S2_CS_N",
+        "xy": [
+          138.0,
+          133.0
+        ]
+      },
+      {
+        "reference": "TP11",
+        "label": "S2_BUSY",
+        "net": "/S2_BUSY",
+        "xy": [
+          138.0,
+          138.0
+        ]
+      },
+      {
+        "reference": "TP12",
+        "label": "S2_IRQ",
+        "net": "/S2_IRQ",
+        "xy": [
+          138.0,
+          143.0
+        ]
+      },
+      {
+        "reference": "TP13",
+        "label": "S2_RESET_N",
+        "net": "/S2_RESET_N",
+        "xy": [
+          138.0,
+          148.0
+        ]
+      },
+      {
+        "reference": "TP14",
+        "label": "S2_GND",
+        "net": "/GND",
+        "xy": [
+          138.0,
+          169.0
+        ]
+      },
+      {
+        "reference": "TP15",
+        "label": "S3_5V",
+        "net": "/RADIO_5V",
+        "xy": [
+          97.0,
+          126.0
+        ]
+      },
+      {
+        "reference": "TP16",
+        "label": "S3_CS_N",
+        "net": "/S3_CS_N",
+        "xy": [
+          97.0,
+          133.0
+        ]
+      },
+      {
+        "reference": "TP17",
+        "label": "S3_BUSY",
+        "net": "/S3_BUSY",
+        "xy": [
+          97.0,
+          138.0
+        ]
+      },
+      {
+        "reference": "TP18",
+        "label": "S3_IRQ",
+        "net": "/S3_IRQ",
+        "xy": [
+          97.0,
+          143.0
+        ]
+      },
+      {
+        "reference": "TP19",
+        "label": "S3_RESET_N",
+        "net": "/S3_RESET_N",
+        "xy": [
+          97.0,
+          148.0
+        ]
+      },
+      {
+        "reference": "TP20",
+        "label": "S3_TX_EN",
+        "net": "/S3_TX_EN",
+        "xy": [
+          97.0,
+          153.0
+        ]
+      },
+      {
+        "reference": "TP21",
+        "label": "S3_RX_EN",
+        "net": "/S3_RX_EN",
+        "xy": [
+          97.0,
+          158.0
+        ]
+      },
+      {
+        "reference": "TP22",
+        "label": "S3_GND",
+        "net": "/GND",
+        "xy": [
+          97.0,
+          169.0
+        ]
+      },
+      {
+        "reference": "TP23",
+        "label": "S4_5V",
+        "net": "/RADIO_5V",
+        "xy": [
+          138.0,
+          26.0
+        ]
+      },
+      {
+        "reference": "TP24",
+        "label": "S4_CS_N",
+        "net": "/S4_CS_N",
+        "xy": [
+          138.0,
+          33.0
+        ]
+      },
+      {
+        "reference": "TP25",
+        "label": "S4_BUSY",
+        "net": "/S4_BUSY",
+        "xy": [
+          138.0,
+          38.0
+        ]
+      },
+      {
+        "reference": "TP26",
+        "label": "S4_IRQ",
+        "net": "/S4_IRQ",
+        "xy": [
+          138.0,
+          43.0
+        ]
+      },
+      {
+        "reference": "TP27",
+        "label": "S4_RESET_N",
+        "net": "/S4_RESET_N",
+        "xy": [
+          138.0,
+          48.0
+        ]
+      },
+      {
+        "reference": "TP28",
+        "label": "S4_TX_EN",
+        "net": "/S4_TX_EN",
+        "xy": [
+          138.0,
+          53.0
+        ]
+      },
+      {
+        "reference": "TP29",
+        "label": "S4_RX_EN",
+        "net": "/S4_RX_EN",
+        "xy": [
+          138.0,
+          58.0
+        ]
+      },
+      {
+        "reference": "TP30",
+        "label": "S4_GND",
+        "net": "/GND",
+        "xy": [
+          138.0,
+          69.0
+        ]
+      },
+      {
+        "reference": "TP31",
+        "label": "IN_5V",
+        "net": "/EXT_5V",
+        "xy": [
+          104.0,
+          195.0
+        ]
+      },
+      {
+        "reference": "TP32",
+        "label": "BUS_5V",
+        "net": "/RADIO_5V",
+        "xy": [
+          130.0,
+          181.0
+        ]
+      },
+      {
+        "reference": "TP33",
+        "label": "VBUS",
+        "net": "/USB_VBUS",
+        "xy": [
+          136.0,
+          12.0
+        ]
+      },
+      {
+        "reference": "TP34",
+        "label": "VSYS",
+        "net": "/PICO_VSYS",
+        "xy": [
+          136.0,
+          24.0
+        ]
+      },
+      {
+        "reference": "TP35",
+        "label": "PICO_3V3",
+        "net": "/PICO_3V3",
+        "xy": [
+          132.0,
+          58.0
+        ]
+      },
+      {
+        "reference": "TP36",
+        "label": "IOREF_3V3",
+        "net": "/IOREF_3V3",
+        "xy": [
+          126.0,
+          158.0
+        ]
+      },
+      {
+        "reference": "TP37",
+        "label": "UVLO",
+        "net": "/UVLO",
+        "xy": [
+          103.0,
+          175.0
+        ]
+      },
+      {
+        "reference": "TP38",
+        "label": "OVLO",
+        "net": "/OVLO",
+        "xy": [
+          103.0,
+          183.0
+        ]
+      },
+      {
+        "reference": "TP39",
+        "label": "DVDT",
+        "net": "/DVDT",
+        "xy": [
+          123.0,
+          184.0
+        ]
+      },
+      {
+        "reference": "TP40",
+        "label": "ILIM",
+        "net": "/ILIM",
+        "xy": [
+          124.0,
+          175.0
+        ]
+      },
+      {
+        "reference": "TP41",
+        "label": "EXP_CS",
+        "net": "/EXP_CS_N",
+        "xy": [
+          103.0,
+          106.0
+        ]
+      },
+      {
+        "reference": "TP42",
+        "label": "EXP_RST",
+        "net": "/EXP_RESET_N",
+        "xy": [
+          122.0,
+          105.0
+        ]
+      },
+      {
+        "reference": "TP43",
+        "label": "OE_N",
+        "net": "/P_IO_OE_N",
+        "xy": [
+          102.0,
+          72.0
+        ]
+      },
+      {
+        "reference": "TP44",
+        "label": "P_SCK",
+        "net": "/P_SPI_SCK",
+        "xy": [
+          104.0,
+          78.0
+        ]
+      },
+      {
+        "reference": "TP45",
+        "label": "P_MOSI",
+        "net": "/P_SPI_MOSI",
+        "xy": [
+          104.0,
+          82.0
+        ]
+      },
+      {
+        "reference": "TP46",
+        "label": "P_MISO",
+        "net": "/P_SPI_MISO",
+        "xy": [
+          118.0,
+          96.0
+        ]
+      },
+      {
+        "reference": "TP47",
+        "label": "SCK",
+        "net": "/SPI_SCK",
+        "xy": [
+          124.0,
+          80.375
+        ]
+      },
+      {
+        "reference": "TP48",
+        "label": "MOSI",
+        "net": "/SPI_MOSI",
+        "xy": [
+          124.0,
+          83.375
+        ]
+      },
+      {
+        "reference": "TP49",
+        "label": "MISO",
+        "net": "/SPI_MISO",
+        "xy": [
+          126.0,
+          96.0
+        ]
+      },
+      {
+        "reference": "TP50",
+        "label": "ENTRY_GND",
+        "net": "/GND",
+        "xy": [
+          135.0,
+          195.0
+        ]
+      },
+      {
+        "reference": "TP51",
+        "label": "U3_GND",
+        "net": "/GND",
+        "xy": [
+          113.0,
+          162.0
+        ]
+      }
+    ],
+    "ground_area_mm2": {
+      "F.Cu": 41492.71,
+      "B.Cu": 48466.84
+    },
+    "drc_findings": {
+      "violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity": 0
+    }
+  }
+}

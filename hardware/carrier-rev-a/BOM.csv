@@ -61,3 +61,8 @@ MP3,M3 captive-post clamp nut,HPN-M3-A2,,1,Factory threadlocked clamp nut for H3
 H4,Captive M3 x 25 alignment post,SSCF-M3-25-A2,,1,"S4 anti-offset and anti-reversal post, installed from below",factory,RadioLab:Alignment_M3_3.4mm,Accu product datasheet 642039; radio-slot-v0.1.md
 MP4,M3 captive-post clamp nut,HPN-M3-A2,,1,Factory threadlocked clamp nut for H4,factory,,"Accu HPN-M3-A2, 5.5 mm AF, 2.4 mm thick"
 MP5,External cable mating plug,1757019,,1,"Mates J9; 18 AWG or larger supply pair, factory terminated",factory,,Phoenix Contact manufacturer mating table
+TP8,S1_GND,5011,,1,Accessible ground clip,Factory fitted,TestPoint:TestPoint_Keystone_5010-5014_Multipurpose,Keystone 5011 drawing and manufacturer category 748
+TP14,S2_GND,5011,,1,Accessible ground clip,Factory fitted,TestPoint:TestPoint_Keystone_5010-5014_Multipurpose,Keystone 5011 drawing and manufacturer category 748
+TP22,S3_GND,5011,,1,Accessible ground clip,Factory fitted,TestPoint:TestPoint_Keystone_5010-5014_Multipurpose,Keystone 5011 drawing and manufacturer category 748
+TP30,S4_GND,5011,,1,Accessible ground clip,Factory fitted,TestPoint:TestPoint_Keystone_5010-5014_Multipurpose,Keystone 5011 drawing and manufacturer category 748
+TP50,ENTRY_GND,5011,,1,Accessible ground clip,Factory fitted,TestPoint:TestPoint_Keystone_5010-5014_Multipurpose,Keystone 5011 drawing and manufacturer category 748

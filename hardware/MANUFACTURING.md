@@ -15,7 +15,7 @@ Pico 2 with headers and Core2021-HF-M are separately purchased plug-in items. Fa
 
 ## Required future release files
 
-After the missing engineering, human review, ERC and DRC are complete, each board directory should contain the following exact release paths, with `<board>` replaced by that directory's board name:
+After human layout review, supplier process acceptance and explicit authorization for manufacturing output, each board directory should contain the following exact release paths, with `<board>` replaced by that directory's board name:
 
 - `fabrication/<board>-gerbers.zip`: top/bottom copper, top/bottom solder mask, silkscreen, board outline, plated/non-plated drills and the necessary paste layers for the agreed assembly process. Confirm the ZIP contents in the manufacturer's preview.
 - `fabrication/<board>-jlc-bom.csv`: approved manufacturer and supplier codes, references, values and quantities. Exclude the separately purchased plug-in modules from the factory placement BOM.

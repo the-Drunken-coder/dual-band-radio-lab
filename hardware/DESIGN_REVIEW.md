@@ -1,6 +1,6 @@
-# Rev A schematic review
+# Rev A schematic and PCB review
 
-2026-09-17. **All four schematics pass ERC with zero errors and zero warnings. Stopped before PCB layout, as requested.** The native schematics, BOMs, footprint selections, exported netlists and combined PDF have been updated. These are review artifacts, not a fabrication release.
+2026-09-17. **Four routed native PCBs pass KiCad 10.0.6 DRC with zero findings, zero unconnected items and zero schematic-parity findings. All four schematics also pass ERC with zero errors/warnings.** Stopped for board review. No Gerbers, drills, placement/order packages or orders were produced. One E28 design is instantiated twice.
 
 | Requested blocker | Implemented disposition |
 | --- | --- |
@@ -17,13 +17,13 @@
 
 ## Rev A physical priorities
 
-Do not optimize Rev A for size. Keep the four radio slots physically spread out, give the 5-V distribution generous copper, provide useful test points throughout the carrier and cards, and keep each switcher's high-current loops compact. A larger board that is easy to probe and debug is preferred. [LAYOUT_REQUIREMENTS.md](LAYOUT_REQUIREMENTS.md) records the required probe coverage and access checks. This is a documentation update; the current schematic validation remains unchanged and PCB layout remains on hold.
+Do not optimize Rev A for size. Keep the four radio slots physically spread out, give the 5-V distribution generous copper, provide useful test points throughout the carrier and cards, and keep each switcher's high-current loops compact. A larger board that is easy to probe and debug is preferred. [LAYOUT_REQUIREMENTS.md](LAYOUT_REQUIREMENTS.md) records the required probe coverage and access checks. These priorities are implemented in the layouts described below.
 
 ## Configurable SPI source termination
 
 All six schematic resistor positions start at **22 ohms**, using Yageo **RC0603FR-0722RL**, 1%, 0.1 W, with `Resistor_SMD:R_0603_1608Metric`. The E28 design is installed twice, giving **seven physical resistors**: SCK, MOSI and five independent MISO sources. Each BOM and schematic Assembly property permits **RC0603JR-070RL, 0 ohms**, in the same footprint. Fit one selected value; DNP opens the signal. No parallel bypass trace or separate jumper is permitted.
 
-| Design / resistor | Source side, pad 1 | Bus side, pad 2 | Required later placement |
+| Design / resistor | Source side, pad 1 | Bus side, pad 2 | Implemented source placement |
 | --- | --- | --- | --- |
 | Carrier R20 | U5 B1 pin 21, SPI_SCK_SRC | SPI_SCK to all slots and U4 SCK | Immediately after the carrier output buffer, before fanout |
 | Carrier R21 | U5 B2 pin 20, SPI_MOSI_SRC | SPI_MOSI to all slots and U4 SI | Immediately after the carrier output buffer, before fanout |
@@ -38,7 +38,7 @@ Keep every driver-to-resistor connection short and inline. Do not route a signal
 
 **22 ohms is an initial population value, not a validated impedance match.** During bring-up, verify and tune each path with an oscilloscope and IBIS analysis where models are available. Model the actual buffer/driver and receiver loading, connectors and routed interconnect; do not treat a bare-chip model as a complete radio-module model. Probe source and relevant receiver ends with short ground connections, check overshoot/undershoot, ringing, edge settling and setup/hold margin against the actual device limits, and exercise each MISO driver separately. Check intended SPI speeds, supply corners and supported card populations, including all four installed. Record the chosen values, clock rate, loading and waveforms/model results. Retain the 0-ohm option for those comparisons.
 
-Exported-netlist checks verify each split net and its exact members, resistor endpoints, initial value, footprint and alternate-population metadata. They reject direct source-to-bus bypasses and accidental extra connections on source segments. Physical source proximity and stub lengths remain layout-review requirements because no PCB is being created.
+Exported-netlist checks verify each split net and its exact members, resistor endpoints, initial value, footprint and alternate-population metadata. They reject direct source-to-bus bypasses and accidental extra connections on source segments. Native-board measurements below independently check source proximity and the routed interconnect. No source net contains a test point or a pre-resistor branch.
 
 ## ERC findings and what changed
 
@@ -54,8 +54,83 @@ The schematic choices are now concrete. **E28 factory IPEX configuration still n
 
 The 4 A rating is a design target subject to the documented copper/reference-layout requirements, 0-40 C bench ambient and later thermal/load/inrush measurements. The capacitor-bias allowance and transient model are engineering bounds, not guaranteed measured performance. Full 30 dBm E22 output is not guaranteed from exactly 5 V at the carrier connector after path losses. RF coexistence and antenna separation require later testing.
 
-Mechanical footprint dimensions and connector mapping are checked; physical fit is not yet tested because there are no boards. The alignment post and solid capture regions are binding inputs to later mechanical design. Do not replace them with unequal header lengths or silkscreen arrows.
+Mechanical footprint dimensions and connector mapping are checked; physical fit is not yet tested because there are no boards. The alignment post and solid capture regions are preserved in all four layouts. Do not replace them with unequal header lengths or silkscreen arrows.
 
 Semtech's current product page lists LR20xx v2.2, while the saved Waveshare-linked full datasheet is v2.1. This review uses the Waveshare module schematic for connector wiring and conservative module power reserves; it does not claim a v2.2 protocol audit. Compare the current radio-command documentation before implementing firmware.
 
-No `.kicad_pcb`, board outlines, placement files, Gerbers, drills or manufacturing archives were created. DRC is not applicable yet. The original breadboard/prototype work and pre-existing root README edits are preserved.
+The four `.kicad_pcb` files are the authoritative routed designs. No fabrication or ordering outputs were created. The original breadboard/prototype work and pre-existing root README edits are preserved.
+
+## Board geometry, access and validation
+
+Carrier: **250 x 210 mm**, two layers, **70 um (2 oz) copper per side**, 1.6 mm board. Each daughtercard is **84 x 80 mm**. S1 (915 LORA) is upper left, S2 (915 FLRC) lower right, S3 (2.4 LORA) lower left and S4 (2.4 FLRC) upper right. Same-band A1 locations are 168.0 mm apart. Card outlines have a 51 mm horizontal gap and 20 mm vertical gap. This is physical separation for bench work, not an RF coexistence qualification.
+
+Installed-view slot coordinates, in carrier millimetres:
+
+| Slot | A1 | B1 | Post H |
+| --- | --- | --- | --- |
+| S1 | 20,25 | 50.48,25 | 27.62,30.08 |
+| S2 | 155,125 | 185.48,125 | 162.62,130.08 |
+| S3 | 20,125 | 50.48,125 | 27.62,130.08 |
+| S4 | 155,25 | 185.48,25 | 162.62,30.08 |
+
+`audit_layouts.py` checks every header pad against the exact interface geometry. `audit_mechanics.py` checks the installed card envelopes, actual footprint bodies, both mandatory solid-capture rectangles and every drilled pad/via. The post uses a 3.4 mm NPTH and 7 mm exclusion diameter. The capture areas contain no added holes, vias or components. Correctly installed cards sit 11.05 mm above the carrier; the post protrudes nominally 10.75 mm above the card top. The 5.35 mm worst-case pre-contact engagement margin remains unchanged. Under each card, the carrier has only its intended sockets and alignment post. No card has underside components beyond its two mating headers.
+
+The Pico occupies the central top corridor, USB facing the top edge. Its USB approach, BOOTSEL top access and lower debug access remain open. Carrier probes are at x=97 or 138, outside the installed card rectangles; ground clips have 3.4 mm body clearance from card edges. Card-edge gaps provide independent removal access. Use a nonconductive bench support that clears the four screw heads; they remain accessible from below.
+
+All radio IPEX receptacles have vertical access. The E22 cable exits along local x=39..46 beyond y=38.5; E28 exits along x=52..59 beyond y=26.5. Core cables leave over low passives, below its >=8.51 mm socket clearance. Keep flexible antenna leads above the boards and directed outward; do not drape them across the buck or probe banks. The E28 antenna-end keepout is present on both card and carrier copper layers, including under the two installed modules. RF remains entirely inside the modules; no carrier RF trace exists.
+
+The four individual 3D views, [assembled four-card view](renders/rev-a-assembled-3d.png) and [low-angle mating view](renders/rev-a-assembled-side.png) are in renders/. Custom radio, Pico, header, post and capacitor models are dimensioned clearance envelopes, not manufacturer production CAD. Core/Pico plug-in models use nominal header standoff for visualization; the access check uses the lower socket-height bound. These checks establish geometric clearance. Physical insertion, cable strain, socket tolerances and the specified unpowered misinsertion tests remain assembly acceptance work.
+
+## Routed SPI measurements
+
+Lengths below are routed pad-centre distances, including 1.6 mm per via transition, rounded to 0.1 mm. They exclude module-internal traces and connector contact length. The independent graph splits trace junctions and checks exact source-net membership. Source-side copper has no branches, vias or test stubs.
+
+| Source | Resistor | Source-to-pad-1 length |
+| --- | --- | ---: |
+| carrier-rev-a: U5.21 | R20 | 2.31 mm |
+| carrier-rev-a: U5.20 | R21 | 4.46 mm |
+| carrier-rev-a: U4.14 | R22 | 2.23 mm |
+| e22-900m30s-rev-a: U1.16 | R5 | 2.58 mm |
+| core2021-hf-m-rev-a: J4.3 | R3 | 3.73 mm |
+| e28-2g4m27s-rev-a: U1.3 | R5 | 2.58 mm |
+
+These are pad-centre lengths; the exposed inter-pad trace is shorter. R20/R21 are beside the U5 output side, R22 beside U4 SO, and each radio source resistor beside its module/socket source pad. Core R3 is next to J4.3. Initial population remains 22 ohms with the documented 0-ohm option.
+
+The carrier uses a shared branched tree with two slot columns, not four isolated SPI links. Routes share copper before diverging; the following path lengths must not be added as independent branches. The left-hand MOSI continuation is the longest path. No serpentine length matching or redundant test header was added. The slot-to-module wiring is another load branch once a card is inserted.
+
+| Carrier path from resistor pad 2 | S1 | S2 | S3 | S4 | Local endpoint |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| SPI_SCK (R20) | 228.1 mm | 82.4 mm | 170.7 mm | 84.8 mm | 60.3 mm (U4.12) |
+| SPI_MOSI (R21) | 372.7 mm | 102.9 mm | 260.7 mm | 96.5 mm | 164.4 mm (U4.13) |
+| SPI_MISO (R22) | 172.0 mm | 62.4 mm | 104.3 mm | 122.1 mm | 62.6 mm (U7.4) |
+
+For MISO the reference above is the expander's bus-side resistor. Each card has its own source resistor; only the selected source may drive the shared bus. U7 is the receiving buffer.
+
+| Card: slot to module/socket (MISO to resistor pad 2) | SCK | MOSI | MISO |
+| --- | ---: | ---: | ---: |
+| e22-900m30s-rev-a | 55.3 mm | 40.8 mm | 47.5 mm |
+| core2021-hf-m-rev-a | 59.5 mm | 59.5 mm | 66.0 mm |
+| e28-2g4m27s-rev-a | 48.9 mm | 52.1 mm | 44.5 mm |
+
+Every card SPI probe is now only **2.0 mm from its header contact**, on the existing path or a short local branch. Longer probe detours found during review were removed. Bare pads are used instead of wire-loop SPI probes. The long shared interconnect is intentional for separated bench slots and is not impedance-qualified: use the actual tree and connector loading for IBIS/oscilloscope work. No maximum SPI rate or successful simultaneous-radio operation is claimed from DRC.
+
+## Power and AP63203 copper review
+
+The carrier has 6 mm horizontal protected-power runs, an **8 mm right-hand trunk**, 4 mm entry/main fanout copper and 2 mm slot drops, with both A2/A3 power contacts joined by >=1.5 mm copper. Power traces are reinforced by solid-connection pours. High-current power never changes layers through a single via. Bottom ground retains verified 10 mm main return corridors and >=4 mm branch corridors; the local signal routing does not cut those corridors. Ground stitching ties remaining top/bottom regions, and native DRC finds no isolated ground connection.
+
+The tiny eFuse package necessarily has a local fanout exception: its 0.30 mm power strips continue about 1 mm beyond the land, then expand through short 1.5 mm fanouts into >=4 mm copper. The longest 1.5 mm entry fanout is 3.7 mm; the output fanout is about 4.0 mm before widening. No thermal spokes are used. This exception is included in the extracted resistance and requires the documented full-load thermal check; it is not represented as 4 mm copper through a 0.30 mm land. Broad board copper surrounds the device, and 4 A remains a design target pending hardware thermal qualification.
+
+[POWER_BUDGET.md](POWER_BUDGET.md) records extracted route lengths, the shared-current voltage-drop estimate and explicit ground/contact assumptions. At 4.75 V at J9, the modeled E28 inputs are 4.47 V at the running allocation and **4.41 / 4.40 V** in the 4 A common-trunk stress calculation. The latter is an engineering estimate with little remaining modeled margin, not a measured supply guarantee. Verify at the slot/regulator probes under startup and load steps. E22's 30 dBm requirement still cannot be guaranteed from exactly 5 V at J9.
+
+The E28 buck was compared with AP63203 datasheet **DS41326 Rev 3-2, Figure 25** and the manufacturer's evaluation-board layout. VIN-to-C1 is 3.30 mm pad-centre; SW-to-L1 is 2.77 mm. C1/C8, U2, L1 and C2/C3/C7 form one local cluster. Bootstrap C4 is above U2: BST is 3.76 mm and its SW branch 7.29 mm. SW is confined to this cluster, has no plane pour and never enters the SPI/control field. Its 0.6 mm probe pad adds less than 0.9 mm of local trace. TP20 provides an exposed ground-spring pad 4.2 mm away, so SW probing does not require a long ground lead. Eighteen ground vias within x=0..20, y=35..57 stitch the IC/capacitor returns to bottom ground. Feedback senses the output capacitor bank on B.Cu, routed around the input/SW cluster, with a 43.7 mm pad-to-pad sense path. It is a quiet sense route, not part of the load-current path. This follows the reference's short VIN/hot-loop, small SW, grounded underside and separated feedback principles; it is not claimed to be an exact copied evaluation board.
+
+References: [AP63203 datasheet](https://www.diodes.com/datasheet/download/AP63200-AP63201-AP63203-AP63205.pdf), [AP63203 evaluation-board guide](https://www.diodes.com/assets/Evaluation-Boards/AP63203-EVB-User-Guide.pdf). Thermal rise, ripple, startup and loop stability still require powered measurements.
+
+## Final checks and stop point
+
+- Native KiCad DRC: all four boards, all severities, zones refilled, schematic parity enabled; zero findings. No DRC exclusions or severity downgrades.
+- Native ERC and exported connectivity: all four schematics pass; 18 GPIOs used, eight spare; GP26/27/28 remain physically unconnected.
+- Source-series membership, actual slot geometry, mechanical capture, installed probe access and power-route measurements: recorded in `validation/layout-audit.json`, `mechanical-access.json` and `power-route-audit.json`.
+- Schematics, selected BOMs, test-point symbols and combined schematic PDF are synchronized. Bare probe pads are PCB features; fitted ground clips have explicit MPNs.
+
+The final native PCBs are authoritative. Initial placement/router scripts and DSN/SES files are intermediate aids and must not be rerun over the final copper. Stop here for human layout review. No manufacturing export, supplier message, quotation request or order is authorized by this package.

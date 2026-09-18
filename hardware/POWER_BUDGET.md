@@ -59,8 +59,48 @@ Panasonic EEEFK1A221P is 220 uF, 10 V, +/-20%, maximum 0.26 ohm impedance at 100
 
 Rev A does not optimize for size. Use generous power pours and keep the four slots spread out. The dimensions below are minimums; increase copper area where space permits and recalculate voltage drop for the actual route lengths. Keep local switcher loops compact and provide accessible power/ground measurements as specified in [LAYOUT_REQUIREMENTS.md](LAYOUT_REQUIREMENTS.md).
 
-Use two layers with **2 oz finished copper on both sides**, a continuous ground plane and power pours. Main 5 V and its ground return must each have at least **4 mm uninterrupted width**, with no thermal-relief bottleneck at J9 or U2 power connections. For a 100 mm run and 70 um copper, R=0.01724 x 0.1/(4 x .070)=6.16 milliohms at 20 C. At 60 C this becomes 7.13 milliohms, 28.5 mV drop and 114 mW at 4 A per conductor. Budget both outgoing and return paths. Where a layer change is unavoidable use at least eight 0.30 mm finished vias with >=25 um barrel copper; 0.5 A per via at 4 A. Each slot's supply branch needs >=1.5 mm width and both +5 V contacts. Recalculate for actual lengths and fabricator copper tolerances; these are requirements, not claims about nonexistent copper.
+Use two layers with **2 oz finished copper on both sides**, a continuous ground plane and power pours. Main 5 V and its ground return must each have at least **4 mm uninterrupted width**, with no thermal-relief bottleneck at J9 or U2 power connections. For a 100 mm run and 70 um copper, R=0.01724 x 0.1/(4 x .070)=6.16 milliohms at 20 C. At 60 C this becomes 7.13 milliohms, 28.5 mV drop and 114 mW at 4 A per conductor. Budget both outgoing and return paths. Where a layer change is unavoidable use at least eight 0.30 mm finished vias with >=25 um barrel copper; 0.5 A per via at 4 A. Each slot's supply branch needs >=1.5 mm width and both +5 V contacts. Recalculate for actual lengths and fabricator copper tolerances; the routed implementation and package-fanout exception are assessed below.
 
 Design ambient is 0-40 C for the first bench prototype. U2's test-board 74.5 C/W estimate gives 54 C rise at 4 A. Each buck at 1 A and 80% efficiency dissipates 0.825 W, approximately 73 C rise using 89 C/W. Core LDO at 5.1 V and 150 mA dissipates 0.270 W, about 50 C rise using 184 C/W. These estimates require the respective reference layouts and copper; no enclosed or 85 C ambient operation is qualified. Evaluate the 6 A fault-path copper case and U2 thermal shutdown separately from the 4 A service target.
 
 Sources: saved Pico 2 datasheet sections 5.2/5.5; TPS25947 SLVSFC9C sections 6/7; Diodes AP63203 DS41326 and AP2112 DS39724; module manuals; Coilcraft XAL50xx; Panasonic FK. Exact source links and hashes are in sources/manifest.json and FOOTPRINT_REVIEW.md.
+
+## Extracted Rev A power routes
+
+The actual carrier is 250 x 210 mm. Copper is 70 um on F.Cu and B.Cu in the native stackup. Protected power uses 6 mm horizontal feeders and an 8 mm right-side trunk, with 6 mm near-entry trunk, 4 mm entry/main fanouts, 2 mm slot drops and >=1.5 mm dual-contact joins. These are solid connections, with no thermal-relief necks. All high-current positive paths stay on F.Cu. No single power via or insufficient via bank carries 4 A.
+
+**Package fanout exception:** U2's two 0.30 mm-wide, 2.40 mm-long power lands cannot accept a literal 4 mm trace between adjacent terminals. The 0.30 mm escape extends about 1.0–1.1 mm beyond each land. It expands through 3.7 mm (input) / about 4.0 mm (output) of 1.5 mm fanout into >=4 mm copper. The narrow portions are included in the resistance calculation. This is an explicit package-local exception to the general uninterrupted-4-mm rule, with no thermal spokes; it is not permission for a narrow main distribution route. Validate U2 temperature at 4 A before approving a hardware rating.
+
+Actual pad-centre positive paths, measured from U2 OUT6 to slot A2, include all main feeder and branch segments:
+
+| Slot | Carrier positive route | Trace-only resistance at 60 C | Shared-load positive drop at 3.225 A total |
+| --- | ---: | ---: | ---: |
+| S1 | 593.0 mm | 30.92 mOhm | 67.5 mV |
+| S2 | 372.0 mm | 22.20 mOhm | 48.7 mV |
+| S3 | 507.0 mm | 28.61 mOhm | 58.1 mV |
+| S4 | 458.0 mm | 24.51 mOhm | 63.2 mV |
+
+J9-to-U2 IN is 20.25 mm / 3.903 mOhm at 60 C. Adapter positive routes are:
+
+| Adapter | Slot A2 to module/regulator input | Resistance at 60 C |
+| --- | ---: | ---: |
+| e22-900m30s-rev-a | 96.9 mm | 18.42 mOhm |
+| core2021-hf-m-rev-a | 50.5 mm | 13.80 mOhm |
+| e28-2g4m27s-rev-a | 55.6 mm | 11.50 mOhm |
+
+Method: rho=0.01724 Ohm mm²/m, 70 um copper, 60 C multiplier 1.1572. The graph applies the specified load current to each shared positive segment; it does not incorrectly apply all 3.225 A independently to every slot branch. Parallel power-pour conductance is omitted, giving a conservative trace-only estimate. Internal pad/contact spreading is covered separately rather than inferred from a zero-length netlist connection.
+
+The B.Cu fill was checked at 0.25 mm spacing across 10 mm-wide main return corridors down both outer sides and across the bottom, and 4 mm-wide local branch corridors. All sampled points contain connected GND fill. Coordinates and sample counts are in `validation/power-route-audit.json`. Routes to the four slot contacts are bounded by 300.9, 235.8, 200.9 and 335.8 mm respectively. Actual plane current spreads across more copper. Load weighting follows the shared left/right return segments; the entire 0.35 A Pico/logic allocation is conservatively added to each main segment. An additional 5 mOhm allowance, carrying the full input current, covers local ground terminal spreading/fan-in. Adapter ground adds an engineering allowance equivalent to 80 mm of 4 mm-wide copper per card. These ground allowances are estimates, not a solved field model or measured impedance.
+
+Header allowance: 20 mOhm per contact, with two parallel +5 V contacts and four ground contacts, giving 15 mOhm per slot loop. This is an engineering allowance above the saved Samtec test results, not a new manufacturer-guaranteed maximum. The model includes the eFuse's 45 mOhm maximum and the adapter input trace. Supply lead/connector loss before J9 is excluded because 4.75 V is specified **at J9 under load**.
+
+| Load input, with 4.75 V at J9 | Running allocation, 3.225 A total | 4 A common-trunk stress |
+| --- | ---: | ---: |
+| S1 | 4.459 V | 4.394 V |
+| S2 | 4.513 V | 4.455 V |
+| S3 | 4.474 V | 4.414 V |
+| S4 | 4.466 V | 4.403 V |
+
+The stress calculation scales shared positive drops by 4/3.225, applies the extra 0.775 A to every main ground corridor as an upper allowance, and holds each radio's stated branch load. It is a 4 A total-distribution check, not authorization to put 4 A through a slot. Both E28 inputs remain above the 4.4 V budget point in this estimate, although S4's stress margin is small. Confirm copper thickness, connector resistance, regulator efficiency, rail droop and transient recovery on the prototype. No field/thermal model or oscilloscope measurement has been substituted by DRC. E22 is above its operating minimum but still below the >=5 V condition for guaranteed full 30 dBm.
+
+The 6 A fault-path check is transient only: a 223 mm x 6 mm feeder is about 10.59 mOhm at 60 C, dissipating 0.38 W if all 6 A traversed it. The 8 mm trunk has lower resistance per unit length. The eFuse's 4.11–5.13 A estimated current-limit range and thermal shutdown, rather than a 6 A continuous-board rating, constrain a sustained fault. The previously specified 4 A load/thermal and 3.865 A startup tests remain mandatory.

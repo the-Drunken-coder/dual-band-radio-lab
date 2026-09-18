@@ -1,6 +1,6 @@
 # Rev A assembly requirements
 
-These notes specify the intended assembly configuration for schematic review. There are no manufacturing files and nothing has been submitted for assembly.
+These notes specify the intended assembly configuration for schematic and routed-board review. There are no manufacturing files and nothing has been submitted for assembly.
 
 ## Antenna population evidence
 
@@ -32,3 +32,11 @@ The 1757019 power plug must be supplied preterminated with an 18 AWG or larger l
 ## SPI resistor population
 
 Initially populate carrier R20/R21/R22, E22 R5, Core2021 R3 and R5 on both E28 cards with 22-ohm RC0603FR-0722RL. All use the existing 0603 footprint. RC0603JR-070RL is the explicit 0-ohm configuration option, subject to bring-up measurement and recording the selected configuration. Do not populate both alternatives or omit the resistor: DNP opens that signal. See DESIGN_REVIEW.md for source placement and oscilloscope/IBIS verification.
+
+## Layout access and probe assembly
+
+The 250 x 210 mm carrier accepts four 84 x 80 mm cards. Fit 1x10/1x8 male headers on card undersides exactly as marked; all other card components are on top. Reuse the E28 design for S3 and S4. Keep the 20 mm inter-row gaps and 51 mm central gap clear of bundled antenna leads. Labels `B`, `I`, `T`, `R` by card probes mean BUSY, IRQ, TX_EN and RX_EN; the full legend is also printed on each card. Pin 1, rails, power polarity and card orientation are marked.
+
+Fit Keystone 5011 ground clips from each BOM. Round signal/rail probe pads have no part to place and no paste aperture. Use short ground springs on the local regulator ground pad; do not clip long ground leads to the SW pad. SW/FB/protection-threshold probing requires an appropriate high-impedance probe. The 0.6 mm SW pad sits beside the E28 inductor; use nearby TP20 (SW GND), 4.2 mm away, for the probe ground spring. It is not a test header.
+
+Retain at least 22.94 mm post projection above the carrier, permanent clamp nuts and all capture laminate. Support the bench carrier above the screw heads. The geometric review has been performed with all cards present; the physical unpowered correct/offset/reversed insertion test has not. Verify socket seating, Pico USB/BOOTSEL/debug access, both Core coax paths, IPEX latch/cable access and probe access on the actual first assembly. Models use nominal plug-in header height; do not substitute a header with shorter engagement lead or lower module clearance.

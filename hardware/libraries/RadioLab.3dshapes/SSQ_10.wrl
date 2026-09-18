@@ -1,0 +1,13 @@
+#VRML V2.0 utf8
+# Dimensioned clearance envelope; see hardware/FOOTPRINT_REVIEW.md
+Transform { translation 0.0 -4.5 1.6751968503937007 children [ Shape { appearance Appearance { material Material { diffuseColor .08 .08 .08 } } geometry Box { size 0.9488188976377954 10.200787401574804 3.3503937007874014 } } ] }
+Transform { translation 0.0 -0.0 3.358267716535433 children [ Shape { appearance Appearance { material Material { diffuseColor .65 .45 .1 } } geometry Box { size 0.31496062992125984 0.31496062992125984 0.01968503937007874 } } ] }
+Transform { translation 0.0 -1.0 3.358267716535433 children [ Shape { appearance Appearance { material Material { diffuseColor .65 .45 .1 } } geometry Box { size 0.31496062992125984 0.31496062992125984 0.01968503937007874 } } ] }
+Transform { translation 0.0 -2.0 3.358267716535433 children [ Shape { appearance Appearance { material Material { diffuseColor .65 .45 .1 } } geometry Box { size 0.31496062992125984 0.31496062992125984 0.01968503937007874 } } ] }
+Transform { translation 0.0 -3.0 3.358267716535433 children [ Shape { appearance Appearance { material Material { diffuseColor .65 .45 .1 } } geometry Box { size 0.31496062992125984 0.31496062992125984 0.01968503937007874 } } ] }
+Transform { translation 0.0 -4.0 3.358267716535433 children [ Shape { appearance Appearance { material Material { diffuseColor .65 .45 .1 } } geometry Box { size 0.31496062992125984 0.31496062992125984 0.01968503937007874 } } ] }
+Transform { translation 0.0 -5.0 3.358267716535433 children [ Shape { appearance Appearance { material Material { diffuseColor .65 .45 .1 } } geometry Box { size 0.31496062992125984 0.31496062992125984 0.01968503937007874 } } ] }
+Transform { translation 0.0 -6.0 3.358267716535433 children [ Shape { appearance Appearance { material Material { diffuseColor .65 .45 .1 } } geometry Box { size 0.31496062992125984 0.31496062992125984 0.01968503937007874 } } ] }
+Transform { translation 0.0 -7.0 3.358267716535433 children [ Shape { appearance Appearance { material Material { diffuseColor .65 .45 .1 } } geometry Box { size 0.31496062992125984 0.31496062992125984 0.01968503937007874 } } ] }
+Transform { translation 0.0 -8.0 3.358267716535433 children [ Shape { appearance Appearance { material Material { diffuseColor .65 .45 .1 } } geometry Box { size 0.31496062992125984 0.31496062992125984 0.01968503937007874 } } ] }
+Transform { translation 0.0 -9.0 3.358267716535433 children [ Shape { appearance Appearance { material Material { diffuseColor .65 .45 .1 } } geometry Box { size 0.31496062992125984 0.31496062992125984 0.01968503937007874 } } ] }

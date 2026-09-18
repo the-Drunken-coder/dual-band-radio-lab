@@ -8,6 +8,6 @@ w=PdfWriter()
 for p in paths:
  assert len(PdfReader(p).pages)==1,p
  w.append(p,outline_item=p.stem)
-w.add_metadata({'/Title':'Rev A schematic review, no PCB layout','/Subject':'Carrier and three daughtercard designs; E28 card used twice','/Author':'dual-band-radio-lab'})
+w.add_metadata({'/Title':'Rev A schematics accompanying routed PCB review','/Subject':'Carrier and three daughtercard designs; E28 card used twice','/Author':'dual-band-radio-lab'})
 w.write(ROOT/'Rev-A-electrical-studies.pdf')
 print('Combined 4 schematic pages.')

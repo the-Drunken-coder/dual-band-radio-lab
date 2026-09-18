@@ -1,8 +1,8 @@
 # Footprint and component review
 
-Reviewed 2026-09-17 against manufacturer drawings and the actual KiCad 10.0.6 library files. `validation/footprint-geometry.json` records pad numbers, coordinates, sizes and finished drill diameters read by KiCad's footprint loader. Custom library footprints are schematic selections; no board was placed or routed. Standard-library names alone were not treated as dimensional evidence.
+Reviewed 2026-09-17 against manufacturer drawings and the actual KiCad 10.0.6 library files. `validation/footprint-geometry.json` records pad numbers, coordinates, sizes and finished drill diameters read by KiCad's footprint loader. Custom and standard footprints are now placed in the four routed review boards. Standard-library names alone were not treated as dimensional evidence.
 
-All coordinates below are mm. Pad dimensions are copper, not solder-mask openings. Library land patterns are engineering choices unless explicitly identified as manufacturer recommendations. Final paste, courtyards, tolerances and assembly clearances still require the later board-level review.
+All coordinates below are mm. Pad dimensions are copper, not solder-mask openings. Library land patterns are engineering choices unless explicitly identified as manufacturer recommendations. Board-level courtyard/access review is recorded in DESIGN_REVIEW.md; fabrication process acceptance remains pending.
 
 | Selected part / footprint | Manufacturer check | Actual footprint and disposition |
 | --- | --- | --- |
@@ -36,3 +36,11 @@ The H1 alignment-hole item on each daughtercard is a board feature and excluded 
 ## SPI series resistor additions
 
 RC0603FR-0722RL, 22 ohms / 1% / 0.1 W, and the alternate RC0603JR-070RL 0-ohm jumper both use Yageo's 1.60 +/-0.10 x 0.80 +/-0.10 mm RC0603 body, 0.45 +/-0.10 mm thick. Their manufacturer part-specific sheets confirm the same mechanical dimensions, so both fit the already reviewed R_0603_1608Metric lands without a new footprint. [22-ohm manufacturer sheet](https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0722RL), [0-ohm manufacturer sheet](https://yageogroup.com/component-documentation/download/specsheet/RC0603JR-070RL). Only the 22-ohm initial population is counted in each BOM; the 0-ohm alternate is recorded in its assembly field.
+
+## Added probe features and 3D access review
+
+Keystone **5011** black multipurpose test points use a 1.6 mm finished hole, 3.17 mm base and 8.13 mm overall reference height. The KiCad `TestPoint_Keystone_5010-5014_Multipurpose` pad/drill geometry matches those dimensions. The 5011 is factory-fitted at the power entry, each carrier slot and each card ground clip. [Manufacturer dimensions](https://www.keyelco.com/category.cfm/Test-Points-color-keyed-Thru-Hole-Mount/Multipurpose-Style/id/748), [5011 product page](https://www.keyelco.com/product.cfm/product_id/1320).
+
+Other probes are project-local 1.0 mm circular copper pads with mask openings and no paste/body courtyard. The E28 SW probe is 0.6 mm to fit clear of the inductor body; it is a board feature, not an assembled component. Copper/mask clearance DRC applies to every probe. The alignment-hole courtyard is the actual specified 7 mm exclusion diameter.
+
+`RadioLab.3dshapes/` contains dimensioned review envelopes for modules, sockets/headers, Pico/Core plug-ins, post hardware, bulk capacitor, eFuse and 5011. Standard supported KiCad STEP models are used for the remaining packages. Envelope models show connector access and installed heights but are not substitutes for supplier CAD, insertion-force tests or the acceptance checks in ASSEMBLY_NOTES.md.

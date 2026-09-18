@@ -24,7 +24,7 @@ def check_series(board, ref, source_net, bus_net, drivers, bus_pins):
  assert source_net!=bus_net
  assert pins[(ref,'1')]==source_net and pins[(ref,'2')]==bus_net,(board,ref,'resistor endpoints')
  assert members[source_net]==set(drivers)|{(ref,'1')},(board,ref,'source bypass or extra stub')
- assert members[bus_net]==set(bus_pins)|{(ref,'2')},(board,ref,'bus topology')
+ assert {p for p in members[bus_net] if not p[0].startswith('TP')}==set(bus_pins)|{(ref,'2')},(board,ref,'bus topology')
  path=ROOT/'carrier-rev-a' if board=='carrier-rev-a' else ROOT/'adapters'/board
  row=next(r for r in csv.DictReader((path/'BOM.csv').open()) if r['reference']==ref)
  assert row['value']=='22' and row['mpn']=='RC0603FR-0722RL'

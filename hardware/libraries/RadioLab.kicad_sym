@@ -284,6 +284,13 @@
 (pin power_in line (at 20.32 -45.72 180) (length 5.08) (name "GND" (effects (font (size 1.016 1.016)))) (number "38" (effects (font (size 1.016 1.016)))))
 (pin power_in line (at 20.32 -48.26 180) (length 5.08) (name "VSYS" (effects (font (size 1.016 1.016)))) (number "39" (effects (font (size 1.016 1.016)))))
 (pin power_out line (at 20.32 -50.8 180) (length 5.08) (name "VBUS" (effects (font (size 1.016 1.016)))) (number "40" (effects (font (size 1.016 1.016)))))))
+(symbol "Probe_point" (pin_names (offset 0.762)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 5.08 0) (effects (font (size 1.27 1.27))))
+(property "Value" "Probe_point" (at 0 2.54 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+(symbol "Probe_point_0_1" (rectangle (start -15.24 0) (end 15.24 -5.08) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "Probe_point_1_1"
+(pin passive line (at -20.32 -2.54 0) (length 5.08) (name "PROBE" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))))
 (symbol "Resistor_value_only" (pin_names (offset 0.762)) (in_bom yes) (on_board yes)
 (property "Reference" "U" (at 0 5.08 0) (effects (font (size 1.27 1.27))))
 (property "Value" "Resistor_value_only" (at 0 2.54 0) (effects (font (size 1.27 1.27))))

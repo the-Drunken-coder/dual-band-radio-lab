@@ -12,3 +12,9 @@ Murata GRM32ER61C226KE20L and GRM32ER61E226KE15L were considered, but subsequent
 ## SPI resistor options
 
 Read 2026-09-17 from Yageo's exact part sheets: [RC0603FR-0722RL](https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0722RL) is 22 ohms, 1%, 0.1 W; [RC0603JR-070RL](https://yageogroup.com/component-documentation/download/specsheet/RC0603JR-070RL) is the matching 0-ohm jumper. Both specify a 1.6 +/-0.1 by 0.8 +/-0.1 mm body, 0.45 +/-0.1 mm thick, compatible with the selected 0603 footprint. These primary online sheets supplement the saved RC-series datasheet.
+
+
+## Layout probe and regulator references, 2026-09-17
+
+- Keystone 5011: https://www.keyelco.com/category.cfm/Test-Points-color-keyed-Thru-Hole-Mount/Multipurpose-Style/id/748 and https://www.keyelco.com/product.cfm/product_id/1320 . Black multipurpose point, 1.6 mm hole, 3.17 mm base and 8.13 mm reference height. The stock 5010-5014 footprint matches; a local dimensioned review model supplies the otherwise missing 5011 3D envelope.
+- AP63203 DS41326 Rev 3-2 Figure 25: https://www.diodes.com/datasheet/download/AP63200-AP63201-AP63203-AP63205.pdf . Compared against the routed local input, SW/inductor, output-ground and bottom feedback paths. Evaluation board: https://www.diodes.com/assets/Evaluation-Boards/AP63203-EVB-User-Guide.pdf . Both-side 2 oz copper and short hot-loop guidance retained.

@@ -1,0 +1,38 @@
+[
+  {
+    "board": "core2021-hf-m-rev-a",
+    "exit": 0,
+    "findings": {
+      "violations": {},
+      "unconnected_items": {},
+      "schematic_parity": {}
+    }
+  },
+  {
+    "board": "e22-900m30s-rev-a",
+    "exit": 0,
+    "findings": {
+      "violations": {},
+      "unconnected_items": {},
+      "schematic_parity": {}
+    }
+  },
+  {
+    "board": "e28-2g4m27s-rev-a",
+    "exit": 0,
+    "findings": {
+      "violations": {},
+      "unconnected_items": {},
+      "schematic_parity": {}
+    }
+  },
+  {
+    "board": "carrier-rev-a",
+    "exit": 0,
+    "findings": {
+      "violations": {},
+      "unconnected_items": {},
+      "schematic_parity": {}
+    }
+  }
+]

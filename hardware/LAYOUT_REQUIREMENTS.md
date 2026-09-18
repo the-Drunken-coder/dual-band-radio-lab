@@ -1,6 +1,6 @@
 # Rev A layout requirements
 
-Rev A prioritizes probing, debugging and replaceable modules. **Do not optimize for board size.** A slightly oversized carrier is preferred. These requirements guide the next design phase; PCB layout and manufacturing output remain on hold.
+Rev A prioritizes probing, debugging and replaceable modules. **Do not optimize for board size.** A slightly oversized carrier is preferred. These requirements govern the routed review layouts. Manufacturing output remains on hold; implementation evidence is in DESIGN_REVIEW.md.
 
 ## Placement and access
 
@@ -20,11 +20,11 @@ Rev A prioritizes probing, debugging and replaceable modules. **Do not optimize 
 
 Fit carrier R20 immediately after U5 pin 21 for SCK and R21 after U5 pin 20 for MOSI, before fanout. Fit carrier R22 immediately at MCP23S17 U4 SO pin 14 before its MISO branch joins the bus. Fit E22/E28 R5 at each module MISO output and Core R3 beside socket J4 pin 3. Both E28 card instances need their own R5. Use short inline connections with no parallel bypass or long test-point/header stubs.
 
-All start at 22 ohms; the same 0603 footprint accepts the documented 0-ohm alternate. Confirm values by oscilloscope/IBIS during bring-up. See DESIGN_REVIEW.md for the exact endpoint table and measurement requirements. These parts are now in the schematics; their physical placement remains pending PCB layout.
+All start at 22 ohms; the same 0603 footprint accepts the documented 0-ohm alternate. Confirm values by oscilloscope/IBIS during bring-up. See DESIGN_REVIEW.md for the exact endpoint table and measurement requirements. These parts are now in the schematics; their physical placement and routed lengths are recorded in DESIGN_REVIEW.md.
 
 ## Required probe coverage
 
-Provide clearly labeled test points at the following locations. These are requirements for the next schematic/layout revision, not a claim that test-point components have already been added to the current schematics.
+Provide clearly labeled test points at the following locations. The required pads and fitted ground clips are now present in both schematics and layouts.
 
 | Area | Required access |
 | --- | --- |
@@ -41,4 +41,4 @@ Use pads for fast or sensitive nodes and factory-fitted loop points where repeat
 
 Keep the existing GP26-GP28 no-connect guarantee. Do not connect those pins to daughtercards or powered diagnostic headers while adding test access. Use appropriately high-impedance probes on protection thresholds and feedback nodes.
 
-Before the later layout is accepted, review probe access with all four card envelopes, antenna plugs and the Pico present. Check the power path and each switcher loop separately. Board area is expendable; accessible measurements and controlled current paths are the priorities.
+Before manufacturing release, review probe access with all four card envelopes, antenna plugs and the Pico present. Check the power path and each switcher loop separately. Board area is expendable; accessible measurements and controlled current paths are the priorities.

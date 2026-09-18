@@ -635,6 +635,22 @@
       }
     ]
   },
+  "TestPoint:TestPoint_Keystone_5010-5014_Multipurpose": {
+    "pads": [
+      {
+        "n": "1",
+        "xy": [
+          0.0,
+          0.0
+        ],
+        "size": [
+          2.8,
+          2.8
+        ],
+        "drill": 1.6
+      }
+    ]
+  },
   "RadioLab:E22_900M30S": {
     "pads": [
       {

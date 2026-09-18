@@ -1,5 +1,5 @@
 {
-  "status": "SCHEMATIC_REVIEW_NO_LAYOUT",
+  "status": "LAYOUT_REVIEW_NO_FABRICATION",
   "A": {
     "1": "GND",
     "2": "SLOT_5V",

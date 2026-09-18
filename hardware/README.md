@@ -1,17 +1,22 @@
-# Rev A schematic package
+# Rev A hardware review package
 
-**Schematic review complete; stopped before PCB layout. No fabrication release.**
+**Four routed PCBs and four schematics are ready for review. DRC/ERC: zero findings. Manufacturing release remains on hold.**
 
-Four native KiCad projects cover the Pico 2 carrier, E22 915 MHz LoRa card, Core2021-HF-M socket adapter and common E28 2.4 GHz card, used twice. All four pass ERC with zero errors/warnings. The carrier uses 18 GPIOs, leaves eight spare and has a protected 5 V / 4 A external supply target with USB-isolated radio power.
+The 250 x 210 mm carrier and three 84 x 80 mm daughtercard designs use two layers with 2 oz copper per side. The E28 design is installed twice. Radio slots are spread apart, test points remain accessible with all cards installed, and switcher loops stay local.
 
-Rev A favors a larger, easy-to-debug board: spread-out radio slots, generous 5-V copper, accessible test points and compact local switcher loops. [LAYOUT_REQUIREMENTS.md](LAYOUT_REQUIREMENTS.md) makes these constraints explicit for the next phase. Layout remains on hold.
+Start with [DESIGN_REVIEW.md](DESIGN_REVIEW.md), the [assembled 3D view](renders/rev-a-assembled-3d.png) and the [combined schematic PDF](Rev-A-electrical-studies.pdf).
 
-Start with [DESIGN_REVIEW.md](DESIGN_REVIEW.md) and the [combined schematic PDF](Rev-A-electrical-studies.pdf). [GPIO_MAP.md](GPIO_MAP.md), [POWER_BUDGET.md](POWER_BUDGET.md), [radio-slot-v0.1.md](radio-slot-v0.1.md), [FOOTPRINT_REVIEW.md](FOOTPRINT_REVIEW.md) and [ASSEMBLY_NOTES.md](ASSEMBLY_NOTES.md) document the implemented choices and acceptance requirements. E28 IPEX configuration requires factory acceptance before procurement; no user rework is permitted.
+| Native layout | 3D review |
+| --- | --- |
+| [Carrier](carrier-rev-a/carrier-rev-a.kicad_pcb) | [Carrier render](renders/carrier-rev-a-3d.png) |
+| [E22](adapters/e22-900m30s-rev-a/e22-900m30s-rev-a.kicad_pcb) | [E22 render](renders/e22-900m30s-rev-a-3d.png) |
+| [Core2021](adapters/core2021-hf-m-rev-a/core2021-hf-m-rev-a.kicad_pcb) | [Core render](renders/core2021-hf-m-rev-a-3d.png) |
+| [E28, used twice](adapters/e28-2g4m27s-rev-a/e28-2g4m27s-rev-a.kicad_pcb) | [E28 render](renders/e28-2g4m27s-rev-a-3d.png) |
 
-Each project directory contains its editable `.kicad_pro` / `.kicad_sch`, selected BOM, connectivity data and PDF. `libraries/` contains project-local symbols and ten reviewed footprint patterns. `validation/` contains raw ERC reports, exported netlists and independent checks. `sources/` records manufacturer evidence and the exact JLC module photographs.
+[GPIO_MAP.md](GPIO_MAP.md), [POWER_BUDGET.md](POWER_BUDGET.md), [radio-slot-v0.1.md](radio-slot-v0.1.md), [FOOTPRINT_REVIEW.md](FOOTPRINT_REVIEW.md), [ASSEMBLY_NOTES.md](ASSEMBLY_NOTES.md) and [LAYOUT_REQUIREMENTS.md](LAYOUT_REQUIREMENTS.md) define the review constraints. The carrier uses 18 GPIOs, leaves eight spare and isolates the radio supply from USB-only operation. GP26–28 remain NC. Source resistors start at 22 ohms, with 0-ohm options and later oscilloscope/IBIS verification.
 
-`tools/build_studies.py` and `tools/build_footprints.py` are deterministic generators. Do not rerun after manual KiCad changes without reconciling them. `tools/validate_schematics.py` runs only schematic exports/ERC; `tools/check_studies.py` checks their exported connectivity. Nothing invokes PCB creation or fabrication export.
+Each project includes editable KiCad files, selected BOM, connectivity data and schematic PDF. `validation/` contains raw DRC/ERC, netlists and independent geometry/power/connectivity measurements. `renders/` contains non-manufacturing review images. `sources/` records manufacturer evidence. Custom 3D models are dimensioned envelopes, not physical fit certification.
 
-Configurable source-series resistors are included on buffered SCK/MOSI and every independent MISO source, including the expander. Initial population is 22 ohms with a 0-ohm option; values require oscilloscope/IBIS verification during bring-up. See DESIGN_REVIEW.md.
+**The final native PCB files are authoritative.** Placement generators and intermediate `layout/` DSN/SES files predate manual routing corrections; do not regenerate/import them over the final boards. See [validation/README.md](validation/README.md) for read-only checks.
 
-No files are ready for ordering. Later PCB layout, thermal/fit testing, factory process acceptance and manufacturing release are separate work. Existing prototype work is unchanged.
+No Gerbers, drill files, CPL, ordering archive, quotation or order has been generated. Factory acceptance of the E28 IPEX variant, human layout review, physical fit and electrical/thermal/RF qualification remain separate release gates. Existing prototype work is unchanged.

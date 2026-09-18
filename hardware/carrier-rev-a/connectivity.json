@@ -1164,5 +1164,770 @@
     "source": "Phoenix Contact manufacturer mating table",
     "footprint": "",
     "nets": {}
+  },
+  {
+    "reference": "TP1",
+    "value": "S1_5V",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "RADIO_5V"
+    }
+  },
+  {
+    "reference": "TP2",
+    "value": "S1_CS_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S1_CS_N"
+    }
+  },
+  {
+    "reference": "TP3",
+    "value": "S1_BUSY",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S1_BUSY"
+    }
+  },
+  {
+    "reference": "TP4",
+    "value": "S1_IRQ",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S1_IRQ"
+    }
+  },
+  {
+    "reference": "TP5",
+    "value": "S1_RESET_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S1_RESET_N"
+    }
+  },
+  {
+    "reference": "TP6",
+    "value": "S1_TX_EN",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S1_TX_EN"
+    }
+  },
+  {
+    "reference": "TP7",
+    "value": "S1_RX_EN",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S1_RX_EN"
+    }
+  },
+  {
+    "reference": "TP8",
+    "value": "S1_GND",
+    "symbol": "Probe_point",
+    "mpn": "5011",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Accessible ground clip",
+    "assembly": "Factory fitted",
+    "source": "Keystone 5011 drawing and manufacturer category 748",
+    "footprint": "TestPoint:TestPoint_Keystone_5010-5014_Multipurpose",
+    "nets": {
+      "1": "GND"
+    }
+  },
+  {
+    "reference": "TP9",
+    "value": "S2_5V",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "RADIO_5V"
+    }
+  },
+  {
+    "reference": "TP10",
+    "value": "S2_CS_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S2_CS_N"
+    }
+  },
+  {
+    "reference": "TP11",
+    "value": "S2_BUSY",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S2_BUSY"
+    }
+  },
+  {
+    "reference": "TP12",
+    "value": "S2_IRQ",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S2_IRQ"
+    }
+  },
+  {
+    "reference": "TP13",
+    "value": "S2_RESET_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S2_RESET_N"
+    }
+  },
+  {
+    "reference": "TP14",
+    "value": "S2_GND",
+    "symbol": "Probe_point",
+    "mpn": "5011",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Accessible ground clip",
+    "assembly": "Factory fitted",
+    "source": "Keystone 5011 drawing and manufacturer category 748",
+    "footprint": "TestPoint:TestPoint_Keystone_5010-5014_Multipurpose",
+    "nets": {
+      "1": "GND"
+    }
+  },
+  {
+    "reference": "TP15",
+    "value": "S3_5V",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "RADIO_5V"
+    }
+  },
+  {
+    "reference": "TP16",
+    "value": "S3_CS_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S3_CS_N"
+    }
+  },
+  {
+    "reference": "TP17",
+    "value": "S3_BUSY",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S3_BUSY"
+    }
+  },
+  {
+    "reference": "TP18",
+    "value": "S3_IRQ",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S3_IRQ"
+    }
+  },
+  {
+    "reference": "TP19",
+    "value": "S3_RESET_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S3_RESET_N"
+    }
+  },
+  {
+    "reference": "TP20",
+    "value": "S3_TX_EN",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S3_TX_EN"
+    }
+  },
+  {
+    "reference": "TP21",
+    "value": "S3_RX_EN",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S3_RX_EN"
+    }
+  },
+  {
+    "reference": "TP22",
+    "value": "S3_GND",
+    "symbol": "Probe_point",
+    "mpn": "5011",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Accessible ground clip",
+    "assembly": "Factory fitted",
+    "source": "Keystone 5011 drawing and manufacturer category 748",
+    "footprint": "TestPoint:TestPoint_Keystone_5010-5014_Multipurpose",
+    "nets": {
+      "1": "GND"
+    }
+  },
+  {
+    "reference": "TP23",
+    "value": "S4_5V",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "RADIO_5V"
+    }
+  },
+  {
+    "reference": "TP24",
+    "value": "S4_CS_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S4_CS_N"
+    }
+  },
+  {
+    "reference": "TP25",
+    "value": "S4_BUSY",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S4_BUSY"
+    }
+  },
+  {
+    "reference": "TP26",
+    "value": "S4_IRQ",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S4_IRQ"
+    }
+  },
+  {
+    "reference": "TP27",
+    "value": "S4_RESET_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S4_RESET_N"
+    }
+  },
+  {
+    "reference": "TP28",
+    "value": "S4_TX_EN",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S4_TX_EN"
+    }
+  },
+  {
+    "reference": "TP29",
+    "value": "S4_RX_EN",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S4_RX_EN"
+    }
+  },
+  {
+    "reference": "TP30",
+    "value": "S4_GND",
+    "symbol": "Probe_point",
+    "mpn": "5011",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Accessible ground clip",
+    "assembly": "Factory fitted",
+    "source": "Keystone 5011 drawing and manufacturer category 748",
+    "footprint": "TestPoint:TestPoint_Keystone_5010-5014_Multipurpose",
+    "nets": {
+      "1": "GND"
+    }
+  },
+  {
+    "reference": "TP31",
+    "value": "IN_5V",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "EXT_5V"
+    }
+  },
+  {
+    "reference": "TP32",
+    "value": "BUS_5V",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "RADIO_5V"
+    }
+  },
+  {
+    "reference": "TP33",
+    "value": "VBUS",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "USB_VBUS"
+    }
+  },
+  {
+    "reference": "TP34",
+    "value": "VSYS",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "PICO_VSYS"
+    }
+  },
+  {
+    "reference": "TP35",
+    "value": "PICO_3V3",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "PICO_3V3"
+    }
+  },
+  {
+    "reference": "TP36",
+    "value": "IOREF_3V3",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "IOREF_3V3"
+    }
+  },
+  {
+    "reference": "TP37",
+    "value": "UVLO",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "UVLO"
+    }
+  },
+  {
+    "reference": "TP38",
+    "value": "OVLO",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "OVLO"
+    }
+  },
+  {
+    "reference": "TP39",
+    "value": "DVDT",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "DVDT"
+    }
+  },
+  {
+    "reference": "TP40",
+    "value": "ILIM",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "ILIM"
+    }
+  },
+  {
+    "reference": "TP41",
+    "value": "EXP_CS",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "EXP_CS_N"
+    }
+  },
+  {
+    "reference": "TP42",
+    "value": "EXP_RST",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "EXP_RESET_N"
+    }
+  },
+  {
+    "reference": "TP43",
+    "value": "OE_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "P_IO_OE_N"
+    }
+  },
+  {
+    "reference": "TP44",
+    "value": "P_SCK",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "P_SPI_SCK"
+    }
+  },
+  {
+    "reference": "TP45",
+    "value": "P_MOSI",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "P_SPI_MOSI"
+    }
+  },
+  {
+    "reference": "TP46",
+    "value": "P_MISO",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "P_SPI_MISO"
+    }
+  },
+  {
+    "reference": "TP47",
+    "value": "SCK",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "SPI_SCK"
+    }
+  },
+  {
+    "reference": "TP48",
+    "value": "MOSI",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "SPI_MOSI"
+    }
+  },
+  {
+    "reference": "TP49",
+    "value": "MISO",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "SPI_MISO"
+    }
+  },
+  {
+    "reference": "TP50",
+    "value": "ENTRY_GND",
+    "symbol": "Probe_point",
+    "mpn": "5011",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Accessible ground clip",
+    "assembly": "Factory fitted",
+    "source": "Keystone 5011 drawing and manufacturer category 748",
+    "footprint": "TestPoint:TestPoint_Keystone_5010-5014_Multipurpose",
+    "nets": {
+      "1": "GND"
+    }
+  },
+  {
+    "reference": "TP51",
+    "value": "U3_GND",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "GND"
+    }
   }
 ]
