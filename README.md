@@ -1,6 +1,6 @@
 # Dual-Band Radio Lab
 
-Notes and experiments for a portable dual-band radio system.
+**Volunteer project:** Lane Araujo volunteered to take on this portable dual-band radio project. This repository documents the research and experiments.
 
 ## Vision
 
