@@ -1,0 +1,374 @@
+[
+  {
+    "text": "OUT 3V3",
+    "xy": [
+      17.0,
+      45.1
+    ],
+    "original_xy": [
+      17,
+      45.1
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "REG GND",
+    "xy": [
+      17.0,
+      51.9
+    ],
+    "original_xy": [
+      17,
+      48.1
+    ],
+    "moved_mm": 3.8
+  },
+  {
+    "text": "MOD 3V3",
+    "xy": [
+      48.0,
+      27.9
+    ],
+    "original_xy": [
+      48,
+      24.1
+    ],
+    "moved_mm": 3.8
+  },
+  {
+    "text": "IN 5V",
+    "xy": [
+      -9.0,
+      3.0
+    ],
+    "original_xy": [
+      -9,
+      3
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "EN 5V",
+    "xy": [
+      3.5,
+      42.9
+    ],
+    "original_xy": [
+      3.5,
+      39.1
+    ],
+    "moved_mm": 3.8
+  },
+  {
+    "text": "MISO",
+    "xy": [
+      -9.0,
+      15.24
+    ],
+    "original_xy": [
+      -9,
+      15.24
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "MOSI",
+    "xy": [
+      -9.0,
+      12.7
+    ],
+    "original_xy": [
+      -9,
+      12.7
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "AUX0",
+    "xy": [
+      34.5,
+      35.1
+    ],
+    "original_xy": [
+      34.5,
+      35.1
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "B",
+    "xy": [
+      36.6,
+      0.0
+    ],
+    "original_xy": [
+      36.6,
+      0.0
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "SCK",
+    "xy": [
+      -9.0,
+      10.16
+    ],
+    "original_xy": [
+      -9,
+      10.16
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "RST",
+    "xy": [
+      -9.0,
+      20.32
+    ],
+    "original_xy": [
+      -9,
+      20.32
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "GND",
+    "xy": [
+      -9.0,
+      60.0
+    ],
+    "original_xy": [
+      -9,
+      60
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "I",
+    "xy": [
+      36.6,
+      2.54
+    ],
+    "original_xy": [
+      36.6,
+      2.54
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "GND",
+    "xy": [
+      51.0,
+      24.1
+    ],
+    "original_xy": [
+      51,
+      24.1
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "CS",
+    "xy": [
+      -9.0,
+      17.78
+    ],
+    "original_xy": [
+      -9,
+      17.78
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "REV A / 2L 2oz / REVIEW ONLY",
+    "xy": [
+      32.0,
+      65.0
+    ],
+    "original_xy": [
+      32.0,
+      65.0
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "HEADER PINS DOWN / IPEX OUT",
+    "xy": [
+      32.0,
+      63.0
+    ],
+    "original_xy": [
+      32.0,
+      63.0
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "core2021-hf-m-rev-a",
+    "xy": [
+      32.0,
+      -9.0
+    ],
+    "original_xy": [
+      32.0,
+      -9.0
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "B1 BUSY",
+    "xy": [
+      30.48,
+      -4.0
+    ],
+    "original_xy": [
+      30.48,
+      -4.0
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "A1 GND",
+    "xy": [
+      0.0,
+      -4.0
+    ],
+    "original_xy": [
+      0.0,
+      -4.0
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "R2",
+    "xy": [
+      60.57,
+      23.0
+    ],
+    "original_xy": [
+      60.57,
+      23.0
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "C2",
+    "xy": [
+      12.5,
+      41.8
+    ],
+    "original_xy": [
+      12.5,
+      41.8
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "C1",
+    "xy": [
+      3.5,
+      34.2
+    ],
+    "original_xy": [
+      3.5,
+      34.2
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "R1",
+    "xy": [
+      63.57,
+      4.0
+    ],
+    "original_xy": [
+      63.57,
+      4.0
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "J3",
+    "xy": [
+      41.795,
+      -1.525
+    ],
+    "original_xy": [
+      41.795,
+      -1.525
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "C4",
+    "xy": [
+      38.5,
+      22.7
+    ],
+    "original_xy": [
+      38.5,
+      22.7
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "R3",
+    "xy": [
+      62.8,
+      11.77
+    ],
+    "original_xy": [
+      62.8,
+      11.77
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "U2",
+    "xy": [
+      8.0,
+      38.1
+    ],
+    "original_xy": [
+      8.0,
+      38.1
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "C3",
+    "xy": [
+      48.0,
+      19.57
+    ],
+    "original_xy": [
+      48.0,
+      19.57
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "J4",
+    "xy": [
+      59.445,
+      24.805
+    ],
+    "original_xy": [
+      59.445,
+      24.805
+    ],
+    "moved_mm": 0.0
+  },
+  {
+    "text": "H1",
+    "xy": [
+      4.12,
+      -0.42
+    ],
+    "original_xy": [
+      4.12,
+      -0.42
+    ],
+    "moved_mm": 0.0
+  }
+]

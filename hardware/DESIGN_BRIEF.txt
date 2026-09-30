@@ -1,0 +1,376 @@
+You are designing the first PCB hardware prototype for the repository:
+
+`the-Drunken-coder/dual-band-radio-lab`
+
+The goal is NOT a production RF PCB. The goal is a modular, beginner-friendly, zero-user-soldering carrier system using pre-engineered RF modules.
+
+Create the KiCad project(s), schematics, PCB layouts, fabrication outputs, documentation, and BOM needed for Rev A.
+
+DO NOT order anything.
+DO NOT fabricate anything.
+DO NOT guess a footprint, pin number, power requirement, connector orientation, or RF-module behavior.
+Verify every such fact from the current manufacturer datasheet or mechanical drawing before using it.
+
+## Architecture
+
+The radio consists of four fixed-role transceivers:
+
+1. 915 MHz LoRa
+2. 915 MHz FLRC
+3. 2.4 GHz LoRa
+4. 2.4 GHz FLRC
+
+The user must perform ZERO soldering.
+
+Use a main carrier PCB plus removable radio daughtercards connected using standard 2.54 mm pin headers.
+
+The radio modules themselves may be soldered to the daughtercards by the PCB assembly company.
+
+### Selected hardware
+
+915 MHz LoRa:
+
+* Ebyte E22-900M30S
+* SX1262
+* SPI
+* 850-930 MHz
+* up to 30 dBm / 1 W
+* JLCPCB part C411294
+* IPEX antenna interface
+* approximately 650 mA TX at maximum power
+* 2.5-5.5 V supply
+* 3.3 V logic
+
+915 MHz FLRC:
+
+* Waveshare Core2021-HF-M
+* SKU 34523
+* Semtech LR2021
+* factory-soldered 2.54 mm headers
+* SPI
+* 850-930 MHz
+* LoRa + FLRC
+* up to 22 dBm sub-GHz
+* 3.3 V supply and logic
+* IPEX-4 antenna connector
+
+2.4 GHz LoRa:
+
+* Ebyte E28-2G4M27S
+* SX1281
+* SPI
+* 2400-2500 MHz
+* LoRa/FLRC/GFSK
+* 27 dBm / approximately 500 mW
+* approximately 580 mA TX
+* 2.5-3.6 V supply, nominally 3.3 V
+* 3.3 V logic
+* IPEX antenna interface
+* JLCPCB part C411312
+
+2.4 GHz FLRC:
+
+* identical Ebyte E28-2G4M27S
+* same daughtercard PCB as the 2.4-LoRa radio
+* firmware/profile determines that this instance permanently operates as FLRC
+
+Controller:
+
+* Raspberry Pi Pico 2 WITH factory-installed headers
+* RP2350
+* plug into female sockets on the main carrier
+* do not solder the Pico directly to the carrier
+
+## Critical modularity requirement
+
+The four RF interfaces must connect to the carrier through a common "Radio Slot v0.1" electrical/mechanical interface.
+
+Use ordinary 2.54 mm pin headers.
+
+Prefer an asymmetric connector arrangement such as:
+
+* one 1x10 header
+* one 1x8 header
+
+The unequal header lengths should make 180-degree reversed insertion physically impossible.
+
+Do not carry RF signals through these headers.
+
+Every radio module retains its own IPEX/IPEX-4 RF connector. RF stays entirely on the module/daughtercard.
+
+The common radio-slot interface should expose approximately:
+
+Power:
+
+* 5V, at least two contacts if useful for current handling
+* multiple GND contacts
+
+SPI:
+
+* SCK
+* MOSI
+* MISO
+* CS_N
+
+Control:
+
+* RESET_N
+* BUSY
+* IRQ
+* TX_EN
+* RX_EN
+* AUX0
+* AUX1
+* optional slot identity/detection
+
+Determine the final safe pinout during schematic design.
+
+Document the pinout in a standalone markdown file.
+
+## Daughtercard power architecture
+
+The main carrier should primarily distribute regulated 5 V.
+
+Each daughtercard should adapt power locally as needed.
+
+E22-900M30S daughtercard:
+
+* use 5 V directly if consistent with manufacturer reference design
+* add manufacturer-recommended decoupling
+* add substantial local bulk capacitance suitable for ~650 mA TX pulses
+* investigate approximately 100 uF or greater local bulk capacitance based on vendor/reference guidance
+* no RF routing; use the module's IPEX connector
+
+Core2021-HF-M adapter:
+
+* this module already has headers
+* create a socketed/pass-through adapter that allows the factory-header module to plug in without soldering
+* generate regulated 3.3 V locally from slot 5 V
+* current demand is modest (~105 mA at 22 dBm)
+* select a suitable regulator based on datasheet/reference design
+* use its existing IPEX-4 RF connector
+
+E28-2G4M27S daughtercard:
+
+* same PCB should be used for both 2.4-GHz radios
+* convert slot 5 V to regulated 3.3 V locally
+* radio can draw approximately 580 mA during TX
+* use a buck regulator, NOT a simple LDO, because dissipating roughly (5-3.3)*0.58 ≈ 1 W in an LDO is undesirable
+* size regulator with sensible margin, target >=1 A continuous capability
+* follow regulator datasheet layout exactly
+* add local bulk and ceramic decoupling
+* retain module IPEX connector
+* do not design an independent RF matching network
+
+## Main carrier
+
+Use Raspberry Pi Pico 2 with headers as a removable controller module.
+
+Carrier should include:
+
+* female headers for the Pico 2
+* four Radio Slot v0.1 sockets
+* clearly labeled slots:
+
+  * 915 LORA
+  * 915 FLRC
+  * 2.4 LORA
+  * 2.4 FLRC
+* robust 5 V input
+* target supply capability at least 3 A
+* input fuse/polyfuse if appropriate
+* reverse-polarity/backfeed considerations
+* substantial main bulk capacitance
+* per-slot power decoupling
+* power indicator LED
+* optional per-slot activity/status LEDs only if they do not interfere with radio signals
+* accessible test points for:
+
+  * 5V
+  * GND
+  * SPI signals
+  * each CS
+  * BUSY
+  * IRQ
+  * reset/control lines
+
+A dedicated carrier power input is preferred.
+
+It is acceptable for the Pico's own USB connector to remain accessible for programming/debugging.
+
+Verify the Raspberry Pi Pico 2 VSYS/VBUS power architecture before tying external carrier power to any Pico power pin. Do not create a USB backfeed path.
+
+## GPIO planning
+
+Before routing, create a GPIO budget.
+
+SPI clock/MOSI/MISO may be shared.
+
+Each radio needs an independent chip select.
+
+BUSY and IRQ should preferably remain directly connected to RP2350 GPIO unless there is a strong documented reason not to.
+
+Some daughtercards require TX_EN/RX_EN while others may perform RF switching through radio DIO pins.
+
+Verify the manufacturer reference circuit for each module.
+
+Do NOT assume TX_EN/RX_EN can be tied to a Semtech DIO unless the module/vendor documentation confirms the correct configuration.
+
+If GPIO count becomes tight:
+
+* consider an MCP23S17 or similar SPI GPIO expander for slow control functions such as RESET, TX_EN, RX_EN, enable, and auxiliary lines
+* keep latency-sensitive IRQ/BUSY signals direct
+* document why each signal is direct or expanded
+
+## RF requirements
+
+This is NOT an RF PCB design exercise.
+
+Do not route 915 MHz or 2.4 GHz RF across the main carrier.
+
+Use the antenna connectors already present on the selected radio modules.
+
+Respect vendor antenna keepout requirements.
+
+Position radio cards and antennas to maximize physical spacing.
+
+Keep the two 915-MHz radios apart and the two 2.4-GHz radios apart as much as reasonably possible.
+
+Same-band full duplex is NOT assumed.
+
+The design must tolerate firmware blanking/protection of the other same-band receiver during local TX.
+
+Do not add LNAs, duplexers, antenna combiners, splitters, or RF switches in Rev A.
+
+Four independent antennas are intentional.
+
+## PCB requirements
+
+Prefer 2-layer PCBs unless a clear technical reason requires 4 layers.
+
+Use ground pours appropriately.
+
+Use wide power traces/pours sized for transmitter currents.
+
+Avoid routing high-current switching-regulator loops near SPI/control lines.
+
+Follow every regulator manufacturer's recommended PCB layout.
+
+Add mounting holes.
+
+Use readable silkscreen.
+
+Mark:
+
+* board revision
+* connector pin 1
+* voltage rails
+* radio role
+* antenna side
+* module orientation
+
+Avoid putting copper or components inside antenna/module keepout regions specified by the vendors.
+
+## Manufacturing target
+
+Target JLCPCB/JLCPCB Assembly where practical.
+
+Known JLC parts:
+
+* E22-900M30S: C411294
+* E28-2G4M27S: C411312
+
+Prefer JLC/LCSC-stocked components for passives, regulators, connectors, and protection components when technically appropriate.
+
+Do not substitute another radio module merely because it is easier to source without documenting the proposed substitution first.
+
+The Core2021-HF-M can be user-purchased separately and plugged into its adapter because it already has factory-soldered headers.
+
+The Pico 2 with headers can likewise be separately purchased and plugged into the carrier.
+
+## Repository structure
+
+Create something similar to:
+
+hardware/
+README.md
+radio-slot-v0.1.md
+
+carrier-rev-a/
+carrier-rev-a.kicad_pro
+carrier-rev-a.kicad_sch
+carrier-rev-a.kicad_pcb
+BOM.csv
+README.md
+fabrication/
+
+adapters/
+e22-900m30s-rev-a/
+...
+core2021-hf-m-rev-a/
+...
+e28-2g4m27s-rev-a/
+...
+
+Only one E28 adapter design is necessary because both 2.4-GHz lanes use the same hardware.
+
+## Validation requirements
+
+Before claiming the design is complete:
+
+1. Verify every radio-module pin against current manufacturer documentation.
+2. Verify every footprint dimension against the mechanical drawing.
+3. Verify connector orientation and Pin 1.
+4. Verify Pico 2 header orientation and pin mapping.
+5. Verify power/current calculations.
+6. Verify regulator thermal/current margin.
+7. Run KiCad ERC.
+8. Resolve legitimate ERC errors rather than suppressing them casually.
+9. Run KiCad DRC.
+10. Resolve legitimate DRC errors.
+11. Inspect the board visually for reversed headers, incorrect rotations, connector access, antenna clearance, and module overhang.
+12. Generate schematic PDFs or screenshots for human review.
+13. Generate a BOM with manufacturer part number, supplier/JLC/LCSC number where available, quantity, and purpose.
+14. Generate Gerbers, drill files, BOM and CPL/position files, but DO NOT submit an order.
+15. Write a `DESIGN_REVIEW.md` listing every assumption, unresolved concern, and item that still needs human verification before manufacturing.
+
+## Very important design philosophy
+
+This is Rev A.
+
+Optimize for:
+
+* debuggability
+* modularity
+* replaceable radios
+* test points
+* zero soldering by the end user
+* conservative power design
+* easy rework by replacing whole daughtercards
+
+Do NOT optimize aggressively for minimum PCB size.
+
+Do NOT integrate bare Semtech RF ICs.
+
+Do NOT remove module headers/connectors just to save space.
+
+Do NOT make speculative RF changes.
+
+Use manufacturer-provided RF modules exactly as intended.
+
+When unsure, stop and document the uncertainty instead of inventing an answer.
+
+At the end, provide:
+
+* a concise architecture summary
+* directory/file list created
+* GPIO map
+* Radio Slot v0.1 pinout
+* power budget
+* BOM summary
+* ERC result
+* DRC result
+* remaining risks
+* exact files I should upload to JLCPCB after human review
+
+Do not place the manufacturing order.

@@ -1,0 +1,213 @@
+{
+  "method": "70 um copper at 60 C; routed trace graph; shared segment currents; 10 mm main ground corridors and 4 mm terminal branches, load-weighted returns plus all 0.35 A auxiliary current on every main corridor; 20 mOhm per header contact engineering allowance (2 supply, 4 return); 45 mOhm eFuse maximum",
+  "ground_sampling_mm": 0.25,
+  "ground_corridors": {
+    "entry": {
+      "centerline": [
+        [
+          113.92,
+          198
+        ],
+        [
+          113.92,
+          205
+        ]
+      ],
+      "width_mm": 4,
+      "length_mm": 7.0,
+      "missing_samples": [],
+      "missing_count": 0
+    },
+    "left_main": {
+      "centerline": [
+        [
+          113.92,
+          203.5
+        ],
+        [
+          10,
+          203.5
+        ],
+        [
+          10,
+          25
+        ]
+      ],
+      "width_mm": 10,
+      "length_mm": 282.42,
+      "missing_samples": [],
+      "missing_count": 0
+    },
+    "right_main": {
+      "centerline": [
+        [
+          113.92,
+          203.5
+        ],
+        [
+          233,
+          203.5
+        ],
+        [
+          233,
+          60
+        ]
+      ],
+      "width_mm": 10,
+      "length_mm": 262.58,
+      "missing_samples": [],
+      "missing_count": 0
+    },
+    "S1": {
+      "centerline": [
+        [
+          10,
+          25
+        ],
+        [
+          17.5,
+          25
+        ]
+      ],
+      "width_mm": 4,
+      "length_mm": 7.5,
+      "missing_samples": [],
+      "missing_count": 0
+    },
+    "S3": {
+      "centerline": [
+        [
+          10,
+          125
+        ],
+        [
+          17.5,
+          125
+        ]
+      ],
+      "width_mm": 4,
+      "length_mm": 7.5,
+      "missing_samples": [],
+      "missing_count": 0
+    },
+    "S2": {
+      "centerline": [
+        [
+          233,
+          142.78
+        ],
+        [
+          188,
+          142.78
+        ]
+      ],
+      "width_mm": 4,
+      "length_mm": 45.0,
+      "missing_samples": [],
+      "missing_count": 0
+    },
+    "S4": {
+      "centerline": [
+        [
+          233,
+          60
+        ],
+        [
+          190,
+          60
+        ],
+        [
+          190,
+          42.78
+        ],
+        [
+          188,
+          42.78
+        ]
+      ],
+      "width_mm": 4,
+      "length_mm": 62.22,
+      "missing_samples": [],
+      "missing_count": 0
+    }
+  },
+  "input_trace_ohm": 0.003903,
+  "loads": {
+    "S1": {
+      "current_A": 0.85,
+      "positive_length_mm": 593.031,
+      "shared_positive_drop_V": 0.0675,
+      "return_length_bound_mm": 300.92,
+      "return_drop_bound_V": 0.033,
+      "return_drop_4A_stress_V": 0.0435,
+      "contact_drop_allowance_V": 0.0127,
+      "adapter_positive_ohm": 0.018416,
+      "module_input_floor_at_J9_4_75V": 4.459,
+      "floor_with_4A_shared_trunk_stress": 4.394
+    },
+    "S2": {
+      "current_A": 0.15,
+      "positive_length_mm": 372.031,
+      "shared_positive_drop_V": 0.0487,
+      "return_length_bound_mm": 235.82,
+      "return_drop_bound_V": 0.0257,
+      "return_drop_4A_stress_V": 0.0339,
+      "contact_drop_allowance_V": 0.0022,
+      "adapter_positive_ohm": 0.013798,
+      "module_input_floor_at_J9_4_75V": 4.513,
+      "floor_with_4A_shared_trunk_stress": 4.455
+    },
+    "S3": {
+      "current_A": 0.9375,
+      "positive_length_mm": 507.031,
+      "shared_positive_drop_V": 0.0581,
+      "return_length_bound_mm": 200.92,
+      "return_drop_bound_V": 0.0296,
+      "return_drop_4A_stress_V": 0.0379,
+      "contact_drop_allowance_V": 0.0141,
+      "adapter_positive_ohm": 0.011502,
+      "module_input_floor_at_J9_4_75V": 4.474,
+      "floor_with_4A_shared_trunk_stress": 4.414
+    },
+    "S4": {
+      "current_A": 0.9375,
+      "positive_length_mm": 458.031,
+      "shared_positive_drop_V": 0.0632,
+      "return_length_bound_mm": 335.82,
+      "return_drop_bound_V": 0.0325,
+      "return_drop_4A_stress_V": 0.0426,
+      "contact_drop_allowance_V": 0.0141,
+      "adapter_positive_ohm": 0.011502,
+      "module_input_floor_at_J9_4_75V": 4.466,
+      "floor_with_4A_shared_trunk_stress": 4.403
+    },
+    "Pico": {
+      "current_A": 0.3,
+      "positive_length_mm": 479.045,
+      "shared_positive_drop_V": 0.0717
+    },
+    "logic": {
+      "current_A": 0.05,
+      "positive_length_mm": 39.641,
+      "shared_positive_drop_V": 0.0104
+    }
+  },
+  "E22_decision": {
+    "supply_architecture_changed": false,
+    "nominal_J9_voltage_V": 5,
+    "nominal_total_input_A": 1.8057,
+    "nominal_E22_current_A": 0.65,
+    "nominal_copper_temperature_C": 20,
+    "nominal_efuse_ohm": 0.0283,
+    "estimated_nominal_module_voltage_V": 4.867,
+    "conservative_J9_voltage_V": 4.75,
+    "conservative_total_input_A": 3.225,
+    "conservative_E22_current_A": 0.85,
+    "conservative_copper_temperature_C": 60,
+    "conservative_module_voltage_V": 4.459,
+    "four_amp_stress_module_voltage_V": 4.394,
+    "module_at_least_5V_guaranteed": false,
+    "full_30dBm_guaranteed": false,
+    "decision": "Accept reduced/unspecified maximum RF output for Rev A. Do not raise the shared input or redesign power solely for 30 dBm. Nominal model assumes 5.000 V at J9; upstream cable/source drop further reduces it. Transient droop, thermal and RF output require measurement."
+  }
+}

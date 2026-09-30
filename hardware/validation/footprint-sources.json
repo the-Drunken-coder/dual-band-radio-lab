@@ -1,0 +1,52 @@
+[
+  {
+    "footprint": "RadioLab:SSQ_1x8",
+    "source": "ssq-drawing.pdf; ssq-footprint.pdf",
+    "description": "SSQ 2.54 mm pitch, 1.02 mm finished holes, 1.90 mm pads"
+  },
+  {
+    "footprint": "RadioLab:SSQ_1x10",
+    "source": "ssq-drawing.pdf; ssq-footprint.pdf",
+    "description": "SSQ 2.54 mm pitch, 1.02 mm finished holes, 1.90 mm pads"
+  },
+  {
+    "footprint": "RadioLab:SSQ_1x20",
+    "source": "ssq-drawing.pdf; ssq-footprint.pdf",
+    "description": "SSQ 2.54 mm pitch, 1.02 mm finished holes, 1.90 mm pads"
+  },
+  {
+    "footprint": "RadioLab:TSW_1x8",
+    "source": "tsw-drawing.pdf; tsw-footprint.pdf",
+    "description": "TSW 2.54 mm pitch, 1.02 mm finished holes, 1.90 mm pads"
+  },
+  {
+    "footprint": "RadioLab:TSW_1x10",
+    "source": "tsw-drawing.pdf; tsw-footprint.pdf",
+    "description": "TSW 2.54 mm pitch, 1.02 mm finished holes, 1.90 mm pads"
+  },
+  {
+    "footprint": "RadioLab:E22_900M30S",
+    "source": "e22-900m30s-manual.pdf p10",
+    "description": "24 x 38.5 mm body; 2.54 mm pitch and 7.60 mm group gap; engineered 2.50 x 1.80 mm lands"
+  },
+  {
+    "footprint": "RadioLab:E28_2G4M27S",
+    "source": "e28-2g4m27s-manual.pdf p5",
+    "description": "15 x 26.5 mm body; 1.27 mm pitch; engineered 2.00 x 0.90 mm lands; IPEX assembly required"
+  },
+  {
+    "footprint": "RadioLab:TPS25947_RPW0010A",
+    "source": "tps25947.pdf p73, drawing 4225183/A",
+    "description": "TI RPW0010A 2 x 2 mm; long IN5/OUT6 pads and L-shaped corner pads; no exposed pad"
+  },
+  {
+    "footprint": "RadioLab:Panasonic_FK_E_8x6.2",
+    "source": "panasonic-fk.pdf p12 land-pattern table",
+    "description": "Panasonic FK size E, 8 mm can, 6.2 mm nominal height; manufacturer 2.2 mm gap and 4 x 1.6 mm lands; pad 1 positive"
+  },
+  {
+    "footprint": "RadioLab:Alignment_M3_3.4mm",
+    "source": "Accu SSCF-M3-25-A2 / HPN-M3-A2; radio-slot-v0.1.md",
+    "description": "M3 post clearance, 3.4 mm NPTH; no copper within radius 3.5 mm on any layer"
+  }
+]

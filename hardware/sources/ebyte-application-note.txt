@@ -1,0 +1,448 @@
+
+--- PDF page 1 ---
+Chengdu Ebyte ElectronicTechnologyCo.,Ltd.                                                      Applicationnote-AN2023005
+
+
+
+
+
+                          Product                 Application                      Note
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             第  1 page, total4                        The  copyrightand  thefinalinterpretationrightof the
+             页                                        product  belong to Chengdu  YibaiteElectronicTechnology
+                                                      Co., Ltd
+
+--- PDF page 2 ---
+Chengdu     Ebyte   Electronic   Technology      Co.,Ltd.                                                                                 Application     note-AN2023005
+                                                                         Contents
+Product          Application             Note      .................................................................................................................................1
+EBYTE        wireless        module         power         supply       reference          design..........................................................................1
+     preface...................................................................................................................................................................1
+     1.   Power       supply        design       using      a   linear     regulator         (LDO)       scheme........................................................      1
+     2.   Power       supply        design       using      a   dc-to-dc          scheme         .................................................................................2
+     3.   Power       supply        design       using      a   DC-DC         +   linear      regulator         (LDO)       scheme....................................       3
+     4.   summary........................................................................................................................................................... 4
+About        us.....................................................................................................................................................................4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   The   copyright     and   the   final interpretation      of  the  product     are  owned      by  Chengdu      Ebyte    Electronic    Technology       Co.,Ltd.
+
+--- PDF page 3 ---
+Chengdu Ebyte ElectronicTechnologyCo.,Ltd.                                                      Applicationnote-AN2023005
+
+
+      EBYTE         wireless         module          power         supply         reference           design
+
+
+preface
+
+    This article introduces  the power  supply  design  reference  suitable forEBYTE   wireless modules,  which  can be
+
+adjusted  according  to actual application  scenarios. Itmainly  involves wireless transmission   modules  less than
+
+27dBm   (0.5W), 30dBm    (1W), 33dBm   (2W)  and  37dBm   (5W), and  the power  supply  voltage  of these modules
+
+involves 3.3V, 5V  and 5V~12V.
+
+
+1. Power    supply    design   using   a  linear  regulator    (LDO)   scheme
+
+    A  linearregulator  (LDO)  isused  to power  the module   as a step-down   device  ina design  where  the  module
+
+power  is lessthan  30dBm   (1W)  and   the input voltage  and  output  voltage   dropout   voltage is small.
+
+    The  circuitdesign  of the LDO  is relativelysimple, selecting  afixed output  voltage  LDO  with  only a filter
+
+capacitor at the periphery,  and  the circuitdesign  schematic  isshown   in Figure 1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            Figure 1 LDO  circuitdesign schematic
+
+    Several  common    models   are listedin Table 1.
+
+                                      Table  1 Common     LDO   recommendations
+
+     Model           Input  voltage  range        Output         Output   current               Module   power
+                                                  voltage
+                     1.5V≤  (VIN - VOUT)   ≤                                              ≤30dBm@(VIN      - VOUT   =
+ AMS1117-5.0                   12V                  5.0V       1A@(VIN    -VOUT   =                  1.5V)
+                         VINmax   = 15V                                1.5V)              ≤27dBm@(VIN      - VOUT   ≥
+                                                                                                     1.5V)
+                     1.5V≤  (VIN - VOUT)   ≤                                              ≤30dBm@(VIN      - VOUT   =
+ AMS1117-3.3                   12V                  3.3V       1A@(VIN    -VOUT   =                  1.5V)
+                         VINmax   = 15V                                1.5V)              ≤27dBm@(VIN      - VOUT   ≥
+                                                                                                     1.5V)
+                     1.2V≤  (VIN - VOUT)   ≤                                              ≤30dBm@(VIN      - VOUT   =
+ LM1117IMPX-                   12V                  5.0V         800mA@(VIN      -                   1.2V)
+       5.0               VINmax   = 15V                           VOUT   =  1.2V)         ≤27dBm@(VIN      - VOUT   ≥
+                                                                                                     1.2V)
+
+
+   1 / 6                                                        The copyrightand  thefinalinterpretationrightof the
+                                                                product belong to Chengdu  YibaiteElectricAllrights
+                                                                reservedby Sub  Technology Co.,Ltd
+
+--- PDF page 4 ---
+Chengdu  EbyteElectronicTechnology Co.,Ltd.                                                        Applicationnote-AN2023005
+
+
+                      1.2V≤  (VIN  -VOUT)   ≤                                                 ≤30dBm@(VIN      - VOUT   =
+ LM1117IMPX-                    12V                   3.3V          800mA@(VIN      -                    1.2V)
+       3.3                VINmax   =  15V                            VOUT   = 1.2V)           ≤27dBm@(VIN      - VOUT   ≥
+                                                                                                         1.2V)
+    L7805CV                  7.5~35V                  5.0V                1.5A                 ≤33dBm@(VIN       ≤ 20V)
+ ADP151AUJZ-          0.3V≤  (VIN  -VOUT)   ≤                                                 ≤27dBm@(VIN      - VOUT   ≤
+       3.3                     2.2V                   3.3V              200mA                            2.2V)
+                         VINmax    = 5.5V
+  LP5907MFX-          0.5V≤  (VIN  -VOUT)   ≤                                                 ≤27dBm@(VIN      - VOUT   ≤
+       3.3                     2.2V                   3.3V              200mA                            2.2V)
+                         VINmax    = 5.5V
+
+
+     Due  to the internal structure  characteristics of the  LDO,  the voltage  difference  between   input  and  output
+
+should  be  as small as possible  when   using the  LDO,  the power   consumption    of the  LDO  when   working   is(Vin-
+
+Vout)  xIout, due  to the junction  temperature   limitation of the  package   and  the manufacturing    process,  inmost
+
+of the packages   without  additional  heat  sinks, inorder  to ensure  that the  LDO  will not be  damaged    due  to
+
+overheating,  for applications  with  large voltage  differences,  itisrecommended      to use  DC-DC   to power   the
+
+module   after step-down.
+
+
+
+2. Power     supply    design   using    a dc-to-dc     scheme
+
+     DC-DC   BUCK   isa common     and  efficientstep-down    scheme,   itsinput-output   dropout   can  be high, for high-
+
+power   modules,  the  use of DC-DC    buck  can provide  a stable  power  supply  to the  module.
+
+     A typical application  diagram   using  the TPS54360BDDAR       DC-DC   chip  isshown.  The  DC-DC    chip can  deliver
+
+3.5A to  the output  with  an input of up  to 60V.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                     Figure 2 TPS54360    design reference  for5V output
+
+
+   2 / 6                                                          The copyright and  thefinalinterpretation rightof the
+                                                                  product belong  to Chengdu  Yibaite ElectricAllrights
+                                                                  reserved by Sub Technology   Co.,Ltd
+
+--- PDF page 5 ---
+Chengdu Ebyte ElectronicTechnologyCo.,Ltd.                                                      Applicationnote-AN2023005
+
+
+    For  modules   ofdifferent powers,  different supply  voltages  are required, and  Table  2 shows  the large
+
+reference  values for devices  fordifferent output  voltages.
+
+                                  Table 2 Reference  values  fordifferentoutput voltages
+
+  Output         R5          R6          R4           C5          C8           L1          C4          Cin         Cost
+  voltage
+    3.3V       37.5K        12K         10.6K        8nF         50pF        8.2uH        0.1uF      2.2uF x2    47uF  x2
+     5V         63K         12K          13K        6.8nF        39pF        8.2uH        0.1uF      2.2uF x2    47uF  x2
+     8V         90K         10K         16.4K        5nF         32pF        8.2uH        0.1uF      2.2uF x2    47uF  x2
+    12V         168K        12K          20K         5nF         25pF        8.2uH        0.1uF      2.2uF x2    47uF  x2
+
+
+    In addition  to the TPS54360,   there are many   models  available, and  Table 3 listsseveral models   to choose
+
+from.
+
+                                Table  3 Recommended     and used  power for othermodels
+
+        Model            Input  voltage         Output           Output   current              Module   power
+                                                voltage               (max)
+    TPS5430DDAR            5.5V~36V         1.221V~32.04V               3A                   37dBm@8~12V、
+                                                                                      ≤33dBm@5V、≤33dBm@3.3V
+     TPS54331DR            3.5V~28V            0.8V~25V                 3A                   37dBm@8~12V、
+                                                                                      ≤33dBm@5V、≤33dBm@3.3V
+  TPS563201DDCR            4.5V~17V           0.768V~7V                 3A                   37dBm@8~12V、
+                                                                                      ≤33dBm@5V、≤33dBm@3.3V
+    TPS5450DDAR            5.5V~36V         1.221V~31.32V               5A                   37dBm@8~12V、
+                                                                                      ≤33dBm@5V、≤33dBm@3.3V
+    ME3103AM5G             2.5V~5.5V           0.6V~5.5V                1A                     ≤30dBm@3.3V
+    ME3104AM5G             2.5V~5.5V           0.6V~5.5V                2A                     ≤33dBm@3.3V
+    LM2576D2T-              7V~40V            1.23V~37V                 3A                   37dBm@8~12V、
+       ADJR4G                                                                         ≤33dBm@5V、≤33dBm@3.3V
+
+
+3. Power    supply    design    using   a DC-DC     + linear   regulator    (LDO)   scheme
+
+    For  some  small power   modules,  when   there is no external LNA   inside,or when   the external LNA   isnot
+
+powered   by only  a separate  LDO, its reception  performance   isaffected  by the power   supply, which  is common    in
+
+modules   with a supply  voltage  of3.3V.
+
+    For  optimal  energy  efficiency,DC-DC   istypically used  to step down   higher voltages  to 5V  or 3.3V to power
+
+the module   when   the system  requires increased  voltage  input. Since the  switching frequency   of the DC-DC
+
+affects the RF signal, inorder  to ensure  that the module   can achieve  the best  reception  performance,   itis
+
+recommended     to connect   the LDO  in series afterthe DC-DC    output  to power  the module.
+
+
+
+
+
+
+   3 / 6                                                        The copyright and the finalinterpretationrightofthe
+                                                                product belong  toChengdu   YibaiteElectricAllrights
+                                                                reserved by Sub Technology  Co.,Ltd
+
+--- PDF page 6 ---
+Chengdu Ebyte ElectronicTechnology Co.,Ltd.                                                        Applicationnote-AN2023005
+
+
+4. summary
+
+     (1)Linear  regulators  (LDOs)  are suitable for small power   modules   or 30dBm    (1W)  modules   with  low dropout
+
+voltages.
+
+     (2)DC-DC   buck  is used  in most  modules   and  has high  power   conversion  efficiency, which  may   affect some
+
+small power   mode   fast reception  performance    due  to itsswitching  characteristics.
+
+     (3)The  DC-DC   buck  +  linearregulator  (LDO)  combination    is suitable for applications  with high  supply
+
+voltages, sensitive  to power  conversion   efficiency, and  using a 3.3V  module.
+
+
+About    us
+
+Technical    support:     support@cdebyte.com
+Thank    you   for  using   Ebyte   products!     Please   contact    us  with   any  questions     or  suggestions:
+info@cdebyte.com
+-------------------------------------------------------------------------------------------------
+Phone:    +86   028-61399028
+Address:    B5   Mould    Park,   199#   Xiqu   Ave,   High-tech     District,   Sichuan,    China
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   4 / 6                                                          The copyright and the finalinterpretationrightof the
+                                                                  product belong  toChengdu   YibaiteElectricAllrights
+                                                                  reserved by Sub Technology  Co., Ltd

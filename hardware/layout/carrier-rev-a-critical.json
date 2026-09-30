@@ -1,0 +1,17 @@
+[
+  {
+    "source": "U5.21",
+    "resistor": "R20",
+    "source_length_mm": 2.3125
+  },
+  {
+    "source": "U5.20",
+    "resistor": "R21",
+    "source_length_mm": 4.421343828520916
+  },
+  {
+    "source": "U4.14",
+    "resistor": "R22",
+    "source_length_mm": 2.2249999999999943
+  }
+]

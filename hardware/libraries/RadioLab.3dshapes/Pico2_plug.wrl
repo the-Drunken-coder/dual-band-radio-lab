@@ -1,0 +1,6 @@
+#VRML V2.0 utf8
+# Dimensioned clearance envelope; see hardware/FOOTPRINT_REVIEW.md
+Transform { translation 3.5 -9.039370078740157 4.547244094488189 children [ Shape { appearance Appearance { material Material { diffuseColor .08 .35 .15 } } geometry Box { size 8.26771653543307 20.078740157480315 0.39370078740157477 } } ] }
+Transform { translation 3.5 0.15748031496062992 5.236220472440945 children [ Shape { appearance Appearance { material Material { diffuseColor .6 .6 .6 } } geometry Box { size 3.149606299212598 2.3622047244094486 1.3385826771653542 } } ] }
+Transform { translation 1.574803149606299 -2.1653543307086616 5.118110236220472 children [ Shape { appearance Appearance { material Material { diffuseColor .95 .95 .9 } } geometry Box { size 0.3543307086614173 0.7874015748031495 0.31496062992125984 } } ] }
+Transform { translation 3.3464566929133857 -7.874015748031496 5.0 children [ Shape { appearance Appearance { material Material { diffuseColor .05 .05 .05 } } geometry Box { size 2.7559055118110236 2.7559055118110236 0.5118110236220472 } } ] }

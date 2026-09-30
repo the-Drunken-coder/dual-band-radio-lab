@@ -1,0 +1,1933 @@
+[
+  {
+    "reference": "U1",
+    "value": "Pico 2 with headers, SC1632",
+    "symbol": "Pico_2_header_map",
+    "mpn": "SC1632",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Removable controller",
+    "assembly": "User plug-in",
+    "source": "Pico 2 datasheet sections 5.2 and 5.5",
+    "footprint": "",
+    "nets": {
+      "1": "P_S1_IRQ",
+      "2": "P_S1_BUSY",
+      "3": "GND",
+      "4": "P_S2_IRQ",
+      "5": "P_S2_BUSY",
+      "6": "P_SPI_MISO",
+      "7": "P_S1_CS_N",
+      "8": "GND",
+      "9": "P_SPI_SCK",
+      "10": "P_SPI_MOSI",
+      "11": "P_S3_IRQ",
+      "12": "P_S3_BUSY",
+      "13": "GND",
+      "14": "P_S4_IRQ",
+      "15": "P_S4_BUSY",
+      "16": "P_S2_CS_N",
+      "17": "P_S3_CS_N",
+      "18": "GND",
+      "19": "P_S4_CS_N",
+      "20": "P_EXP_CS_N",
+      "21": "P_EXP_RESET_N",
+      "22": "P_IO_OE_N",
+      "23": "GND",
+      "24": null,
+      "25": null,
+      "26": null,
+      "27": null,
+      "28": "GND",
+      "29": null,
+      "31": null,
+      "32": null,
+      "33": "GND",
+      "34": null,
+      "36": "PICO_3V3",
+      "38": "GND",
+      "39": "PICO_VSYS",
+      "40": "USB_VBUS"
+    }
+  },
+  {
+    "reference": "J10",
+    "value": "SSQ-120-01-G-S",
+    "symbol": "Header_1x20",
+    "mpn": "SSQ-120-01-G-S",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Pico left socket, physical pins 1-20",
+    "assembly": "factory",
+    "source": "Samtec tsw/ssq-drawing.pdf and footprint.pdf",
+    "footprint": "RadioLab:SSQ_1x20",
+    "nets": {
+      "1": "P_S1_IRQ",
+      "2": "P_S1_BUSY",
+      "3": "GND",
+      "4": "P_S2_IRQ",
+      "5": "P_S2_BUSY",
+      "6": "P_SPI_MISO",
+      "7": "P_S1_CS_N",
+      "8": "GND",
+      "9": "P_SPI_SCK",
+      "10": "P_SPI_MOSI",
+      "11": "P_S3_IRQ",
+      "12": "P_S3_BUSY",
+      "13": "GND",
+      "14": "P_S4_IRQ",
+      "15": "P_S4_BUSY",
+      "16": "P_S2_CS_N",
+      "17": "P_S3_CS_N",
+      "18": "GND",
+      "19": "P_S4_CS_N",
+      "20": "P_EXP_CS_N"
+    }
+  },
+  {
+    "reference": "J11",
+    "value": "SSQ-120-01-G-S",
+    "symbol": "Header_1x20",
+    "mpn": "SSQ-120-01-G-S",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Pico right socket, physical pins 21-40",
+    "assembly": "factory",
+    "source": "Samtec tsw/ssq-drawing.pdf and footprint.pdf",
+    "footprint": "RadioLab:SSQ_1x20",
+    "nets": {
+      "1": "P_EXP_RESET_N",
+      "2": "P_IO_OE_N",
+      "3": "GND",
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": "GND",
+      "9": null,
+      "10": null,
+      "11": null,
+      "12": null,
+      "13": "GND",
+      "14": null,
+      "15": null,
+      "16": "PICO_3V3",
+      "17": null,
+      "18": "GND",
+      "19": "PICO_VSYS",
+      "20": "USB_VBUS"
+    }
+  },
+  {
+    "reference": "J1",
+    "value": "SSQ-110-01-G-S",
+    "symbol": "Header_1x10",
+    "mpn": "SSQ-110-01-G-S",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "S1 slot A",
+    "assembly": "factory",
+    "source": "Samtec tsw/ssq-drawing.pdf and footprint.pdf",
+    "footprint": "RadioLab:SSQ_1x10",
+    "nets": {
+      "1": "GND",
+      "2": "RADIO_5V",
+      "3": "RADIO_5V",
+      "4": "GND",
+      "5": "SPI_SCK",
+      "6": "SPI_MOSI",
+      "7": "SPI_MISO",
+      "8": "S1_CS_N",
+      "9": "S1_RESET_N",
+      "10": "GND"
+    }
+  },
+  {
+    "reference": "J2",
+    "value": "SSQ-108-01-G-S",
+    "symbol": "Header_1x8",
+    "mpn": "SSQ-108-01-G-S",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "S1 slot B",
+    "assembly": "factory",
+    "source": "Samtec tsw/ssq-drawing.pdf and footprint.pdf",
+    "footprint": "RadioLab:SSQ_1x8",
+    "nets": {
+      "1": "S1_BUSY",
+      "2": "S1_IRQ",
+      "3": "S1_TX_EN",
+      "4": "S1_RX_EN",
+      "5": null,
+      "6": null,
+      "7": "IOREF_3V3",
+      "8": "GND"
+    }
+  },
+  {
+    "reference": "J3",
+    "value": "SSQ-110-01-G-S",
+    "symbol": "Header_1x10",
+    "mpn": "SSQ-110-01-G-S",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "S2 slot A",
+    "assembly": "factory",
+    "source": "Samtec tsw/ssq-drawing.pdf and footprint.pdf",
+    "footprint": "RadioLab:SSQ_1x10",
+    "nets": {
+      "1": "GND",
+      "2": "RADIO_5V",
+      "3": "RADIO_5V",
+      "4": "GND",
+      "5": "SPI_SCK",
+      "6": "SPI_MOSI",
+      "7": "SPI_MISO",
+      "8": "S2_CS_N",
+      "9": "S2_RESET_N",
+      "10": "GND"
+    }
+  },
+  {
+    "reference": "J4",
+    "value": "SSQ-108-01-G-S",
+    "symbol": "Header_1x8",
+    "mpn": "SSQ-108-01-G-S",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "S2 slot B",
+    "assembly": "factory",
+    "source": "Samtec tsw/ssq-drawing.pdf and footprint.pdf",
+    "footprint": "RadioLab:SSQ_1x8",
+    "nets": {
+      "1": "S2_BUSY",
+      "2": "S2_IRQ",
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": "IOREF_3V3",
+      "8": "GND"
+    }
+  },
+  {
+    "reference": "J5",
+    "value": "SSQ-110-01-G-S",
+    "symbol": "Header_1x10",
+    "mpn": "SSQ-110-01-G-S",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "S3 slot A",
+    "assembly": "factory",
+    "source": "Samtec tsw/ssq-drawing.pdf and footprint.pdf",
+    "footprint": "RadioLab:SSQ_1x10",
+    "nets": {
+      "1": "GND",
+      "2": "RADIO_5V",
+      "3": "RADIO_5V",
+      "4": "GND",
+      "5": "SPI_SCK",
+      "6": "SPI_MOSI",
+      "7": "SPI_MISO",
+      "8": "S3_CS_N",
+      "9": "S3_RESET_N",
+      "10": "GND"
+    }
+  },
+  {
+    "reference": "J6",
+    "value": "SSQ-108-01-G-S",
+    "symbol": "Header_1x8",
+    "mpn": "SSQ-108-01-G-S",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "S3 slot B",
+    "assembly": "factory",
+    "source": "Samtec tsw/ssq-drawing.pdf and footprint.pdf",
+    "footprint": "RadioLab:SSQ_1x8",
+    "nets": {
+      "1": "S3_BUSY",
+      "2": "S3_IRQ",
+      "3": "S3_TX_EN",
+      "4": "S3_RX_EN",
+      "5": null,
+      "6": null,
+      "7": "IOREF_3V3",
+      "8": "GND"
+    }
+  },
+  {
+    "reference": "J7",
+    "value": "SSQ-110-01-G-S",
+    "symbol": "Header_1x10",
+    "mpn": "SSQ-110-01-G-S",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "S4 slot A",
+    "assembly": "factory",
+    "source": "Samtec tsw/ssq-drawing.pdf and footprint.pdf",
+    "footprint": "RadioLab:SSQ_1x10",
+    "nets": {
+      "1": "GND",
+      "2": "RADIO_5V",
+      "3": "RADIO_5V",
+      "4": "GND",
+      "5": "SPI_SCK",
+      "6": "SPI_MOSI",
+      "7": "SPI_MISO",
+      "8": "S4_CS_N",
+      "9": "S4_RESET_N",
+      "10": "GND"
+    }
+  },
+  {
+    "reference": "J8",
+    "value": "SSQ-108-01-G-S",
+    "symbol": "Header_1x8",
+    "mpn": "SSQ-108-01-G-S",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "S4 slot B",
+    "assembly": "factory",
+    "source": "Samtec tsw/ssq-drawing.pdf and footprint.pdf",
+    "footprint": "RadioLab:SSQ_1x8",
+    "nets": {
+      "1": "S4_BUSY",
+      "2": "S4_IRQ",
+      "3": "S4_TX_EN",
+      "4": "S4_RX_EN",
+      "5": null,
+      "6": null,
+      "7": "IOREF_3V3",
+      "8": "GND"
+    }
+  },
+  {
+    "reference": "J9",
+    "value": "5 V / 4 A INPUT",
+    "symbol": "Header_1x2",
+    "mpn": "1757242",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "12 A keyed input header; mating 1757019 plug",
+    "assembly": "factory",
+    "source": "Phoenix Contact 1757242 manufacturer page",
+    "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal",
+    "nets": {
+      "1": "EXT_5V",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "U2",
+    "value": "TPS259470LRPWR",
+    "symbol": "TPS259470L_RPW",
+    "mpn": "TPS259470LRPWR",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Reverse polarity/current, OV/UV, current limit and inrush; latch off",
+    "assembly": "factory",
+    "source": "SLVSFC9C May 2026 sections 5,7,8",
+    "footprint": "RadioLab:TPS25947_RPW0010A",
+    "nets": {
+      "1": "UVLO",
+      "2": "OVLO",
+      "5": "EXT_5V",
+      "6": "RADIO_5V",
+      "7": "DVDT",
+      "8": "GND",
+      "9": "ILIM"
+    }
+  },
+  {
+    "reference": "Q1",
+    "value": "DMG2305UX-7",
+    "symbol": "DMG2305UX",
+    "mpn": "DMG2305UX-7",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Pico documented external-source ORing: D=external, S=VSYS, G=VBUS",
+    "assembly": "factory",
+    "source": "Pico 2 figure 9; DMG2305UX DS36196",
+    "footprint": "Package_TO_SOT_SMD:SOT-23",
+    "nets": {
+      "1": "USB_VBUS",
+      "2": "PICO_VSYS",
+      "3": "RADIO_5V"
+    }
+  },
+  {
+    "reference": "U3",
+    "value": "AP2112K-3.3TRG1",
+    "symbol": "AP2112K_3_3TRG1",
+    "mpn": "AP2112K-3.3TRG1",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "External-only radio interface and expander supply",
+    "assembly": "factory",
+    "source": "AP2112 DS39724",
+    "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+    "nets": {
+      "1": "RADIO_5V",
+      "2": "GND",
+      "3": "RADIO_5V",
+      "5": "IOREF_3V3"
+    }
+  },
+  {
+    "reference": "U4",
+    "value": "MCP23S17-E/SO",
+    "symbol": "MCP23S17_SO",
+    "mpn": "MCP23S17-E/SO",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Noncritical reset and pre-command RF-switch state",
+    "assembly": "factory",
+    "source": "Microchip DS20001952C; SOIC pin table",
+    "footprint": "Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm",
+    "nets": {
+      "9": "IOREF_3V3",
+      "10": "GND",
+      "11": "EXP_CS_N",
+      "12": "SPI_SCK",
+      "13": "SPI_MOSI",
+      "14": "EXP_MISO_SRC",
+      "15": "GND",
+      "16": "GND",
+      "17": "GND",
+      "18": "EXP_RESET_N",
+      "1": "S1_RESET_N",
+      "2": "S2_RESET_N",
+      "3": "S3_RESET_N",
+      "4": "S4_RESET_N",
+      "21": "S1_TX_EN",
+      "22": "S1_RX_EN",
+      "23": "S3_TX_EN",
+      "24": "S3_RX_EN",
+      "25": "S4_TX_EN",
+      "26": "S4_RX_EN"
+    }
+  },
+  {
+    "reference": "U5",
+    "value": "SN74LVC8T245PWR",
+    "symbol": "SN74LVC8T245_PW",
+    "mpn": "SN74LVC8T245PWR",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Dual-supply power-off isolation; fixed direction",
+    "assembly": "factory",
+    "source": "SCES584D May 2026 sections 4,7.3.3,8.3",
+    "footprint": "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm",
+    "nets": {
+      "1": "PICO_3V3",
+      "2": "PICO_3V3",
+      "11": "GND",
+      "12": "GND",
+      "13": "GND",
+      "22": "P_IO_OE_N",
+      "23": "IOREF_3V3",
+      "24": "IOREF_3V3",
+      "3": "P_SPI_SCK",
+      "21": "SPI_SCK_SRC",
+      "4": "P_SPI_MOSI",
+      "20": "SPI_MOSI_SRC",
+      "5": "P_S1_CS_N",
+      "19": "S1_CS_N",
+      "6": "P_S2_CS_N",
+      "18": "S2_CS_N",
+      "7": "P_S3_CS_N",
+      "17": "S3_CS_N",
+      "8": "P_S4_CS_N",
+      "16": "S4_CS_N",
+      "9": "P_EXP_CS_N",
+      "15": "EXP_CS_N",
+      "10": "P_EXP_RESET_N",
+      "14": "EXP_RESET_N"
+    }
+  },
+  {
+    "reference": "U6",
+    "value": "SN74LVC8T245PWR",
+    "symbol": "SN74LVC8T245_PW",
+    "mpn": "SN74LVC8T245PWR",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Dual-supply power-off isolation; fixed direction",
+    "assembly": "factory",
+    "source": "SCES584D May 2026 sections 4,7.3.3,8.3",
+    "footprint": "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm",
+    "nets": {
+      "1": "PICO_3V3",
+      "2": "GND",
+      "11": "GND",
+      "12": "GND",
+      "13": "GND",
+      "22": "P_IO_OE_N",
+      "23": "IOREF_3V3",
+      "24": "IOREF_3V3",
+      "3": "P_S1_BUSY",
+      "21": "S1_BUSY",
+      "4": "P_S1_IRQ",
+      "20": "S1_IRQ",
+      "5": "P_S2_BUSY",
+      "19": "S2_BUSY",
+      "6": "P_S2_IRQ",
+      "18": "S2_IRQ",
+      "7": "P_S3_BUSY",
+      "17": "S3_BUSY",
+      "8": "P_S3_IRQ",
+      "16": "S3_IRQ",
+      "9": "P_S4_BUSY",
+      "15": "S4_BUSY",
+      "10": "P_S4_IRQ",
+      "14": "S4_IRQ"
+    }
+  },
+  {
+    "reference": "U7",
+    "value": "SN74LVC1T45DBVR",
+    "symbol": "SN74LVC1T45_DBV",
+    "mpn": "SN74LVC1T45DBVR",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "MISO radio-to-Pico power-off isolation",
+    "assembly": "factory",
+    "source": "SCES515N June 2024 sections 4 and 7",
+    "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+    "nets": {
+      "1": "PICO_3V3",
+      "2": "GND",
+      "3": "P_SPI_MISO",
+      "4": "SPI_MISO",
+      "5": "GND",
+      "6": "IOREF_3V3"
+    }
+  },
+  {
+    "reference": "R20",
+    "value": "22",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0722RL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Source-series termination; place immediately at U5 B1 pin 21 before any bus branch; no long stubs",
+    "assembly": "Initially 22 ohm; configurable 0 ohm alternate RC0603JR-070RL in same footprint; verify by oscilloscope/IBIS during bring-up; DNP opens signal",
+    "source": "Yageo RC0603; 22 ohm 1% 0.1 W; yageo-rc.pdf",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "SPI_SCK_SRC",
+      "2": "SPI_SCK"
+    }
+  },
+  {
+    "reference": "R21",
+    "value": "22",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0722RL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Source-series termination; place immediately at U5 B2 pin 20 before any bus branch; no long stubs",
+    "assembly": "Initially 22 ohm; configurable 0 ohm alternate RC0603JR-070RL in same footprint; verify by oscilloscope/IBIS during bring-up; DNP opens signal",
+    "source": "Yageo RC0603; 22 ohm 1% 0.1 W; yageo-rc.pdf",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "SPI_MOSI_SRC",
+      "2": "SPI_MOSI"
+    }
+  },
+  {
+    "reference": "R22",
+    "value": "22",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0722RL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Source-series termination; place immediately at U4 SO pin 14 before any bus branch; no long stubs",
+    "assembly": "Initially 22 ohm; configurable 0 ohm alternate RC0603JR-070RL in same footprint; verify by oscilloscope/IBIS during bring-up; DNP opens signal",
+    "source": "Yageo RC0603; 22 ohm 1% 0.1 W; yageo-rc.pdf",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "EXP_MISO_SRC",
+      "2": "SPI_MISO"
+    }
+  },
+  {
+    "reference": "R1",
+    "value": "267k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-07267KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "UVLO upper",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "EXT_5V",
+      "2": "UVLO"
+    }
+  },
+  {
+    "reference": "R2",
+    "value": "100k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-07100KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "UVLO lower",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "UVLO",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "R3",
+    "value": "340k 0.1%",
+    "symbol": "Resistor_value_only",
+    "mpn": "RT0603BRD07340KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "OVLO upper",
+    "assembly": "factory",
+    "source": "Yageo RT0603; 0.1% 25 ppm/K",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "EXT_5V",
+      "2": "OVLO"
+    }
+  },
+  {
+    "reference": "R4",
+    "value": "100k 0.1%",
+    "symbol": "Resistor_value_only",
+    "mpn": "RT0603BRD07100KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "OVLO lower",
+    "assembly": "factory",
+    "source": "Yageo RT0603; 0.1% 25 ppm/K",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "OVLO",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "R5",
+    "value": "715",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-07715RL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "4.66 A nominal current limit",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "ILIM",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "C1",
+    "value": "10nF",
+    "symbol": "Capacitor_value_only",
+    "mpn": "GRM188R71H103KA01D",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "25 ms nominal 5 V ramp",
+    "assembly": "factory",
+    "source": "Murata; 10 nF 50 V X7R 10%",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "nets": {
+      "1": "DVDT_C",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "C2",
+    "value": "1uF",
+    "symbol": "Capacitor_value_only",
+    "mpn": "GRM21BR71C105KA01L",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Input HF bypass",
+    "assembly": "factory",
+    "source": "Murata; 1 uF 16 V X7R 10%",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "EXT_5V",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "C3",
+    "value": "220uF",
+    "symbol": "Capacitor_polarized",
+    "mpn": "EEEFK1A221P",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Protected bus bulk",
+    "assembly": "factory",
+    "source": "Panasonic; 220 uF 10 V 20%; panasonic-fk.pdf",
+    "footprint": "RadioLab:Panasonic_FK_E_8x6.2",
+    "nets": {
+      "1": "RADIO_5V",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "C4",
+    "value": "22uF",
+    "symbol": "Capacitor_value_only",
+    "mpn": "C3225X7R1E226M250AB",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "U3 input bypass",
+    "assembly": "factory",
+    "source": "TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md",
+    "footprint": "Capacitor_SMD:C_1210_3225Metric",
+    "nets": {
+      "1": "RADIO_5V",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "C5",
+    "value": "22uF",
+    "symbol": "Capacitor_value_only",
+    "mpn": "C3225X7R1E226M250AB",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "U3 output bypass",
+    "assembly": "factory",
+    "source": "TDK; 22 uF 25 V X7R 20%; sources/online-evidence.md",
+    "footprint": "Capacitor_SMD:C_1210_3225Metric",
+    "nets": {
+      "1": "IOREF_3V3",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "C6",
+    "value": "100nF",
+    "symbol": "Capacitor_value_only",
+    "mpn": "GRM188R71H104KA93D",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "U4 bypass",
+    "assembly": "factory",
+    "source": "Murata; 100 nF 50 V X7R 10%",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "nets": {
+      "1": "IOREF_3V3",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "C7",
+    "value": "100nF",
+    "symbol": "Capacitor_value_only",
+    "mpn": "GRM188R71H104KA93D",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "U5 VCCA bypass",
+    "assembly": "factory",
+    "source": "Murata; 100 nF 50 V X7R 10%",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "nets": {
+      "1": "PICO_3V3",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "C8",
+    "value": "100nF",
+    "symbol": "Capacitor_value_only",
+    "mpn": "GRM188R71H104KA93D",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "U5 VCCB bypass",
+    "assembly": "factory",
+    "source": "Murata; 100 nF 50 V X7R 10%",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "nets": {
+      "1": "IOREF_3V3",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "C9",
+    "value": "100nF",
+    "symbol": "Capacitor_value_only",
+    "mpn": "GRM188R71H104KA93D",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "U6 VCCA bypass",
+    "assembly": "factory",
+    "source": "Murata; 100 nF 50 V X7R 10%",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "nets": {
+      "1": "PICO_3V3",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "C10",
+    "value": "100nF",
+    "symbol": "Capacitor_value_only",
+    "mpn": "GRM188R71H104KA93D",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "U6 VCCB bypass",
+    "assembly": "factory",
+    "source": "Murata; 100 nF 50 V X7R 10%",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "nets": {
+      "1": "IOREF_3V3",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "C11",
+    "value": "100nF",
+    "symbol": "Capacitor_value_only",
+    "mpn": "GRM188R71H104KA93D",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "U7 VCCA bypass",
+    "assembly": "factory",
+    "source": "Murata; 100 nF 50 V X7R 10%",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "nets": {
+      "1": "PICO_3V3",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "C12",
+    "value": "100nF",
+    "symbol": "Capacitor_value_only",
+    "mpn": "GRM188R71H104KA93D",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "U7 VCCB bypass",
+    "assembly": "factory",
+    "source": "Murata; 100 nF 50 V X7R 10%",
+    "footprint": "Capacitor_SMD:C_0603_1608Metric",
+    "nets": {
+      "1": "IOREF_3V3",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "R6",
+    "value": "10k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0710KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Interface disabled during Pico reset",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "PICO_3V3",
+      "2": "P_IO_OE_N"
+    }
+  },
+  {
+    "reference": "R7",
+    "value": "100k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-07100KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "P-MOS gate discharge with USB absent",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "USB_VBUS",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "R8",
+    "value": "10k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0710KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Expander held reset if interface disabled",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "EXP_RESET_N",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "R9",
+    "value": "10k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0710KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Expander deselect default",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "IOREF_3V3",
+      "2": "EXP_CS_N"
+    }
+  },
+  {
+    "reference": "R10",
+    "value": "100k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-07100KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Defined idle shared MISO",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "SPI_MISO",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "R11",
+    "value": "1k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-071KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Bus discharge: 5 mA at 5 V",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "RADIO_5V",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "R12",
+    "value": "1k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-071KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Logic discharge: 3.3 mA",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "IOREF_3V3",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "R13",
+    "value": "10k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0710KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Boot-safe expander reset",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "P_EXP_RESET_N",
+      "2": "GND"
+    }
+  },
+  {
+    "reference": "R14",
+    "value": "10k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0710KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Pico-side deselect before enabling U5",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "PICO_3V3",
+      "2": "P_S1_CS_N"
+    }
+  },
+  {
+    "reference": "R15",
+    "value": "10k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0710KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Pico-side deselect before enabling U5",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "PICO_3V3",
+      "2": "P_S2_CS_N"
+    }
+  },
+  {
+    "reference": "R16",
+    "value": "10k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0710KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Pico-side deselect before enabling U5",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "PICO_3V3",
+      "2": "P_S3_CS_N"
+    }
+  },
+  {
+    "reference": "R17",
+    "value": "10k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0710KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Pico-side deselect before enabling U5",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "PICO_3V3",
+      "2": "P_S4_CS_N"
+    }
+  },
+  {
+    "reference": "R18",
+    "value": "10k",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-0710KL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Pico-side deselect before enabling U5",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "PICO_3V3",
+      "2": "P_EXP_CS_N"
+    }
+  },
+  {
+    "reference": "R19",
+    "value": "100",
+    "symbol": "Resistor_value_only",
+    "mpn": "RC0603FR-07100RL",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "TI recommended series damping for CdVdt above 10 nF including tolerance",
+    "assembly": "factory",
+    "source": "Yageo RC0603; 1% 0.1 W",
+    "footprint": "Resistor_SMD:R_0603_1608Metric",
+    "nets": {
+      "1": "DVDT",
+      "2": "DVDT_C"
+    }
+  },
+  {
+    "reference": "H1",
+    "value": "Captive M3 x 25 alignment post",
+    "symbol": "Mechanical",
+    "mpn": "SSCF-M3-25-A2",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "S1 anti-offset and anti-reversal post, installed from below",
+    "assembly": "factory",
+    "source": "Accu product datasheet 642039; radio-slot-v0.1.md",
+    "footprint": "RadioLab:Alignment_M3_3.4mm",
+    "nets": {}
+  },
+  {
+    "reference": "MP1",
+    "value": "M3 captive-post clamp nut",
+    "symbol": "Mechanical",
+    "mpn": "HPN-M3-A2",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Factory threadlocked clamp nut for H1",
+    "assembly": "factory",
+    "source": "Accu HPN-M3-A2, 5.5 mm AF, 2.4 mm thick",
+    "footprint": "",
+    "nets": {}
+  },
+  {
+    "reference": "H2",
+    "value": "Captive M3 x 25 alignment post",
+    "symbol": "Mechanical",
+    "mpn": "SSCF-M3-25-A2",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "S2 anti-offset and anti-reversal post, installed from below",
+    "assembly": "factory",
+    "source": "Accu product datasheet 642039; radio-slot-v0.1.md",
+    "footprint": "RadioLab:Alignment_M3_3.4mm",
+    "nets": {}
+  },
+  {
+    "reference": "MP2",
+    "value": "M3 captive-post clamp nut",
+    "symbol": "Mechanical",
+    "mpn": "HPN-M3-A2",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Factory threadlocked clamp nut for H2",
+    "assembly": "factory",
+    "source": "Accu HPN-M3-A2, 5.5 mm AF, 2.4 mm thick",
+    "footprint": "",
+    "nets": {}
+  },
+  {
+    "reference": "H3",
+    "value": "Captive M3 x 25 alignment post",
+    "symbol": "Mechanical",
+    "mpn": "SSCF-M3-25-A2",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "S3 anti-offset and anti-reversal post, installed from below",
+    "assembly": "factory",
+    "source": "Accu product datasheet 642039; radio-slot-v0.1.md",
+    "footprint": "RadioLab:Alignment_M3_3.4mm",
+    "nets": {}
+  },
+  {
+    "reference": "MP3",
+    "value": "M3 captive-post clamp nut",
+    "symbol": "Mechanical",
+    "mpn": "HPN-M3-A2",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Factory threadlocked clamp nut for H3",
+    "assembly": "factory",
+    "source": "Accu HPN-M3-A2, 5.5 mm AF, 2.4 mm thick",
+    "footprint": "",
+    "nets": {}
+  },
+  {
+    "reference": "H4",
+    "value": "Captive M3 x 25 alignment post",
+    "symbol": "Mechanical",
+    "mpn": "SSCF-M3-25-A2",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "S4 anti-offset and anti-reversal post, installed from below",
+    "assembly": "factory",
+    "source": "Accu product datasheet 642039; radio-slot-v0.1.md",
+    "footprint": "RadioLab:Alignment_M3_3.4mm",
+    "nets": {}
+  },
+  {
+    "reference": "MP4",
+    "value": "M3 captive-post clamp nut",
+    "symbol": "Mechanical",
+    "mpn": "HPN-M3-A2",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Factory threadlocked clamp nut for H4",
+    "assembly": "factory",
+    "source": "Accu HPN-M3-A2, 5.5 mm AF, 2.4 mm thick",
+    "footprint": "",
+    "nets": {}
+  },
+  {
+    "reference": "MP5",
+    "value": "External cable mating plug",
+    "symbol": "Mechanical",
+    "mpn": "1757019",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Mates J9; 18 AWG or larger supply pair, factory terminated",
+    "assembly": "factory",
+    "source": "Phoenix Contact manufacturer mating table",
+    "footprint": "",
+    "nets": {}
+  },
+  {
+    "reference": "TP1",
+    "value": "S1_5V",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "RADIO_5V"
+    }
+  },
+  {
+    "reference": "TP2",
+    "value": "S1_CS_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S1_CS_N"
+    }
+  },
+  {
+    "reference": "TP3",
+    "value": "S1_BUSY",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S1_BUSY"
+    }
+  },
+  {
+    "reference": "TP4",
+    "value": "S1_IRQ",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S1_IRQ"
+    }
+  },
+  {
+    "reference": "TP5",
+    "value": "S1_RESET_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S1_RESET_N"
+    }
+  },
+  {
+    "reference": "TP6",
+    "value": "S1_TX_EN",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S1_TX_EN"
+    }
+  },
+  {
+    "reference": "TP7",
+    "value": "S1_RX_EN",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S1_RX_EN"
+    }
+  },
+  {
+    "reference": "TP8",
+    "value": "S1_GND",
+    "symbol": "Probe_point",
+    "mpn": "5011",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Accessible ground clip",
+    "assembly": "Factory fitted",
+    "source": "Keystone 5011 drawing and manufacturer category 748",
+    "footprint": "TestPoint:TestPoint_Keystone_5010-5014_Multipurpose",
+    "nets": {
+      "1": "GND"
+    }
+  },
+  {
+    "reference": "TP9",
+    "value": "S2_5V",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "RADIO_5V"
+    }
+  },
+  {
+    "reference": "TP10",
+    "value": "S2_CS_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S2_CS_N"
+    }
+  },
+  {
+    "reference": "TP11",
+    "value": "S2_BUSY",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S2_BUSY"
+    }
+  },
+  {
+    "reference": "TP12",
+    "value": "S2_IRQ",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S2_IRQ"
+    }
+  },
+  {
+    "reference": "TP13",
+    "value": "S2_RESET_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S2_RESET_N"
+    }
+  },
+  {
+    "reference": "TP14",
+    "value": "S2_GND",
+    "symbol": "Probe_point",
+    "mpn": "5011",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Accessible ground clip",
+    "assembly": "Factory fitted",
+    "source": "Keystone 5011 drawing and manufacturer category 748",
+    "footprint": "TestPoint:TestPoint_Keystone_5010-5014_Multipurpose",
+    "nets": {
+      "1": "GND"
+    }
+  },
+  {
+    "reference": "TP15",
+    "value": "S3_5V",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "RADIO_5V"
+    }
+  },
+  {
+    "reference": "TP16",
+    "value": "S3_CS_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S3_CS_N"
+    }
+  },
+  {
+    "reference": "TP17",
+    "value": "S3_BUSY",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S3_BUSY"
+    }
+  },
+  {
+    "reference": "TP18",
+    "value": "S3_IRQ",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S3_IRQ"
+    }
+  },
+  {
+    "reference": "TP19",
+    "value": "S3_RESET_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S3_RESET_N"
+    }
+  },
+  {
+    "reference": "TP20",
+    "value": "S3_TX_EN",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S3_TX_EN"
+    }
+  },
+  {
+    "reference": "TP21",
+    "value": "S3_RX_EN",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S3_RX_EN"
+    }
+  },
+  {
+    "reference": "TP22",
+    "value": "S3_GND",
+    "symbol": "Probe_point",
+    "mpn": "5011",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Accessible ground clip",
+    "assembly": "Factory fitted",
+    "source": "Keystone 5011 drawing and manufacturer category 748",
+    "footprint": "TestPoint:TestPoint_Keystone_5010-5014_Multipurpose",
+    "nets": {
+      "1": "GND"
+    }
+  },
+  {
+    "reference": "TP23",
+    "value": "S4_5V",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "RADIO_5V"
+    }
+  },
+  {
+    "reference": "TP24",
+    "value": "S4_CS_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S4_CS_N"
+    }
+  },
+  {
+    "reference": "TP25",
+    "value": "S4_BUSY",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S4_BUSY"
+    }
+  },
+  {
+    "reference": "TP26",
+    "value": "S4_IRQ",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S4_IRQ"
+    }
+  },
+  {
+    "reference": "TP27",
+    "value": "S4_RESET_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S4_RESET_N"
+    }
+  },
+  {
+    "reference": "TP28",
+    "value": "S4_TX_EN",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S4_TX_EN"
+    }
+  },
+  {
+    "reference": "TP29",
+    "value": "S4_RX_EN",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "S4_RX_EN"
+    }
+  },
+  {
+    "reference": "TP30",
+    "value": "S4_GND",
+    "symbol": "Probe_point",
+    "mpn": "5011",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Accessible ground clip",
+    "assembly": "Factory fitted",
+    "source": "Keystone 5011 drawing and manufacturer category 748",
+    "footprint": "TestPoint:TestPoint_Keystone_5010-5014_Multipurpose",
+    "nets": {
+      "1": "GND"
+    }
+  },
+  {
+    "reference": "TP31",
+    "value": "IN_5V",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "EXT_5V"
+    }
+  },
+  {
+    "reference": "TP32",
+    "value": "BUS_5V",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "RADIO_5V"
+    }
+  },
+  {
+    "reference": "TP33",
+    "value": "VBUS",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "USB_VBUS"
+    }
+  },
+  {
+    "reference": "TP34",
+    "value": "VSYS",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "PICO_VSYS"
+    }
+  },
+  {
+    "reference": "TP35",
+    "value": "PICO_3V3",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "PICO_3V3"
+    }
+  },
+  {
+    "reference": "TP36",
+    "value": "IOREF_3V3",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "IOREF_3V3"
+    }
+  },
+  {
+    "reference": "TP37",
+    "value": "UVLO",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "UVLO"
+    }
+  },
+  {
+    "reference": "TP38",
+    "value": "OVLO",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "OVLO"
+    }
+  },
+  {
+    "reference": "TP39",
+    "value": "DVDT",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "DVDT"
+    }
+  },
+  {
+    "reference": "TP40",
+    "value": "ILIM",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "ILIM"
+    }
+  },
+  {
+    "reference": "TP41",
+    "value": "EXP_CS",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "EXP_CS_N"
+    }
+  },
+  {
+    "reference": "TP42",
+    "value": "EXP_RST",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "EXP_RESET_N"
+    }
+  },
+  {
+    "reference": "TP43",
+    "value": "OE_N",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "P_IO_OE_N"
+    }
+  },
+  {
+    "reference": "TP44",
+    "value": "P_SCK",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "P_SPI_SCK"
+    }
+  },
+  {
+    "reference": "TP45",
+    "value": "P_MOSI",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "P_SPI_MOSI"
+    }
+  },
+  {
+    "reference": "TP46",
+    "value": "P_MISO",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "P_SPI_MISO"
+    }
+  },
+  {
+    "reference": "TP47",
+    "value": "SCK",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "SPI_SCK"
+    }
+  },
+  {
+    "reference": "TP48",
+    "value": "MOSI",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "SPI_MOSI"
+    }
+  },
+  {
+    "reference": "TP49",
+    "value": "MISO",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "SPI_MISO"
+    }
+  },
+  {
+    "reference": "TP50",
+    "value": "ENTRY_GND",
+    "symbol": "Probe_point",
+    "mpn": "5011",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Accessible ground clip",
+    "assembly": "Factory fitted",
+    "source": "Keystone 5011 drawing and manufacturer category 748",
+    "footprint": "TestPoint:TestPoint_Keystone_5010-5014_Multipurpose",
+    "nets": {
+      "1": "GND"
+    }
+  },
+  {
+    "reference": "TP51",
+    "value": "U3_GND",
+    "symbol": "Probe_point",
+    "mpn": "PCB-PROBE-PAD",
+    "supplier": "",
+    "quantity": 1,
+    "purpose": "Inline probe pad, no source-side stub",
+    "assembly": "Bare copper PCB feature; no purchased component",
+    "source": "1 mm round exposed copper pad",
+    "footprint": "RadioLab:Probe_Pad_D1.0mm",
+    "nets": {
+      "1": "GND"
+    }
+  }
+]

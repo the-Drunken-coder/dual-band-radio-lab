@@ -1,0 +1,165 @@
+{
+  "date": "2026-09-18",
+  "scope": "Schematic and routed PCB review only; no manufacturing release.",
+  "erc": [
+    {
+      "project": "core2021-hf-m-rev-a",
+      "pdf": 0,
+      "netlist": 0,
+      "erc": 0
+    },
+    {
+      "project": "e22-900m30s-rev-a",
+      "pdf": 0,
+      "netlist": 0,
+      "erc": 0
+    },
+    {
+      "project": "e28-2g4m27s-rev-a",
+      "pdf": 0,
+      "netlist": 0,
+      "erc": 0
+    },
+    {
+      "project": "carrier-rev-a",
+      "pdf": 0,
+      "netlist": 0,
+      "erc": 0
+    }
+  ],
+  "netlist_check": "PASS",
+  "gpio_used": 18,
+  "gpio_spare": 8,
+  "input_target_a": 4,
+  "calculated_running_current_a": 3.225,
+  "inrush_stress_total_a": 3.865,
+  "external_condition": "Assembler must accept E28 IPEX selector configuration before procurement.",
+  "artifacts": {
+    "ASSEMBLY_NOTES.md": "87178220b950b3ca8f59a12b550d6d8317f1f08223ab77f23b00a7d7048a2a9b",
+    "DESIGN_REVIEW.md": "a1e4ae5dfefbdd795d3909e646ea7a4b6d8f67894cbf869cf698fa84e7bdd8a9",
+    "FOOTPRINT_REVIEW.md": "fde77e92e1f6f81a0e71724418c4bda74f653faf755decd39e9f11a37d64b7ae",
+    "GPIO_MAP.md": "05c291a5b5d0985e5465368bc5f8d34baf19b9f1c4255fae99c8801cbc2fc152",
+    "LAYOUT_REQUIREMENTS.md": "7d270194d07feec07b7122e87f15adbcaa108c10ff544006f1afe3be219ffc79",
+    "MANUFACTURING.md": "e8a50fb42acc744b1605208ef2bbeab44a4d01ebcca7ea3c962a3589465a723b",
+    "POWER_BUDGET.md": "02282ac9fcdee9e69b6e4fe07d0cd77c5b82a7505544466b566ae3a777d235c7",
+    "README.md": "c6820f651395dc2260d5328223757eefcdd3d9cec95e5e40878bb298c0d3e926",
+    "Rev-A-electrical-studies.pdf": "ada0a81a257e82b34612e02eb8cffcbcd58b2a9950c488ba183779c23b7d516b",
+    "adapters/core2021-hf-m-rev-a/BOM.csv": "f0d2b45347aafbe5e369ea85e0d317689c2f76bf67e3bd5cd499cf45f744ad97",
+    "adapters/core2021-hf-m-rev-a/README.md": "021737fea7af1bf04c7b7dd45050cbbf9e2788f8575df0f25124a544d3839f24",
+    "adapters/core2021-hf-m-rev-a/connectivity.json": "fad0e84a2273c26f8cfe063772d5192558a59a45177a350b187d41ca3a80e857",
+    "adapters/core2021-hf-m-rev-a/core2021-hf-m-rev-a.kicad_pcb": "43bf3d6d9ca33813d2a135b3996e672eb400146dfc387e86f297bc321b7c8513",
+    "adapters/core2021-hf-m-rev-a/core2021-hf-m-rev-a.kicad_pro": "4308ed669fb649f620879ed66dd5df7e854f7eb461d34a554bf77d167a70655f",
+    "adapters/core2021-hf-m-rev-a/core2021-hf-m-rev-a.kicad_sch": "0710fdba6e3c2f95ff5dcfb9c37cfe40e1d81fdef8fd7728811306aa16fbf4c7",
+    "adapters/core2021-hf-m-rev-a/core2021-hf-m-rev-a.pdf": "da0127490f5de4447e122e6af96f12bda4b8ef19893ef0b9ceb8ccadc039430a",
+    "adapters/core2021-hf-m-rev-a/fabrication/DO_NOT_FABRICATE.md": "39173226165c5de88b7a7432c86e59c1005a83d1761a8d8e17aa3efbe90953af",
+    "adapters/e22-900m30s-rev-a/BOM.csv": "b8ad2c519eb27fe6781bd2cda63f0dbd145bc1bb942f52b6ff58ec0531b5b0a1",
+    "adapters/e22-900m30s-rev-a/README.md": "f1f83829fe7b83506a395493d44ce3c7f82e9115c4f6e1b982a6e95014129e8b",
+    "adapters/e22-900m30s-rev-a/connectivity.json": "2a86567db3a7ab97e4bec00dc6c45e1f49d58d90c655070421039ac4cd2701ad",
+    "adapters/e22-900m30s-rev-a/e22-900m30s-rev-a.kicad_pcb": "4c813119fb4adb4ebd6e7108d4af49b6434fc0286f6beb0a7c5413e0f3c27974",
+    "adapters/e22-900m30s-rev-a/e22-900m30s-rev-a.kicad_pro": "00a1a8c179fcfcb0b074e5a048496a515d0c6f086955041fcb3317268b6c3925",
+    "adapters/e22-900m30s-rev-a/e22-900m30s-rev-a.kicad_sch": "63e381739c3b9e5cbb4b03e7c94423e95f772affa224cf8eae8cd1750a7120f2",
+    "adapters/e22-900m30s-rev-a/e22-900m30s-rev-a.pdf": "e7569bd6606f2c684950c51881c5dc0406d5472a625212253fe48cac39dbef69",
+    "adapters/e22-900m30s-rev-a/fabrication/DO_NOT_FABRICATE.md": "39173226165c5de88b7a7432c86e59c1005a83d1761a8d8e17aa3efbe90953af",
+    "adapters/e28-2g4m27s-rev-a/BOM.csv": "6be513da2ebe54bf9f26f0b9df7d740001477eed50b63d7f0f7bb5c17d34e1c2",
+    "adapters/e28-2g4m27s-rev-a/README.md": "2b5c97dc7e649e99e5aa97627629ce07d8e11e8bc0c93f6e26ebf61fef33b632",
+    "adapters/e28-2g4m27s-rev-a/connectivity.json": "da1a37ea59d5f9de6ded3d573273102aec63f26dcf63cff0c0401689a09f3a53",
+    "adapters/e28-2g4m27s-rev-a/e28-2g4m27s-rev-a.kicad_pcb": "0d6f4b72e5a321f0629ca04169d62bf6ff4b9655384eeaccd0b6f2d8326e42f4",
+    "adapters/e28-2g4m27s-rev-a/e28-2g4m27s-rev-a.kicad_pro": "b34e55b98361533dbc7bdd8a5a98104aa26246f8d77924801b19f20c75b1db0c",
+    "adapters/e28-2g4m27s-rev-a/e28-2g4m27s-rev-a.kicad_sch": "2284c593d4d9507305ce05c0aba2a3631f501737eacaa718d6df57d5c47af181",
+    "adapters/e28-2g4m27s-rev-a/e28-2g4m27s-rev-a.pdf": "27c4329bb8517547a11809a214b21005d9f7dbb012adfec7112294e8b6fa3e79",
+    "adapters/e28-2g4m27s-rev-a/fabrication/DO_NOT_FABRICATE.md": "39173226165c5de88b7a7432c86e59c1005a83d1761a8d8e17aa3efbe90953af",
+    "carrier-rev-a/BOM.csv": "c9d1169e779c2198f234b8da5a25e26b8c588bc0d221aa6018c3e72e1c8e9468",
+    "carrier-rev-a/README.md": "649f2fdcdc410f69d1f68a89073259cd31f810847dbaf54a4dbbebadfb7194a5",
+    "carrier-rev-a/carrier-rev-a.kicad_pcb": "65f006887162d37038c0215254cd91fff91637425dbf48ad6acab402bcbd1b55",
+    "carrier-rev-a/carrier-rev-a.kicad_pro": "7f8ea8ebbb35ba23056bfa1340574313b4407da03a00fa7574ba1bef864ef767",
+    "carrier-rev-a/carrier-rev-a.kicad_sch": "f93ee0f9189870464cc0ee07c5782dad791c875b5abf43725e1628eb7b3d9b32",
+    "carrier-rev-a/carrier-rev-a.pdf": "4c36ecef8d5810fcfcda966e7109dccb2fb06a5b658accf3f1e8ba4401ebc734",
+    "carrier-rev-a/connectivity.json": "c522493663e938dc20cfff8c34c5af566beca14bf5b5dbf71b875b21e5dd1331",
+    "carrier-rev-a/fabrication/DO_NOT_FABRICATE.md": "39173226165c5de88b7a7432c86e59c1005a83d1761a8d8e17aa3efbe90953af",
+    "radio-slot-v0.1.md": "ce99e8a77b66219648fd2410fa7dd43a3785b04f981502ed1aa94995c3e5bbd5",
+    "renders/carrier-rev-a-3d.png": "49fe332a63302742aea4a918cf2c46b238ac9e0bd39a3f332cf3c8e0685e1cca",
+    "renders/carrier-rev-a-bottom-3d.png": "754faff0490225c461faec96b75aee3e5d461f8fe6ebed417f2fd98695404f0e",
+    "renders/carrier-rev-a-return-reference.svg": "2f1f00b9b739e409587951080f8dd972477024a3afd37db3e2a466ba35bc0715",
+    "renders/core2021-hf-m-rev-a-3d.png": "3489e9526b8d778c4e856d73c4bbe989aa873dca99a9e0aa8593128c944aa540",
+    "renders/core2021-hf-m-rev-a-return-reference.svg": "a5702e3b9f2cc3805edd1d7d39ff2fea5a4e34407df45cb372c79908a522ee61",
+    "renders/e22-900m30s-rev-a-3d.png": "62823415797f688eb514fffd6f92b446f8b0b934d0022bfd2c7438477371b323",
+    "renders/e22-900m30s-rev-a-return-reference.svg": "a06db4e3a3542d49b592154f118d60b37c40a60f95abf4a53698945e0556fbb8",
+    "renders/e28-2g4m27s-rev-a-3d.png": "f31d9379a5dbab0b1d2534e318e8b7e6da5472007f068718ba4e5b38b5a63917",
+    "renders/e28-2g4m27s-rev-a-bottom-3d.png": "9f18bdd86d48a5b88bd78c4daeeaedcad0d86689081d58221a8daa1894aec835",
+    "renders/e28-2g4m27s-rev-a-return-reference.svg": "c865c4c0dc62e31ebe128e6dec159999453dd9ea1d365072c33f3240992db33c",
+    "renders/rev-a-assembled-3d.png": "9fd4359a4bc6f092d48853d341b5b01328ef9b474e3703987e4eaeb26dc8d97e",
+    "renders/rev-a-assembled-side.png": "4bb4877018fea6487d8525ba7ef4022669ec657dcc22267fd112f130c09947e9",
+    "validation/README.md": "4bac916693fd1a8d5427ccb9fa34dc4fceca137617192eda3bab98caee8004d3",
+    "validation/connectivity-check.json": "3e6e6c03d7fc95d362d0bb09e1e5b16dc6e7d94ed03f2e59ba12b21f9644a076",
+    "validation/footprint-geometry.json": "875775f35c1e5bc50002dc10ce9c3488511bc33a873892f9a78ff9f8dd34df03",
+    "validation/layout-audit.json": "bea3fa3f8ba8a998714320c1b1849f1c5ccce7be4f75f4009b493799dde7153f",
+    "validation/layout-drc-results.json": "9c0cdd2fd18e8398d5b08b5e6c430d23bbe874f08a464d12f834e266930df740",
+    "validation/layout-invariants.json": "1323287a472a04305c23d189545e85ce8a8b68ec9cdbfffc464d6c6f59abc35d",
+    "validation/mechanical-access.json": "c7555b5489f6c859cf53fe08b38b48fb9372296765034cecfdae821dea688b04",
+    "validation/power-route-audit.json": "3d432afd583d25d2e1da4194f055ec1e5844bd2fe6475ace37faa48ad565bb25",
+    "validation/return-path-audit.json": "a8330683f11123754b8b8d738cc0ac966c09a7375d647c3e128b6395331506a6",
+    "validation/return-path-baseline.json": "9cab68b94398ff0cc7920c2191ff9bb1b2b8a01954ad9fa08907debf1a56d71a"
+  },
+  "documentation_update": "Ground-reference rerouting, exact return-gap audit, local E28 feedback sense, E22 voltage limitation and refreshed native/access/power/termination checks and renders.",
+  "series_termination": {
+    "initial_ohms": 22,
+    "alternate_ohms": 0,
+    "schematic_positions": 6,
+    "assembled_quantity": 7,
+    "validation": "Exact source/bus membership, initial/alternate population, native source pad-centre lengths and 2 mm card probe connections verified; powered oscilloscope/IBIS work remains pending."
+  },
+  "drc": [
+    {
+      "board": "core2021-hf-m-rev-a",
+      "exit": 0,
+      "findings": {
+        "violations": {},
+        "unconnected_items": {},
+        "schematic_parity": {}
+      }
+    },
+    {
+      "board": "e22-900m30s-rev-a",
+      "exit": 0,
+      "findings": {
+        "violations": {},
+        "unconnected_items": {},
+        "schematic_parity": {}
+      }
+    },
+    {
+      "board": "e28-2g4m27s-rev-a",
+      "exit": 0,
+      "findings": {
+        "violations": {},
+        "unconnected_items": {},
+        "schematic_parity": {}
+      }
+    },
+    {
+      "board": "carrier-rev-a",
+      "exit": 0,
+      "findings": {
+        "violations": {},
+        "unconnected_items": {},
+        "schematic_parity": {}
+      }
+    }
+  ],
+  "pcb_design_count": 4,
+  "assembled_radio_card_count": 4,
+  "e28_design_instances": 2,
+  "mechanical_review": "PASS: native geometry and dimensioned envelopes; physical fit not performed",
+  "manufacturing_files_generated": false,
+  "orders_placed": false,
+  "human_review_pending": {
+    "SPI_reference_interruptions_mm": {
+      "core2021-hf-m-rev-a": 6.75,
+      "e22-900m30s-rev-a": 5.808,
+      "e28-2g4m27s-rev-a": 28.398,
+      "carrier-rev-a": 172.072
+    },
+    "E22_full_30dBm_guaranteed": false,
+    "physical_fit_and_signal_integrity_qualification": "Pending"
+  }
+}

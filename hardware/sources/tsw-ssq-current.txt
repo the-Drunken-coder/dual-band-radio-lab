@@ -1,0 +1,1397 @@
+
+--- PDF page 1 ---
+Project Number:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Tracking Code: TC0838-SSQ-1975
+Requested by: Bryon Saylor                                                                                                                                                                                                                                                                                                                                                                                  Date: 1/19/2009                                                                                                                                                                        Product Rev: AT
+Part #: SSQ-150-02-G-D/TSW-150-07-G-D                                                                                                                                                                                                                                                                                                               Lot #: 7/12/2008                                                                                                                                      Tech: Tony Wagoner                                            Eng: Dave Scopelliti
+Part description: SSQ/TSW                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Qty to test: 25
+Test Start: 9/19/2008                                                                                                                                           Test Completed: 12/31/2008
+
+                                                                                               SAMTEC POWER CHARACTERIZATION
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                              PART DESCRIPTION
+
+                                                                                                                                                                                                                                                                                                                                                                                      SSQ-150-02-G-D
+
+                                                                                                                                                                                                                                                                                                                                                                                                          Mated with
+
+                                                                                                                                                                                                                                                                                                                                                                                   TSW-150-07-G-D
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    Power Test Template 11708 (MailMerge)                                                                                       Page 1 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 1/19/2009
+
+--- PDF page 2 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           POWER INTEGRITY TEST
+                                                                                                                                                                                                                                                                                TC0838-SSQ-1975
+                                                                                                                                                        REPORT                                                                                                                                                                                                                                                                                                                                                     INITIAL RELEASE
+
+
+                                                                                                                                                   CERTIFICATION
+
+
+All instruments and measuring equipment were calibrated to National Institute for Standards and Technology (NIST)
+traceable standards according to IS0 10012-l and ANSI/NCSL 2540-1, as applicable.
+
+All contents contained herein are the property of Samtec.  No portion of this report, in part or in full shall be
+reproduced without prior written approval of Samtec.
+
+SCOPE
+1.                          Temperature Rise/Current Carrying Capacity
+            1.1.  To determine the amount of current the device under test (DUT) can safely carry over the operating
+                           temperature range of the DUT.
+            1.2.  Contact loading will also be addressed in this docum ent which will determine how much current can be
+                           carried as the number of energized contacts is varied.
+
+2.                           Current Cycling
+            2.1.  To determine the performance of the device under test  (DUT) when subjected to the power-on/power-off
+                           cycling that heats and cools the DUT in normal everyday use.
+            2.2.  Contact loading will set to 100% throughout the test.
+
+APPLICABLE DOCUMENTS
+                                                                                                                                     Standards:          EIA Publication 364-70 Temperature Rise
+                                                                                                                                                                                                                                                                                                                                                            EIA Publication 364-06 Contact Resistance
+                                                                                                                                                                                                                                                                                                                                                            EIA Publication 364-55 Current Cycling
+                                                                                                                                                                                                                                                                                                                                                            TLPM-032 Current Carrying Capacity
+                                                                                                                                                                                                                                                                                                                                                            TLPM-084 Current Cycling
+                                                                                                                                                                                                                                                                                                                                                            IEC 512-3 Electromechanical Components for Electronic Equipment: Basic Testing Procedures
+                                                                                                                                                                                                                                                                                                                                                                                                                         and Measuring Methods, Part 3: Current Carrying Capacity Tests
+
+
+TEST SAMPLES AND PREPARATION
+1)                       All materials shall be manufactured in accordance with the applicable product specification.
+2)                       All test samples shall be identified and encoded to  maintain traceability throughout the test sequences.
+3)                       After soldering, the parts to be used  shall be cleaned according to TLWI-0001.
+4)                       All samples shall be visually inspected and cleaned as necessary.
+5)                       Any additional preparation shall be noted in the individual test sequences.
+6)                       Solder Information: Lead Free
+7)                       Re-Flow Time/Temp: See accompanying profile.
+8)                       All products designed to operate mounted on a printed circu its board shall be tested mounted to test boards in
+            accordance with EIA-364-70.
+
+
+
+
+
+
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                                       Page 2 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         1/19/2009
+
+--- PDF page 3 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                                                                                                                                                                                      TC0838-SSQ-1975
+                                                                                                                                                                                               REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+
+                                                                                                                                                                            PREPARED TEST SAMPLE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                Figure 1: Thermo-couple placement shown, actual part not depicted.
+
+9)                       The following loading configurations shall be tested fo r Temperature Rise/Current Carrying Capacity testing of
+                single row connector systems:
+                a.                                                                                                                                                                             One contact energized only
+                b.                                                                                                                                                                          Two contacts energized adjacent to each other
+                c.                                                                                                                                                                             Three contacts energized adjacent to each other
+                d.                                                                                                                                                                          Four contacts energized adjacent to each other
+                e.                                                                                                                                                                             All contacts energized
+
+                                                                                                                                                                                                                                                                Test Condition as in 9.1 above
+                                                                                                                    Indicates energized contacts
+
+                                                                                                                    Indicates thermocouple monitored, energized contacts
+
+10)  The following loading configurations shall be tested fo r Temperature Rise/Current Carrying Capacity testing of
+                two row connector systems:
+                a.                                            Two by One contact energized
+                b.                                         Two by Two contacts energized adjacent to each other
+                c.                                            Two by Three contacts energized adjacent to each other
+                d.                                         Two by Four contacts energized adjacent to each other
+                e.                                            All contacts energized
+
+                                                                                                                                                                                                                                                                Test Condition as in 10.1 above
+
+                                                                                                                    Indicates energized contacts
+
+                                                                                                                    Indicates thermocouple monitored, energized contacts
+
+
+
+11)  For Current Cycling, only 100 % loading will be tested.
+
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                                             3 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              1/19/2009
+
+--- PDF page 4 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          TC0838-SSQ-1975
+                                                                                                                                                                                                                                                                                                                                                                           REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+
+                                                                                                                                                                                                                                                   OVEN PROFILE (Soldering Parts to Test Boards)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                                             4 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              1/19/2009
+
+--- PDF page 5 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                TC0838-SSQ-1975
+                                                                                                                                                                                                                                                                                                                                                                      REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+
+                                                                                                                                                                                                                                                                                                                                                                       FLOWCHARTS
+
+   Current Carrying Capacity                                                                                                                                                                                                                          3 Mated Assemblies Each
+
+
+                   TEST                                                                                                                                                                                   GROUP A                                                                                                                                                                                                                                                                                  GROUP B                                                                                                                                                                                                                                                                                  GROUP C                                                                                                                                                                                                                                                                                 GROUP D                                                                                                                                                                                                                                                                                  GROUP E
+                   STEP                                                                                                                                         3 Mated Assembies                                                                                                                                                                                           3 Mated Assembies                                                                                                                                                                                           3 Mated Assembies                                                                                                                                                                                                   3 Mated Assembies                                                                                                                                                                                                   3 Mated Assembies
+
+                                                                                              2 CONTACT POWERED                                                                                                                4 CONTACTS POWERED                                                                                                         6 CONTACTS POWERED                                                                                                         8 CONTACTS POWERED                                                                                       ALL CONTACTS POWERED
+                            01                                                                                                                                                                                                                                                  CCC                                                                                                                                                                                                                                                                                                                                                            CCC                                                                                                                                                                                                                                                                                                                                                            CCC                                                                                                                                                                                                                                                                                                                                                            CCC                                                                                                                                                                                                                                                                                                                                                            CCC
+
+  (TIN PLATING)  - Tabulate calculated current at RT, 65° C, 75° C and 95° C
+                                                                       after derating 20% and based on 105° C
+  (GOLD PLATING)  - Tabulate calculated current at RT, 85° C, 95° C and 115° C
+                                                                       after derating 20% and based on 125° C
+  CCC, Temp rise = EIA-364-70
+
+
+     Current Cycling
+
+
+                                                                                                                                                                                 GROUP A
+                          TEST                                                                                                                                                                                                   8 Mated Assemblies
+                          STEP                                                                                                               ALL CONTACTS POWERED
+
+                                                                                                                  Current Cycle, 500 cycles at
+                                       01                                                                                           125% of Rated current
+
+
+    Current Cycle = EIA 364-55, Condition "B", Method #4
+    Test at Current 125% of Rated Current
+                                                                                              Measure at 45 minutes into ON time of cycle
+                                                                                              Measure Voltage Drop on 5 random contacts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                                             5 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              1/19/2009
+
+--- PDF page 6 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                                                                                                                                                                                      TC0838-SSQ-1975
+                                                                                                                                                                                               REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+
+                                                                                                                                                                                   TEST PROCEDURES
+Part No.                                                                                                                                                                                                                                                                                                                                                       SSQ-150-02-G-D                                                                                                                                                                                                          Mating Part No.                                                                                                                                                                                      SSQ-150-02-G-D
+Sample Size                                                                                                                                                                                                                                                                            15                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Technician                                                                                                                                                                                                                                                                                                 Tony Wagoner
+Start Date                                                                                                                                                                                                                                                                                                              9/19/2008                                                                                                                                                                                                                                                                                                                                                                     Complete Date                                                                                                                                                                                                                  9/19/2008
+Room Ambient                                                                                                                                                                                                           23.2°C                                                                                                                                                                                                                                                                                                                                                                                                                             Relative Humidity                                                                                                                                            24%
+Equipment ID#: MO-04, PS-07, TC111307-(001 - 017)
+
+TEMPERATURE RISE (Current Carrying Capacity, CCC):
+
+1)                       Thermocouples shall be calibrated in accordance with Samtec documents; TLWI 000 3, Thermocouple Welding
+                Procedure and TLWI 0005, Thermocouple Calibration
+2)                       The thermocouples shall be placed at a location to sen se the maximum temperature generated during testing.
+3)                       Temperature stability shall be defined as the temperatur e at which three successive readings, 5 minutes apart,
+                differ not more than 1° C (computer controlled data acqui sition). This is the Temperature Rise that the Current
+                Carrying Capacity and De-rating curves are based on.
+4)                       The following loading configurations shall be tested (double for two row systems):
+                a.                                            One contact energized only
+                b.                                         Two contacts energized adjacent to each other
+                c.                                            Three contacts energized adjacent to each other
+                d.                                         Four contacts energized adjacent to each other
+                e.                                            All contacts energized
+5)                       The following loading configurations shall be tested fo r Temperature Rise/Current Carrying Capacity testing of
+                two row connector systems:
+                a.                                            Two by One contact energized
+                b.                                         Two by Two contacts energized adjacent to each other
+                c.                                            Two by Three contacts energized adjacent to each other
+                d.                                         Two by Four contacts energized adjacent to each other
+                e.                                            All contacts energized
+6)                       Three samples shall be tested for each of the above configurations for a total of eighteen assemblies.
+7)                       Temperature Rise measurements shall be made at 5 different current levels yielding temperature rises in the 10 to
+                70°C range.
+8)                       The base curve for the Current Rating chart will be derived from the average (maximum) value of three test
+                specimens in accordance with IEC 512-3, Test 5b.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                                             6 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              1/19/2009
+
+--- PDF page 7 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           TC0838-SSQ-1975
+                                                                                                                                                                                                                                                                                                                                                 REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+
+
+Part No.                                                                                                                                                                                                                                                                                                                                                       SSQ-150-02-G-D                                                                                                                                                                                                          Mating Part No.                                                                                                                                                                                      SSQ-150-02-G-D
+Sample Size                                                                                                                                                                                                                                                                            8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Technician                                                                                                                                                                                                                                                                                                 Tony Wagoner
+Start Date                                                                                                                                                                                                                                                                                                              9/19/2008                                                                                                                                                                                                                                                                                                                                                                     Complete Date                                                                                                                                                                                                                  9/19/2008
+Room Ambient                                                                                                                                                                                                          25°C                                                                                                                                                                                                                                                                                                                                                                                                                                                           Relative Humidity                                                                                                                                            24%
+Equipment ID#: PS-05, MO-08, TC111307-(041 - 059)
+
+CURRENT CYCLING
+
+1.                           Samples shall be prepared and tested as above (paragraph 14.5).
+2.                           Current Cycling shall be performed in accordance with EIA-364-55, Test Condition
+3.                           Testing shall be as follows:
+                                                                                                                                                     3.1.                                             Test Current:                                                                                                                                                                                                                                                                  2.8(125% of 30°C Rating)
+                                                                                                                                                     3.2.                                             “ON” Time:                                                                                                                                                                                                                                                                                  45 Minutes
+                                                                                                                                                     3.3.                                             “OFF” Time:                                                                                                                                                                                                                                                                 15 Minutes
+                                                                                                                                                     3.4.                                             Number of Cycles:                                                                                                                                                              500
+                                                                                                                                                     3.5.                                             Measurements:                                                                                                                                                                                                                                40 minutes into ON cycle
+                                                                                                                                                                                          3.5.1.                                            Temperature
+                                                                                                                                                                                          3.5.2.                                            Voltage Drop/Contact Resistance
+4.                           Temperature vs. Number of Cycles and Voltage Drop vs. Number of Cycles shall be measured and recorded.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                                             7 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              1/19/2009
+
+--- PDF page 8 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                                                                                                          TC0838-SSQ-1975
+                                                                                                                                                     REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+
+                                                                                                                                                     TEST RESULTS
+
+CURRENT CARRYING CAPACITY (CCC) RESULTS
+            •                                        There was no evidence of physical damage to the test samples as tested.
+            •                                        The following is a summary of the observed data:
+
+  Temperature Rise, CCC at a 20% de-rating
+            •                                           CCC for a  30°C Temperature Rise     -----------------------6.3A per contac  t with 2 contacts (2 x 1) powered
+
+            •                                           CCC for a  30°C Temperature Rise     -----------------------4.4A per contac  t with 4 contacts (2 x 2) powered
+
+            •                                           CCC for a  30°C Temperature Rise     -----------------------3.9A per contac  t with 6 contacts (2 x 3) powered
+
+            •                                           CCC for a  30°C Temperature Rise     -----------------------3.6A per contac  t with 8 contacts (2 x 4) powered
+
+            •                                           CCC for a  30°C Temperature Rise     -----------------------2.3A per contac  t with 100 contacts (2 x 50) powered
+
+
+
+CURRENT CYCLING RESULTS
+
+ Test Condition:    500 Cycles, 45 minutes ON and 15 minutes OFF
+            •                                           Test Current             ------------------------------------------------       2.8 Amps
+
+            •                                           Contact Resistances, Measured 40 minutes into the FIRST and LAST ON cycle
+                                     o                                      Initial
+                                                                                                         Min       ---------------------------------------      2.85 mOhms
+                                                                                                         Max---------------------------------------      3.86 mOhms
+                                     o                                      Final
+                                                                                                         Min       ---------------------------------------      2.78 mOhms
+                                                                                                         Max---------------------------------------      3.83 mOhms
+
+            •                                            Temperature Change, Measured 40 minutes into the FIRST and  LAST ON cycle
+                                     o                                     Initial Temperature Change         ------------------32.5°C
+                                     o                                     Final Temperature Change           -------------------31.9°C
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                                             8 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              1/19/2009
+
+--- PDF page 9 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                                                                                                                                                                                        TC0838-SSQ-1975
+                                                                                                                                                                                                REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+
+                                                                                                                                                                                                         TEST DATA
+
+CONTACT RESISTANCE @ RATED CURRENT
+
+The following data represents the Voltage drop and Cont act Resistance at Rated Current for the 100% energized
+samples:
+
+
+
+                                                                                                                                        Contact Resistance @ Rated Current
+                                                                                                                                                                                                        (milli-Oh ms )
+
+
+                                                         6
+                                                  5. 5
+                                                         5
+                                                  4. 5
+                                                         4
+                                                  3. 5
+                                                         3                                                                                                                                                                                                                                                                                                                                                                   Max
+                                                  2. 5
+                                                         2
+                                                  1. 5
+                                                         1
+                                                  0. 5
+                                                         0
+                                                              1. 5                                                                                                                                                                                                                                      2                                                                                                                                                                                                                                   2. 5                                                                                                                                                                                                                                         3                                                                                                                                                                                                                                   3. 5                                                                                                                                                                                                                                      4
+                                                                                                                                                                                              Curre  nt (Am ps)
+
+
+
+
+                                                                                                                                                         CONTACT RESISTANCE DATA
+                                                                                                                                                                         ALL CONTACTS ENERGIZED
+                                                                                                                                                                                                                             (mΩ)
+
+      TEST CURRENT
+                        AMPS          1.72 2.43 2.98 3.44 3.85
+                          Min          2.78 2.82 2.83 2.88 2.88
+                         Max                                                                             3.35                                                                             3.4                                                                          3.41                                                                           3.46                                                                           3.46
+                          Avg           3 3.04 3.05 3.09 3.09
+
+
+
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                                             9 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              1/19/2009
+
+--- PDF page 10 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           POWER INTEGRITY TEST
+                                                                                                                                                                                                                                                                                                                                            TC0838-SSQ-1975
+                                                                                                                                                                                         REPORT                                                                                                                                                                                                                                                                                                                                                     INITIAL RELEASE
+
+
+                                                                                                                                                                                                 TEST DATA
+
+VOLTAGE DROP @ RATED CURRENT
+
+The following data represents the Voltage drop at  Rated Current for the 100% energized samples:
+
+
+
+
+                                                                                                                                                    Voltage Drop @ Rated Current
+                                                                                                                                                                                                    (milli-V  o lts )
+
+
+                                                 15
+                                                 14
+                                                 13
+                                                 12
+                                                 11
+                                                 10                                                                                                                                                                                                                                                                                                                                                          Max
+                                                     9
+                                                     8
+                                                     7
+                                                     6
+                                                     5
+                                                     4
+                                                          1. 5                                                                                                                                                                                                                                         2                                                                                                                                                                                                                                      2. 5                                                                                                                                                                                                                                         3                                                                                                                                                                                                                                      3. 5                                                                                                                                                                                                                                         4
+                                                                                                                                                                                      Curre  nt (Am ps)
+
+
+
+
+                                                                                                                                                                     VOLTAGE DROP DATA
+                                                                                                                                                                  ALL CONTACTS ENERGIZED
+                                                                                                                                                                                                                    (mV)
+
+      TEST CURRENT
+                       AMPS          1.72 2.43 2.98 3.44 3.85
+                         Min          4.79 6.86 8.44 9.89 11.08
+                        Max                                                                          5.77                                                                        8.25                                                                     10.16                                                                         11.9                                                                      13.34
+                         Avg          5.25 7.5 9.23 10.79 12.07
+
+
+
+
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                           Page 10 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 1/19/2009
+
+--- PDF page 11 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                                                                                                                                                                                                TC0838-SSQ-1975
+                                                                                                                                                                                                     REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+
+                                                                                                                                   CURRENT CARRYING CAPACITY DATA
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                Base Curve
+                                                                                                                                                                                                                          TC0838--1975                                                                                                                                                                                                          Derated 20 %
+                                                                                                                                                                                               2 (2x1) Contacts in Linear series                                                                                                                                                                                                                RT Peak Amp
+                                                                                                                                                                    Part Numbers:SSQ-150-02-G-D and TSW-150-07-L-D                                                                                                                                                                                                                              RT Derated Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                Measured Current
+                                                                                                                                                                                                                                                                                                                                                                                                                                                85 ° C
+                                                                                                                                                   Current Rating per Contact (30 Deg. Rise, 20% Derated)  =  6.3 Amps                                                                                                                                                                                                                          85  ° C Peak Amp
+                                     Room Temp= 23.9 C                                                                                                                                                                                                                                                                                                                                                                                          85  ° C Derated Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                95  ° C
+                                                                                                                                                                                                                                                                                                                                                                                                                                                95  ° C Peak Amp
+               16.0                                                                                                                                                                                                                                                                                                                                                                                                                             95  ° C Derated Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                Limit
+                                               14.714.7                                                                                                                                                                                                                                                                                                                                                                                         115  ° C Peak Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                115  ° C Derated Amp
+               14.0                                                                                                                                                                                                                                                                                                                                                                                                                             115  ° C
+                                                                                                                                                                                                                                                                                                                                                                                                                                                Room Temp
+
+               12.0                            11.811.8
+
+
+                                                                                                                                                                                                                                                                                                                                                                                125° C
+               10.0                                                                                                                                                                                                                                                                                                                                                                Limit
+                                                                                                                                                                                                                                                         9.29.2
+
+                  8.0                                                                                                                                                                                                                                                                     7.97.9
+                                                                                                                                                                                                                                                         7.37.3
+                  6.0                                                                                                                                                                                                                                                                     6.36.3
+
+
+                  4.0                                                                                                                                                                                                                                                                                                                                       4.54.5
+                                                                                                                                                                                                                                                                                                                                                            3.63.6
+
+
+                  2.0                                                                                                                          Useful    Range
+
+
+
+                  0.0
+                            20                                                                                                                                                                                                                                  40                                                                                                                                                                                                                                  60                                                                                                                                                                                                                                  80                                                                                                                                                                                                                            100                                                                                                                                                                                                                     120                                                                                                                                                                                                                     140
+                                                                                                                                                                                               Ambient Temperature,  ° C
+
+
+                                                                                                                                                                    TEMPERATURE RISE DATA
+                                                                                                                                                                               TWO CONTACT ENERGIZED
+                                                                                                                                                                     (Degrees Celsius above ambient)
+
+       TEST CURRENT
+                        AMPS          3.85 5.44 6.67 7.7 8.61
+                 Sample 1         5.5 15.7 23.3 30.9 38.4
+                 Sample 2         5.5 14.5 21.3 28.1 34.7
+                 Sample 3          5 13.6 20.2 26.6 32.7
+
+                           Min           5 13.6 20.2 26.6 32.7
+                          Max          5.5 15.7 23.3 30.9 38.4
+                           Avg                                                                              5.33                                                                             14.6                                                                             21.6                                                                          28.53                                                                            35.27
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                    Double Row
+                                                                                                                                                                                                                                                                                                                                                                                                                  Configuration
+                            Indicates energized contacts
+
+                            Indicates thermocouple monitored, energized contacts
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                              11 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  1/19/2009
+
+--- PDF page 12 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                                                                                                                                                                                                             TC0838-SSQ-1975
+                                                                                                                                                                                                            REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                Base Curve
+                                                                                                                                                                                                                                  TC0838--1975                                                                                                                                                                                                                  Derated 20 %
+                                                                                                                                                                                                      4 (2x2) Contacts in Linear series                                                                                                                                                                                                                         RT Peak Amp
+                                                                                                                                                                          Part Numbers:SSQ-150-02-G-D and TSW-150-07-L-D                                                                                                                                                                                                                                        RT Derated Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                Measured Current
+                                                                                                                                    Current Rating per Contact (30 Deg. Rise, 20% Derated)  = 4.4 Amps                                                                                                                                                                                                                                                          85 ° C
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                85  ° C Peak Amp
+                                       Room Temp= 23.8 C                                                                                                                                                                                                                                                                                                                                                                                                        85  ° C Derated Amp
+               12.0                                                                                                                                                                                                                                                                                                                                                                                                                                             95  ° C
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                95  ° C Peak Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                95  ° C Derated Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                Limit
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                115  ° C Peak Amp
+               10.0                              10.210.2                                                                                                                                                                                                                                                                                                                                                                                                       115  ° C Derated Amp
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                115  ° C
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                Room Temp
+
+
+                   8.0                           8.28.2
+                                                                                                                                                                                                                                                                                                                                                                                               125° C
+                                                                                                                                                                                                                                                                                                                                                                                                  Limit
+
+                   6.0                                                                                                                                                                                                                                            6.36.3
+
+                                                                                                                                                                                                                                                                                                    5.55.5
+                                                                                                                                                                                                                                                                  5.15.1
+                                                                                                                                                                                                                                                                                                    4.44.4
+                   4.0
+
+                                                                                                                                                                                                                                                                                                                                                                        3.13.1
+                                                                                                                                                                                                                                                                                                                                                                         2.52.5
+                   2.0
+
+                                                                                                                                                    Useful    Range
+
+
+                   0.0
+                             20                                                                                                                                                                                                                                  40                                                                                                                                                                                                                                  60                                                                                                                                                                                                                                  80                                                                                                                                                                                                                            100                                                                                                                                                                                                                     120                                                                                                                                                                                                                     140
+                                                                                                                                                                                                      Ambient Temperature,  ° C
+
+
+                                                                                                                                                                          TEMPERATURE RISE DATA
+                                                                                                                                                                                FOUR CONTACTS ENERGIZED
+                                                                                                                                                                           (Degrees Celsius above ambient)
+
+       TEST CURRENT
+                         AMPS          2.91 4.11 5.04 5.82 6.51
+                  Sample 4         8.3 16 23.4 30.9 38.3
+                  Sample 5         10.2 19.7 28.9 38.2 47.3
+                  Sample 6          9 17.1 25.1 32.8 40.5
+
+                            Min           8.3 16 23.4 30.9 38.3
+                           Max          10.2 19.7 28.9 38.2 47.3
+                            Avg                                                                                 9.17                                                                                17.6                                                                                25.8                                                                             33.97                                                                               42.03
+
+
+
+
+
+
+                             Indicates energized contacts
+
+                             Indicates thermocouple monitored, energized contacts
+
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                              12 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  1/19/2009
+
+--- PDF page 13 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                                                                                                                                                                                                                TC0838-SSQ-1975
+                                                                                                                                                                                                              REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Base Curve
+                                                                                                                                                                                                                                    TC0838--1975                                                                                                                                                                                                                   Derated 20 %
+                                                                                                                                                                                                        6 (2x3) Contacts in Linear series                                                                                                                                                                                                                          RT Peak Amp
+                                                                                                                                                                           Part Numbers:SSQ-150-02-G-D and TSW-150-07-L-D                                                                                                                                                                                                                                          RT Derated Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Measured Current
+                                                                                                                                                       Current Rating per Contact (30 Deg. Rise, 20% Derated)  = 3.9 Amps                                                                                                                                                                                                                                          85 ° C
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                   85  ° C Peak Amp
+                                        Room Temp= 23.8 C                                                                                                                                                                                                                                                                                                                                                                                                          85  ° C Derated Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                   95  ° C
+               10.0                                                                                                                                                                                                                                                                                                                                                                                                                                                95  ° C Peak Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                   95  ° C Derated Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Limit
+                                                9.29.2                                                                                                                                                                                                                                                                                                                                                                                                             115  ° C Peak Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                   115  ° C Derated Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                   115  ° C
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Room Temp
+                  8.0
+                                                7.47.4
+                                                                                                                                                                                                                                                                                                                                                                                                 125° C
+                                                                                                                                                                                                                                                                                                                                                                                                   Limit
+
+                  6.0
+                                                                                                                                                                                                                                                                   5.75.7
+
+                                                                                                                                                                                                                                                                                                     4.94.9
+                                                                                                                                                                                                                                                                   4.54.5
+                  4.0                                                                                                                                                                                                                                                                                3.93.9
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                          2.72.7
+                  2.0                                                                                                                                                                                                                                                                                                                                                     2.12.1
+
+
+                                                                                                                                                      Useful    Range
+
+
+                  0.0
+                            20                                                                                                                                                                                                                                          40                                                                                                                                                                                                                                          60                                                                                                                                                                                                                                          80                                                                                                                                                                                                                                   100                                                                                                                                                                                                                             120                                                                                                                                                                                                                             140
+                                                                                                                                                                                                       Ambient Temperature,  ° C
+
+
+                                                                                                                                                                            TEMPERATURE RISE DATA
+                                                                                                                                                                                       SIX CONTACTS ENERGIZED
+                                                                                                                                                                             (Degrees Celsius above ambient)
+
+       TEST CURRENT
+                          AMPS          2.91 4.11 5.04 5.82 6.51
+                  Sample 7         11 20.7 29.8 39 48.3
+                  Sample 8         12.3 23.1 33.7 44.1 54.3
+                  Sample 9         12 22.7 33.5 43.7 54.1
+
+                            Min          11 20.7 29.8 39 48.3
+                           Max          12.3 23.1 33.7 44.1 54.3
+                            Avg                                                                               11.77                                                                                22.17                                                                               32.33                                                                                42.27                                                                                52.23
+
+
+
+
+
+
+                              Indicates energized contacts
+
+                              Indicates thermocouple monitored, energized contacts
+
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                              13 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  1/19/2009
+
+--- PDF page 14 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                                                                                                                                                                                                       TC0838-SSQ-1975
+                                                                                                                                                                                                         REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         Base Curve
+                                                                                                                                                                                                                              TC0838--1975                                                                                                                                                                                                               Derated 20 %
+                                                                                                                                                                                                   8 (2x4) Contacts in Linear series                                                                                                                                                                                                                     RT Peak Amp
+                                                                                                                                                                       Part Numbers:SSQ-150-02-G-D and TSW-150-07-L-D                                                                                                                                                                                                                                    RT Derated Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         Measured Current
+                                                                                                                                                 Current Rating per Contact (30 Deg. Rise, 20% Derated)  = 3.6 Amps                                                                                                                                                                                                                                      85 ° C
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         85  ° C Peak Amp
+                                                    Room Temp= 23.8 C                                                                                                                                                                                                                                                                                                                                                                                    85  ° C Derated Amp
+                              10.0                                                                                                                                                                                                                                                                                                                                                                                                                       95  ° C
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         95  ° C Peak Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         95  ° C Derated Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         Limit
+                                                             8.78.7                                                                                                                                                                                                                                                                                                                                                                                      115  ° C Peak Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         115  ° C Derated Amp
+                                 8.0                                                                                                                                                                                                                                                                                                                                                                                                                     115  ° C
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         Room Temp
+
+
+                                                             6.96.9
+
+                                 6.0                                                                                                                                                                                                                                                                                                                                     125° C
+                                                                                                                                                                                                                                                                                                                                                                            Limit
+                                                                                                                                                                                                                                                         5.35.3
+
+                                                                                                                                                                                                                                                         4.34.3                         4.64.6
+                                 4.0
+                                                                                                                                                                                                                                                                                        3.63.6
+
+
+                                                                                                                                                                                                                                                                                                                                                     2.52.5
+                                 2.0                                                                                                                                                                                                                                                                                                                 2.02.0
+
+
+                                                                                                                                                    Useful    Range
+
+
+                                 0.0
+                                           20                                                                                                                                                                                                            40                                                                                                                                                                                                            60                                                                                                                                                                                                            80                                                                                                                                                                                                     100                                                                                                                                                                                               120                                                                                                                                                                                               140
+                                                                                                                                                                                                Ambient Temperature,  ° C
+
+
+
+                                                                                                                                                                       TEMPERATURE RISE DATA
+                                                                                                                                                                            EIGHT CONTACTS ENERGIZED
+                                                                                                                                                                        (Degrees Celsius above ambient)
+
+       TEST CURRENT
+                         AMPS          2.91 4.11 5.04 5.82 6.51
+               Sample 10        14.1 26.9 39.1 51 62.8
+               Sample 11        12.9 24.5 35.7 46.6 57.3
+               Sample 12        12.6 23.9 34.8 45.5 55.7
+
+                           Min          12.6 23.9 34.8 45.5 55.7
+                           Max          14.1 26.9 39.1 51 62.8
+                            Avg                                                                               13.2                                                                              25.1                                                                             36.53                                                                               47.7                                                                               58.6
+
+
+
+
+
+                             Indicates energized contacts
+
+                             Indicates thermocouple monitored, energized contacts
+
+
+
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                              14 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  1/19/2009
+
+--- PDF page 15 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                                                                                                                                                                                                                  TC0838-SSQ-1975
+                                                                                                                                                                                                               REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Base Curve
+                                                                                                                                                                                                                                     TC0838--1975                                                                                                                                                                                                                     Derated 20 %
+                                                                                                                                                                                          ALL POWER 100 Contacts in Linear series                                                                                                                                                                                                                                     RT Peak Amp
+                                                                                                                                                                            Part Numbers:SSQ-150-02-G-D and TSW-150-07-L-D                                                                                                                                                                                                                                            RT Derated Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Measured Current
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      85 ° C
+                                                                                                                                         Current Rating per Contact (30 Deg. Rise, 20% Derated)  = 2.3 Amps                                                                                                                                                                                                                                                           85  ° C Peak Amp
+                                    Room Temp= 23.2 C                                                                                                                                                                                                                                                                                                                                                                                                                 85  ° C Derated Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      95  ° C
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      95  ° C Peak Amp
+                6.0                                                                                                                                                                                                                                                                                                                                                                                                                                                   95  ° C Derated Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Limit
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      115  ° C Peak Amp
+                                            5.55.5                                                                                                                                                                                                                                                                                                                                                                                                                    115  ° C Derated Amp
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      115  ° C
+                5.0                                                                                                                                                                                                                                                                                                                                                                                                                                                   Room Temp
+
+
+                                            4.44.4
+                                                                                                                                                                                                                                                                                                                                                                                                    125° C
+                4.0                                                                                                                                                                                                                                                                                                                                                                                    Limit
+
+
+                                                                                                                                                                                                                                                                    3.33.3
+                3.0
+                                                                                                                                                                                                                                                                    2.62.6                                                                                               2.82.8
+
+
+                                                                                                                                                                                                                                                                                                       2.32.3
+                2.0
+
+                                                                                                                                                                                                                                                                                                                                                                            1.51.5
+                1.0                                                                                                                                                                                                                                                                                                                                                          1.21.2
+
+
+                                                                                                                                                   Useful    Range
+
+
+                0.0
+                          20                                                                                                                                                                                                                                    40                                                                                                                                                                                                                                    60                                                                                                                                                                                                                                    80                                                                                                                                                                                                                              100                                                                                                                                                                                                                        120                                                                                                                                                                                                                       140
+                                                                                                                                                                                                       Ambient Temperature,  ° C
+
+
+                                                                                                                                                                             TEMPERATURE RISE DATA
+                                                                                                                                                                                      ALL CONTACTS ENERGIZED
+                                                                                                                                                                             (Degrees Celsius above ambient)
+
+       TEST CURRENT
+                          AMPS          1.72 2.43 2.98 3.44 3.85
+               Sample 13        13.2 24.7 34.9 45.1 54
+               Sample 14        12.9 23.8 33.4 42.8 51.3
+               Sample 15        12.7 23.2 32.6 42.1 50
+
+                            Min          12.7 23.2 32.6 42.1 50
+                           Max          13.2 24.7 34.9 45.1 54
+                            Avg                                                                                12.93                                                                                  23.9                                                                               33.63                                                                                43.33                                                                                51.77
+
+
+
+
+
+                              Indicates energized contacts
+
+                              Indicates thermocouple monitored, energized contacts
+
+
+
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                              15 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  1/19/2009
+
+--- PDF page 16 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                       TC0838-SSQ-1975
+                                                                                                                                                                                                                                                              REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+
+
+
+                                                                                                                                                    CURRENT CYCLING VS. TEMPERATURE RISE
+
+
+
+                                                                                  44
+                                                                                  42
+                                                                                  40
+                                                                                  38
+                                                                                  36
+                                                                                  34
+                                                                                  32                                                                                                                                                                                                                                                                                                                                                                                                                                                      Max Rise
+
+                                                                                  30
+                                                                                  28
+                                                                                  26
+                                                                                  24
+                                                                                  22
+                                                                                  20
+                                                                                                     0                                                                                                                                                                                                    100                                                                                                                                                                                200                                                                                                                                                                                   300                                                                                                                                                                                400                                                                                                                                                                                500
+                                                                                                                                                                                                         NUM BER OF  CURRENT  CYCL ES
+
+
+
+
+                                                                                                                                                                                                                    TEMPERATURE RISE DATA
+                                                                                                                                                                                                                                ALL CONTACTS ENERGIZED
+                                                                                                                                                                                                                     (Degrees Celsius above ambient)
+
+                                                                                                                                                                                                                                                                                                                INITIAL                                                                                                                                                                                     50 CYCLES                                                                                                                                                 100 CYCLES                                                                                                                                        200 CYCLES                                                                                                                                        500 CYCLES
+                                   Min          30.4 30.3 30.2 30.1 29.8
+                                  Max          35.8 35.9 35.9 35.6 35.2
+                                   Avg                                                                                                     32.5                                                                                                     32.5                                                                                                    32.4                                                                                                     32.2                                                                                                    31.9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                              16 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  1/19/2009
+
+--- PDF page 17 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                TC0838-SSQ-1975
+                                                                                                                                                                                                                                                                   REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+
+
+
+
+                                                                                                                                                CURRENT CYCLING VS. CONTACT RESISTANCE
+
+
+                                                                                                 7
+                                                                                       6. 5
+                                                                                                 6
+                                                                                       5. 5
+                                                                                                 5
+                                                                                       4. 5
+                                                                                                 4
+                                                                                       3. 5                                                                                                                                                                                                                                                                                                                                                                                                                                                              Max Res
+                                                                                                 3
+                                                                                       2. 5
+                                                                                                 2
+                                                                                       1. 5
+                                                                                                 1
+                                                                                       0. 5
+                                                                                                 0
+                                                                                                              0                                                                                                                                                                                                    100                                                                                                                                                                                200                                                                                                                                                                             300                                                                                                                                                                                400                                                                                                                                                                                500
+                                                                                                                                                                                                                   NUM BER OF  CURRENT  CYCL ES
+
+
+
+                                                                                                                                                                                                              CONTACT RESISTANCE DATA
+                                                                                                                                                                                                                                    ALL CONTACTS ENERGIZED
+                                                                                                                                                                                                                                                                                                          (mΩ)
+
+                                                                                                                                                                                                                                                                                                                 INITIAL                                                                                                                                                                                     50 CYCLES                                                                                                                                                 100 CYCLES                                                                                                                                        200 CYCLES                                                                                                                                        500 CYCLES
+                                   Min          2.85 2.81 2.8 2.79 2.78
+                                  Max                                                                                                         3.86                                                                                                      3.85                                                                                                       3.84                                                                                                      3.84                                                                                                       3.83
+                                    Avg          3.16 3.13 3.12 3.11 3.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                              17 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  1/19/2009
+
+--- PDF page 18 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   TC0838-SSQ-1975
+                                                                                                                                                                                                                                                                     REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+
+
+
+
+
+                                                                                                                                                                          CURRENT CYCLING VS. VOLTAGE DROP
+
+
+                                                                                     20
+                                                                                     19
+                                                                                     18
+                                                                                     17
+                                                                                     16
+                                                                                     15
+                                                                                     14
+                                                                                     13
+                                                                                     12
+                                                                                     11
+                                                                                     10                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Max Volt
+                                                                                           9
+                                                                                           8
+                                                                                           7
+                                                                                           6
+                                                                                           5
+                                                                                           4
+                                                                                           3
+                                                                                           2
+                                                                                           1
+                                                                                           0
+                                                                                                        0                                                                                                                                                                                                       100                                                                                                                                                                                200                                                                                                                                                                                   300                                                                                                                                                                                400                                                                                                                                                                                   500
+                                                                                                                                                                                                                NUM BER OF  CURRENT  CYCL ES
+
+
+
+
+                                                                                                                                                                                                                                          VOLTAGE DROP DATA
+                                                                                                                                                                                                                                      ALL CONTACTS ENERGIZED
+                                                                                                                                                                                                                                                                                                              (MV)
+
+                                                                                                                                                                                                                                                                                                                  INITIAL                                                                                                                                                                                     50 CYCLES                                                                                                                                                 100 CYCLES                                                                                                                                        200 CYCLES                                                                                                                                        500 CYCLES
+                                    Min          7.99 7.88 7.84 7.82 7.78
+                                   Max                                                                                                      10.81                                                                                                      10.77                                                                                                       10.74                                                                                                      10.74                                                                                                      10.71
+                                    Avg          8.85 8.76 8.74 8.72 8.69
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                              18 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  1/19/2009
+
+--- PDF page 19 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                                      TC0838-SSQ-1975
+                                                                                                               REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+
+                                                                EQUIPMENT AND CALIBRATION SCHEDULES
+Equipment #: PS-01
+Description: System Power Supply
+Manufacturer:  Hewlett Packard
+Model:  HP 6033A
+Serial #:  (HP) 3329A-07330
+Accuracy: See Manual
+… Last Cal: 06/22/07, Next Cal: 06/22/08
+Equipment #: PS-02
+Description: System Power Supply, 0 - 20V/  0 - 30 amp, 200 Watts
+Manufacturer:  Hewlett Packard
+Model:  6033A
+Serial #:  (HP) 2847A-04167
+Accuracy: See Manual
+… Last Cal: 03/08/2007, Next Cal: 03/08/2008
+Equipment #: PS-03
+Description: Power Supply, 50 amp
+Manufacturer:  HP/Agilent
+Model:  0-60V / 0 - 50 amps / 1000 Watts
+Serial #:  2723A-02144
+Accuracy: See Manual
+… Last Cal: 06/22/2007, Next Cal: 06/22/08
+Equipment #: PS-04
+Description: 60 V, 50 A DC Power Supply - AutoRanging SO
+Manufacturer:  Hewlett Packard / Agilent
+Model:  AT-6032A
+Serial #:  MY41001186
+Accuracy: See Manual Current Cycle Chamber 2 - Lower Shelf
+… Last Cal: 12/04/2007, Next Cal: 12/04/2008
+Equipment #: PS-05
+Description: 60 V, 50 A DC Power Supply - AutoRanging SO
+Manufacturer:  Hewlett Packard / Agilent
+Model:  AT-6032A
+Serial #:  MY41001158
+Accuracy: See Manual Current Cycle Chamber 2 - Lower Shelf
+… Last Cal: 12/04/2007, Next Cal: 12/04/2008
+
+
+
+
+
+
+
+
+
+
+
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                              19 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  1/19/2009
+
+--- PDF page 20 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                          TC0838-SSQ-1975
+                                                                                                        REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+Equipment #: PS-06
+Description: 60 V, 50 A DC Power Supply - AutoRanging SO
+Manufacturer:  Hewlett Packard / Agilent
+Model:  AT-6032A
+Serial #:  US35420827
+Accuracy: See Manual Current Cycle Chamber 3 (This chamber only has 1 shelf)
+… Last Cal: 10/25/2007, Next Cal: 10/25/2008
+Equipment #: PS-07
+Description: 20 V, 120 A DC Power Supply - AutoRanging SO/HPIB
+Manufacturer:  Hewlett Packard / Agilent
+Model:  AT-6031A
+Serial #:  2721A00648
+Accuracy: See Manual See Manual
+… Last Cal: 10/25/2007, Next Cal: 10/25/2008
+Equipment #: MO-02
+Description: Multimeter /Data Acquisition System
+Manufacturer:  Keithley
+Model:  2700
+Serial #:  0780546
+Accuracy: See Manual
+… Last Cal: 06/22/07, Next Cal: 06/22/08
+Equipment #: PS-04
+Description: 60 V, 50 A DC Power Supply - AutoRanging SO
+Manufacturer:  Hewlett Packard / Agilent
+Model:  AT-6032A
+Serial #:  MY41001186
+Accuracy: See Manual Current Cycle Chamber 2 - Lower Shelf
+… Last Cal: 12/04/2007, Next Cal: 12/04/2008
+Equipment #: MO-08
+Description: Model 2750 Multimeter/Switch System (Integra Series)
+Manufacturer:  Keithley
+Model:  2750
+Serial #:  WDC-875194
+Accuracy: See Manual
+… Last Cal: 10/25/2007, Next Cal: 10/27/2008
+
+Equipment #: MO-08
+Description: Model 2750 Multimeter/Switch System (Integra Series)
+Manufacturer:  Keithley
+Model:  2750
+Serial #:  (HP) 3329A-07330
+Accuracy: See Manual
+… Last Cal: 10/25/2007, Next Cal: 10/27/2008
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                              20 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  1/19/2009
+
+--- PDF page 21 ---
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     POWER INTEGRITY TEST
+                                                                                                                                                                                              TC0838-SSQ-1975
+                                                                                                          REPORT                                                                                                                                                                                                                                                                                                                                                INITIAL RELEASE
+
+Equipment #: MO-09
+Description: Model 2750 Multimeter/Switch System (Integra Series)
+Manufacturer:  Keithley
+Model:  2750
+Serial #:  WDC-874817
+Accuracy: See Manual
+… Last Cal: 10/22/2007, Next Cal: 10/22/2008
+Equipment #: TC111307-(001 - 017)
+Description: CCC Chamber Thermocouples
+Manufacturer:  Samtec
+Model:
+Serial #:  TC111307-(001 - 017)
+Accuracy: +/- 1 Deg.
+… Last Cal: 11/03/2007, Next Cal: 11/03/2008
+Equipment #: TC111307-(041 - 059)
+Description: Current Cycling Chamber #1 Thermcouples
+Manufacturer:  Samtec
+Model:
+Serial #:  TC111307-(041 - 059)
+Accuracy: +/- 1 Deg.
+… Last Cal: 11/03/2007, Next Cal: 11/03/2008
+Equipment #: TC010908-(060 - 077)
+Description: Current Cycling Chamber # 2 Thermcouples
+Manufacturer:  Samtec
+Model:
+Serial #:  TC010908-(060-077)
+Accuracy: +/- 1 Deg.
+… Last Cal: 11/03/2007, Next Cal: 11/03/2008
+Equipment #: TC111307-(118 - 136)
+Description: Current Cycling Chamber # 3 Thermcouples
+Manufacturer:  Samtec
+Model:
+Serial #:  TC111307-(118 - 136)
+Accuracy: +/- 1 Deg.
+… Last Cal: 11/03/2007, Next Cal: 11/03/2008
+
+Equipment #: TC120607-(101C - 109C), 110807-140
+Description: Current Cycling Chamber # 4 Thermcouples
+Manufacturer:  Samtec
+Model:
+Serial #:  TC120607-(101C - 109C), 110807-140
+Accuracy: +/- 1 Deg.
+… Last Cal: 12/06/2007 & 11/08/2007, Next Cal: 12/06/2008 & 11/08/2008
+
+
+Power Test Template 11708 (MailMerge)                                                                                                                                                                                                              21 of 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  1/19/2009
