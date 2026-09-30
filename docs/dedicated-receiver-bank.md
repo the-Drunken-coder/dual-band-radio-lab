@@ -2,6 +2,8 @@
 
 **Status:** Proposed architecture for prototyping and evaluation
 
+**Execution:** Follow the [individual-radio test plan](staged-rollout.md). Characterize each radio separately before combining it into the four-lane target below.
+
 ## Motivation
 
 The radio needs to support four persistent network lanes:
@@ -118,7 +120,7 @@ There is therefore no requirement for equal output power, identical receiver sen
 
 ## Four-Antenna Baseline
 
-The simplest first prototype may use one antenna per transceiver:
+Once individual-radio results justify a four-lane prototype, its simplest antenna arrangement may use one antenna per transceiver:
 
 ```text
 915 LoRa radio  <-> 915 antenna A
@@ -238,44 +240,14 @@ SPI can still be shared where electrical requirements and device timing permit, 
 
 ## Prototype Plan
 
-### Phase 1 - Four independent receive lanes
+The [individual-radio test plan](staged-rollout.md) replaces the earlier four-receivers-first sequence with separate bring-up and characterization ladders:
 
-- select one candidate module for each of the four lanes
-- use one antenna per radio initially
-- define one temporary canonical network profile per lane
-- verify all four receivers can remain active simultaneously
-- verify shared host/SPI/control wiring is reliable with the mixed radio set
-- log receive quality and packet metadata independently per lane
+1. **2.4-LoRa:** inventory and bring up the owned SX1280 PA boards, then characterize LoRa profiles, load/power and stationary range.
+2. **2.4-FLRC:** reuse the same boards sequentially; prove FLRC configuration and sustainable goodput before rate/margin experiments.
+3. **915-LoRa:** characterize available compatible Heltec V4 hardware independently; verify its exact FEM/output variant and LoRa power/airtime tradeoffs.
+4. **915-FLRC:** establish a justified, compatible evaluation setup and driver first; LR2021 remains a candidate. Prove its own link before tuning or comparing its value.
 
-### Phase 2 - Per-lane transmission
-
-- enable TX on each lane at minimum power first
-- verify that each transceiver can switch RX -> TX -> RX reliably without changing network role
-- measure local-TX coupling into the other three receivers
-- determine which receivers must be protected or blanked for each transmission case
-- increase TX power only after safe coupling levels are established
-
-### Phase 3 - Concurrent operation
-
-- test whether opposite-band receivers remain useful during local TX
-- test simultaneous 915 MHz and 2.4 GHz transmissions
-- measure packet loss, desense, recovery time, and RF interaction
-- experimentally test same-band simultaneous TX/RX only if isolation measurements justify it
-
-### Phase 4 - Hardware optimization
-
-- compare four antennas against shared-antenna alternatives
-- evaluate whether an LNA is useful on any receive lane
-- evaluate filters, duplexers, switches, or limiters where measurements justify them
-- compare standard-power and high-power module options
-- revisit whether a fifth dedicated transmitter provides any measured advantage
-
-### Phase 5 - Link-selection experiments
-
-- track per-peer reception by lane
-- choose an outgoing lane based on traffic type and observed link state
-- implement fallback behavior
-- characterize latency, range, throughput, packet loss, interference, and power consumption
+Each radio produces its own working configuration, measurement record, operating envelope and pass/hold/defer decision. Only then combine useful qualified radios, beginning with two and validating co-location/protection before concurrency or routing. Temporary profile changes and reuse of one pair during isolated tests do not change the final persistent-profile contract. Hardware counts and purchases remain unconfirmed; the existing Rev A manufacturing hold remains unchanged.
 
 ## Open Questions
 
@@ -297,4 +269,4 @@ This is a proposed architecture to test, not a claim that every RF detail is sol
 
 > **Use four persistent, fixed-role transceivers: 915-LoRa, 915-FLRC, 2.4-LoRa, and 2.4-FLRC. Keep all four in RX during normal idle operation, and let the appropriate lane temporarily transmit without retuning to another network role. Select the best practical hardware independently for each lane instead of forcing all four lanes onto LR2021.**
 
-The first prototype should favor simple, independently testable RF chains over aggressive antenna sharing or same-band full-duplex operation. High-power hardware, LNAs, filters, shared antennas, and additional transmitters should be added only when measurements show that they improve the system enough to justify their cost, power, and RF complexity.
+Develop and characterize each radio independently with a compatible peer before integration. Expand toward the four-lane target only when individual results justify the roles and spending. High-power hardware, LNAs, filters, shared antennas, and additional transmitters should be added only when measurements show that they improve the system enough to justify their cost, power, and RF complexity.

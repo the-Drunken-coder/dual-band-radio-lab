@@ -43,9 +43,15 @@ Current candidate direction:
 
 These are candidates, not finalized purchases. Maximum module output power is a hardware capability, not an assumption that the maximum setting is legal for every LoRa or FLRC profile. Final frequencies, bandwidths, power, antenna gain, EIRP, and spectral limits must be validated for license-free U.S. operation before normal over-the-air testing.
 
-The initial physical prototype may use four separate antennas, one per transceiver. This avoids the passive splitter loss and RF switching complexity of the earlier shared-antenna concept and makes each RF lane easier to characterize independently. Shared antennas, splitters, filters, LNAs, or duplexing can be reconsidered later if size or antenna count becomes more important.
+When the four-lane prototype is justified, it may use four separate antennas, one per transceiver. This avoids the passive splitter loss and RF switching complexity of the earlier shared-antenna concept and makes each RF lane easier to characterize independently. Shared antennas, splitters, filters, LNAs, or duplexing can be reconsidered later if size or antenna count becomes more important.
 
-See `docs/dedicated-receiver-bank.md` for the architecture and prototype plan.
+See the [four-lane architecture](docs/dedicated-receiver-bank.md) for the long-term design and the [individual-radio test plan](docs/staged-rollout.md) for staged development of each radio.
+
+## Develop one radio at a time
+
+Each radio gets its own bring-up and characterization ladder: 2.4-LoRa, 2.4-FLRC, 915-LoRa and 915-FLRC. Test one lane in isolation with a compatible peer, progressing from a fixed-profile bench link through controlled tuning to its own operating envelope. Reuse a compatible SX1280 pair sequentially for the two 2.4 GHz PHYs if inventory confirms one. Combined-node and network work comes afterward.
+
+The plan has explicit pass/stop and purchase gates. Board counts, exact variants and usable peers still need confirmation; candidates remain unselected. Do not order a full four-radio node or fabricate the [Rev A hardware](hardware/README.md) to characterize an individual radio. Its manufacturing hold remains in force.
 
 ## Example deployment
 
