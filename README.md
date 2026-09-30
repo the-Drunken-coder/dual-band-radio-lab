@@ -45,13 +45,13 @@ These are candidates, not finalized purchases. Maximum module output power is a 
 
 When the four-lane prototype is justified, it may use four separate antennas, one per transceiver. This avoids the passive splitter loss and RF switching complexity of the earlier shared-antenna concept and makes each RF lane easier to characterize independently. Shared antennas, splitters, filters, LNAs, or duplexing can be reconsidered later if size or antenna count becomes more important.
 
-See the [four-lane architecture](docs/dedicated-receiver-bank.md) for the long-term design and the [staged rollout](docs/staged-rollout.md) for the execution plan.
+See the [four-lane architecture](docs/dedicated-receiver-bank.md) for the long-term design and the [individual-radio test plan](docs/staged-rollout.md) for staged development of each radio.
 
-## Start with one link
+## Develop one radio at a time
 
-The four-lane node is the destination, not the first build. Start with an inventoried, compatible pair of existing boards, one fixed profile and a simple packet logger. Prove bring-up and measurement validity before comparing PHYs or extending range; add a second band, co-located radios, failover and mobile/multi-node tests only as earlier results justify them.
+Each radio gets its own bring-up and characterization ladder: 2.4-LoRa, 2.4-FLRC, 915-LoRa and 915-FLRC. Test one lane in isolation with a compatible peer, progressing from a fixed-profile bench link through controlled tuning to its own operating envelope. Reuse a compatible SX1280 pair sequentially for the two 2.4 GHz PHYs if inventory confirms one. Combined-node and network work comes afterward.
 
-The rollout has explicit pass/stop and purchase gates. Existing T3-S3 SX1280 PA boards are the first candidate; board counts, exact variants and usable peers still need confirmation. Do not order a full four-radio node or fabricate the [Rev A hardware](hardware/README.md) to answer a question that a two-node experiment can answer. Its manufacturing hold remains in force.
+The plan has explicit pass/stop and purchase gates. Board counts, exact variants and usable peers still need confirmation; candidates remain unselected. Do not order a full four-radio node or fabricate the [Rev A hardware](hardware/README.md) to characterize an individual radio. Its manufacturing hold remains in force.
 
 ## Example deployment
 

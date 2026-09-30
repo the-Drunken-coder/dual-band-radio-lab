@@ -2,7 +2,7 @@
 
 **Status:** Proposed architecture for prototyping and evaluation
 
-**Execution:** Follow the [staged rollout](staged-rollout.md). The four-lane node below is a target architecture, not the entry requirement for the first experiment.
+**Execution:** Follow the [individual-radio test plan](staged-rollout.md). Characterize each radio separately before combining it into the four-lane target below.
 
 ## Motivation
 
@@ -120,7 +120,7 @@ There is therefore no requirement for equal output power, identical receiver sen
 
 ## Four-Antenna Baseline
 
-Once the staged rollout justifies a four-lane prototype, its simplest antenna arrangement may use one antenna per transceiver:
+Once individual-radio results justify a four-lane prototype, its simplest antenna arrangement may use one antenna per transceiver:
 
 ```text
 915 LoRa radio  <-> 915 antenna A
@@ -240,16 +240,14 @@ SPI can still be shared where electrical requirements and device timing permit, 
 
 ## Prototype Plan
 
-The [staged rollout](staged-rollout.md) replaces the earlier four-receivers-first sequence:
+The [individual-radio test plan](staged-rollout.md) replaces the earlier four-receivers-first sequence with separate bring-up and characterization ladders:
 
-1. Inventory existing boards and clear electrical/RF and U.S. transmission gates.
-2. Bring up one fixed-profile, two-node link and validate its measurement/logging path.
-3. Compare PHY profiles on the same hardware, then characterize stationary range one variable at a time.
-4. Add one band or hardware candidate only to answer a documented gap; qualify it independently before integration.
-5. Measure co-location, receiver protection and serialized operation before considering simultaneous transmission.
-6. Add two-node failover, then multi-node routing and mobility as separately gated experiments.
+1. **2.4-LoRa:** inventory and bring up the owned SX1280 PA boards, then characterize LoRa profiles, load/power and stationary range.
+2. **2.4-FLRC:** reuse the same boards sequentially; prove FLRC configuration and sustainable goodput before rate/margin experiments.
+3. **915-LoRa:** characterize available compatible Heltec V4 hardware independently; verify its exact FEM/output variant and LoRa power/airtime tradeoffs.
+4. **915-FLRC:** establish a justified, compatible evaluation setup and driver first; LR2021 remains a candidate. Prove its own link before tuning or comparing its value.
 
-Temporary, manually selected profiles in isolated comparison runs do not change the final persistent-profile contract. Four concurrent lanes, custom hardware fabrication, high-power operation, shared antennas, LNAs and a fifth transmitter remain evidence-gated choices. The existing Rev A manufacturing hold remains unchanged.
+Each radio produces its own working configuration, measurement record, operating envelope and pass/hold/defer decision. Only then combine useful qualified radios, beginning with two and validating co-location/protection before concurrency or routing. Temporary profile changes and reuse of one pair during isolated tests do not change the final persistent-profile contract. Hardware counts and purchases remain unconfirmed; the existing Rev A manufacturing hold remains unchanged.
 
 ## Open Questions
 
@@ -271,4 +269,4 @@ This is a proposed architecture to test, not a claim that every RF detail is sol
 
 > **Use four persistent, fixed-role transceivers: 915-LoRa, 915-FLRC, 2.4-LoRa, and 2.4-FLRC. Keep all four in RX during normal idle operation, and let the appropriate lane temporarily transmit without retuning to another network role. Select the best practical hardware independently for each lane instead of forcing all four lanes onto LR2021.**
 
-The first experiment should establish one independently testable two-node link. Expand toward the four-lane target only through the staged rollout's evidence and spending gates. High-power hardware, LNAs, filters, shared antennas, and additional transmitters should be added only when measurements show that they improve the system enough to justify their cost, power, and RF complexity.
+Develop and characterize each radio independently with a compatible peer before integration. Expand toward the four-lane target only when individual results justify the roles and spending. High-power hardware, LNAs, filters, shared antennas, and additional transmitters should be added only when measurements show that they improve the system enough to justify their cost, power, and RF complexity.
