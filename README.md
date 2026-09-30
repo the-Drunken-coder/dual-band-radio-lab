@@ -43,9 +43,15 @@ Current candidate direction:
 
 These are candidates, not finalized purchases. Maximum module output power is a hardware capability, not an assumption that the maximum setting is legal for every LoRa or FLRC profile. Final frequencies, bandwidths, power, antenna gain, EIRP, and spectral limits must be validated for license-free U.S. operation before normal over-the-air testing.
 
-The initial physical prototype may use four separate antennas, one per transceiver. This avoids the passive splitter loss and RF switching complexity of the earlier shared-antenna concept and makes each RF lane easier to characterize independently. Shared antennas, splitters, filters, LNAs, or duplexing can be reconsidered later if size or antenna count becomes more important.
+When the four-lane prototype is justified, it may use four separate antennas, one per transceiver. This avoids the passive splitter loss and RF switching complexity of the earlier shared-antenna concept and makes each RF lane easier to characterize independently. Shared antennas, splitters, filters, LNAs, or duplexing can be reconsidered later if size or antenna count becomes more important.
 
-See `docs/dedicated-receiver-bank.md` for the architecture and prototype plan.
+See the [four-lane architecture](docs/dedicated-receiver-bank.md) for the long-term design and the [staged rollout](docs/staged-rollout.md) for the execution plan.
+
+## Start with one link
+
+The four-lane node is the destination, not the first build. Start with an inventoried, compatible pair of existing boards, one fixed profile and a simple packet logger. Prove bring-up and measurement validity before comparing PHYs or extending range; add a second band, co-located radios, failover and mobile/multi-node tests only as earlier results justify them.
+
+The rollout has explicit pass/stop and purchase gates. Existing T3-S3 SX1280 PA boards are the first candidate; board counts, exact variants and usable peers still need confirmation. Do not order a full four-radio node or fabricate the [Rev A hardware](hardware/README.md) to answer a question that a two-node experiment can answer. Its manufacturing hold remains in force.
 
 ## Example deployment
 
