@@ -1,0 +1,71 @@
+{
+  "source": "sources/controller-3d.step",
+  "method": "STEP assembly frame transforms and BREP vertices; no geometry modifications",
+  "board_shape_entity": 27066,
+  "usb_H1_shape_entity": 258475,
+  "board_vertex_bounds_mm_in_board_frame": {
+    "x": [
+      -0.01034288000004,
+      25.41034288
+    ],
+    "y": [
+      1.269999996899e-05,
+      63.31070904
+    ],
+    "z": [
+      0.0,
+      1.59999934
+    ]
+  },
+  "usb_H1_vertex_bounds_mm_in_assembly_frame": {
+    "x": [
+      7.919970145741999,
+      17.499970145741997
+    ],
+    "y": [
+      -0.2888431504061133,
+      7.419331604802074
+    ],
+    "z": [
+      -0.9104783961953427,
+      3.2495218045012138
+    ]
+  },
+  "board_header_holes_count": 44,
+  "board_header_x_rows_mm": [
+    1.26,
+    24.1200127
+  ],
+  "board_header_y_positions_mm": [
+    5.0603607,
+    7.6003607,
+    10.1403607,
+    12.6803607,
+    15.2203607,
+    17.7603607,
+    20.3003607,
+    22.8403607,
+    25.3803607,
+    27.9203607,
+    30.4603607,
+    33.0003607,
+    35.5403607,
+    38.0803607,
+    40.6203607,
+    43.1603607,
+    45.7003607,
+    48.2403607,
+    50.7803607,
+    53.3203607,
+    55.8603607,
+    58.4003607
+  ],
+  "header_row_spacing_mm": 22.8600127,
+  "header_pitch_mm": 2.54,
+  "usb_projection_beyond_USB_end_board_edge_mm": 0.2888558504060823,
+  "notes": [
+    "Board STEP placement subtracts 1.59999934 mm from z; x and y unchanged.",
+    "BREP vertex bounds can differ slightly from nominal drawing dimensions.",
+    "Header x-row identity and pin order come from the schematic plus pinout image, not STEP geometry."
+  ]
+}

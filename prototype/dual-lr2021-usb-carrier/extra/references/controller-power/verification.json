@@ -1,0 +1,482 @@
+{
+  "verified_date": "2026-10-24",
+  "status": "passed_document_cross_checks",
+  "source_pdf": "sources/controller-schematic.pdf",
+  "pdf_header_signal_labels_cross_checked": 38,
+  "gpio_assignments_unique": true,
+  "reserved_gpio_collisions": [],
+  "sources_sha256_verified": 15,
+  "header_power_pin_continuity": "P1.1/P1.2 3V3, P1.22 GND, P2.1/P2.21/P2.22 GND checked visually in official schematic; branch wires not inferred from label row proximity.",
+  "header_pitch_and_spacing": "44 source STEP hole centers, 22 per row, 2.54mm pitch and22.8600127mm row spacing, inspection script assertions passed.",
+  "checks": [
+    {
+      "header": "P1",
+      "pin": 3,
+      "schematic_label": "CHIP_PU",
+      "label_bbox": [
+        175.2910919189453,
+        56.95023727416992,
+        194.5012664794922,
+        61.74259948730469
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 4,
+      "schematic_label": "GPIO4",
+      "label_bbox": [
+        178.16868591308594,
+        62.22178268432617,
+        191.58731079101562,
+        67.01414489746094
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 5,
+      "schematic_label": "GPIO5",
+      "label_bbox": [
+        178.16868591308594,
+        67.49333190917969,
+        191.58731079101562,
+        72.28569030761719
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 6,
+      "schematic_label": "GPIO6",
+      "label_bbox": [
+        178.16868591308594,
+        72.76487731933594,
+        191.58731079101562,
+        77.55723571777344
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 7,
+      "schematic_label": "GPIO7",
+      "label_bbox": [
+        178.16868591308594,
+        78.27601623535156,
+        191.58731079101562,
+        83.06837463378906
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 8,
+      "schematic_label": "GPIO15",
+      "label_bbox": [
+        178.16868591308594,
+        83.54759216308594,
+        193.98348999023438,
+        88.33995056152344
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 9,
+      "schematic_label": "GPIO16",
+      "label_bbox": [
+        178.16868591308594,
+        88.81913757324219,
+        193.98348999023438,
+        93.61149597167969
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 10,
+      "schematic_label": "GPIO17",
+      "label_bbox": [
+        178.16868591308594,
+        94.09074401855469,
+        193.98348999023438,
+        98.88310241699219
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 11,
+      "schematic_label": "GPIO18",
+      "label_bbox": [
+        178.16868591308594,
+        99.36228942871094,
+        193.98348999023438,
+        104.15464782714844
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 12,
+      "schematic_label": "GPIO8",
+      "label_bbox": [
+        178.16868591308594,
+        104.63386535644531,
+        191.58731079101562,
+        109.42622375488281
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 13,
+      "schematic_label": "GPIO3",
+      "label_bbox": [
+        178.16868591308594,
+        109.90541076660156,
+        191.58731079101562,
+        114.69776916503906
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 14,
+      "schematic_label": "GPIO46",
+      "label_bbox": [
+        178.16868591308594,
+        115.41664123535156,
+        193.98348999023438,
+        120.20899963378906
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 15,
+      "schematic_label": "GPIO9",
+      "label_bbox": [
+        178.16868591308594,
+        120.68809509277344,
+        191.58731079101562,
+        125.48045349121094
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 16,
+      "schematic_label": "GPIO10",
+      "label_bbox": [
+        178.16868591308594,
+        125.95967102050781,
+        193.98348999023438,
+        130.7520294189453
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 17,
+      "schematic_label": "GPIO11",
+      "label_bbox": [
+        178.16868591308594,
+        131.2312469482422,
+        193.74386596679688,
+        136.0236053466797
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 18,
+      "schematic_label": "GPIO12",
+      "label_bbox": [
+        178.16868591308594,
+        136.50282287597656,
+        193.98348999023438,
+        141.29518127441406
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 19,
+      "schematic_label": "GPIO13",
+      "label_bbox": [
+        178.16868591308594,
+        141.7743682861328,
+        193.98348999023438,
+        146.5667266845703
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 20,
+      "schematic_label": "GPIO14",
+      "label_bbox": [
+        178.16868591308594,
+        147.2855987548828,
+        193.98348999023438,
+        152.0779571533203
+      ]
+    },
+    {
+      "header": "P1",
+      "pin": 21,
+      "schematic_label": "VCC_5V",
+      "label_bbox": [
+        178.16868591308594,
+        152.5571746826172,
+        195.93589782714844,
+        157.3495330810547
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 2,
+      "schematic_label": "U0TXD",
+      "label_bbox": [
+        422.5212097167969,
+        51.67863082885742,
+        437.962158203125,
+        56.47099304199219
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 3,
+      "schematic_label": "U0RXD",
+      "label_bbox": [
+        422.5212097167969,
+        56.95023727416992,
+        438.2018127441406,
+        61.74259948730469
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 4,
+      "schematic_label": "GPIO1",
+      "label_bbox": [
+        422.5212097167969,
+        62.22178268432617,
+        435.9397888183594,
+        67.01414489746094
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 5,
+      "schematic_label": "GPIO2",
+      "label_bbox": [
+        422.5212097167969,
+        67.49333190917969,
+        435.9397888183594,
+        72.28569030761719
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 6,
+      "schematic_label": "GPIO42",
+      "label_bbox": [
+        422.5212097167969,
+        72.76487731933594,
+        438.3359680175781,
+        77.55723571777344
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 7,
+      "schematic_label": "GPIO41",
+      "label_bbox": [
+        422.5212097167969,
+        78.27601623535156,
+        438.3359680175781,
+        83.06837463378906
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 8,
+      "schematic_label": "GPIO40",
+      "label_bbox": [
+        422.5212097167969,
+        83.54759216308594,
+        438.3359680175781,
+        88.33995056152344
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 9,
+      "schematic_label": "GPIO39",
+      "label_bbox": [
+        422.5212097167969,
+        88.81913757324219,
+        438.3359680175781,
+        93.61149597167969
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 10,
+      "schematic_label": "GPIO38",
+      "label_bbox": [
+        422.5212097167969,
+        94.09074401855469,
+        438.3359680175781,
+        98.88310241699219
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 11,
+      "schematic_label": "GPIO37",
+      "label_bbox": [
+        422.5212097167969,
+        99.36228942871094,
+        438.3359680175781,
+        104.15464782714844
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 12,
+      "schematic_label": "GPIO36",
+      "label_bbox": [
+        422.5212097167969,
+        104.63386535644531,
+        438.3359680175781,
+        109.42622375488281
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 13,
+      "schematic_label": "GPIO35",
+      "label_bbox": [
+        422.5212097167969,
+        109.90541076660156,
+        438.3359680175781,
+        114.69776916503906
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 14,
+      "schematic_label": "GPIO0",
+      "label_bbox": [
+        422.5212097167969,
+        115.41664123535156,
+        435.9397888183594,
+        120.20899963378906
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 15,
+      "schematic_label": "GPIO45",
+      "label_bbox": [
+        422.5212097167969,
+        120.68809509277344,
+        438.3359680175781,
+        125.48045349121094
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 16,
+      "schematic_label": "GPIO48",
+      "label_bbox": [
+        422.5212097167969,
+        125.95967102050781,
+        438.3359680175781,
+        130.7520294189453
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 17,
+      "schematic_label": "GPIO47",
+      "label_bbox": [
+        422.5212097167969,
+        131.2312469482422,
+        438.3359680175781,
+        136.0236053466797
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 18,
+      "schematic_label": "GPIO21",
+      "label_bbox": [
+        422.5212097167969,
+        136.50282287597656,
+        438.3359680175781,
+        141.29518127441406
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 19,
+      "schematic_label": "GPIO20",
+      "label_bbox": [
+        422.5212097167969,
+        141.7743682861328,
+        438.3359680175781,
+        146.5667266845703
+      ]
+    },
+    {
+      "header": "P2",
+      "pin": 20,
+      "schematic_label": "GPIO19",
+      "label_bbox": [
+        422.5212097167969,
+        147.2855987548828,
+        438.3359680175781,
+        152.0779571533203
+      ]
+    }
+  ],
+  "not_verified": [
+    "physical dimensions of purchased unit",
+    "USB/current/thermal measurements",
+    "automatic flashing on physical controller",
+    "full carrier electrical connectivity and layout"
+  ],
+  "AP7361C_update": {
+    "status": "passed_document_and_reference_contract_checks",
+    "datasheet_file": "sources/ap7361c.pdf",
+    "sha256": "9b64f49c5975b2baf2360248a75212599bde8bf083d315d936e4f1c93b2e1f92",
+    "official_download_assets_identical": true,
+    "official_product_page_links_requested_pdf": true,
+    "pin_assignment_agreement": [
+      "page1 pin diagrams",
+      "page2 pin descriptions",
+      "page13 ordering E versus ER",
+      "page15 marking and pin descriptions"
+    ],
+    "selected_order_code": "AP7361C-33E-13",
+    "selected_pin_functions": {
+      "1": "IN",
+      "2": "GND",
+      "3": "OUT",
+      "tab": "GND"
+    },
+    "no_enable_in_SOT223_page11": true,
+    "ceramic_capacitor_requirements_page10": {
+      "input_recommended_uf": 1,
+      "output_minimum_uf": 2.2
+    },
+    "reference_footprint_pad_numbers": [
+      1,
+      2,
+      2,
+      3
+    ],
+    "lead_pitch_mm": 2.3,
+    "thermal_metric_c_per_w": 110,
+    "thermal_estimate_210ma_5v_to3v3_c": 39.27,
+    "thermal_estimate_300ma_5v_to3v3_c": 56.1,
+    "physical_USB_up_header_rows_cross_checked": 22,
+    "connector_identity": {
+      "J1": "P1 right",
+      "J2": "P2 left"
+    },
+    "both_pin1_positions": "bottom,antenna end",
+    "pulled_CS_ohms_each": 47000,
+    "pulled_RESET_ohms_each": 10000,
+    "SCK_MOSI_series_ohms_each": 33,
+    "canonical_design_modified": false
+  }
+}

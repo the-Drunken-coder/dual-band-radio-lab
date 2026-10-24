@@ -1,0 +1,3217 @@
+{
+  "name": "dual-radio-carrier",
+  "revision": "A",
+  "size": [
+    100,
+    75
+  ],
+  "edge_clearance": 0.5,
+  "components": [
+    {
+      "ref": "J1",
+      "value": "SSW-122-01-G-S",
+      "mpn": "SSW-122-01-G-S",
+      "socket": true,
+      "at": [
+        32.0,
+        60
+      ],
+      "schematic": [
+        40.64,
+        43.18
+      ],
+      "footprint": "Socket_1x22_P2.54_USB_Top",
+      "description": "Female socket, 2.54mm pitch, Samtec 1.04mm recommended finished hole; sample mating fit required",
+      "datasheet": "https://suddendocs.samtec.com/prints/ssw-s.pdf",
+      "ref_at": [
+        0,
+        3.0
+      ],
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1.35,
+            -54.84,
+            1.35,
+            1.5
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -1.6500000000000001,
+            -55.14,
+            1.6500000000000001,
+            1.8
+          ]
+        ]
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            0,
+            0.0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "rect",
+          "function": "3V3",
+          "net": null,
+          "module_pin": "P1.1",
+          "pin_type": "passive"
+        },
+        {
+          "number": "2",
+          "at": [
+            0,
+            -2.54
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "3V3",
+          "net": null,
+          "module_pin": "P1.2",
+          "pin_type": "passive"
+        },
+        {
+          "number": "3",
+          "at": [
+            0,
+            -5.08
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "EN",
+          "net": null,
+          "module_pin": "P1.3",
+          "pin_type": "passive"
+        },
+        {
+          "number": "4",
+          "at": [
+            0,
+            -7.62
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO4",
+          "net": "RADIO_A_DIO11",
+          "module_pin": "P1.4",
+          "pin_type": "passive"
+        },
+        {
+          "number": "5",
+          "at": [
+            0,
+            -10.16
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO5",
+          "net": "RADIO_A_BUSY",
+          "module_pin": "P1.5",
+          "pin_type": "passive"
+        },
+        {
+          "number": "6",
+          "at": [
+            0,
+            -12.7
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO6",
+          "net": "RADIO_A_RESET_N",
+          "module_pin": "P1.6",
+          "pin_type": "passive"
+        },
+        {
+          "number": "7",
+          "at": [
+            0,
+            -15.24
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO7",
+          "net": "RADIO_B_DIO11",
+          "module_pin": "P1.7",
+          "pin_type": "passive"
+        },
+        {
+          "number": "8",
+          "at": [
+            0,
+            -17.78
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO15",
+          "net": "RADIO_B_BUSY",
+          "module_pin": "P1.8",
+          "pin_type": "passive"
+        },
+        {
+          "number": "9",
+          "at": [
+            0,
+            -20.32
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO16",
+          "net": "RADIO_B_RESET_N",
+          "module_pin": "P1.9",
+          "pin_type": "passive"
+        },
+        {
+          "number": "10",
+          "at": [
+            0,
+            -22.86
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO17",
+          "net": null,
+          "module_pin": "P1.10",
+          "pin_type": "passive"
+        },
+        {
+          "number": "11",
+          "at": [
+            0,
+            -25.4
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO18",
+          "net": null,
+          "module_pin": "P1.11",
+          "pin_type": "passive"
+        },
+        {
+          "number": "12",
+          "at": [
+            0,
+            -27.94
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO8",
+          "net": null,
+          "module_pin": "P1.12",
+          "pin_type": "passive"
+        },
+        {
+          "number": "13",
+          "at": [
+            0,
+            -30.48
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO3",
+          "net": null,
+          "module_pin": "P1.13",
+          "pin_type": "passive"
+        },
+        {
+          "number": "14",
+          "at": [
+            0,
+            -33.02
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO46",
+          "net": null,
+          "module_pin": "P1.14",
+          "pin_type": "passive"
+        },
+        {
+          "number": "15",
+          "at": [
+            0,
+            -35.56
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO9",
+          "net": "RADIO_B_CS_N",
+          "module_pin": "P1.15",
+          "pin_type": "passive"
+        },
+        {
+          "number": "16",
+          "at": [
+            0,
+            -38.1
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO10",
+          "net": "RADIO_A_CS_N",
+          "module_pin": "P1.16",
+          "pin_type": "passive"
+        },
+        {
+          "number": "17",
+          "at": [
+            0,
+            -40.64
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO11",
+          "net": "SPI_MOSI_HOST",
+          "module_pin": "P1.17",
+          "pin_type": "passive"
+        },
+        {
+          "number": "18",
+          "at": [
+            0,
+            -43.18
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO12",
+          "net": "SPI_SCK_HOST",
+          "module_pin": "P1.18",
+          "pin_type": "passive"
+        },
+        {
+          "number": "19",
+          "at": [
+            0,
+            -45.72
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO13",
+          "net": "SPI_MISO",
+          "module_pin": "P1.19",
+          "pin_type": "passive"
+        },
+        {
+          "number": "20",
+          "at": [
+            0,
+            -48.26
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO14",
+          "net": null,
+          "module_pin": "P1.20",
+          "pin_type": "passive"
+        },
+        {
+          "number": "21",
+          "at": [
+            0,
+            -50.8
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "USB5V_DIODE",
+          "net": "USB_5V",
+          "module_pin": "P1.21",
+          "pin_type": "power_out"
+        },
+        {
+          "number": "22",
+          "at": [
+            0,
+            -53.34
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GND",
+          "net": "GND",
+          "module_pin": "P1.22",
+          "pin_type": "power_out"
+        }
+      ]
+    },
+    {
+      "ref": "J2",
+      "value": "SSW-122-01-G-S",
+      "mpn": "SSW-122-01-G-S",
+      "socket": true,
+      "at": [
+        9.14,
+        60
+      ],
+      "schematic": [
+        106.68,
+        43.18
+      ],
+      "footprint": "Socket_1x22_P2.54_USB_Top",
+      "description": "Female socket, 2.54mm pitch, Samtec 1.04mm recommended finished hole; sample mating fit required",
+      "datasheet": "https://suddendocs.samtec.com/prints/ssw-s.pdf",
+      "ref_at": [
+        0,
+        3.0
+      ],
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1.35,
+            -54.84,
+            1.35,
+            1.5
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -1.6500000000000001,
+            -55.14,
+            1.6500000000000001,
+            1.8
+          ]
+        ]
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            0,
+            0.0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "rect",
+          "function": "GND",
+          "net": "GND",
+          "module_pin": "P2.1",
+          "pin_type": "passive"
+        },
+        {
+          "number": "2",
+          "at": [
+            0,
+            -2.54
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO43",
+          "net": null,
+          "module_pin": "P2.2",
+          "pin_type": "passive"
+        },
+        {
+          "number": "3",
+          "at": [
+            0,
+            -5.08
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO44",
+          "net": null,
+          "module_pin": "P2.3",
+          "pin_type": "passive"
+        },
+        {
+          "number": "4",
+          "at": [
+            0,
+            -7.62
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO1",
+          "net": null,
+          "module_pin": "P2.4",
+          "pin_type": "passive"
+        },
+        {
+          "number": "5",
+          "at": [
+            0,
+            -10.16
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO2",
+          "net": null,
+          "module_pin": "P2.5",
+          "pin_type": "passive"
+        },
+        {
+          "number": "6",
+          "at": [
+            0,
+            -12.7
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO42",
+          "net": null,
+          "module_pin": "P2.6",
+          "pin_type": "passive"
+        },
+        {
+          "number": "7",
+          "at": [
+            0,
+            -15.24
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO41",
+          "net": null,
+          "module_pin": "P2.7",
+          "pin_type": "passive"
+        },
+        {
+          "number": "8",
+          "at": [
+            0,
+            -17.78
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO40",
+          "net": null,
+          "module_pin": "P2.8",
+          "pin_type": "passive"
+        },
+        {
+          "number": "9",
+          "at": [
+            0,
+            -20.32
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO39",
+          "net": null,
+          "module_pin": "P2.9",
+          "pin_type": "passive"
+        },
+        {
+          "number": "10",
+          "at": [
+            0,
+            -22.86
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO38",
+          "net": null,
+          "module_pin": "P2.10",
+          "pin_type": "passive"
+        },
+        {
+          "number": "11",
+          "at": [
+            0,
+            -25.4
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO37",
+          "net": null,
+          "module_pin": "P2.11",
+          "pin_type": "passive"
+        },
+        {
+          "number": "12",
+          "at": [
+            0,
+            -27.94
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO36",
+          "net": null,
+          "module_pin": "P2.12",
+          "pin_type": "passive"
+        },
+        {
+          "number": "13",
+          "at": [
+            0,
+            -30.48
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO35",
+          "net": null,
+          "module_pin": "P2.13",
+          "pin_type": "passive"
+        },
+        {
+          "number": "14",
+          "at": [
+            0,
+            -33.02
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO0",
+          "net": null,
+          "module_pin": "P2.14",
+          "pin_type": "passive"
+        },
+        {
+          "number": "15",
+          "at": [
+            0,
+            -35.56
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO45",
+          "net": null,
+          "module_pin": "P2.15",
+          "pin_type": "passive"
+        },
+        {
+          "number": "16",
+          "at": [
+            0,
+            -38.1
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO48",
+          "net": null,
+          "module_pin": "P2.16",
+          "pin_type": "passive"
+        },
+        {
+          "number": "17",
+          "at": [
+            0,
+            -40.64
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO47",
+          "net": null,
+          "module_pin": "P2.17",
+          "pin_type": "passive"
+        },
+        {
+          "number": "18",
+          "at": [
+            0,
+            -43.18
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO21",
+          "net": null,
+          "module_pin": "P2.18",
+          "pin_type": "passive"
+        },
+        {
+          "number": "19",
+          "at": [
+            0,
+            -45.72
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO20",
+          "net": null,
+          "module_pin": "P2.19",
+          "pin_type": "passive"
+        },
+        {
+          "number": "20",
+          "at": [
+            0,
+            -48.26
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GPIO19",
+          "net": null,
+          "module_pin": "P2.20",
+          "pin_type": "passive"
+        },
+        {
+          "number": "21",
+          "at": [
+            0,
+            -50.8
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GND",
+          "net": "GND",
+          "module_pin": "P2.21",
+          "pin_type": "passive"
+        },
+        {
+          "number": "22",
+          "at": [
+            0,
+            -53.34
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GND",
+          "net": "GND",
+          "module_pin": "P2.22",
+          "pin_type": "passive"
+        }
+      ]
+    },
+    {
+      "ref": "J3",
+      "value": "SSW-108-01-G-S",
+      "mpn": "SSW-108-01-G-S",
+      "socket": true,
+      "at": [
+        45,
+        20
+      ],
+      "schematic": [
+        187.96,
+        43.18
+      ],
+      "footprint": "Socket_1x08_P2.54_Horizontal_SolidGND2",
+      "description": "Female socket, 2.54mm pitch, Samtec 1.04mm recommended finished hole; sample mating fit required",
+      "datasheet": "https://suddendocs.samtec.com/prints/ssw-s.pdf",
+      "ref_at": [
+        8.89,
+        -2.9
+      ],
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1.5,
+            -1.35,
+            19.3,
+            1.35
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -1.8,
+            -1.6500000000000001,
+            19.6,
+            1.6500000000000001
+          ]
+        ]
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            0.0,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "rect",
+          "function": "3V3",
+          "net": "+3V3_RADIO",
+          "module_pin": "8",
+          "radio": "A"
+        },
+        {
+          "number": "2",
+          "at": [
+            2.54,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GND",
+          "net": "GND",
+          "module_pin": "7",
+          "radio": "A",
+          "zone_connect": 2
+        },
+        {
+          "number": "3",
+          "at": [
+            5.08,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "NC",
+          "net": null,
+          "module_pin": "6",
+          "radio": "A"
+        },
+        {
+          "number": "4",
+          "at": [
+            7.62,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "DIO7",
+          "net": null,
+          "module_pin": "5",
+          "radio": "A"
+        },
+        {
+          "number": "5",
+          "at": [
+            10.16,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "DIO8",
+          "net": null,
+          "module_pin": "4",
+          "radio": "A"
+        },
+        {
+          "number": "6",
+          "at": [
+            12.7,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "DIO11",
+          "net": "RADIO_A_DIO11",
+          "module_pin": "3",
+          "radio": "A"
+        },
+        {
+          "number": "7",
+          "at": [
+            15.24,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GND",
+          "net": "GND",
+          "module_pin": "2",
+          "radio": "A"
+        },
+        {
+          "number": "8",
+          "at": [
+            17.78,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "2.4G_ANT",
+          "net": null,
+          "module_pin": "1",
+          "radio": "A"
+        }
+      ]
+    },
+    {
+      "ref": "J4",
+      "value": "SSW-108-01-G-S",
+      "mpn": "SSW-108-01-G-S",
+      "socket": true,
+      "at": [
+        45,
+        35.24
+      ],
+      "schematic": [
+        187.96,
+        86.36
+      ],
+      "footprint": "Socket_1x08_P2.54_Horizontal",
+      "description": "Female socket, 2.54mm pitch, Samtec 1.04mm recommended finished hole; sample mating fit required",
+      "datasheet": "https://suddendocs.samtec.com/prints/ssw-s.pdf",
+      "ref_at": [
+        8.89,
+        -2.9
+      ],
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1.5,
+            -1.35,
+            19.3,
+            1.35
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -1.8,
+            -1.6500000000000001,
+            19.6,
+            1.6500000000000001
+          ]
+        ]
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            0.0,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "rect",
+          "function": "BUSY",
+          "net": "RADIO_A_BUSY",
+          "module_pin": "9",
+          "radio": "A"
+        },
+        {
+          "number": "2",
+          "at": [
+            2.54,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "RESET",
+          "net": "RADIO_A_RESET_N",
+          "module_pin": "10",
+          "radio": "A"
+        },
+        {
+          "number": "3",
+          "at": [
+            5.08,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "MISO",
+          "net": "SPI_MISO",
+          "module_pin": "11",
+          "radio": "A"
+        },
+        {
+          "number": "4",
+          "at": [
+            7.62,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "MOSI",
+          "net": "SPI_MOSI",
+          "module_pin": "12",
+          "radio": "A"
+        },
+        {
+          "number": "5",
+          "at": [
+            10.16,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "SCK",
+          "net": "SPI_SCK",
+          "module_pin": "13",
+          "radio": "A"
+        },
+        {
+          "number": "6",
+          "at": [
+            12.7,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "NSS",
+          "net": "RADIO_A_CS_N",
+          "module_pin": "14",
+          "radio": "A"
+        },
+        {
+          "number": "7",
+          "at": [
+            15.24,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GND",
+          "net": "GND",
+          "module_pin": "15",
+          "radio": "A"
+        },
+        {
+          "number": "8",
+          "at": [
+            17.78,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "LoRa_ANT",
+          "net": null,
+          "module_pin": "16",
+          "radio": "A"
+        }
+      ]
+    },
+    {
+      "ref": "J5",
+      "value": "SSW-108-01-G-S",
+      "mpn": "SSW-108-01-G-S",
+      "socket": true,
+      "at": [
+        75,
+        48
+      ],
+      "schematic": [
+        294.64,
+        43.18
+      ],
+      "footprint": "Socket_1x08_P2.54_Horizontal",
+      "description": "Female socket, 2.54mm pitch, Samtec 1.04mm recommended finished hole; sample mating fit required",
+      "datasheet": "https://suddendocs.samtec.com/prints/ssw-s.pdf",
+      "ref_at": [
+        8.89,
+        -2.9
+      ],
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1.5,
+            -1.35,
+            19.3,
+            1.35
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -1.8,
+            -1.6500000000000001,
+            19.6,
+            1.6500000000000001
+          ]
+        ]
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            0.0,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "rect",
+          "function": "3V3",
+          "net": "+3V3_RADIO",
+          "module_pin": "8",
+          "radio": "B"
+        },
+        {
+          "number": "2",
+          "at": [
+            2.54,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GND",
+          "net": "GND",
+          "module_pin": "7",
+          "radio": "B"
+        },
+        {
+          "number": "3",
+          "at": [
+            5.08,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "NC",
+          "net": null,
+          "module_pin": "6",
+          "radio": "B"
+        },
+        {
+          "number": "4",
+          "at": [
+            7.62,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "DIO7",
+          "net": null,
+          "module_pin": "5",
+          "radio": "B"
+        },
+        {
+          "number": "5",
+          "at": [
+            10.16,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "DIO8",
+          "net": null,
+          "module_pin": "4",
+          "radio": "B"
+        },
+        {
+          "number": "6",
+          "at": [
+            12.7,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "DIO11",
+          "net": "RADIO_B_DIO11",
+          "module_pin": "3",
+          "radio": "B"
+        },
+        {
+          "number": "7",
+          "at": [
+            15.24,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GND",
+          "net": "GND",
+          "module_pin": "2",
+          "radio": "B"
+        },
+        {
+          "number": "8",
+          "at": [
+            17.78,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "2.4G_ANT",
+          "net": null,
+          "module_pin": "1",
+          "radio": "B"
+        }
+      ]
+    },
+    {
+      "ref": "J6",
+      "value": "SSW-108-01-G-S",
+      "mpn": "SSW-108-01-G-S",
+      "socket": true,
+      "at": [
+        75,
+        63.24
+      ],
+      "schematic": [
+        294.64,
+        86.36
+      ],
+      "footprint": "Socket_1x08_P2.54_Horizontal",
+      "description": "Female socket, 2.54mm pitch, Samtec 1.04mm recommended finished hole; sample mating fit required",
+      "datasheet": "https://suddendocs.samtec.com/prints/ssw-s.pdf",
+      "ref_at": [
+        8.89,
+        -2.9
+      ],
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1.5,
+            -1.35,
+            19.3,
+            1.35
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -1.8,
+            -1.6500000000000001,
+            19.6,
+            1.6500000000000001
+          ]
+        ]
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            0.0,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "rect",
+          "function": "BUSY",
+          "net": "RADIO_B_BUSY",
+          "module_pin": "9",
+          "radio": "B"
+        },
+        {
+          "number": "2",
+          "at": [
+            2.54,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "RESET",
+          "net": "RADIO_B_RESET_N",
+          "module_pin": "10",
+          "radio": "B"
+        },
+        {
+          "number": "3",
+          "at": [
+            5.08,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "MISO",
+          "net": "SPI_MISO",
+          "module_pin": "11",
+          "radio": "B"
+        },
+        {
+          "number": "4",
+          "at": [
+            7.62,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "MOSI",
+          "net": "SPI_MOSI",
+          "module_pin": "12",
+          "radio": "B"
+        },
+        {
+          "number": "5",
+          "at": [
+            10.16,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "SCK",
+          "net": "SPI_SCK",
+          "module_pin": "13",
+          "radio": "B"
+        },
+        {
+          "number": "6",
+          "at": [
+            12.7,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "NSS",
+          "net": "RADIO_B_CS_N",
+          "module_pin": "14",
+          "radio": "B"
+        },
+        {
+          "number": "7",
+          "at": [
+            15.24,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "GND",
+          "net": "GND",
+          "module_pin": "15",
+          "radio": "B"
+        },
+        {
+          "number": "8",
+          "at": [
+            17.78,
+            0
+          ],
+          "size": [
+            1.8,
+            1.8
+          ],
+          "drill": 1.04,
+          "shape": "circle",
+          "function": "LoRa_ANT",
+          "net": null,
+          "module_pin": "16",
+          "radio": "B"
+        }
+      ]
+    },
+    {
+      "ref": "R1",
+      "value": "10k",
+      "at": [
+        58,
+        41
+      ],
+      "schematic": [
+        187.96,
+        137.16
+      ],
+      "footprint": "R_0805",
+      "mpn": "RC0805FR-0710KL",
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1,
+            -0.65,
+            1,
+            0.65
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -1.8,
+            -1.2,
+            1.8,
+            1.2
+          ]
+        ]
+      ],
+      "ref_at": [
+        0,
+        -1.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            -0.95,
+            0
+          ],
+          "size": [
+            1.1,
+            1.5
+          ],
+          "shape": "roundrect",
+          "net": "RADIO_A_CS_N",
+          "function": "1"
+        },
+        {
+          "number": "2",
+          "at": [
+            0.95,
+            0
+          ],
+          "size": [
+            1.1,
+            1.5
+          ],
+          "shape": "roundrect",
+          "net": "+3V3_RADIO",
+          "function": "2"
+        }
+      ]
+    },
+    {
+      "ref": "R2",
+      "value": "10k",
+      "at": [
+        87,
+        70
+      ],
+      "schematic": [
+        294.64,
+        137.16
+      ],
+      "footprint": "R_0805",
+      "mpn": "RC0805FR-0710KL",
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1,
+            -0.65,
+            1,
+            0.65
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -1.8,
+            -1.2,
+            1.8,
+            1.2
+          ]
+        ]
+      ],
+      "ref_at": [
+        0,
+        -1.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            -0.95,
+            0
+          ],
+          "size": [
+            1.1,
+            1.5
+          ],
+          "shape": "roundrect",
+          "net": "RADIO_B_CS_N",
+          "function": "1"
+        },
+        {
+          "number": "2",
+          "at": [
+            0.95,
+            0
+          ],
+          "size": [
+            1.1,
+            1.5
+          ],
+          "shape": "roundrect",
+          "net": "+3V3_RADIO",
+          "function": "2"
+        }
+      ]
+    },
+    {
+      "ref": "R3",
+      "value": "10k",
+      "at": [
+        48,
+        41
+      ],
+      "schematic": [
+        187.96,
+        152.4
+      ],
+      "footprint": "R_0805",
+      "mpn": "RC0805FR-0710KL",
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1,
+            -0.65,
+            1,
+            0.65
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -1.8,
+            -1.2,
+            1.8,
+            1.2
+          ]
+        ]
+      ],
+      "ref_at": [
+        0,
+        -1.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            -0.95,
+            0
+          ],
+          "size": [
+            1.1,
+            1.5
+          ],
+          "shape": "roundrect",
+          "net": "RADIO_A_RESET_N",
+          "function": "1"
+        },
+        {
+          "number": "2",
+          "at": [
+            0.95,
+            0
+          ],
+          "size": [
+            1.1,
+            1.5
+          ],
+          "shape": "roundrect",
+          "net": "+3V3_RADIO",
+          "function": "2"
+        }
+      ]
+    },
+    {
+      "ref": "R4",
+      "value": "10k",
+      "at": [
+        76,
+        70
+      ],
+      "schematic": [
+        294.64,
+        152.4
+      ],
+      "footprint": "R_0805",
+      "mpn": "RC0805FR-0710KL",
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1,
+            -0.65,
+            1,
+            0.65
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -1.8,
+            -1.2,
+            1.8,
+            1.2
+          ]
+        ]
+      ],
+      "ref_at": [
+        0,
+        -1.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            -0.95,
+            0
+          ],
+          "size": [
+            1.1,
+            1.5
+          ],
+          "shape": "roundrect",
+          "net": "RADIO_B_RESET_N",
+          "function": "1"
+        },
+        {
+          "number": "2",
+          "at": [
+            0.95,
+            0
+          ],
+          "size": [
+            1.1,
+            1.5
+          ],
+          "shape": "roundrect",
+          "net": "+3V3_RADIO",
+          "function": "2"
+        }
+      ]
+    },
+    {
+      "ref": "R5",
+      "value": "33R",
+      "at": [
+        36,
+        16.8
+      ],
+      "schematic": [
+        40.64,
+        119.38
+      ],
+      "footprint": "R_0805",
+      "mpn": "RC0805FR-0733RL",
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1,
+            -0.65,
+            1,
+            0.65
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -1.8,
+            -1.2,
+            1.8,
+            1.2
+          ]
+        ]
+      ],
+      "ref_at": [
+        0,
+        -1.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            -0.95,
+            0
+          ],
+          "size": [
+            1.1,
+            1.5
+          ],
+          "shape": "roundrect",
+          "net": "SPI_SCK_HOST",
+          "function": "1"
+        },
+        {
+          "number": "2",
+          "at": [
+            0.95,
+            0
+          ],
+          "size": [
+            1.1,
+            1.5
+          ],
+          "shape": "roundrect",
+          "net": "SPI_SCK",
+          "function": "2"
+        }
+      ]
+    },
+    {
+      "ref": "R6",
+      "value": "33R",
+      "at": [
+        36,
+        20.2
+      ],
+      "schematic": [
+        106.68,
+        119.38
+      ],
+      "footprint": "R_0805",
+      "mpn": "RC0805FR-0733RL",
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1,
+            -0.65,
+            1,
+            0.65
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -1.8,
+            -1.2,
+            1.8,
+            1.2
+          ]
+        ]
+      ],
+      "ref_at": [
+        0,
+        -1.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            -0.95,
+            0
+          ],
+          "size": [
+            1.1,
+            1.5
+          ],
+          "shape": "roundrect",
+          "net": "SPI_MOSI_HOST",
+          "function": "1"
+        },
+        {
+          "number": "2",
+          "at": [
+            0.95,
+            0
+          ],
+          "size": [
+            1.1,
+            1.5
+          ],
+          "shape": "roundrect",
+          "net": "SPI_MOSI",
+          "function": "2"
+        }
+      ]
+    },
+    {
+      "ref": "C1",
+      "value": "10uF 25V X7R",
+      "at": [
+        43,
+        62
+      ],
+      "schematic": [
+        40.64,
+        165.1
+      ],
+      "footprint": "C_1206",
+      "mpn": "C1206C106K3RACTU",
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1.6,
+            -0.8,
+            1.6,
+            0.8
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -2.3,
+            -1.2,
+            2.3,
+            1.2
+          ]
+        ]
+      ],
+      "ref_at": [
+        0,
+        -1.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            -1.45,
+            0
+          ],
+          "size": [
+            1.2,
+            1.8
+          ],
+          "shape": "roundrect",
+          "net": "USB_5V",
+          "function": "1"
+        },
+        {
+          "number": "2",
+          "at": [
+            1.45,
+            0
+          ],
+          "size": [
+            1.2,
+            1.8
+          ],
+          "shape": "roundrect",
+          "net": "GND",
+          "function": "2"
+        }
+      ]
+    },
+    {
+      "ref": "C2",
+      "value": "10uF 25V X7R",
+      "at": [
+        58,
+        62
+      ],
+      "schematic": [
+        106.68,
+        165.1
+      ],
+      "footprint": "C_1206",
+      "mpn": "C1206C106K3RACTU",
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1.6,
+            -0.8,
+            1.6,
+            0.8
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -2.3,
+            -1.2,
+            2.3,
+            1.2
+          ]
+        ]
+      ],
+      "ref_at": [
+        0,
+        -1.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            -1.45,
+            0
+          ],
+          "size": [
+            1.2,
+            1.8
+          ],
+          "shape": "roundrect",
+          "net": "+3V3_RADIO",
+          "function": "1"
+        },
+        {
+          "number": "2",
+          "at": [
+            1.45,
+            0
+          ],
+          "size": [
+            1.2,
+            1.8
+          ],
+          "shape": "roundrect",
+          "net": "GND",
+          "function": "2"
+        }
+      ]
+    },
+    {
+      "ref": "C3",
+      "value": "10uF 25V X7R",
+      "at": [
+        43,
+        14
+      ],
+      "schematic": [
+        187.96,
+        172.72
+      ],
+      "footprint": "C_1206",
+      "mpn": "C1206C106K3RACTU",
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1.6,
+            -0.8,
+            1.6,
+            0.8
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -2.3,
+            -1.2,
+            2.3,
+            1.2
+          ]
+        ]
+      ],
+      "ref_at": [
+        0,
+        -1.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            -1.45,
+            0
+          ],
+          "size": [
+            1.2,
+            1.8
+          ],
+          "shape": "roundrect",
+          "net": "+3V3_RADIO",
+          "function": "1"
+        },
+        {
+          "number": "2",
+          "at": [
+            1.45,
+            0
+          ],
+          "size": [
+            1.2,
+            1.8
+          ],
+          "shape": "roundrect",
+          "net": "GND",
+          "function": "2"
+        }
+      ]
+    },
+    {
+      "ref": "C4",
+      "value": "100nF 50V X7R",
+      "at": [
+        49,
+        14
+      ],
+      "schematic": [
+        187.96,
+        187.96
+      ],
+      "footprint": "C_0805",
+      "mpn": "C0805C104K5RACTU",
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1,
+            -0.65,
+            1,
+            0.65
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -1.8,
+            -1.2,
+            1.8,
+            1.2
+          ]
+        ]
+      ],
+      "ref_at": [
+        0,
+        -1.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            -0.95,
+            0
+          ],
+          "size": [
+            1.1,
+            1.5
+          ],
+          "shape": "roundrect",
+          "net": "+3V3_RADIO",
+          "function": "1"
+        },
+        {
+          "number": "2",
+          "at": [
+            0.95,
+            0
+          ],
+          "size": [
+            1.1,
+            1.5
+          ],
+          "shape": "roundrect",
+          "net": "GND",
+          "function": "2"
+        }
+      ]
+    },
+    {
+      "ref": "C5",
+      "value": "10uF 25V X7R",
+      "at": [
+        73,
+        42
+      ],
+      "schematic": [
+        294.64,
+        172.72
+      ],
+      "footprint": "C_1206",
+      "mpn": "C1206C106K3RACTU",
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1.6,
+            -0.8,
+            1.6,
+            0.8
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -2.3,
+            -1.2,
+            2.3,
+            1.2
+          ]
+        ]
+      ],
+      "ref_at": [
+        0,
+        -1.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            -1.45,
+            0
+          ],
+          "size": [
+            1.2,
+            1.8
+          ],
+          "shape": "roundrect",
+          "net": "+3V3_RADIO",
+          "function": "1"
+        },
+        {
+          "number": "2",
+          "at": [
+            1.45,
+            0
+          ],
+          "size": [
+            1.2,
+            1.8
+          ],
+          "shape": "roundrect",
+          "net": "GND",
+          "function": "2"
+        }
+      ]
+    },
+    {
+      "ref": "C6",
+      "value": "100nF 50V X7R",
+      "at": [
+        79,
+        42
+      ],
+      "schematic": [
+        294.64,
+        187.96
+      ],
+      "footprint": "C_0805",
+      "mpn": "C0805C104K5RACTU",
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1,
+            -0.65,
+            1,
+            0.65
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -1.8,
+            -1.2,
+            1.8,
+            1.2
+          ]
+        ]
+      ],
+      "ref_at": [
+        0,
+        -1.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "at": [
+            -0.95,
+            0
+          ],
+          "size": [
+            1.1,
+            1.5
+          ],
+          "shape": "roundrect",
+          "net": "+3V3_RADIO",
+          "function": "1"
+        },
+        {
+          "number": "2",
+          "at": [
+            0.95,
+            0
+          ],
+          "size": [
+            1.1,
+            1.5
+          ],
+          "shape": "roundrect",
+          "net": "GND",
+          "function": "2"
+        }
+      ]
+    },
+    {
+      "ref": "U1",
+      "value": "TLV1117LV33DCYR",
+      "mpn": "TLV1117LV33DCYR",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/tlv1117lv.pdf",
+      "at": [
+        51,
+        56.5
+      ],
+      "schematic": [
+        106.68,
+        142.24
+      ],
+      "footprint": "SOT223_TabPin2",
+      "outlines": [
+        [
+          "F.Fab",
+          [
+            -1.85,
+            -3.35,
+            1.85,
+            3.35
+          ]
+        ],
+        [
+          "F.CrtYd",
+          [
+            -4.4,
+            -3.6,
+            4.4,
+            3.6
+          ]
+        ]
+      ],
+      "ref_at": [
+        0,
+        -4.5
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "function": "GND",
+          "pin_type": "power_in",
+          "at": [
+            -3.15,
+            -2.3
+          ],
+          "size": [
+            2,
+            1.5
+          ],
+          "shape": "rect",
+          "net": "GND"
+        },
+        {
+          "number": "2",
+          "function": "OUT_3V3",
+          "pin_type": "power_out",
+          "at": [
+            -3.15,
+            0
+          ],
+          "size": [
+            2,
+            1.5
+          ],
+          "shape": "rect",
+          "net": "+3V3_RADIO"
+        },
+        {
+          "number": "3",
+          "function": "IN_USB",
+          "pin_type": "power_in",
+          "at": [
+            -3.15,
+            2.3
+          ],
+          "size": [
+            2,
+            1.5
+          ],
+          "shape": "rect",
+          "net": "USB_5V"
+        },
+        {
+          "number": "2",
+          "function": "OUT_3V3",
+          "at": [
+            3.15,
+            0
+          ],
+          "size": [
+            2,
+            3.8
+          ],
+          "shape": "rect",
+          "net": "+3V3_RADIO"
+        }
+      ]
+    },
+    {
+      "ref": "TP1",
+      "value": "USB_5V",
+      "at": [
+        35,
+        9.2
+      ],
+      "schematic": [
+        40.64,
+        203.2
+      ],
+      "footprint": "TestPoint_1.5mm",
+      "mpn": "PCB copper test pad",
+      "ref_at": [
+        0,
+        -1.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "function": "TEST",
+          "at": [
+            0,
+            0
+          ],
+          "size": [
+            1.5,
+            1.5
+          ],
+          "shape": "circle",
+          "net": "USB_5V"
+        }
+      ]
+    },
+    {
+      "ref": "TP2",
+      "value": "+3V3_RADIO",
+      "at": [
+        63,
+        56.5
+      ],
+      "schematic": [
+        106.68,
+        203.2
+      ],
+      "footprint": "TestPoint_1.5mm",
+      "mpn": "PCB copper test pad",
+      "ref_at": [
+        0,
+        -1.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "function": "TEST",
+          "at": [
+            0,
+            0
+          ],
+          "size": [
+            1.5,
+            1.5
+          ],
+          "shape": "circle",
+          "net": "+3V3_RADIO"
+        }
+      ]
+    },
+    {
+      "ref": "TP3",
+      "value": "GND",
+      "at": [
+        63,
+        62
+      ],
+      "schematic": [
+        187.96,
+        210.82
+      ],
+      "footprint": "TestPoint_1.5mm",
+      "mpn": "PCB copper test pad",
+      "ref_at": [
+        0,
+        -1.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "function": "TEST",
+          "at": [
+            0,
+            0
+          ],
+          "size": [
+            1.5,
+            1.5
+          ],
+          "shape": "circle",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "TP4",
+      "value": "RADIO_A_DIO11",
+      "at": [
+        65,
+        14
+      ],
+      "schematic": [
+        294.64,
+        210.82
+      ],
+      "footprint": "TestPoint_1.5mm",
+      "mpn": "PCB copper test pad",
+      "ref_at": [
+        0,
+        -1.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "function": "TEST",
+          "at": [
+            0,
+            0
+          ],
+          "size": [
+            1.5,
+            1.5
+          ],
+          "shape": "circle",
+          "net": "RADIO_A_DIO11"
+        }
+      ]
+    },
+    {
+      "ref": "TP5",
+      "value": "RADIO_B_DIO11",
+      "at": [
+        95,
+        42
+      ],
+      "schematic": [
+        365.76,
+        210.82
+      ],
+      "footprint": "TestPoint_1.5mm",
+      "mpn": "PCB copper test pad",
+      "ref_at": [
+        0,
+        -1.8
+      ],
+      "pads": [
+        {
+          "number": "1",
+          "function": "TEST",
+          "at": [
+            0,
+            0
+          ],
+          "size": [
+            1.5,
+            1.5
+          ],
+          "shape": "circle",
+          "net": "RADIO_B_DIO11"
+        }
+      ]
+    },
+    {
+      "ref": "H1",
+      "value": "M3 NPTH",
+      "at": [
+        3.5,
+        3.5
+      ],
+      "board_only": true,
+      "footprint": "MountingHole_3.2mm",
+      "ref_at": [
+        0,
+        -2.6
+      ],
+      "pads": [
+        {
+          "number": "",
+          "at": [
+            0,
+            0
+          ],
+          "size": [
+            3.2,
+            3.2
+          ],
+          "shape": "circle",
+          "drill": 3.2,
+          "npth": true
+        }
+      ]
+    },
+    {
+      "ref": "H2",
+      "value": "M3 NPTH",
+      "at": [
+        96.5,
+        3.5
+      ],
+      "board_only": true,
+      "footprint": "MountingHole_3.2mm",
+      "ref_at": [
+        0,
+        -2.6
+      ],
+      "pads": [
+        {
+          "number": "",
+          "at": [
+            0,
+            0
+          ],
+          "size": [
+            3.2,
+            3.2
+          ],
+          "shape": "circle",
+          "drill": 3.2,
+          "npth": true
+        }
+      ]
+    },
+    {
+      "ref": "H3",
+      "value": "M3 NPTH",
+      "at": [
+        3.5,
+        71.5
+      ],
+      "board_only": true,
+      "footprint": "MountingHole_3.2mm",
+      "ref_at": [
+        0,
+        -2.6
+      ],
+      "pads": [
+        {
+          "number": "",
+          "at": [
+            0,
+            0
+          ],
+          "size": [
+            3.2,
+            3.2
+          ],
+          "shape": "circle",
+          "drill": 3.2,
+          "npth": true
+        }
+      ]
+    },
+    {
+      "ref": "H4",
+      "value": "M3 NPTH",
+      "at": [
+        96.5,
+        71.5
+      ],
+      "board_only": true,
+      "footprint": "MountingHole_3.2mm",
+      "ref_at": [
+        0,
+        -2.6
+      ],
+      "pads": [
+        {
+          "number": "",
+          "at": [
+            0,
+            0
+          ],
+          "size": [
+            3.2,
+            3.2
+          ],
+          "shape": "circle",
+          "drill": 3.2,
+          "npth": true
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "DUAL LR2021 USB TEST CARRIER",
+      "at": [
+        65,
+        3.5
+      ],
+      "size": 1.25
+    },
+    {
+      "text": "REV A  /  ENGINEERING PROTOTYPE",
+      "at": [
+        62,
+        7
+      ],
+      "size": 0.85
+    },
+    {
+      "text": "USB-C",
+      "at": [
+        20.5,
+        3.5
+      ],
+      "size": 1.0
+    },
+    {
+      "text": "RADIO A",
+      "at": [
+        54,
+        10
+      ],
+      "size": 1.2
+    },
+    {
+      "text": "RADIO B",
+      "at": [
+        84,
+        38
+      ],
+      "size": 1.2
+    },
+    {
+      "text": "3V3",
+      "at": [
+        43,
+        24
+      ],
+      "size": 0.8
+    },
+    {
+      "text": "3V3",
+      "at": [
+        73,
+        52
+      ],
+      "size": 0.8
+    },
+    {
+      "text": "2.4G",
+      "at": [
+        68,
+        20
+      ],
+      "size": 0.8
+    },
+    {
+      "text": "SUB-G",
+      "at": [
+        68,
+        35.24
+      ],
+      "size": 0.8
+    },
+    {
+      "text": "2.4G",
+      "at": [
+        97,
+        48
+      ],
+      "size": 0.8
+    },
+    {
+      "text": "SUB-G",
+      "at": [
+        97,
+        63.24
+      ],
+      "size": 0.8
+    },
+    {
+      "text": "3.3V RADIO SUPPLY",
+      "at": [
+        53,
+        48.5
+      ],
+      "size": 0.9
+    },
+    {
+      "text": "5V",
+      "at": [
+        38,
+        9.2
+      ],
+      "size": 0.8
+    },
+    {
+      "text": "3V3",
+      "at": [
+        66,
+        56.5
+      ],
+      "size": 0.8
+    },
+    {
+      "text": "GND",
+      "at": [
+        63,
+        65
+      ],
+      "size": 0.8
+    },
+    {
+      "text": "IRQ A",
+      "at": [
+        69,
+        14
+      ],
+      "size": 0.8
+    },
+    {
+      "text": "IRQ B",
+      "at": [
+        94,
+        36.8
+      ],
+      "size": 0.8
+    },
+    {
+      "text": "SOCKETS ON THIS SIDE",
+      "at": [
+        53,
+        72.5
+      ],
+      "size": 0.9
+    }
+  ],
+  "keepouts": [
+    {
+      "name": "ESP32 ANTENNA NO COPPER",
+      "bounds": [
+        11.2,
+        53,
+        29.9,
+        74.4
+      ]
+    }
+  ],
+  "module_outlines": [
+    {
+      "name": "ESP32-S3-DEV-KIT-N8R8-M",
+      "bounds": [
+        7.86,
+        1.61,
+        33.26,
+        64.91
+      ]
+    },
+    {
+      "name": "Core2021-HF-M A",
+      "bounds": [
+        42.39,
+        18,
+        65.4,
+        38
+      ]
+    },
+    {
+      "name": "Core2021-HF-M B",
+      "bounds": [
+        72.39,
+        46,
+        95.4,
+        66
+      ]
+    }
+  ],
+  "radio_rf_socket_pins": {
+    "J3": [
+      "8"
+    ],
+    "J4": [
+      "8"
+    ],
+    "J5": [
+      "8"
+    ],
+    "J6": [
+      "8"
+    ]
+  },
+  "radio_pin_map": {
+    "J3.1": {
+      "radio": "A",
+      "module_pin": 8,
+      "function": "3V3",
+      "net": "+3V3_RADIO"
+    },
+    "J3.2": {
+      "radio": "A",
+      "module_pin": 7,
+      "function": "GND",
+      "net": "GND"
+    },
+    "J3.3": {
+      "radio": "A",
+      "module_pin": 6,
+      "function": "NC",
+      "net": null
+    },
+    "J3.4": {
+      "radio": "A",
+      "module_pin": 5,
+      "function": "DIO7",
+      "net": null
+    },
+    "J3.5": {
+      "radio": "A",
+      "module_pin": 4,
+      "function": "DIO8",
+      "net": null
+    },
+    "J3.6": {
+      "radio": "A",
+      "module_pin": 3,
+      "function": "DIO11",
+      "net": "RADIO_A_DIO11"
+    },
+    "J3.7": {
+      "radio": "A",
+      "module_pin": 2,
+      "function": "GND",
+      "net": "GND"
+    },
+    "J3.8": {
+      "radio": "A",
+      "module_pin": 1,
+      "function": "2.4G_ANT",
+      "net": null
+    },
+    "J4.1": {
+      "radio": "A",
+      "module_pin": 9,
+      "function": "BUSY",
+      "net": "RADIO_A_BUSY"
+    },
+    "J4.2": {
+      "radio": "A",
+      "module_pin": 10,
+      "function": "RESET",
+      "net": "RADIO_A_RESET_N"
+    },
+    "J4.3": {
+      "radio": "A",
+      "module_pin": 11,
+      "function": "MISO",
+      "net": "SPI_MISO"
+    },
+    "J4.4": {
+      "radio": "A",
+      "module_pin": 12,
+      "function": "MOSI",
+      "net": "SPI_MOSI"
+    },
+    "J4.5": {
+      "radio": "A",
+      "module_pin": 13,
+      "function": "SCK",
+      "net": "SPI_SCK"
+    },
+    "J4.6": {
+      "radio": "A",
+      "module_pin": 14,
+      "function": "NSS",
+      "net": "RADIO_A_CS_N"
+    },
+    "J4.7": {
+      "radio": "A",
+      "module_pin": 15,
+      "function": "GND",
+      "net": "GND"
+    },
+    "J4.8": {
+      "radio": "A",
+      "module_pin": 16,
+      "function": "LoRa_ANT",
+      "net": null
+    },
+    "J5.1": {
+      "radio": "B",
+      "module_pin": 8,
+      "function": "3V3",
+      "net": "+3V3_RADIO"
+    },
+    "J5.2": {
+      "radio": "B",
+      "module_pin": 7,
+      "function": "GND",
+      "net": "GND"
+    },
+    "J5.3": {
+      "radio": "B",
+      "module_pin": 6,
+      "function": "NC",
+      "net": null
+    },
+    "J5.4": {
+      "radio": "B",
+      "module_pin": 5,
+      "function": "DIO7",
+      "net": null
+    },
+    "J5.5": {
+      "radio": "B",
+      "module_pin": 4,
+      "function": "DIO8",
+      "net": null
+    },
+    "J5.6": {
+      "radio": "B",
+      "module_pin": 3,
+      "function": "DIO11",
+      "net": "RADIO_B_DIO11"
+    },
+    "J5.7": {
+      "radio": "B",
+      "module_pin": 2,
+      "function": "GND",
+      "net": "GND"
+    },
+    "J5.8": {
+      "radio": "B",
+      "module_pin": 1,
+      "function": "2.4G_ANT",
+      "net": null
+    },
+    "J6.1": {
+      "radio": "B",
+      "module_pin": 9,
+      "function": "BUSY",
+      "net": "RADIO_B_BUSY"
+    },
+    "J6.2": {
+      "radio": "B",
+      "module_pin": 10,
+      "function": "RESET",
+      "net": "RADIO_B_RESET_N"
+    },
+    "J6.3": {
+      "radio": "B",
+      "module_pin": 11,
+      "function": "MISO",
+      "net": "SPI_MISO"
+    },
+    "J6.4": {
+      "radio": "B",
+      "module_pin": 12,
+      "function": "MOSI",
+      "net": "SPI_MOSI"
+    },
+    "J6.5": {
+      "radio": "B",
+      "module_pin": 13,
+      "function": "SCK",
+      "net": "SPI_SCK"
+    },
+    "J6.6": {
+      "radio": "B",
+      "module_pin": 14,
+      "function": "NSS",
+      "net": "RADIO_B_CS_N"
+    },
+    "J6.7": {
+      "radio": "B",
+      "module_pin": 15,
+      "function": "GND",
+      "net": "GND"
+    },
+    "J6.8": {
+      "radio": "B",
+      "module_pin": 16,
+      "function": "LoRa_ANT",
+      "net": null
+    }
+  },
+  "schematic_notes": [
+    {
+      "text": "USB-C CONTROLLER SOCKETS\nJ1 = vendor P1; J2 = vendor P2. USB end faces carrier top.\n22.86 mm between rows. Socket pin 1 is at antenna end.",
+      "at": [
+        25.4,
+        20.32
+      ]
+    },
+    {
+      "text": "RADIO A SOCKETS\nTop view: upper row module pins 8..1 left to right; lower 9..16.\nAntennas connect to module IPEX4 ports at right.",
+      "at": [
+        172.72,
+        20.32
+      ]
+    },
+    {
+      "text": "RADIO B SOCKETS\nSame wiring and orientation as Radio A.\nBoth sockets support either band and modulation.",
+      "at": [
+        279.4,
+        20.32
+      ]
+    },
+    {
+      "text": "POWER\nUSB_5V is controller P1.21, downstream of its D1 diode.\nU1 output is separate from controller 3V3 pins.\nNo external power input. Radio allowance 300 mA.\nValidate USB allowance, controller D1 heat, and voltage drop.",
+      "at": [
+        25.4,
+        134.62
+      ],
+      "size": 1.1
+    },
+    {
+      "text": "FIRMWARE\nCS defaults high. Reset and initialize both radios at boot.\nWait for each BUSY low before commands. One CS active at a time.\nStart SPI at 2 MHz. DIO11 is a radio pin name, not ESP32 GPIO11.\nKeep Wi-Fi/Bluetooth off for initial RF tests.",
+      "at": [
+        25.4,
+        220.98
+      ],
+      "size": 1.1
+    },
+    {
+      "text": "RADIO CONTACTS\nRF header pins 1 and 16 and NC pin 6 have no carrier traces.\nDIO7 and DIO8 are reserved and unconnected in this revision.\nManufacturer pinout image is an underside view.\nSocket numbering here follows the documented TOP view.",
+      "at": [
+        172.72,
+        231.14
+      ],
+      "size": 1.1
+    },
+    {
+      "text": "ENGINEERING PROTOTYPE\nNative KiCad ERC/DRC and sample socket-fit checks pending.\nNo hardware or radio performance has been validated.\nDo not substitute generic LM/AMS1117 for ceramic-stable TLV1117LV.",
+      "at": [
+        279.4,
+        231.14
+      ],
+      "size": 1.1
+    }
+  ]
+}

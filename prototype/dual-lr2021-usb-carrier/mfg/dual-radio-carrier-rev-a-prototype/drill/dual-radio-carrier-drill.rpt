@@ -1,0 +1,24 @@
+Drill report for dual-radio-carrier.kicad_pcb
+Created on 2026-10-24T16:35:51
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'dual-radio-carrier-PTH.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.300mm  0.0118"  (43 holes))
+    T2  1.040mm  0.0409"  (76 holes))
+
+    Total plated holes count 119
+
+
+Drill file 'dual-radio-carrier-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+    T1  3.200mm  0.1260"  (4 holes))
+
+    Total unplated holes count 4

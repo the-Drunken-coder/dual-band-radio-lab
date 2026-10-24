@@ -1,0 +1,40 @@
+{
+  "status": "engineering_prototype",
+  "pcb_sha256": "693d1665eff8aad079659388e0f69ff8a422e1953bacf7669a900d5f7c645b03",
+  "schematic_sha256": "55153318e21edbbb1ad7abd6ff94df1e19899216637f920012289031a46a1bd5",
+  "native_checks": {
+    "timestamp_utc": "2026-10-24T20:35:47.760015+00:00",
+    "kicad_version": "10.99.0",
+    "status": "pass",
+    "erc_exit_code": 0,
+    "drc_exit_code": 0,
+    "erc_violations": 0,
+    "drc_violations": 0,
+    "unconnected_items": 0,
+    "schematic_parity_issues": 0,
+    "pcb_sha256": "693d1665eff8aad079659388e0f69ff8a422e1953bacf7669a900d5f7c645b03",
+    "schematic_sha256": "55153318e21edbbb1ad7abd6ff94df1e19899216637f920012289031a46a1bd5",
+    "physical_validation": "not performed"
+  },
+  "files": {
+    "PROTOTYPE-STATUS.txt": "c8b3158e674c9cb213cebff273e9809d8fbee56ab7d69a142a3bd67bc8c9486b",
+    "assembly-notes.md": "b006f1f9fb6a4453d3b72b2083f704161685fc777fc04f04cff8365ae1f8b915",
+    "bom.csv": "9e7787bdd9b366ddd07b5ebaddaa68da00567af36cf5d4fbc84ecd81e0b4e459",
+    "drill/dual-radio-carrier-NPTH.drl": "41bd575a2b8b5b43b53b51049a85dfb535b02dc32ea70a500abe211fc8c6d2d6",
+    "drill/dual-radio-carrier-PTH.drl": "a1a5ee7394a7f896dbd518e46144fcafbaa4f338947da78d80219b87bdb32ddd",
+    "drill/dual-radio-carrier-drill.rpt": "d9bf28929f5502e81a09f4dd7113aed2938a30b7e822d28070eb00ac4958b9f6",
+    "gerbers/dual-radio-carrier-B_Cu.gbl": "65f2ab3b50d33a89fcbe6259f8081ebc0a834d82a55d5515df07f5a0edb53c4e",
+    "gerbers/dual-radio-carrier-B_Mask.gbs": "3d84dabcc177fe03d216520016e887b55a271f33e85d57d3189268b25677c4f2",
+    "gerbers/dual-radio-carrier-B_Paste.gbp": "78baeb1cdbb787c82b15d81f16df43ef1ca93815539e253b0d72171166608056",
+    "gerbers/dual-radio-carrier-B_Silkscreen.gbo": "cc2a29fd38d9f3d9ca5f007dd85c8b0b29fd678dedbc57afae34f09790de1bc1",
+    "gerbers/dual-radio-carrier-Edge_Cuts.gm1": "9bb2db5a10283aaab1252ce47e56abffcdca003544339f48307a907431473f11",
+    "gerbers/dual-radio-carrier-F_Cu.gtl": "0f3767b2b83c01564ad0346696e91e3c8464c435567deabc37f4b477b20de8ee",
+    "gerbers/dual-radio-carrier-F_Mask.gts": "948a53873c2a46984fe7678dcf1efe9549058aaafc791c76d48d2a112ff1bfbd",
+    "gerbers/dual-radio-carrier-F_Paste.gtp": "70267ef17c5af729611d9af6f3a0d894b620e4ed2f2a599b9d0390c49d3e092c",
+    "gerbers/dual-radio-carrier-F_Silkscreen.gto": "765f0c860b000c116f7744c203ecae2524297e5ee1b8c152a241f1924f2019f7",
+    "gerbers/dual-radio-carrier-job.gbrjob": "e480c0118a0b376d42a51f5dcf72ccf8d957bcb735a5614b5f10a9cf8d67701c",
+    "gpio-map.csv": "78c6bf55b4ac61e4b91bb8350d21ae85ac4fd7999a4aee9a551a865138398843",
+    "placement.csv": "12010dc1b2bfae114068000b3a44f892f89e255c680f4a539a9daba2d1d24167",
+    "radio-socket-map.csv": "89643a7ffddfa2beb1d6a56f3558286c0b7d081a270b403ffdcd4249f36d2bd8"
+  }
+}

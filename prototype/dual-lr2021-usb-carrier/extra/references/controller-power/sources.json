@@ -1,0 +1,134 @@
+{
+  "retrieved_date": "2026-10-24",
+  "sources": [
+    {
+      "file": "sources/ap2112.pdf",
+      "bytes": 755270,
+      "sha256": "ef8d376f2ec356e29172eb9e053819a0ebdcc576dba7fc9ab0505c568427920f",
+      "url": "https://www.diodes.com/assets/Datasheets/AP2112.pdf"
+    },
+    {
+      "file": "sources/boot-mode.html",
+      "bytes": 30927,
+      "sha256": "e20e74416065ff78d99d8befd44f6b14706b133898b2a736bdf2face7aa03dda",
+      "url": "https://docs.espressif.com/projects/esptool/en/latest/esp32s3/advanced-topics/boot-mode-selection.html"
+    },
+    {
+      "file": "sources/controller-3d.step",
+      "bytes": 16538779,
+      "sha256": "9bcedd033637555746d4ba873864da52edab18520b62c7f764d523d8fd3e75b4",
+      "archive": "sources/controller-3d.zip",
+      "archive_member_type": ".step"
+    },
+    {
+      "file": "sources/controller-3d.zip",
+      "bytes": 2851212,
+      "sha256": "2edf965c20a7e3804b379e76ec2e432db10e8079f784f1db89f613527af99932",
+      "url": "https://files.waveshare.com/wiki/ESP32-S3-DEV-KIT-N8R8/ESP32-S3-DEV-KIT-N8R8_20260110.zip"
+    },
+    {
+      "file": "sources/controller-dimensions.dxf",
+      "bytes": 2665988,
+      "sha256": "e8e0d640f24396d2a2a5067494d75721ff0ca7b8aaf5180da53dc8f2d2121433",
+      "archive": "sources/controller-3d.zip",
+      "archive_member_type": ".dxf"
+    },
+    {
+      "file": "sources/controller-dimensions.pdf",
+      "bytes": 71780,
+      "sha256": "26bb8ee7337f0383bfe13c445e43b2e8d0a1007f320981e60dc623017fe7a6f1",
+      "archive": "sources/controller-3d.zip",
+      "archive_member_type": ".pdf"
+    },
+    {
+      "file": "sources/controller-schematic.pdf",
+      "bytes": 438419,
+      "sha256": "73285a0b5c8f3603b73a6cb07be95146f5bb9f707fbea6d5aafb04d410ceb7b8",
+      "url": "https://files.waveshare.com/wiki/ESP32-S3-DEV-KIT-N8R8/ESP32-S3-DEV-KIT-N8R8-schematic.pdf"
+    },
+    {
+      "file": "sources/dimensions.webp",
+      "bytes": 48232,
+      "sha256": "a68452945a7b357ed10b22a77e5d1eb184d259a063b50e48ade352fa27b2a15e",
+      "url": "https://docs.waveshare.com/assets/images/ESP32-S3-DEV-KIT-N8R8-details-size-de1bb65d3985c613f06a65417479c2c5.webp"
+    },
+    {
+      "file": "sources/esp32-s3-wroom-datasheet.pdf",
+      "bytes": 1280501,
+      "sha256": "27d71971da07c280c6068d08c74720d1a25b8f20cf8494dc1765bdd28d40d435",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf"
+    },
+    {
+      "file": "sources/kemet-100nf.pdf",
+      "bytes": 287464,
+      "sha256": "dfafcced3a85c99ce7b1e300dfb4be8af9475da166254263afcadb246b0b84b5",
+      "url": "https://search.kemet.com/download/specsheet/C0805C104K5RACTU"
+    },
+    {
+      "file": "sources/kemet-10uf.pdf",
+      "bytes": 287597,
+      "sha256": "90a3a633410ed4e39b2b9db1793c414d4f69407b40a57313d0c3aa87ace17ddf",
+      "url": "https://search.kemet.com/component-documentation/download/specsheet/C1206C106K3RAC7800"
+    },
+    {
+      "file": "sources/pinout.webp",
+      "bytes": 97626,
+      "sha256": "3f0e168281bed7f365d2dfb657500d92ee134c6f322b5376e97dac5519c27ab7",
+      "url": "https://docs.waveshare.com/assets/images/ESP32-S3-DEV-KIT-N8R8-details-13-d6828c78fd0babb4a15b7ebb6b6872ff.webp"
+    },
+    {
+      "file": "sources/tlv1117lv.pdf",
+      "bytes": 1052119,
+      "sha256": "84091b2a9521014cf80b72dca4cf6edf4dba2773d4aaec0d5716dbd1ff412bb8",
+      "url": "https://www.ti.com/lit/ds/symlink/tlv1117lv.pdf"
+    },
+    {
+      "file": "sources/ap7361c.pdf",
+      "bytes": 931328,
+      "sha256": "9b64f49c5975b2baf2360248a75212599bde8bf083d315d936e4f1c93b2e1f92",
+      "url": "https://www.diodes.com/datasheet/download/AP7361C.pdf",
+      "also_verified_identical_url": "https://www.diodes.com/assets/Datasheets/AP7361C.pdf",
+      "document": "DS37274Rev5-2,October2020",
+      "official_product_page_links_this_url": true
+    },
+    {
+      "file": "sources/kicad-SOT-223-3_TabPin2.kicad_mod",
+      "bytes": 1856,
+      "sha256": "d0c42456d9abf96fbcc106d1cf570472c20d51a2194243ae7696d4772d3c6a64",
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-footprints/master/Package_TO_SOT_SMD.pretty/SOT-223-3_TabPin2.kicad_mod"
+    }
+  ],
+  "pages_inspected": [
+    {
+      "url": "https://docs.waveshare.com/ESP32-S3-DEV-KIT-N8R8/Resources-And-Documents",
+      "method": "live official docs in browser; source links extracted from article"
+    },
+    {
+      "url": "https://docs.waveshare.com/ESP32-S3-DEV-KIT-N8R8",
+      "method": "live official documentation; header image and dimension image extracted"
+    },
+    {
+      "url": "https://www.waveshare.com/wiki/ESP32-S3-DEV-KIT-N8R8",
+      "method": "official search index accessible; direct fetch HTTP 403; outdated GPIO35/36/37 claim rejected in favor of Espressif datasheet"
+    },
+    {
+      "url": "https://docs.waveshare.com/ESP32-S3-DEV-KIT-N8R8/FAQ",
+      "method": "official documentation; CH343/native USB identity confirmed"
+    },
+    {
+      "url": "https://www.ti.com/product/TLV1117LV/part-details/TLV1117LV33DCYR",
+      "method": "official product page confirms exact order code active and SOT-223 package"
+    },
+    {
+      "url": "https://smc-diodes.com/propdf/B5819WS%20N2030%20REV.A.pdf",
+      "method": "Official PDF read with web PDF tool. Direct download did not complete successfully. Datasheet shows1A average current,250mW dissipation,500C/W. Reference family only; fitted D1 manufacturer unknown."
+    },
+    {
+      "url": "https://www.diodes.com/part/view/AP7361C",
+      "method": "Official product page Datasheet link39 resolves to the requested AP7361C download PDF."
+    }
+  ],
+  "failed_attempts": [
+    "Murata printable datasheet URLs returned HTML rather than PDF. Replaced capacitor choices with downloaded KEMET exact-part PDFs."
+  ]
+}

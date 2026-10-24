@@ -1,0 +1,81 @@
+{
+  "status": "pass",
+  "scope": "Saved-artifact parsing, copper clearance, routed connectivity, edge/hole/antenna keepout, schematic-PCB equivalence. NOT KiCad ERC/DRC or physical validation.",
+  "kicad_erc": "pass",
+  "kicad_drc": "pass",
+  "pcb_sha256": "693d1665eff8aad079659388e0f69ff8a422e1953bacf7669a900d5f7c645b03",
+  "schematic_sha256": "55153318e21edbbb1ad7abd6ff94df1e19899216637f920012289031a46a1bd5",
+  "footprints": 28,
+  "schematic_symbols": 24,
+  "tracks": 442,
+  "vias": 43,
+  "filled_copper_polygons": 11,
+  "nets": {
+    "+3V3_RADIO": {
+      "pad_count": 14,
+      "connected_groups": 1
+    },
+    "GND": {
+      "pad_count": 18,
+      "connected_groups": 1
+    },
+    "RADIO_A_BUSY": {
+      "pad_count": 2,
+      "connected_groups": 1
+    },
+    "RADIO_A_CS_N": {
+      "pad_count": 3,
+      "connected_groups": 1
+    },
+    "RADIO_A_DIO11": {
+      "pad_count": 3,
+      "connected_groups": 1
+    },
+    "RADIO_A_RESET_N": {
+      "pad_count": 3,
+      "connected_groups": 1
+    },
+    "RADIO_B_BUSY": {
+      "pad_count": 2,
+      "connected_groups": 1
+    },
+    "RADIO_B_CS_N": {
+      "pad_count": 3,
+      "connected_groups": 1
+    },
+    "RADIO_B_DIO11": {
+      "pad_count": 3,
+      "connected_groups": 1
+    },
+    "RADIO_B_RESET_N": {
+      "pad_count": 3,
+      "connected_groups": 1
+    },
+    "SPI_MISO": {
+      "pad_count": 3,
+      "connected_groups": 1
+    },
+    "SPI_MOSI": {
+      "pad_count": 3,
+      "connected_groups": 1
+    },
+    "SPI_MOSI_HOST": {
+      "pad_count": 2,
+      "connected_groups": 1
+    },
+    "SPI_SCK": {
+      "pad_count": 3,
+      "connected_groups": 1
+    },
+    "SPI_SCK_HOST": {
+      "pad_count": 2,
+      "connected_groups": 1
+    },
+    "USB_5V": {
+      "pad_count": 4,
+      "connected_groups": 1
+    }
+  },
+  "minimum_clearance_near_threshold_mm": 0.2505,
+  "errors": []
+}

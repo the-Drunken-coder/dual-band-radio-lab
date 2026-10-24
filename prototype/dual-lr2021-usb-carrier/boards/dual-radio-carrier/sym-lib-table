@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "dual-radio-carrier") (type "KiCad") (uri "${KIPRJMOD}/dual-radio-carrier.kicad_sym") (options "") (descr "Local carrier symbols")))

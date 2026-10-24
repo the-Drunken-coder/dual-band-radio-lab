@@ -1,0 +1,1451 @@
+{
+  "schema_version": 1,
+  "verified_date": "2026-10-24",
+  "manufacturer": "Waveshare",
+  "part": "ESP32-S3-DEV-KIT-N8R8-M",
+  "sku": 24243,
+  "module_on_controller": "ESP32-S3-WROOM-1-N8R8",
+  "source_manifest": "sources.json",
+  "verification_scope": {
+    "documents_and_geometry": true,
+    "physical_sample_measured": false,
+    "electrical_bench_tested": false,
+    "canonical_design_files_modified": false,
+    "manufacturing_release": false
+  },
+  "numbering": {
+    "basis": "Waveshare schematic P1 and P2, each independently numbered 1 through 22. These are development-board header numbers, not WROOM castellated pad numbers.",
+    "view": "Top/component side, antenna at top, USB-C at bottom. P1 left; P2 right. Both pin 1 positions at antenna end.",
+    "carrier_pad_convention_if_single_44_pad_footprint": "Not used: user chose two separate1x22 connector footprints.",
+    "carrier_connector_assignment": "Suggested separate carrier sockets: J1=P1,physical right withUSB up; J2=P2,physical left withUSB up. Preserve official header pin numbers1..22 in each connector."
+  },
+  "mechanical": {
+    "units": "mm",
+    "header_rows": 2,
+    "pins_per_row": 22,
+    "header_pitch": 2.54,
+    "row_center_spacing": 22.86,
+    "first_to_last_pin_span": 53.34,
+    "body_length_nominal": 63.3,
+    "body_width_nominal": 25.4,
+    "pcb_thickness_nominal": 1.6,
+    "header_pin_extent_below_pcb_nominal": 8.5,
+    "mount_hole_diameter_nominal": 2.0,
+    "mount_hole_center_spacing_longitudinal_nominal": 59.7,
+    "mount_hole_center_spacing_transverse_nominal": 21.8,
+    "mount_hole_center_offset_from_edges_nominal": 1.8,
+    "body_envelope_relative_to_P1_1": {
+      "left": -1.26,
+      "right": 24.14,
+      "antenna_end": -4.91,
+      "usb_end": 58.39,
+      "status": "Approximate placement envelope combining nominal drawing with rounded STEP header offsets; do not treat as tolerance boundary."
+    },
+    "usb_connector_model_bounds_in_native_frame": "extracted/step-measurements.json",
+    "usb_shell_projection_beyond_usb_end_edge_approx": 0.29,
+    "usb_H1_max_component_height_above_pcb_top_model": 3.2495,
+    "usb_cable_clearance": "Place USB end at a carrier edge or provide a cable opening. Reserve clearance for the chosen plug overmold; no universal cable envelope is specified.",
+    "source_quality": "63.3/25.4/1.6/8.5 and mount dimensions from official 20260110 PDF; pitch and spacing extracted from 44 STEP board-hole cylinders, nominal values rounded to 0.01 mm. USB projection extracted from H1 assembly vertices. Not tolerance guarantees.",
+    "antenna_rule": "Keep carrier copper, components, and metal away from antenna region; preferably let controller antenna end project beyond carrier edge. Apply Espressif antenna placement guidance during canonical layout."
+  },
+  "headers": {
+    "P1": [
+      {
+        "pin": 1,
+        "name": "3V3",
+        "position_mm_from_P1_1": [
+          0,
+          0.0
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 2,
+        "name": "3V3",
+        "position_mm_from_P1_1": [
+          0,
+          2.54
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 3,
+        "name": "EN",
+        "position_mm_from_P1_1": [
+          0,
+          5.08
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 4,
+        "name": "GPIO4",
+        "position_mm_from_P1_1": [
+          0,
+          7.62
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 5,
+        "name": "GPIO5",
+        "position_mm_from_P1_1": [
+          0,
+          10.16
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 6,
+        "name": "GPIO6",
+        "position_mm_from_P1_1": [
+          0,
+          12.7
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 7,
+        "name": "GPIO7",
+        "position_mm_from_P1_1": [
+          0,
+          15.24
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 8,
+        "name": "GPIO15",
+        "position_mm_from_P1_1": [
+          0,
+          17.78
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 9,
+        "name": "GPIO16",
+        "position_mm_from_P1_1": [
+          0,
+          20.32
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 10,
+        "name": "GPIO17",
+        "position_mm_from_P1_1": [
+          0,
+          22.86
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 11,
+        "name": "GPIO18",
+        "position_mm_from_P1_1": [
+          0,
+          25.4
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 12,
+        "name": "GPIO8",
+        "position_mm_from_P1_1": [
+          0,
+          27.94
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 13,
+        "name": "GPIO3",
+        "position_mm_from_P1_1": [
+          0,
+          30.48
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 14,
+        "name": "GPIO46",
+        "position_mm_from_P1_1": [
+          0,
+          33.02
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 15,
+        "name": "GPIO9",
+        "position_mm_from_P1_1": [
+          0,
+          35.56
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 16,
+        "name": "GPIO10",
+        "position_mm_from_P1_1": [
+          0,
+          38.1
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 17,
+        "name": "GPIO11",
+        "position_mm_from_P1_1": [
+          0,
+          40.64
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 18,
+        "name": "GPIO12",
+        "position_mm_from_P1_1": [
+          0,
+          43.18
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 19,
+        "name": "GPIO13",
+        "position_mm_from_P1_1": [
+          0,
+          45.72
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 20,
+        "name": "GPIO14",
+        "position_mm_from_P1_1": [
+          0,
+          48.26
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 21,
+        "name": "USB5V_DIODE",
+        "position_mm_from_P1_1": [
+          0,
+          50.8
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 22,
+        "name": "GND",
+        "position_mm_from_P1_1": [
+          0,
+          53.34
+        ],
+        "reserved": true
+      }
+    ],
+    "P2": [
+      {
+        "pin": 1,
+        "name": "GND",
+        "position_mm_from_P1_1": [
+          22.86,
+          0.0
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 2,
+        "name": "GPIO43",
+        "position_mm_from_P1_1": [
+          22.86,
+          2.54
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 3,
+        "name": "GPIO44",
+        "position_mm_from_P1_1": [
+          22.86,
+          5.08
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 4,
+        "name": "GPIO1",
+        "position_mm_from_P1_1": [
+          22.86,
+          7.62
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 5,
+        "name": "GPIO2",
+        "position_mm_from_P1_1": [
+          22.86,
+          10.16
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 6,
+        "name": "GPIO42",
+        "position_mm_from_P1_1": [
+          22.86,
+          12.7
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 7,
+        "name": "GPIO41",
+        "position_mm_from_P1_1": [
+          22.86,
+          15.24
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 8,
+        "name": "GPIO40",
+        "position_mm_from_P1_1": [
+          22.86,
+          17.78
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 9,
+        "name": "GPIO39",
+        "position_mm_from_P1_1": [
+          22.86,
+          20.32
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 10,
+        "name": "GPIO38",
+        "position_mm_from_P1_1": [
+          22.86,
+          22.86
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 11,
+        "name": "GPIO37",
+        "position_mm_from_P1_1": [
+          22.86,
+          25.4
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 12,
+        "name": "GPIO36",
+        "position_mm_from_P1_1": [
+          22.86,
+          27.94
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 13,
+        "name": "GPIO35",
+        "position_mm_from_P1_1": [
+          22.86,
+          30.48
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 14,
+        "name": "GPIO0",
+        "position_mm_from_P1_1": [
+          22.86,
+          33.02
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 15,
+        "name": "GPIO45",
+        "position_mm_from_P1_1": [
+          22.86,
+          35.56
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 16,
+        "name": "GPIO48",
+        "position_mm_from_P1_1": [
+          22.86,
+          38.1
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 17,
+        "name": "GPIO47",
+        "position_mm_from_P1_1": [
+          22.86,
+          40.64
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 18,
+        "name": "GPIO21",
+        "position_mm_from_P1_1": [
+          22.86,
+          43.18
+        ],
+        "reserved": false
+      },
+      {
+        "pin": 19,
+        "name": "GPIO20",
+        "position_mm_from_P1_1": [
+          22.86,
+          45.72
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 20,
+        "name": "GPIO19",
+        "position_mm_from_P1_1": [
+          22.86,
+          48.26
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 21,
+        "name": "GND",
+        "position_mm_from_P1_1": [
+          22.86,
+          50.8
+        ],
+        "reserved": true
+      },
+      {
+        "pin": 22,
+        "name": "GND",
+        "position_mm_from_P1_1": [
+          22.86,
+          53.34
+        ],
+        "reserved": true
+      }
+    ]
+  },
+  "selected_radio_signals": [
+    {
+      "signal": "SPI_SCK",
+      "gpio": 12,
+      "header": "P1",
+      "header_pin": 18,
+      "direction_at_controller": "controller_output",
+      "controller_pad_net": "SPI_SCK_MCU"
+    },
+    {
+      "signal": "SPI_MOSI",
+      "gpio": 11,
+      "header": "P1",
+      "header_pin": 17,
+      "direction_at_controller": "controller_output",
+      "controller_pad_net": "SPI_MOSI_MCU"
+    },
+    {
+      "signal": "SPI_MISO",
+      "gpio": 13,
+      "header": "P1",
+      "header_pin": 19,
+      "direction_at_controller": "controller_input",
+      "controller_pad_net": "SPI_MISO"
+    },
+    {
+      "signal": "RADIO_A_CS_N",
+      "gpio": 10,
+      "header": "P1",
+      "header_pin": 16,
+      "direction_at_controller": "controller_output",
+      "controller_pad_net": "RADIO_A_CS_N"
+    },
+    {
+      "signal": "RADIO_A_DIO11",
+      "gpio": 4,
+      "header": "P1",
+      "header_pin": 4,
+      "direction_at_controller": "controller_input",
+      "controller_pad_net": "RADIO_A_DIO11"
+    },
+    {
+      "signal": "RADIO_A_BUSY",
+      "gpio": 5,
+      "header": "P1",
+      "header_pin": 5,
+      "direction_at_controller": "controller_input",
+      "controller_pad_net": "RADIO_A_BUSY"
+    },
+    {
+      "signal": "RADIO_A_RESET_N",
+      "gpio": 6,
+      "header": "P1",
+      "header_pin": 6,
+      "direction_at_controller": "controller_output",
+      "controller_pad_net": "RADIO_A_RESET_N"
+    },
+    {
+      "signal": "RADIO_B_CS_N",
+      "gpio": 9,
+      "header": "P1",
+      "header_pin": 15,
+      "direction_at_controller": "controller_output",
+      "controller_pad_net": "RADIO_B_CS_N"
+    },
+    {
+      "signal": "RADIO_B_DIO11",
+      "gpio": 7,
+      "header": "P1",
+      "header_pin": 7,
+      "direction_at_controller": "controller_input",
+      "controller_pad_net": "RADIO_B_DIO11"
+    },
+    {
+      "signal": "RADIO_B_BUSY",
+      "gpio": 15,
+      "header": "P1",
+      "header_pin": 8,
+      "direction_at_controller": "controller_input",
+      "controller_pad_net": "RADIO_B_BUSY"
+    },
+    {
+      "signal": "RADIO_B_RESET_N",
+      "gpio": 16,
+      "header": "P1",
+      "header_pin": 9,
+      "direction_at_controller": "controller_output",
+      "controller_pad_net": "RADIO_B_RESET_N"
+    }
+  ],
+  "reserved_gpio_groups": {
+    "native_usb_jtag": [
+      19,
+      20
+    ],
+    "uart_programming": [
+      43,
+      44
+    ],
+    "strapping": [
+      0,
+      3,
+      45,
+      46
+    ],
+    "internal_psram": [
+      35,
+      36,
+      37
+    ],
+    "onboard_rgb_confirmed": [
+      38
+    ],
+    "user_requested_led_reserve": [
+      48
+    ],
+    "external_jtag_also_left_unused": [
+      39,
+      40,
+      41,
+      42
+    ]
+  },
+  "spi": {
+    "host_recommendation": "ESP32-S3 SPI2/FSPI general-purpose host; GPIO12 FSPICLK, GPIO11 FSPID, GPIO13 FSPIQ",
+    "shared_nets": [
+      "SPI_SCK",
+      "SPI_MOSI",
+      "SPI_MISO"
+    ],
+    "separate_nets_per_radio": [
+      "CS_N",
+      "DIO11",
+      "BUSY",
+      "RESET_N"
+    ],
+    "firmware": "Initialize both CS high before SPI activity. Serialize transactions, select one radio at a time, wait for its BUSY low, and explicitly initialize/reset both radios after controller boot. Radio command timings remain the radio workstream responsibility.",
+    "pullups": [
+      {
+        "signals": [
+          "RADIO_A_CS_N",
+          "RADIO_B_CS_N"
+        ],
+        "ohms": 47000,
+        "rail": "RADIO_3V3"
+      },
+      {
+        "signals": [
+          "RADIO_A_RESET_N",
+          "RADIO_B_RESET_N"
+        ],
+        "ohms": 10000,
+        "rail": "RADIO_3V3"
+      }
+    ],
+    "series_damping": [
+      {
+        "gpio": 12,
+        "ohms": 33,
+        "controller_net": "SPI_SCK_MCU",
+        "radio_bus_net": "SPI_SCK",
+        "placement": "AtMCU header pinP1.18, before shared bus fanout"
+      },
+      {
+        "gpio": 11,
+        "ohms": 33,
+        "controller_net": "SPI_MOSI_MCU",
+        "radio_bus_net": "SPI_MOSI",
+        "placement": "AtMCU header pinP1.17,before shared bus fanout"
+      }
+    ],
+    "series_damping_note": "One resistor per shared signal, not one per radio. MISO stays direct.33ohm is initial damping value; validate waveform/timing with final traces and selected SPI clock."
+  },
+  "usb_and_reset": {
+    "physical_usb_ports": 1,
+    "hub": "CH334F U3",
+    "usb_uart_bridge": "CH343P U4",
+    "native_usb_path": "H1 -> CH334F USB1 -> GPIO20 D+ and GPIO19 D-",
+    "uart_path": "H1 -> CH334F USB2 -> CH343P -> U0RXD GPIO44 and U0TXD GPIO43",
+    "recommended_agent_flashing_interface": "CH343 USB-to-UART serial device; stable hardware reset/boot control independent of flashed application native USB configuration.",
+    "automatic_boot_circuit": "U4 DTR pin12 and RTS pin13 feed VT1/VT2 S8050 cross-coupled transistor circuit via R4/R6 12k to EN and GPIO0.",
+    "existing_en_capacitance_uf": 5.7,
+    "existing_en_capacitance_details": "C5 1uF plus C8 4.7uF, both EN-to-GND in official schematic.",
+    "existing_boot_capacitance_uf": 1.0,
+    "boot_rule": "Hold GPIO0 low while releasing EN/reset; leave GPIO46 unforced so its default low is retained.",
+    "truth_table_logic_levels_not_asserted_flags": [
+      {
+        "DTR": 1,
+        "RTS": 1,
+        "EN": 1,
+        "GPIO0": 1
+      },
+      {
+        "DTR": 0,
+        "RTS": 0,
+        "EN": 1,
+        "GPIO0": 1
+      },
+      {
+        "DTR": 1,
+        "RTS": 0,
+        "EN": 0,
+        "GPIO0": 1
+      },
+      {
+        "DTR": 0,
+        "RTS": 1,
+        "EN": 1,
+        "GPIO0": 0
+      }
+    ],
+    "manual_controls": "BOOT S1 pulls GPIO0 low; RESET S2 pulls EN low. Preserve access.",
+    "external_auto_reset_circuit_required": false,
+    "host_software": "Use data-capable USB cable. Identify CH343 vs Espressif serial device; use esptool reset flow. Serial terminal DTR/RTS settings can reset the MCU."
+  },
+  "power": {
+    "header_5v": {
+      "header": "P1",
+      "pin": 21,
+      "silkscreen": "5V0 / 5V",
+      "schematic_net": "VCC_5V / VDDUSB",
+      "path": "USB-C H1 VBUS -> D1 B5819WS anode pin1 -> cathode pin2 VDDUSB -> P1.21 and U2 input",
+      "voltage": "USB VBUS minus D1 forward drop; not guaranteed exactly 5.0 V.",
+      "rated_external_current_ma": null,
+      "current_limit_statement": "No explicit external-load guarantee, current limiter, or fuse in official schematic. D1 fitted manufacturer, thermal margin, trace capacity, and host power allowance are not specified. A nominal 1A diode family rating cannot establish safe header current.",
+      "backfeed": "D1 orientation blocks a directly driven P1.21 from feeding upstream USB VBUS through D1. This is not a complete powered-host/self-powered USB compliance guarantee."
+    },
+    "controller_3v3": {
+      "header": "P1",
+      "pins": [
+        1,
+        2
+      ],
+      "net": "VDD3V3",
+      "regulator": "U2 SGM2212-3.3 / AMS1117 per schematic; exact fitted variant unspecified",
+      "connection_to_radio_regulator_output": "DO NOT CONNECT. Use separate RADIO_3V3, common GND."
+    },
+    "usb_type_c": "R9/R10 5.1k Rd to GND; no PD controller or source-current measurement shown. USB-C connector alone does not establish a 1A power budget.",
+    "recommended_radio_regulator": {
+      "mpn": "AP7361C-33E-13",
+      "manufacturer": "Diodes Incorporated",
+      "package": "SOT223",
+      "package_code": "E",
+      "selection_status": "Selected per user preference; verified against currently linked official AP7361C datasheet, not AP7361 predecessor.",
+      "nominal_output_v": 3.3,
+      "rated_output_current_a": 1.0,
+      "design_radio_budget_ma": 300,
+      "pins": {
+        "1": "USB5V_DIODE IN",
+        "2": "GND",
+        "3": "RADIO_3V3 OUT",
+        "tab": "GND, electrically pin2"
+      },
+      "footprint": "Package_TO_SOT_SMD:SOT-223-3_TabPin2",
+      "footprint_contract": {
+        "pad1": "USB5V_DIODE",
+        "pad2_lead": "GND",
+        "pad2_tab": "GND",
+        "pad3": "RADIO_3V3"
+      },
+      "footprint_reference_file": "sources/kicad-SOT-223-3_TabPin2.kicad_mod",
+      "footprint_hint": "Use a symbol with1IN2GND3OUT. Generic1117/TLV1117LV symbol is wrong even though the physical SOT223 footprint can be the same.",
+      "enable": "Always on; SOT223 package has no EN pin. No module power switching.",
+      "cin": "10uF25V X7R C1206C106K3RACTU atIN/GND; datasheet recommends at least1uF input ceramic.",
+      "cout": "10uF25V X7R C1206C106K3RACTU atOUT/GND; maintain at least2.2uF effective output capacitance across bias,temperature,tolerance and aging.",
+      "stability": "Datasheet specifies ceramic output capacitance at least2.2uF; no minimum load. Typical application uses4.7uF input/output.",
+      "input_operating_range_v": [
+        2.2,
+        6.0
+      ],
+      "dropout_max_v_at_300ma": 0.14,
+      "thermal_rtheta_ja_c_per_w": 110,
+      "thermal_conditions": "Datasheet p6: SOT223 onFR4 with minimum recommended pad layout. Actual copper and airflow change result. Spread heat from ground tab into GND copper.",
+      "reverse_current": "Do not externally driveRADIO_3V3 or connect it to controller3V3. The selected datasheet does not specify reverse-current blocking.",
+      "confusable_variant": {
+        "mpn": "AP7361C-33ER-13",
+        "package_code": "ER",
+        "package": "SOT223R",
+        "pins": {
+          "1": "GND",
+          "2": "OUT",
+          "3": "IN",
+          "tab": "OUT, electrically pin2"
+        },
+        "substitution_allowed": false
+      },
+      "datasheet": {
+        "file": "sources/ap7361c.pdf",
+        "url": "https://www.diodes.com/datasheet/download/AP7361C.pdf",
+        "document": "DS37274 Rev.5-2,October2020",
+        "current_product_page": "https://www.diodes.com/part/view/AP7361C",
+        "verified_pages_one_based": {
+          "pin_assignments": 1,
+          "pin_table": 2,
+          "thermal": 6,
+          "capacitors": 10,
+          "no_enable_in_SOT223": 11,
+          "ordering_E_vs_ER": 13,
+          "marking_and_pin_functions": 15,
+          "package_dimensions": 19,
+          "vendor_land_pattern": 21
+        },
+        "note": "Both official download and assets URLs served identical bytes at verification. This is the revision presently linked by the official product page."
+      }
+    },
+    "radio_local_decoupling_per_module": {
+      "bulk": "10uF 25V X7R C1206C106K3RACTU",
+      "high_frequency": "100nF 50V X7R C0805C104K5RACTU",
+      "placement": "Across radio supply and GND near socket, short returns to GND plane"
+    },
+    "budget": {
+      "per_radio_tx_ma_user_supplied_approx": 105,
+      "simultaneous_two_radio_tx_ma_approx": 210,
+      "radio_design_current_ma": 300,
+      "power_at_5v_210ma": {
+        "output_w": 0.693,
+        "ldo_loss_w": 0.357,
+        "TLV1117LV_estimated_rise_c": 22.46,
+        "AP2112K_estimated_rise_c": 65.69,
+        "AP7361C_SOT223_estimated_rise_c": 39.27
+      },
+      "power_at_5v_250ma": {
+        "ldo_loss_w": 0.425,
+        "TLV1117LV_estimated_rise_c": 26.73,
+        "AP2112K_estimated_rise_c": 78.2,
+        "AP7361C_SOT223_estimated_rise_c": 46.75
+      },
+      "thermal_basis": "Selected AP7361C SOT223 uses110C/W from current official datasheetp6. AP2112 SOT25 comparison uses184C/W. Previous TLV1117LV values,where present,are comparison only and do not describe AP7361C. Estimates are not measured temperatures.",
+      "controller_module_wifi_tx_peak_ma_datasheet": 355,
+      "lower_bound_simultaneous_wifi_and_radios_ma": 565,
+      "budget_inference": "355mA controller module Wi-Fi peak +210mA radios already565mA before hub,bridge,LEDs and margin. Do not claim a500mA USB2 port suffices. Plan a validated5V host source with at least1A allowance; port power allowance and D1/trace thermal checks remain necessary.",
+      "suggested_system_peak_design_allowance_ma": 850,
+      "system_allowance_is_measured": false,
+      "power_at_5v_300ma": {
+        "ldo_loss_w": 0.51,
+        "TLV1117LV_estimated_rise_c": 32.079,
+        "AP2112K_estimated_rise_c": 93.84,
+        "AP7361C_SOT223_estimated_rise_c": 56.1
+      }
+    },
+    "acceptance_before_release": [
+      "Measure P1.21 and RADIO_3V3 during simultaneous TX and any intended Wi-Fi workload with the actual laptop and cable.",
+      "Check D1 and LDO temperatures at maximum intended ambient and duty cycle.",
+      "Confirm host current allowance, USB attach/inrush behavior, and sustained current.",
+      "Exercise repeated automatic flash, hard reset, boot and both radio reset initialization through CH343."
+    ],
+    "bom": [
+      {
+        "quantity": 1,
+        "mpn": "AP7361C-33E-13",
+        "package": "SOT223",
+        "purpose": "Separate always-on radio3V3 regulator;1IN2GND3OUT/tabGND"
+      },
+      {
+        "quantity": 4,
+        "mpn": "C1206C106K3RACTU",
+        "package": "1206",
+        "purpose": "10uF25V X7R: regulator input,output,and two radio sockets"
+      },
+      {
+        "quantity": 2,
+        "mpn": "C0805C104K5RACTU",
+        "package": "0805",
+        "purpose": "100nF50V X7R: two radio sockets"
+      },
+      {
+        "quantity": 2,
+        "mpn": null,
+        "package": "0805",
+        "requirements": "47k1%,at least0.125W",
+        "purpose": "OneCS_N pullup per radio toRADIO_3V3"
+      },
+      {
+        "quantity": 2,
+        "mpn": null,
+        "package": "0805",
+        "requirements": "10k1%,at least0.125W",
+        "purpose": "OneRESET_N pullup per radio toRADIO_3V3"
+      },
+      {
+        "quantity": 2,
+        "mpn": null,
+        "package": "0805",
+        "requirements": "33ohm1%,at least0.125W",
+        "purpose": "CommonSCK andMOSI series damping,nearMCU and before fanout"
+      }
+    ],
+    "previous_candidate_regulator": {
+      "mpn": "TLV1117LV33DCYR",
+      "manufacturer": "Texas Instruments",
+      "package": "SOT-223 DCY",
+      "nominal_output_v": 3.3,
+      "rated_output_current_a": 1.0,
+      "design_radio_budget_ma": 300,
+      "pins": {
+        "1": "GND",
+        "2": "RADIO_3V3 OUT",
+        "3": "USB5V_DIODE IN",
+        "tab": "RADIO_3V3 OUT"
+      },
+      "footprint_hint": "SOT-223 with tab tied to pin2, never GND.",
+      "enable": "Always on; no EN pin.",
+      "cin": "10uF 25V X7R C1206C106K3RACTU adjacent IN/GND",
+      "cout": "10uF 25V X7R C1206C106K3RACTU adjacent OUT/GND",
+      "stability": "Ceramic and 0-ohm ESR stable; nominal 1uF specified, effective output capacitance must stay above 0.5uF. Selected nominal10uF provides margin; confirm capacitance after bias, temperature and tolerance.",
+      "reverse_current": "Output-to-input body diode is not current limited. Do not feed RADIO_3V3 externally or connect it to controller 3V3.",
+      "selection_status": "Previous candidate, superseded by user preference AP7361C-33E-13; different pin functions, not electrically interchangeable."
+    },
+    "rejected_regulators": [
+      {
+        "mpn": "AP2112K-3.3TRG1",
+        "manufacturer": "Diodes Incorporated",
+        "package": "SOT25 / SOT-23-5",
+        "pins": {
+          "1": "USB5V_DIODE VIN",
+          "2": "GND",
+          "3": "EN tied directly VIN",
+          "4": "NC, leave unconnected",
+          "5": "RADIO_3V3 VOUT"
+        },
+        "rated_output_current_a": 0.6,
+        "input_operating_range_v": [
+          2.5,
+          6.0
+        ],
+        "dropout_max_v_at_300ma": 0.2,
+        "minimum_nominal_input_and_output_cap_uf": 1.0,
+        "capacitor_type": "X5R or X7R ceramic; same proposed 10uF capacitors are suitable in principle",
+        "reason_not_primary": "At 210mA and5V input estimated junction rise is66C using184C/W, versus22C for SOT223. Needs more thermal scrutiny.",
+        "selection_status": "Rejected for this design due to SOT23 thermal rise at sustained radio load."
+      }
+    ],
+    "module_power_switching": false,
+    "radio_reset_control": "Individual RESET_N GPIOs only; both radios powered continuously fromRADIO_3V3."
+  },
+  "document_conflicts": [
+    {
+      "topic": "GPIO35/36/37",
+      "finding": "Legacy wiki describes them as functional for N8R8. Current Waveshare docs and Espressif module datasheet say octal PSRAM consumes them. Do not use."
+    },
+    {
+      "topic": "RGB GPIO",
+      "finding": "Waveshare schematic and pinout show GPIO38. GPIO48 is additionally reserved per task instruction."
+    },
+    {
+      "topic": "body edge precision",
+      "finding": "STEP board vertices extend slightly beyond nominal body drawing. Use nominal drawing dimensions plus mechanical clearance; STEP does not define production tolerances."
+    }
+  ],
+  "limitations": [
+    "Document verification only. No KiCad/FreeCAD, fabrication checks, physical fit checks, or bench power/flashing tests performed.",
+    "Controller external5V current limit is unknown. Separate radio LDO does not remove D1 or host-current limitations.",
+    "Radio105mA value supplied in task and not a guaranteed module-wide maximum. Parent radio verification must add module consumption and operating margins."
+  ],
+  "carrier_orientation": {
+    "view": "Top/component side,USB-C at top,controller antenna at bottom.180degree in-plane rotation of vendor pinout; not a bottom-view mirror.",
+    "board_size_mm_proposed": [
+      100,
+      75
+    ],
+    "controller_placement": "Left side withUSB at top edge; two radios next to each other to the right.",
+    "connector_assignment_is_proposed": true,
+    "left_connector": "J2=P2",
+    "right_connector": "J1=P1",
+    "socket_type": "Two1x22 female2.54mm pitch sockets; rows22.86mm apart",
+    "pin1_location": "Bottom/antenna end for both sockets; pin22 at top/USB end.",
+    "rows_top_to_bottom": [
+      {
+        "position_top_to_bottom": 1,
+        "y_mm_from_top_pin": 0.0,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 22,
+          "function": "GND",
+          "xy_mm": [
+            0,
+            0.0
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 22,
+          "function": "GND",
+          "xy_mm": [
+            22.86,
+            0.0
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 2,
+        "y_mm_from_top_pin": 2.54,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 21,
+          "function": "GND",
+          "xy_mm": [
+            0,
+            2.54
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 21,
+          "function": "USB5V_DIODE",
+          "xy_mm": [
+            22.86,
+            2.54
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 3,
+        "y_mm_from_top_pin": 5.08,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 20,
+          "function": "GPIO19",
+          "xy_mm": [
+            0,
+            5.08
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 20,
+          "function": "GPIO14",
+          "xy_mm": [
+            22.86,
+            5.08
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 4,
+        "y_mm_from_top_pin": 7.62,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 19,
+          "function": "GPIO20",
+          "xy_mm": [
+            0,
+            7.62
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 19,
+          "function": "GPIO13",
+          "xy_mm": [
+            22.86,
+            7.62
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 5,
+        "y_mm_from_top_pin": 10.16,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 18,
+          "function": "GPIO21",
+          "xy_mm": [
+            0,
+            10.16
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 18,
+          "function": "GPIO12",
+          "xy_mm": [
+            22.86,
+            10.16
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 6,
+        "y_mm_from_top_pin": 12.7,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 17,
+          "function": "GPIO47",
+          "xy_mm": [
+            0,
+            12.7
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 17,
+          "function": "GPIO11",
+          "xy_mm": [
+            22.86,
+            12.7
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 7,
+        "y_mm_from_top_pin": 15.24,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 16,
+          "function": "GPIO48",
+          "xy_mm": [
+            0,
+            15.24
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 16,
+          "function": "GPIO10",
+          "xy_mm": [
+            22.86,
+            15.24
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 8,
+        "y_mm_from_top_pin": 17.78,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 15,
+          "function": "GPIO45",
+          "xy_mm": [
+            0,
+            17.78
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 15,
+          "function": "GPIO9",
+          "xy_mm": [
+            22.86,
+            17.78
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 9,
+        "y_mm_from_top_pin": 20.32,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 14,
+          "function": "GPIO0",
+          "xy_mm": [
+            0,
+            20.32
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 14,
+          "function": "GPIO46",
+          "xy_mm": [
+            22.86,
+            20.32
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 10,
+        "y_mm_from_top_pin": 22.86,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 13,
+          "function": "GPIO35",
+          "xy_mm": [
+            0,
+            22.86
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 13,
+          "function": "GPIO3",
+          "xy_mm": [
+            22.86,
+            22.86
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 11,
+        "y_mm_from_top_pin": 25.4,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 12,
+          "function": "GPIO36",
+          "xy_mm": [
+            0,
+            25.4
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 12,
+          "function": "GPIO8",
+          "xy_mm": [
+            22.86,
+            25.4
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 12,
+        "y_mm_from_top_pin": 27.94,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 11,
+          "function": "GPIO37",
+          "xy_mm": [
+            0,
+            27.94
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 11,
+          "function": "GPIO18",
+          "xy_mm": [
+            22.86,
+            27.94
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 13,
+        "y_mm_from_top_pin": 30.48,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 10,
+          "function": "GPIO38",
+          "xy_mm": [
+            0,
+            30.48
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 10,
+          "function": "GPIO17",
+          "xy_mm": [
+            22.86,
+            30.48
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 14,
+        "y_mm_from_top_pin": 33.02,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 9,
+          "function": "GPIO39",
+          "xy_mm": [
+            0,
+            33.02
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 9,
+          "function": "GPIO16",
+          "xy_mm": [
+            22.86,
+            33.02
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 15,
+        "y_mm_from_top_pin": 35.56,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 8,
+          "function": "GPIO40",
+          "xy_mm": [
+            0,
+            35.56
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 8,
+          "function": "GPIO15",
+          "xy_mm": [
+            22.86,
+            35.56
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 16,
+        "y_mm_from_top_pin": 38.1,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 7,
+          "function": "GPIO41",
+          "xy_mm": [
+            0,
+            38.1
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 7,
+          "function": "GPIO7",
+          "xy_mm": [
+            22.86,
+            38.1
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 17,
+        "y_mm_from_top_pin": 40.64,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 6,
+          "function": "GPIO42",
+          "xy_mm": [
+            0,
+            40.64
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 6,
+          "function": "GPIO6",
+          "xy_mm": [
+            22.86,
+            40.64
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 18,
+        "y_mm_from_top_pin": 43.18,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 5,
+          "function": "GPIO2",
+          "xy_mm": [
+            0,
+            43.18
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 5,
+          "function": "GPIO5",
+          "xy_mm": [
+            22.86,
+            43.18
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 19,
+        "y_mm_from_top_pin": 45.72,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 4,
+          "function": "GPIO1",
+          "xy_mm": [
+            0,
+            45.72
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 4,
+          "function": "GPIO4",
+          "xy_mm": [
+            22.86,
+            45.72
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 20,
+        "y_mm_from_top_pin": 48.26,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 3,
+          "function": "GPIO44",
+          "xy_mm": [
+            0,
+            48.26
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 3,
+          "function": "EN",
+          "xy_mm": [
+            22.86,
+            48.26
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 21,
+        "y_mm_from_top_pin": 50.8,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 2,
+          "function": "GPIO43",
+          "xy_mm": [
+            0,
+            50.8
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 2,
+          "function": "3V3",
+          "xy_mm": [
+            22.86,
+            50.8
+          ]
+        }
+      },
+      {
+        "position_top_to_bottom": 22,
+        "y_mm_from_top_pin": 53.34,
+        "left": {
+          "carrier_ref": "J2",
+          "vendor_header": "P2",
+          "pin": 1,
+          "function": "GND",
+          "xy_mm": [
+            0,
+            53.34
+          ]
+        },
+        "right": {
+          "carrier_ref": "J1",
+          "vendor_header": "P1",
+          "pin": 1,
+          "function": "3V3",
+          "xy_mm": [
+            22.86,
+            53.34
+          ]
+        }
+      }
+    ],
+    "antenna_and_cable_note": "At75mm carrier height and63.3mm controller length,USB at top does not automatically place antenna beyond carrier bottom. Reserve antenna copper/component keepout and actual plug clearance during canonical placement; this note is not a mechanical fit approval."
+  }
+}

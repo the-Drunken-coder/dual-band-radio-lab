@@ -1,0 +1,12 @@
+DUAL LR2021 USB TEST CARRIER - REV A ENGINEERING PROTOTYPE
+One board design; order quantity is a separate decision.
+Nominal board: 100 x 75 mm, 2 copper layers, 1.6 mm FR-4.
+Native KiCad ERC, refilled-zone DRC and schematic parity: all zero findings.
+Independent saved-artifact geometry/connectivity checks: pass.
+Minimum design trace/clearance: 0.25 mm. Via drill: 0.30 mm.
+Socket finished PTH holes: 1.04 mm. Mounting NPTH holes: 3.20 mm.
+SOCKET MATING FIT AND USB POWER/THERMAL CAPACITY ARE NOT PHYSICALLY VERIFIED.
+Check module/socket samples and validate the first assembled units.
+The controller and radio modules plug in after carrier soldering.
+Test points and mounting holes have no purchased assembly components.
+This package was generated locally. Nothing has been ordered or submitted.

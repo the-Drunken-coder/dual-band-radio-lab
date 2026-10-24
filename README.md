@@ -53,6 +53,14 @@ Each radio gets its own bring-up and characterization ladder: 2.4-LoRa, 2.4-FLRC
 
 The plan has explicit pass/stop and purchase gates. Board counts, exact variants and usable peers still need confirmation; candidates remain unselected. Do not order a full four-radio node or fabricate the [Rev A hardware](hardware/README.md) to characterize an individual radio. Its manufacturing hold remains in force.
 
+## Optional LR2021 USB test carrier
+
+The [dual-LR2021 USB test carrier](prototype/dual-lr2021-usb-carrier/README.md) is a separate development platform for laptop-driven radio experiments. It uses a USB-C ESP32-S3 controller and two socketed Core2021-HF-M modules. The archive includes editable KiCad files, pin maps, manufacturer evidence, validation reports, and a prototype fabrication package.
+
+This carrier can test two chosen radio profiles at once. It does not provide the four persistent receive lanes or use the existing Rev A daughtercard interface. Firmware and the laptop test runner remain unimplemented. Physical fit, power, thermal behavior, and RF performance remain unverified.
+
+Treat it as an optional design archive alongside the [individual-radio test plan](docs/staged-rollout.md). Its presence does not approve purchases or change the manufacturing hold on the existing [Rev A hardware](hardware/README.md).
+
 ## Example deployment
 
 A person inside a house connects through a rooftop relay to a drone roughly one mile away. Every node normally keeps the four standardized receive profiles active. For outgoing traffic, the host selects the appropriate lane and that lane's transceiver temporarily changes from RX to TX.

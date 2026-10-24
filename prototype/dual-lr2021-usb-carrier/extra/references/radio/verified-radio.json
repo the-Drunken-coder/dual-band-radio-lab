@@ -1,0 +1,459 @@
+{
+  "schema_version": 1,
+  "verified_at_utc": "2026-10-24T20:04:56.375349+00:00",
+  "product": {
+    "manufacturer": "Waveshare",
+    "part": "Core2021-HF-M",
+    "sku": "34523",
+    "radio_ic": "Semtech LR2021",
+    "official_resources_index": "https://docs.waveshare.com/Core2021-XF/Resources-And-Documents",
+    "official_documentation": "https://docs.waveshare.com/Core2021-XF",
+    "repository_commit": "92dc63be8c6930b27cd1a52b7563aebb581aaa90"
+  },
+  "verification_status": {
+    "electrical_pinout": "verified against official HF schematic U2",
+    "socket_xy_geometry": "verified nominal geometry, independent of conflicting body outline",
+    "body_dimensions": "conflicting official sources, preserve both",
+    "complete_mating_fit": "not fully specified by Waveshare; male post width and exposed length need sample measurement"
+  },
+  "coordinate_system": {
+    "view": "top of installed module and carrier, looking at shield; shield text upright, antenna connectors at right",
+    "origin": "pin 8, upper-left socket hole center",
+    "x_positive": "right",
+    "y_positive": "down",
+    "units": "mm",
+    "pin_1_location": "upper-right, beside the 2.4 GHz antenna connector",
+    "warning": "Published pinout photo is underside view. Do not mirror this top-view coordinate table."
+  },
+  "header_geometry": {
+    "rows": 2,
+    "positions_per_row": 8,
+    "pitch_mm": 2.54,
+    "first_to_last_span_mm": 17.78,
+    "row_center_spacing_mm": 15.24,
+    "header_type": "two straight single-row 1x8 male headers, projecting beneath the module",
+    "assembled_header_evidence": [
+      "store",
+      "presoldered_photo_1",
+      "presoldered_photo_2",
+      "presoldered_photo_3"
+    ],
+    "geometry_evidence": [
+      "dimension_pdf",
+      "dimension_photo"
+    ],
+    "tolerances": "Waveshare drawing does not state header-position tolerances."
+  },
+  "pins": [
+    {
+      "pin": 1,
+      "signal": "2.4G_ANT",
+      "x_mm": 17.78,
+      "y_mm": 0,
+      "carrier_connection": "no_connect",
+      "evidence": [
+        "hf_schematic",
+        "pinout_photo",
+        "presoldered_photo_2",
+        "presoldered_photo_3"
+      ]
+    },
+    {
+      "pin": 2,
+      "signal": "GND",
+      "x_mm": 15.24,
+      "y_mm": 0,
+      "carrier_connection": "signal_or_power",
+      "evidence": [
+        "hf_schematic",
+        "pinout_photo",
+        "presoldered_photo_2",
+        "presoldered_photo_3"
+      ]
+    },
+    {
+      "pin": 3,
+      "signal": "DIO11",
+      "x_mm": 12.7,
+      "y_mm": 0,
+      "carrier_connection": "signal_or_power",
+      "evidence": [
+        "hf_schematic",
+        "pinout_photo",
+        "presoldered_photo_2",
+        "presoldered_photo_3"
+      ]
+    },
+    {
+      "pin": 4,
+      "signal": "DIO8",
+      "x_mm": 10.16,
+      "y_mm": 0,
+      "carrier_connection": "signal_or_power",
+      "evidence": [
+        "hf_schematic",
+        "pinout_photo",
+        "presoldered_photo_2",
+        "presoldered_photo_3"
+      ]
+    },
+    {
+      "pin": 5,
+      "signal": "DIO7",
+      "x_mm": 7.62,
+      "y_mm": 0,
+      "carrier_connection": "signal_or_power",
+      "evidence": [
+        "hf_schematic",
+        "pinout_photo",
+        "presoldered_photo_2",
+        "presoldered_photo_3"
+      ]
+    },
+    {
+      "pin": 6,
+      "signal": "NC",
+      "x_mm": 5.08,
+      "y_mm": 0,
+      "carrier_connection": "no_connect",
+      "evidence": [
+        "hf_schematic",
+        "pinout_photo",
+        "presoldered_photo_2",
+        "presoldered_photo_3"
+      ]
+    },
+    {
+      "pin": 7,
+      "signal": "GND",
+      "x_mm": 2.54,
+      "y_mm": 0,
+      "carrier_connection": "signal_or_power",
+      "evidence": [
+        "hf_schematic",
+        "pinout_photo",
+        "presoldered_photo_2",
+        "presoldered_photo_3"
+      ]
+    },
+    {
+      "pin": 8,
+      "signal": "3V3",
+      "x_mm": 0.0,
+      "y_mm": 0,
+      "carrier_connection": "signal_or_power",
+      "evidence": [
+        "hf_schematic",
+        "pinout_photo",
+        "presoldered_photo_2",
+        "presoldered_photo_3"
+      ]
+    },
+    {
+      "pin": 9,
+      "signal": "BUSY",
+      "x_mm": 0.0,
+      "y_mm": 15.24,
+      "carrier_connection": "signal_or_power",
+      "evidence": [
+        "hf_schematic",
+        "pinout_photo",
+        "presoldered_photo_2",
+        "presoldered_photo_3"
+      ]
+    },
+    {
+      "pin": 10,
+      "signal": "RESET",
+      "x_mm": 2.54,
+      "y_mm": 15.24,
+      "carrier_connection": "signal_or_power",
+      "evidence": [
+        "hf_schematic",
+        "pinout_photo",
+        "presoldered_photo_2",
+        "presoldered_photo_3"
+      ]
+    },
+    {
+      "pin": 11,
+      "signal": "MISO",
+      "x_mm": 5.08,
+      "y_mm": 15.24,
+      "carrier_connection": "signal_or_power",
+      "evidence": [
+        "hf_schematic",
+        "pinout_photo",
+        "presoldered_photo_2",
+        "presoldered_photo_3"
+      ]
+    },
+    {
+      "pin": 12,
+      "signal": "MOSI",
+      "x_mm": 7.62,
+      "y_mm": 15.24,
+      "carrier_connection": "signal_or_power",
+      "evidence": [
+        "hf_schematic",
+        "pinout_photo",
+        "presoldered_photo_2",
+        "presoldered_photo_3"
+      ]
+    },
+    {
+      "pin": 13,
+      "signal": "SCK",
+      "x_mm": 10.16,
+      "y_mm": 15.24,
+      "carrier_connection": "signal_or_power",
+      "evidence": [
+        "hf_schematic",
+        "pinout_photo",
+        "presoldered_photo_2",
+        "presoldered_photo_3"
+      ]
+    },
+    {
+      "pin": 14,
+      "signal": "NSS",
+      "x_mm": 12.7,
+      "y_mm": 15.24,
+      "carrier_connection": "signal_or_power",
+      "evidence": [
+        "hf_schematic",
+        "pinout_photo",
+        "presoldered_photo_2",
+        "presoldered_photo_3"
+      ]
+    },
+    {
+      "pin": 15,
+      "signal": "GND",
+      "x_mm": 15.24,
+      "y_mm": 15.24,
+      "carrier_connection": "signal_or_power",
+      "evidence": [
+        "hf_schematic",
+        "pinout_photo",
+        "presoldered_photo_2",
+        "presoldered_photo_3"
+      ]
+    },
+    {
+      "pin": 16,
+      "signal": "LoRa_ANT",
+      "x_mm": 17.78,
+      "y_mm": 15.24,
+      "carrier_connection": "no_connect",
+      "evidence": [
+        "hf_schematic",
+        "pinout_photo",
+        "presoldered_photo_2",
+        "presoldered_photo_3"
+      ]
+    }
+  ],
+  "body_dimensions": {
+    "official_dimension_pdf": {
+      "length_mm": 22.01,
+      "width_mm": 18.45,
+      "pcb_thickness_mm": 1.0,
+      "pcb_bottom_to_shield_top_mm": 2.5,
+      "left_body_edge_to_left_header_center_mm": 2.11,
+      "antenna_connector_center_to_right_body_edge_mm": 2.26,
+      "antenna_connector_center_spacing_mm": 9.2,
+      "shield_length_mm": 20.07,
+      "shield_width_mm": 12.0,
+      "notes": "22.01/18.45/2.5 are annotations from PDF, not the product photo dimensions."
+    },
+    "official_product_dimension_photo": {
+      "length_mm": 22.0,
+      "width_mm": 19.0,
+      "pcb_bottom_to_top_mm": 3.27,
+      "first_to_last_header_center_mm": 17.78,
+      "row_center_spacing_mm": 15.24,
+      "module_header_hole_diameter_mm": 1.0,
+      "notes": "1.00 is the module hole diameter, not the carrier socket drill. The 1.60 dimension at the lower right refers to castellated pad width."
+    },
+    "design_recommendation": "Keep a generous body clearance envelope covering at least 22.01 x 19.0 mm plus assembly margin. Do not use either body drawing to override the agreed 2.54 x 15.24 header geometry. No exact overall installed height is established for the -M module plus chosen socket."
+  },
+  "antenna": {
+    "ports": [
+      {
+        "reference": "ANT1",
+        "band": "2.4 GHz / HF",
+        "connector": "IPEX4",
+        "top_view_position": "upper-right"
+      },
+      {
+        "reference": "ANT2",
+        "band": "868/915 MHz Sub-GHz",
+        "connector": "IPEX4",
+        "top_view_position": "lower-right"
+      }
+    ],
+    "optional_rf_header_pins": [
+      {
+        "pin": 1,
+        "signal": "2.4G_ANT",
+        "link": "R2 marked NC/0R"
+      },
+      {
+        "pin": 16,
+        "signal": "LoRa_ANT",
+        "link": "R3 marked NC/0R"
+      }
+    ],
+    "carrier_requirement": "Leave carrier pads 1 and 16 isolated, with no traces, planes, testpoints or MCU connections, when using onboard IPEX4 ports. Leave pin 6 isolated too.",
+    "qualification": "This is the carrier design requirement for IPEX4 operation, not a claim that RF pins are intrinsically unconnected. The module schematic permits connection through optional R2/R3. Default RF-pad continuity is not conclusively specified by the NC/0R annotation alone; inspect or measure the received module if relevant.",
+    "evidence": [
+      "hf_schematic",
+      "store",
+      "presoldered_photo_2"
+    ]
+  },
+  "female_socket_reference": {
+    "manufacturer": "Samtec",
+    "part": "SSW-108-01-G-S",
+    "quantity_per_module": 2,
+    "role": "documented candidate socket, not an assertion that Waveshare specifies this manufacturer",
+    "official_product_url": "https://www.samtec.com/products/ssw-108-01-g-s",
+    "pitch_mm": 2.54,
+    "recommended_finished_pth_diameter_mm": 1.04,
+    "pcb_tail_length_mm": 2.64,
+    "body_height_mm": 8.51,
+    "body_width_mm": 2.41,
+    "body_length_nominal_mm": 20.83,
+    "mating_post_nominal_square_mm": 0.635,
+    "mating_insertion_depth_min_mm": 3.68,
+    "mating_insertion_depth_max_mm": 6.35,
+    "suggested_carrier_land": {
+      "copper_diameter_mm": 1.8,
+      "finished_hole_mm": 1.04,
+      "annular_ring_nominal_mm": 0.38,
+      "copper_gap_at_pitch_mm": 0.74,
+      "status": "engineering land-size choice; hole and pitch are manufacturer values. Confirm fabrication drill/plating tolerance in board rules."
+    },
+    "placement": "Put each socket contact center at the corresponding coordinate in pins. Upper socket spans module pins 8 to 1 left-to-right. Lower socket spans module pins 9 to 16 left-to-right. Any two independently numbered 1x8 connector symbols must be mapped to those module numbers explicitly.",
+    "fit_limit": "Waveshare does not specify supplied male pin cross-section, mating length, or header supplier. Do not claim sample-proven Samtec mating fit or installed height without measuring the -M headers.",
+    "evidence": [
+      "socket_footprint",
+      "socket_catalog",
+      "socket_print"
+    ]
+  },
+  "open_items": [
+    "Conflicting official body outline/height dimensions.",
+    "Actual -M male post width, exposed mating length, and assembled height are not dimensioned.",
+    "R2/R3 actual fitted configuration cannot be established from NC/0R schematic text alone."
+  ],
+  "sources": [
+    {
+      "id": "hf_schematic",
+      "file": "Core2021-HF-Schematics.pdf",
+      "url": "https://raw.githubusercontent.com/waveshareteam/core2021-xf/92dc63be8c6930b27cd1a52b7563aebb581aaa90/hardware/schematics/Core2021-HF-Schematics.pdf",
+      "sha256": "d3c0c9d8224478cec2cd2d51b0ca5f227aa73aba94bbd4ddb244e74df6150bac",
+      "bytes": 207701
+    },
+    {
+      "id": "dimension_pdf",
+      "file": "core2021-xf-2D.pdf",
+      "url": "https://raw.githubusercontent.com/waveshareteam/core2021-xf/92dc63be8c6930b27cd1a52b7563aebb581aaa90/hardware/dimensions/core2021-xf-2D.pdf",
+      "sha256": "6e552e98aea5c2f33d357dab35666ac4519dec9543277de1464e22fafee61cec",
+      "bytes": 7426
+    },
+    {
+      "id": "vendor_step",
+      "file": "core2021-xf-3D.stp",
+      "url": "https://raw.githubusercontent.com/waveshareteam/core2021-xf/92dc63be8c6930b27cd1a52b7563aebb581aaa90/hardware/dimensions/core2021-xf-3D.stp",
+      "sha256": "cec30854cf2cf2e072110e1f2525e8c40613cb3cec463bedea0bd37535ebd14b",
+      "bytes": 3696668
+    },
+    {
+      "id": "store",
+      "file": "store.html",
+      "url": "https://www.waveshare.com/core2021-xf.htm?sku=34523",
+      "sha256": "61c71c4398f65cd25afe1eaace4d597846050fa441d17ee696a9f0fa23c146b5",
+      "bytes": 214851
+    },
+    {
+      "id": "pinout_photo",
+      "file": "pinout.webp",
+      "url": "https://docs.waveshare.com/assets/images/Core2021-HF-Product-introduce-02-8055d4bcd0081527f6cc924f00d8c3b0.webp",
+      "sha256": "f6f0af3d01bb98bc8a37aaf26b2bddbbcd2175d176125acac92e823f8dfc319f",
+      "bytes": 33312
+    },
+    {
+      "id": "dimension_photo",
+      "file": "dimensions.webp",
+      "url": "https://docs.waveshare.com/assets/images/Core2021-HF-Product-introduce-03-9592b4d1100c62739ad133b74507ebfc.webp",
+      "sha256": "6e870dc74e38d50564a48b5ef3fa06f22e319f5bcf9900e6c2d8a5e703409eaf",
+      "bytes": 28592
+    },
+    {
+      "id": "bare_module_photo",
+      "file": "product-photo.webp",
+      "url": "https://docs.waveshare.com/assets/images/Core2021-HF-Product-introduce-01-df084b2f93e8f33e785f1073291d594e.webp",
+      "sha256": "26748e08830b94e9016fcfe8fc78fbb4540961e679810d2bb4467a55845e24a5",
+      "bytes": 38512
+    },
+    {
+      "id": "socket_footprint",
+      "file": "ssw-s.pdf",
+      "url": "https://suddendocs.samtec.com/prints/ssw-s.pdf",
+      "sha256": "f0da4d42482916595034a3c2ea5e2c60f2901a64003b252ff43859f8c854d898",
+      "bytes": 11964
+    },
+    {
+      "id": "socket_catalog",
+      "file": "ssw_th.pdf",
+      "url": "https://suddendocs.samtec.com/catalog_english/ssw_th.pdf",
+      "sha256": "6d89f5c186a49e0f52f37d7bf7b5095081aff8f98e5ba18a85b0811caaf6f509",
+      "bytes": 471452
+    },
+    {
+      "id": "socket_print",
+      "file": "ssw-series-print.pdf",
+      "url": "https://suddendocs.samtec.com/prints/ssw-1xx-xx-xxx-x-xx-xxx-xx-mkt.pdf",
+      "sha256": "890f20796637b7947c7655aabf919d055b56988a01c20338b635f2daf35b051f",
+      "bytes": 491233
+    },
+    {
+      "id": "presoldered_photo_1",
+      "file": "core2021-hf-m-1.jpg",
+      "url": "https://www.waveshare.com/media/catalog/product/c/o/core2021-hf-m-1.jpg",
+      "sha256": "8b1054639c7c7beb480f1e7cf7d62ce0e1e99ac46e08f99cd60ce2ced38f1d98",
+      "bytes": 133615
+    },
+    {
+      "id": "presoldered_photo_2",
+      "file": "core2021-hf-m-2.jpg",
+      "url": "https://www.waveshare.com/media/catalog/product/c/o/core2021-hf-m-2.jpg",
+      "sha256": "e282b7fa99d3ba1c2ccc175ea0e13feecb2e6381254f564736b4e6432780ce1a",
+      "bytes": 137071
+    },
+    {
+      "id": "presoldered_photo_3",
+      "file": "core2021-hf-m-3.jpg",
+      "url": "https://www.waveshare.com/media/catalog/product/c/o/core2021-hf-m-3.jpg",
+      "sha256": "41f2672519e1d083f8f991b2c8af53db9e99229b351852d43a918590aeae79c0",
+      "bytes": 171112
+    },
+    {
+      "id": "presoldered_photo_4",
+      "file": "core2021-hf-m-4.jpg",
+      "url": "https://www.waveshare.com/media/catalog/product/c/o/core2021-hf-m-4.jpg",
+      "sha256": "057f4eb6d9eb29ce336279307afe251f797db0199fe65097219fe97c75cccb60",
+      "bytes": 155880
+    },
+    {
+      "id": "presoldered_photo_5",
+      "file": "core2021-hf-m-5.jpg",
+      "url": "https://www.waveshare.com/media/catalog/product/c/o/core2021-hf-m-5.jpg",
+      "sha256": "8c837298bf57e78d4b29c6640219973652e88a7396bc515b5f64e89375e04b95",
+      "bytes": 175904
+    }
+  ],
+  "scope": "Only .backplane/intent.md and extra/references/radio/** written. No carrier board, schematic, project, or generator created or changed."
+}

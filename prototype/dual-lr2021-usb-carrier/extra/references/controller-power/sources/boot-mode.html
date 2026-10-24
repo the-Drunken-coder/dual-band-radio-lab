@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boot Mode Selection - ESP32-S3 -  &mdash; esptool latest documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=a60756f2" />
+      <link rel="stylesheet" type="text/css" href="../_static/theme_overrides.css?v=851bd809" />
+
+  
+    <link rel="canonical" href="https://docs.espressif.com/projects/esptool/en/stable/esp32s3/advanced-topics/boot-mode-selection.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=becddca3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/js/theme.js"></script>
+
+    
+        
+
+    <script type="text/javascript">
+        DOCUMENTATION_OPTIONS.PAGENAME = 'advanced-topics/boot-mode-selection';
+        DOCUMENTATION_OPTIONS.PROJECT_SLUG = 'esptool';
+        DOCUMENTATION_OPTIONS.LATEST_BRANCH_NAME = 'master';
+        DOCUMENTATION_OPTIONS.VERSIONS_URL = '.././_static/esptool_versions.js';
+        DOCUMENTATION_OPTIONS.LANGUAGES = ["en"];
+        DOCUMENTATION_OPTIONS.IDF_TARGET = 'esp32s3';
+        DOCUMENTATION_OPTIONS.HAS_IDF_TARGETS = ["esp8266", "esp32", "esp32s2", "esp32s3", "esp32c3", "esp32c2", "esp32c6", "esp32h2", "esp32h4", "esp32p4", "esp32c5", "esp32c61", "esp32h21", "esp32s31"]
+        DOCUMENTATION_OPTIONS.RELEASE = 'latest';
+        DOCUMENTATION_OPTIONS.LANGUAGE_URL = 'en';
+
+    </script>
+
+    <script type="text/javascript" src=".././_static/esptool_versions.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Troubleshooting" href="../troubleshooting.html" />
+    <link rel="prev" title="SPI Flash Modes" href="spi-flash-modes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            esptool
+              <img src="../_static/espressif-logo.svg" class="logo" alt="Logo"/>
+          </a>
+
+          
+            <div class="selectors">
+              <select id="target-select" style="width: 150px;" hidden>
+                <option value="" disabled selected>Choose target...</option>
+              </select>
+            </div>
+          
+
+          <div class="selectors">
+            <select id="version-select" style="width: 150px;" hidden>
+              <option value="" disabled selected>Choose version...</option>
+            </select>
+          </div>
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../esptool/index.html">Esptool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../espefuse/index.html">Espefuse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../espsecure/index.html">Espsecure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../remote-serial-ports.html">Remote Serial Ports</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Advanced Topics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="firmware-image-format.html">Firmware Image Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serial-protocol.html">Serial Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spi-flash-modes.html">SPI Flash Modes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Boot Mode Selection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#select-bootloader-mode">Select Bootloader Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gpio0">GPIO0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gpio46">GPIO46</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-pins">Other Pins</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#automatic-bootloader">Automatic Bootloader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manual-bootloader">Manual Bootloader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boot-log">Boot Log</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#boot-mode-message">Boot Mode Message</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#later-boot-messages">Later Boot Messages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versions.html">Versions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migration-guide.html">Migration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">esptool</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Advanced Topics</a></li>
+      <li class="breadcrumb-item active">Boot Mode Selection</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/espressif/esptool/blob/93477ace/docs/en/advanced-topics/boot-mode-selection.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="boot-mode-selection">
+<span id="boot-mode"></span><h1>Boot Mode Selection<a class="headerlink" href="#boot-mode-selection" title="Permalink to this heading"></a></h1>
+<p>This guide explains how to select the boot mode correctly and describes the boot log messages of ESP32-S3.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The ESP32-S3 has a 45k ohm internal pull-up/pull-down resistor at GPIO0 (and other pins). If you want to connect a switch button to enter the boot mode, this has to be a strong pull-down. For example a 10k resistor to GND.</p>
+</div>
+<p>Information about ESP32-S3 strapping pins can also be found in the <a class="reference external" href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf">ESP32-S3 Datasheet</a>, section “Strapping Pins”.</p>
+<p>On many development boards with built-in USB/Serial, <code class="docutils literal notranslate"><span class="pre">esptool</span></code> can automatically reset the board into bootloader mode. For other configurations or custom hardware, you will need to check the orientation of some “strapping pins” to get the correct boot mode:</p>
+<section id="select-bootloader-mode">
+<h2>Select Bootloader Mode<a class="headerlink" href="#select-bootloader-mode" title="Permalink to this heading"></a></h2>
+<section id="gpio0">
+<h3>GPIO0<a class="headerlink" href="#gpio0" title="Permalink to this heading"></a></h3>
+<p>The ESP32-S3 will enter the serial bootloader when GPIO0 is held low on reset. Otherwise it will run the program in flash.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 28.6%" />
+<col style="width: 71.4%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>GPIO0 Input</p></th>
+<th class="head"><p>Mode</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Low/GND</p></td>
+<td><p>ROM serial bootloader for esptool</p></td>
+</tr>
+<tr class="row-odd"><td><p>High/VCC</p></td>
+<td><p>Normal execution mode</p></td>
+</tr>
+</tbody>
+</table>
+<p>GPIO0 has an internal pullup resistor, so if it is left unconnected then it will pull high.</p>
+<p>Many boards use a button marked “Flash” (or “BOOT” on some Espressif development boards) that pulls GPIO0 low when pressed.</p>
+</section>
+<section id="gpio46">
+<h3>GPIO46<a class="headerlink" href="#gpio46" title="Permalink to this heading"></a></h3>
+<p>GPIO46 must also be either left unconnected/floating, or driven Low, in order to enter the serial bootloader.</p>
+<p>In normal boot mode (GPIO0 high), GPIO46 is ignored.</p>
+</section>
+<section id="other-pins">
+<h3>Other Pins<a class="headerlink" href="#other-pins" title="Permalink to this heading"></a></h3>
+<p>As well as the above mentioned pins, other ones influence the serial bootloader, please consult the <a class="reference external" href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf">ESP32-S3 Datasheet</a>, section “Strapping Pins”.</p>
+</section>
+</section>
+<section id="automatic-bootloader">
+<span id="id1"></span><h2>Automatic Bootloader<a class="headerlink" href="#automatic-bootloader" title="Permalink to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">esptool</span></code> resets ESP32-S3 automatically by asserting <code class="docutils literal notranslate"><span class="pre">DTR</span></code> and <code class="docutils literal notranslate"><span class="pre">RTS</span></code> control lines of the USB to serial converter chip, i.e., FTDI, CP210x, or CH340x. The <code class="docutils literal notranslate"><span class="pre">DTR</span></code> and <code class="docutils literal notranslate"><span class="pre">RTS</span></code> control lines are in turn connected to <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> and <code class="docutils literal notranslate"><span class="pre">EN</span></code> (<code class="docutils literal notranslate"><span class="pre">CHIP_PU</span></code>) pins of ESP32-S3, thus changes in the voltage levels of <code class="docutils literal notranslate"><span class="pre">DTR</span></code> and <code class="docutils literal notranslate"><span class="pre">RTS</span></code> will boot the ESP32-S3 into Firmware Download mode.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When developing <code class="docutils literal notranslate"><span class="pre">esptool</span></code>, keep in mind <code class="docutils literal notranslate"><span class="pre">DTR</span></code> and <code class="docutils literal notranslate"><span class="pre">RTS</span></code> are active low signals, i.e., <code class="docutils literal notranslate"><span class="pre">True</span></code> = pin &#64; 0V, <code class="docutils literal notranslate"><span class="pre">False</span></code> = pin &#64; VCC.</p>
+</div>
+<p>As an example of auto-reset curcuitry implementation, check the <a class="reference external" href="https://dl.espressif.com/dl/schematics/esp32_devkitc_v4-sch-20180607a.pdf">schematic</a> of the ESP32 DevKitC development board:</p>
+<ul class="simple">
+<li><p>The <strong>Micro USB 5V &amp; USB-UART</strong> section shows the <code class="docutils literal notranslate"><span class="pre">DTR</span></code> and <code class="docutils literal notranslate"><span class="pre">RTS</span></code> control lines of the USB to serial converter chip connected to <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> and <code class="docutils literal notranslate"><span class="pre">EN</span></code> pins of the ESP module.</p></li>
+<li><p>Some OS and/or drivers may activate <code class="docutils literal notranslate"><span class="pre">RTS</span></code> and or <code class="docutils literal notranslate"><span class="pre">DTR</span></code> automatically when opening the serial port (true only for some serial terminal programs, not <code class="docutils literal notranslate"><span class="pre">esptool</span></code>), pulling them low together and holding the ESP in reset. If <code class="docutils literal notranslate"><span class="pre">RTS</span></code> is wired directly to <code class="docutils literal notranslate"><span class="pre">EN</span></code> then RTS/CTS “hardware flow control” needs to be disabled in the serial program to avoid this.
+An additional circuitry is implemented in order to avoid this problem - if both <code class="docutils literal notranslate"><span class="pre">RTS</span></code> and <code class="docutils literal notranslate"><span class="pre">DTR</span></code> are asserted together, this doesn’t reset the chip. The schematic shows this specific circuit with two transistors and its truth table.</p></li>
+<li><p>If this circuitry is implemented (all Espressif boards have it), adding a capacitor between the <code class="docutils literal notranslate"><span class="pre">EN</span></code> pin and <code class="docutils literal notranslate"><span class="pre">GND</span></code> (in the 1uF-10uF range) is necessary for the reset circuitry to work reliably. This is shown in the <strong>ESP32 Module</strong> section of the schematic.</p></li>
+<li><p>The <strong>Switch Button</strong> section shows buttons needed for <a class="reference internal" href="#manual-bootloader"><span class="std std-ref">manually switching to bootloader</span></a>.</p></li>
+</ul>
+<p>Make the following connections for <code class="docutils literal notranslate"><span class="pre">esptool</span></code> to automatically enter the bootloader of an ESP32-S3 chip:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>ESP Pin</p></th>
+<th class="head"><p>Serial Pin</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>EN</p></td>
+<td><p>RTS</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPIO0</p></td>
+<td><p>DTR</p></td>
+</tr>
+</tbody>
+</table>
+<p>In Linux serial ports by default will assert RTS when nothing is attached to them. This can hold the ESP32-S3 in a reset loop which may cause some serial adapters to subsequently reset loop. This functionality can be disabled by disabling <code class="docutils literal notranslate"><span class="pre">HUPCL</span></code> (ie <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">stty</span> <span class="pre">-F</span> <span class="pre">/dev/ttyUSB0</span> <span class="pre">-hupcl</span></code>).</p>
+<p>(Some third party ESP32-S3 development boards use an automatic reset circuit for <code class="docutils literal notranslate"><span class="pre">EN</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> pins, but don’t add a capacitor on the <code class="docutils literal notranslate"><span class="pre">EN</span></code> pin. This results in unreliable automatic reset, especially on Windows. Adding a 1uF (or higher) value capacitor between <code class="docutils literal notranslate"><span class="pre">EN</span></code> pin and <code class="docutils literal notranslate"><span class="pre">GND</span></code> may make automatic reset more reliable.)</p>
+<p>In general, you should have no problems with the official Espressif development boards. However, <code class="docutils literal notranslate"><span class="pre">esptool</span></code> is not able to reset your hardware automatically in the following cases:</p>
+<ul class="simple">
+<li><p>Your hardware does not have the <code class="docutils literal notranslate"><span class="pre">DTR</span></code> and <code class="docutils literal notranslate"><span class="pre">RTS</span></code> lines connected to <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> and <code class="docutils literal notranslate"><span class="pre">EN</span></code> (<code class="docutils literal notranslate"><span class="pre">CHIP_PU</span></code>)</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">DTR</span></code> and <code class="docutils literal notranslate"><span class="pre">RTS</span></code> lines are configured differently</p></li>
+<li><p>There are no such serial control lines at all</p></li>
+</ul>
+</section>
+<section id="manual-bootloader">
+<span id="id2"></span><h2>Manual Bootloader<a class="headerlink" href="#manual-bootloader" title="Permalink to this heading"></a></h2>
+<p>Depending on the kind of hardware you have, it may also be possible to manually put your ESP32-S3 board into Firmware Download mode (reset).</p>
+<ul class="simple">
+<li><p>For development boards produced by Espressif, this information can be found in the respective getting started guides or user guides. For example, to manually reset a development board, hold down the <strong>Boot</strong> button (<code class="docutils literal notranslate"><span class="pre">GPIO0</span></code>) and press the <strong>EN</strong> button (<code class="docutils literal notranslate"><span class="pre">EN</span></code> (<code class="docutils literal notranslate"><span class="pre">CHIP_PU</span></code>)).</p></li>
+<li><p>For other types of hardware, try pulling <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> down.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If esptool is able to reset the chip but for some reason the chip is not entering into bootloader mode then hold down the Boot button (or pull down <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code>) while you start esptool and keep it down during reset.</p>
+</div>
+</section>
+<section id="boot-log">
+<h2>Boot Log<a class="headerlink" href="#boot-log" title="Permalink to this heading"></a></h2>
+<section id="boot-mode-message">
+<h3>Boot Mode Message<a class="headerlink" href="#boot-mode-message" title="Permalink to this heading"></a></h3>
+<p>After reset, the second line printed by the ESP32-S3 ROM (at 115200bps) is a reset &amp; boot mode message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ets</span> <span class="n">Jun</span>  <span class="mi">8</span> <span class="mi">2016</span> <span class="mi">00</span><span class="p">:</span><span class="mi">22</span><span class="p">:</span><span class="mi">57</span>
+<span class="n">rst</span><span class="p">:</span><span class="mh">0x1</span> <span class="p">(</span><span class="n">POWERON_RESET</span><span class="p">),</span><span class="n">boot</span><span class="p">:</span><span class="mh">0x3</span> <span class="p">(</span><span class="n">DOWNLOAD_BOOT</span><span class="p">(</span><span class="n">UART0</span><span class="o">/</span><span class="n">UART1</span><span class="o">/</span><span class="n">SDIO_REI_REO_V2</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">rst:0xNN</span> <span class="pre">(REASON)</span></code> is an enumerated value (and description) of the reason for the reset. A mapping between the hex value and each reason can be found in the <a class="reference external" href="https://github.com/espressif/esp-idf/blob/release/v6.1/components/esp_rom/esp32s3/include/esp32s3/rom/rtc.h">ESP-IDF source under RESET_REASON enum</a>.
+The value can be read in ESP32-S3 code via the <a class="reference external" href="https://github.com/espressif/esp-idf/blob/release/v6.1/components/esp_rom/esp32s3/include/esp32s3/rom/rtc.h">get_reset_reason() ROM function</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">boot:0xNN</span> <span class="pre">(DESCRIPTION)</span></code> is the hex value of the strapping pins, as represented in the <a class="reference external" href="https://github.com/espressif/esp-idf/blob/release/v6.1/components/soc/esp32s3/register/soc/gpio_reg.h">GPIO_STRAP register</a>. Each bit corresponds to one strapping pin: set if that pin was high on reset, cleared if it was low. Note that not all strapping pins affect the boot mode.</p>
+<p>A number of boot mode strings can be shown depending on the strapping pins:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2)</span></code> or <code class="docutils literal notranslate"><span class="pre">DOWNLOAD(USB/UART0)</span></code> or similar - ESP32-S3 is in download flashing mode (suitable for esptool)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPI_FAST_FLASH_BOOT</span></code> - This is the normal SPI flash boot mode.</p></li>
+<li><p>Other modes (including <code class="docutils literal notranslate"><span class="pre">SPI_FLASH_BOOT</span></code>, <code class="docutils literal notranslate"><span class="pre">SDIO_REI_FEO_V1_BOOT</span></code>, <code class="docutils literal notranslate"><span class="pre">ATE_BOOT</span></code>) may be shown here. This indicates an unsupported boot mode has been selected.</p></li>
+</ul>
+<p>For the <code class="docutils literal notranslate"><span class="pre">GPIO_STRAP</span></code> bit mapping and strapping pin functions, see the <a class="reference external" href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_en.pdf">ESP32-S3 Technical Reference Manual</a>.</p>
+</section>
+<section id="later-boot-messages">
+<h3>Later Boot Messages<a class="headerlink" href="#later-boot-messages" title="Permalink to this heading"></a></h3>
+<p>Later output from the ROM bootloader depends on the strapping pins and
+the boot mode. Some common output includes:</p>
+<section id="early-flash-read-error">
+<h4>Early Flash Read Error<a class="headerlink" href="#early-flash-read-error" title="Permalink to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Invalid</span> <span class="n">header</span> <span class="o">&lt;</span><span class="n">value</span> <span class="n">at</span> <span class="mh">0x0</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>This fatal error indicates that the bootloader tried to read the software bootloader header at address 0x0 but failed to read valid data. Possible reasons for this include:</p>
+<p><ul class="simple">
+<li><p>There isn’t actually a bootloader at offset 0x0 (maybe the bootloader was flashed to the wrong offset by mistake, or the flash has been erased and no bootloader has been flashed yet.)</p></li>
+<li><p>Physical problem with the connection to the flash chip, or flash chip power.</p></li>
+<li><p>Flash encryption is enabled but the bootloader is plaintext. Alternatively, flash encryption is disabled but the bootloader is encrypted ciphertext.</p></li>
+</ul>
+</p>
+</section>
+<section id="software-bootloader-header-info">
+<h4>Software Bootloader Header Info<a class="headerlink" href="#software-bootloader-header-info" title="Permalink to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SPIWP</span><span class="p">:</span><span class="mh">0xee</span>
+<span class="n">mode</span><span class="p">:</span><span class="n">DIO</span><span class="p">,</span> <span class="n">clock</span> <span class="n">div</span><span class="p">:</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>This is normal boot output based on a combination of eFuse values and information read from the bootloader header at flash offset 0x0:</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SPIWP:0xNN</span></code> indicates a custom <code class="docutils literal notranslate"><span class="pre">WP</span></code> pin value, which is stored in the bootloader header. This pin value is only used if SPI flash pins have been remapped via eFuse (as shown in the <code class="docutils literal notranslate"><span class="pre">configsip</span></code> value).
+All custom pin values but WP are encoded in the configsip byte loaded from eFuse, and WP is supplied in the bootloader header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode:</span> <span class="pre">AAA,</span> <span class="pre">clock</span> <span class="pre">div:</span> <span class="pre">N</span></code>. SPI flash access mode. Read from the bootloader header, correspond to the <code class="docutils literal notranslate"><span class="pre">--flash-mode</span></code> and <code class="docutils literal notranslate"><span class="pre">--flash-freq</span></code> arguments supplied to <code class="docutils literal notranslate"><span class="pre">esptool</span> <span class="pre">write-flash</span></code> or <code class="docutils literal notranslate"><span class="pre">esptool</span> <span class="pre">elf2image</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> can be DIO, DOUT, QIO, or QOUT. <em>QIO and QOUT are not supported here</em>, to boot in a Quad I/O mode the ROM bootloader should load the software bootloader in a Dual I/O mode and then the ESP-IDF software bootloader enables Quad I/O based on the detected flash chip mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clock</span> <span class="pre">div:</span> <span class="pre">N</span></code> is the SPI flash clock frequency divider. This is an integer clock divider value from an 80MHz APB clock, based on the supplied <code class="docutils literal notranslate"><span class="pre">--flash-freq</span></code> argument (ie 80MHz=1, 40MHz=2, etc).
+The ROM bootloader actually loads the software bootloader at a lower frequency than the <code class="docutils literal notranslate"><span class="pre">--flash-freq</span></code> value. The initial APB clock frequency is equal to the crystal frequency, so with a 40MHz crystal the SPI clock used to load the software bootloader will be half the configured value (40MHz/2=20MHz).
+When the software bootloader starts it sets the APB clock to 80MHz causing the SPI clock frequency to match the value set when flashing.</p></li>
+</ul>
+</p>
+</section>
+<section id="software-bootloader-load-segments">
+<h4>Software Bootloader Load Segments<a class="headerlink" href="#software-bootloader-load-segments" title="Permalink to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">:</span><span class="mh">0x3fff0008</span><span class="p">,</span><span class="nb">len</span><span class="p">:</span><span class="mi">8</span>
+<span class="n">load</span><span class="p">:</span><span class="mh">0x3fff0010</span><span class="p">,</span><span class="nb">len</span><span class="p">:</span><span class="mi">3680</span>
+<span class="n">load</span><span class="p">:</span><span class="mh">0x40078000</span><span class="p">,</span><span class="nb">len</span><span class="p">:</span><span class="mi">8364</span>
+<span class="n">load</span><span class="p">:</span><span class="mh">0x40080000</span><span class="p">,</span><span class="nb">len</span><span class="p">:</span><span class="mi">252</span>
+<span class="n">entry</span> <span class="mh">0x40080034</span>
+</pre></div>
+</div>
+<p>These entries are printed as the ROM bootloader loads each segment in the software bootloader image. The load address and length of each segment is printed.</p>
+<p>You can compare these values to the software bootloader image by running <code class="docutils literal notranslate"><span class="pre">esptool</span> <span class="pre">--chip</span> <span class="pre">esp32s3</span> <span class="pre">image-info</span> <span class="pre">/path/to/bootloader.bin</span></code> to dump image info including a summary of each segment. Corresponding details will also be found in the bootloader ELF file headers.</p>
+<p>If there is a problem with the SPI flash chip addressing mode, the values printed by the bootloader here may be corrupted.</p>
+<p>The final line shows the entry point address of the software bootloader, where the ROM bootloader will call as it hands over control.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="spi-flash-modes.html" class="btn btn-neutral float-left" title="SPI Flash Modes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../troubleshooting.html" class="btn btn-neutral float-right" title="Troubleshooting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016 - 2026, Espressif Systems (Shanghai) Co., Ltd.</p>
+  </div>
+
+  <ul class="footer">
+        <li>
+	    
+            
+            Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/espressif/sphinx_idf_theme">theme</a>  based on <a href="https://github.com/readthedocs/sphinx_rtd_theme">Read the Docs Sphinx Theme</a>.
+         </li>
+
+  </ul> 
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

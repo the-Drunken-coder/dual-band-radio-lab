@@ -1,0 +1,544 @@
+{
+  "view": "Top/component side,USB-C at top,controller antenna at bottom.180degree in-plane rotation of vendor pinout; not a bottom-view mirror.",
+  "board_size_mm_proposed": [
+    100,
+    75
+  ],
+  "controller_placement": "Left side withUSB at top edge; two radios next to each other to the right.",
+  "connector_assignment_is_proposed": true,
+  "left_connector": "J2=P2",
+  "right_connector": "J1=P1",
+  "socket_type": "Two1x22 female2.54mm pitch sockets; rows22.86mm apart",
+  "pin1_location": "Bottom/antenna end for both sockets; pin22 at top/USB end.",
+  "rows_top_to_bottom": [
+    {
+      "position_top_to_bottom": 1,
+      "y_mm_from_top_pin": 0.0,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 22,
+        "function": "GND",
+        "xy_mm": [
+          0,
+          0.0
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 22,
+        "function": "GND",
+        "xy_mm": [
+          22.86,
+          0.0
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 2,
+      "y_mm_from_top_pin": 2.54,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 21,
+        "function": "GND",
+        "xy_mm": [
+          0,
+          2.54
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 21,
+        "function": "USB5V_DIODE",
+        "xy_mm": [
+          22.86,
+          2.54
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 3,
+      "y_mm_from_top_pin": 5.08,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 20,
+        "function": "GPIO19",
+        "xy_mm": [
+          0,
+          5.08
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 20,
+        "function": "GPIO14",
+        "xy_mm": [
+          22.86,
+          5.08
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 4,
+      "y_mm_from_top_pin": 7.62,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 19,
+        "function": "GPIO20",
+        "xy_mm": [
+          0,
+          7.62
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 19,
+        "function": "GPIO13",
+        "xy_mm": [
+          22.86,
+          7.62
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 5,
+      "y_mm_from_top_pin": 10.16,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 18,
+        "function": "GPIO21",
+        "xy_mm": [
+          0,
+          10.16
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 18,
+        "function": "GPIO12",
+        "xy_mm": [
+          22.86,
+          10.16
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 6,
+      "y_mm_from_top_pin": 12.7,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 17,
+        "function": "GPIO47",
+        "xy_mm": [
+          0,
+          12.7
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 17,
+        "function": "GPIO11",
+        "xy_mm": [
+          22.86,
+          12.7
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 7,
+      "y_mm_from_top_pin": 15.24,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 16,
+        "function": "GPIO48",
+        "xy_mm": [
+          0,
+          15.24
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 16,
+        "function": "GPIO10",
+        "xy_mm": [
+          22.86,
+          15.24
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 8,
+      "y_mm_from_top_pin": 17.78,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 15,
+        "function": "GPIO45",
+        "xy_mm": [
+          0,
+          17.78
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 15,
+        "function": "GPIO9",
+        "xy_mm": [
+          22.86,
+          17.78
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 9,
+      "y_mm_from_top_pin": 20.32,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 14,
+        "function": "GPIO0",
+        "xy_mm": [
+          0,
+          20.32
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 14,
+        "function": "GPIO46",
+        "xy_mm": [
+          22.86,
+          20.32
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 10,
+      "y_mm_from_top_pin": 22.86,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 13,
+        "function": "GPIO35",
+        "xy_mm": [
+          0,
+          22.86
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 13,
+        "function": "GPIO3",
+        "xy_mm": [
+          22.86,
+          22.86
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 11,
+      "y_mm_from_top_pin": 25.4,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 12,
+        "function": "GPIO36",
+        "xy_mm": [
+          0,
+          25.4
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 12,
+        "function": "GPIO8",
+        "xy_mm": [
+          22.86,
+          25.4
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 12,
+      "y_mm_from_top_pin": 27.94,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 11,
+        "function": "GPIO37",
+        "xy_mm": [
+          0,
+          27.94
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 11,
+        "function": "GPIO18",
+        "xy_mm": [
+          22.86,
+          27.94
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 13,
+      "y_mm_from_top_pin": 30.48,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 10,
+        "function": "GPIO38",
+        "xy_mm": [
+          0,
+          30.48
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 10,
+        "function": "GPIO17",
+        "xy_mm": [
+          22.86,
+          30.48
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 14,
+      "y_mm_from_top_pin": 33.02,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 9,
+        "function": "GPIO39",
+        "xy_mm": [
+          0,
+          33.02
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 9,
+        "function": "GPIO16",
+        "xy_mm": [
+          22.86,
+          33.02
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 15,
+      "y_mm_from_top_pin": 35.56,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 8,
+        "function": "GPIO40",
+        "xy_mm": [
+          0,
+          35.56
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 8,
+        "function": "GPIO15",
+        "xy_mm": [
+          22.86,
+          35.56
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 16,
+      "y_mm_from_top_pin": 38.1,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 7,
+        "function": "GPIO41",
+        "xy_mm": [
+          0,
+          38.1
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 7,
+        "function": "GPIO7",
+        "xy_mm": [
+          22.86,
+          38.1
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 17,
+      "y_mm_from_top_pin": 40.64,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 6,
+        "function": "GPIO42",
+        "xy_mm": [
+          0,
+          40.64
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 6,
+        "function": "GPIO6",
+        "xy_mm": [
+          22.86,
+          40.64
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 18,
+      "y_mm_from_top_pin": 43.18,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 5,
+        "function": "GPIO2",
+        "xy_mm": [
+          0,
+          43.18
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 5,
+        "function": "GPIO5",
+        "xy_mm": [
+          22.86,
+          43.18
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 19,
+      "y_mm_from_top_pin": 45.72,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 4,
+        "function": "GPIO1",
+        "xy_mm": [
+          0,
+          45.72
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 4,
+        "function": "GPIO4",
+        "xy_mm": [
+          22.86,
+          45.72
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 20,
+      "y_mm_from_top_pin": 48.26,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 3,
+        "function": "GPIO44",
+        "xy_mm": [
+          0,
+          48.26
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 3,
+        "function": "EN",
+        "xy_mm": [
+          22.86,
+          48.26
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 21,
+      "y_mm_from_top_pin": 50.8,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 2,
+        "function": "GPIO43",
+        "xy_mm": [
+          0,
+          50.8
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 2,
+        "function": "3V3",
+        "xy_mm": [
+          22.86,
+          50.8
+        ]
+      }
+    },
+    {
+      "position_top_to_bottom": 22,
+      "y_mm_from_top_pin": 53.34,
+      "left": {
+        "carrier_ref": "J2",
+        "vendor_header": "P2",
+        "pin": 1,
+        "function": "GND",
+        "xy_mm": [
+          0,
+          53.34
+        ]
+      },
+      "right": {
+        "carrier_ref": "J1",
+        "vendor_header": "P1",
+        "pin": 1,
+        "function": "3V3",
+        "xy_mm": [
+          22.86,
+          53.34
+        ]
+      }
+    }
+  ],
+  "antenna_and_cable_note": "At75mm carrier height and63.3mm controller length,USB at top does not automatically place antenna beyond carrier bottom. Reserve antenna copper/component keepout and actual plug clearance during canonical placement; this note is not a mechanical fit approval."
+}
