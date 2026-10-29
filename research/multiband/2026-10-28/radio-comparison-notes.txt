@@ -1,0 +1,133 @@
+MULTIBAND MESH: RATE / RANGE AND BAND-OFFLOAD ANALYSIS
+28 October 2026
+
+PURPOSE
+Compare selected operating profiles for the proposed 915 MHz LoRa / FLRC /
+HaLow, 2.4 GHz LoRa / FLRC / Wi-Fi, and 5 GHz Wi-Fi system. The user's goal is
+nearby high-rate communication and progressively more robust low-rate paths,
+while preserving 915 MHz airtime for links that need it.
+
+DESIGN RECOMMENDATION
+A coherent three-band starting architecture is a 5 GHz Wi-Fi radio, a separate
+2.4 GHz LR2021 packet radio, and a 915 MHz LR2021 packet radio. Treat 915 MHz
+HaLow as a measured-performance / IP-networking option, not an automatic extra
+rung. Conventional 2.4 GHz Wi-Fi may improve throughput in that band but adds
+coexistence work if operated beside the 2.4 GHz packet radio. Actual Wi-Fi
+hardware must have suitable driver and mesh support; the CYW43455 is only the
+illustrative PHY comparator used in the figure.
+
+WHAT THE PLOT SHOWS
+Each family curve is the highest nominal / coding-adjusted rate among the
+sampled profiles that can tolerate a specified reference path budget.
+
+B_ref915 = P_TX - S_RX - 20 * log10(f_MHz / 915)
+
+This removes the simple free-space frequency penalty relative to 915 MHz,
+assuming equal antenna gains. Higher budget means more loss can be tolerated.
+It is not a measured range curve. The curves exclude cable/board/antenna losses,
+receiver desensitization, interference, fade margin, terrain, body blockage,
+radio horizon, and regional power reductions.
+
+The vertical reference line illustrates a five-mile free-space 915 MHz path:
+32.45 + 20*log10(915) + 20*log10(8.04672) = 109.7908 dB.
+Adding an illustrative 15 dB reliability reserve gives 124.7908 dB.
+This reference does not assert that a ground-level five-mile path is free space.
+The radio-horizon and Fresnel-clearance requirements still apply.
+
+The dataset is sampled, not exhaustive. A step boundary is a switch among
+included profiles, not a precise field handoff distance. Low-SF / narrow-band
+and higher-SF / wider-band LoRa settings can exchange efficiency; the best
+rate-versus-budget point can occupy more spectrum. The graph deliberately does
+not claim that the two-variable frontier is the full network optimum.
+
+RATES AND TEST CONDITIONS
+LoRa nominal rates use SF * BW / 2**SF * 4/5. They exclude LDRO payload-rate
+reduction and finite-packet overhead. FLRC rates are coding-adjusted at CR3/4.
+Wi-Fi uses one stream and 800 ns GI. HaLow uses one stream and 8 us GI; rates
+are calculated from standard data-subcarrier counts and a 40 us symbol rather
+than copied from the source's rounded, largely short-GI rate column.
+
+LR2021 typical sensitivity uses the manufacturer's receiver-boost conditions.
+Sub-GHz LoRa uses 1% PER / 64-byte payloads. Other Semtech tables use differing
+packet lengths; a 2.4 LoRa table contains inconsistent 64B / 20-byte wording.
+HaLow sensitivity uses 10% PER / 256-byte packets. Conventional Wi-Fi uses
+10% PER / 4096-byte PSDUs. These are not controlled apples-to-apples lab tests.
+The metadata records these differences; tiny dB differences do not prove a
+real-world performance winner.
+
+POWER
+LR2021 uses its listed bare-chip maxima: +22 dBm at sub-GHz and +12 dBm at
+2.4 GHz. HaLow uses per-mode module output power, including high-MCS backoff.
+Wi-Fi uses manufacturer chip-port power examples; mapping generic OFDM BPSK
+power to HT/VHT MCS0 is a declared model assumption. Unspecified intermediate
+Wi-Fi MCS power maxima were not invented. The specifications are not a finding
+that every plotted power/channel/mode is permitted in every region.
+
+HANDOFF POLICY
+For each neighbor, radio and profile, measure useful goodput, reliability,
+latency, retransmissions, airtime and queue load. First reject paths that fail
+the flow's service requirement. Among qualifying paths, prefer 5 GHz, then
+2.4 GHz, then 915 MHz when that reduces scarce-band airtime without degrading
+service. This is a band preference, not a universal reach ordering.
+
+Example initial policy parameters, to tune in tests:
+- Candidate preferred-band path: at least 2 times the offered traffic rate and
+  acceptable delivery performance for 10 seconds.
+- Keep current path while it has at least 1.25 times rate headroom and meets
+  the application's deadline / reliability target.
+- Fail over promptly on link failure; otherwise use bounded, smoothed metrics
+  and hysteresis to avoid oscillation.
+- These numbers are design assumptions, not manufacturer recommendations.
+
+One node can simultaneously serve different neighbors on different radios.
+Do not place an entire node in one global best mode. A single LR2021 cannot
+listen to all LoRa / FLRC profiles simultaneously: negotiate channel/profile
+and timing, retain rendezvous windows, and recover to a known setting when a
+change fails. HaLow / Wi-Fi rate control can use supported rate and bandwidth
+choices within negotiated channel capability; changing operating channel or
+primary channel requires coordination.
+
+WHY A RIGID MODE LADDER FAILS
+2.4 GHz LoRa SF7 / BW200k has about 8.75 kb/s nominal rate and 126.6 dB of
+normalized budget with the stated hardware assumptions. 915 MHz FLRC at
+975 kb/s has 126.5 dB. Small telemetry can stay on 2.4 GHz to preserve 915
+airtime, while a larger transfer on that same path may justify 915 FLRC.
+
+Same-band HaLow and FLRC have overlapping budgets and rates. Switching between
+them can improve service, but it does not move traffic out of 915 MHz.
+
+NEXT VALIDATION
+Build three nodes. Measure packet error rate and useful goodput while sweeping
+attenuation for each profile, then repeat with all relevant local transmitters
+active. Check both link directions and multi-hop forwarding under load. Record
+available airtime and energy. Keep profiles and radios that improve delivered
+service or free a scarce band, and remove redundant ones. Measure real paths
+before assigning handoff distances in miles.
+
+PRIMARY SOURCES
+Semtech LR20xx final datasheet rev 2.1 (13 Apr 2026):
+https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf
+The current product page lists rev 2.2; numerical values here use accessible
+rev 2.1 and should be rechecked for a production design.
+https://www.semtech.com/products/wireless-rf/lora-plus/lr2021
+
+Morse Micro MM8108-MF15457 datasheet v4, Tables 11 and 12:
+https://www.morsemicro.com/resources/datasheets/modules/MM8108-MF15457_Data_Sheet.pdf
+
+Infineon / Cypress CYW43455 datasheet 002-15051 Rev *O:
+https://www.infineon.com/assets/row/public/documents/30/49/infineon-cyw43455-datasheet-en.pdf
+
+ITU-R P.525-5, free-space attenuation:
+https://www.itu.int/rec/R-REC-P.525-5-202411-I/en
+
+Morse Micro rate-control implementation:
+https://github.com/MorseMicro/morse_driver/blob/main/rc.c
+
+RFC 8966, Babel routing and hysteresis:
+https://www.rfc-editor.org/rfc/rfc8966.html
+
+REPRODUCTION
+Install Python 3 and matplotlib, extract this archive, and run:
+python3 build-radio-comparison.py
+The two source JSON files contain all extracted operating points and source
+metadata. The CSV contains derived link budgets and sampled-frontier flags.

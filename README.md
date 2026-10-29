@@ -1,5 +1,7 @@
 # Dual-Band Radio Lab
 
+For the current evidence map, project boundaries and continuation state, see [project context](docs/project-context.md).
+
 **Volunteer project:** Lane Araujo volunteered to take on this portable dual-band radio project. This repository documents the research and experiments.
 
 ## Vision

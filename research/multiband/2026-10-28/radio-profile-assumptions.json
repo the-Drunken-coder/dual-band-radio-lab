@@ -1,0 +1,123 @@
+{
+  "analysis_date": "2026-10-28",
+  "formula": "B_ref915 = P_TX - S_RX - 20*log10(f_MHz/915)",
+  "meaning": "Free-space frequency-normalized conducted link-budget proxy. Equal antenna gains; no loss or fade margin is subtracted from individual curves.",
+  "frontier": "Fastest nominal rate among sampled settings satisfying B_ref915 >= required path budget. Within each family only; spectrum occupancy and energy are not optimization dimensions in this plot.",
+  "line_interpretation": "Step transitions select among sampled settings. They do not interpolate nonexistent modes or claim the sample is exhaustive.",
+  "packet_metadata": {
+    "schema_version": 1,
+    "title": "Selected verified LR2021 LoRa and FLRC operating points",
+    "manufacturer": "Semtech",
+    "document": {
+      "title": "LR2021/LR2022/LR2012 Datasheet",
+      "revision": "2.1",
+      "date": "2026-04-13",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "provenance": "Semtech-authored datasheet hosted by DigiKey",
+      "version_caveat": "The current Semtech product page lists revision 2.2; these numerical points were verified against the accessible revision 2.1."
+    },
+    "scope": {
+      "description": "All points from the previously reported verified sample matrices, not the complete supported configuration space.",
+      "lora_spreading_factors": [
+        5,
+        7,
+        9,
+        12
+      ],
+      "lora_915_bandwidths_khz": [
+        125,
+        250,
+        500,
+        1000
+      ],
+      "lora_2400_bandwidths_khz": [
+        200,
+        400,
+        500,
+        1000
+      ],
+      "flrc_effective_rates_kbps": [
+        195,
+        390,
+        975,
+        1950
+      ],
+      "point_count": 40,
+      "lora_2400_missing_bandwidths_note": "No inferred sensitivities for 125 or 250 kHz at 2.4 GHz. Use the actual tabulated bandwidths in this dataset."
+    },
+    "rate_assumptions": {
+      "lora_coding_rate": "4/5",
+      "lora_rate_formula": "rate_kbps = SF * bandwidth_khz / 2**SF * (4/5)",
+      "lora_rate_interpretation": "Nominal bitrate, not measured payload throughput. Preamble, header, CRC, finite-packet effects, low-data-rate optimization (LDRO), MAC scheduling, acknowledgements and retransmissions are excluded.",
+      "flrc_coding_rate": "3/4",
+      "flrc_rate_formula": "effective_rate_kbps = raw_rate_kbps * (3/4)",
+      "flrc_rate_interpretation": "Coding-adjusted PHY rate before packet and MAC overhead. The advertised 2.6 Mbps maximum uses CR=1; that uncoded configuration is not included here."
+    },
+    "sensitivity_test_criteria": {
+      "general": "Manufacturer reference-design typical sensitivity, with G13 and rx_boost=7 where tabulated. Not measured end-to-end application thresholds.",
+      "general_rf_conditions": "Datasheet general conditions specify the LF reference design around 915/869 MHz and HF around 2.45 GHz, SIMO power and no RF shield. Dataset labels 915 and 2400 MHz identify the intended bands.",
+      "lora_915": "Table 3-17: 1% packet error rate, 64-byte payload; CR4/5, G13, rx_boost=7.",
+      "lora_2400": "Table 3-18 title specifies 64-byte payload, but adjacent introductory text inconsistently says both 64B and 20 Bytes at 1% PER. This ambiguity is retained rather than silently resolved. G13, rx_boost=7.",
+      "flrc_915": "Table 3-12: 1% packet error rate; CR3/4, G13, rx_boost=7. The table introduction does not specify a packet length.",
+      "flrc_2400": "Table 3-13: 1% packet error rate, 31-byte packets; CR3/4, G13, rx_boost=7.",
+      "cross_mode_comparison_caution": "Packet lengths and test criteria are not perfectly uniform across these tables or across other radio manufacturers."
+    },
+    "power_and_bandwidth_assumptions": {
+      "tx_dbm_interpretation": "Maximum listed bare-chip transmit capability: +22 dBm sub-GHz and +12 dBm at 2.4 GHz. These are scenario assumptions, not a determination of permitted EIRP or module output.",
+      "antenna_and_system_losses": "Antenna gain, feed loss, implementation loss, interference and fade margin are not included.",
+      "flrc_bandwidth_caveat": "Use revised modem bandwidths from Table 18-1 (307/571/1333/2666 kHz). The sensitivity tables retain older rounded bandwidth labels for some settings. These are modem configuration bandwidths, not guaranteed occupied-spectrum widths or channel separation rules."
+    },
+    "plot_guidance": {
+      "normalized_budget_formula": "tx_dbm - sensitivity_dbm - 20*log10(frequency_mhz/915)",
+      "interpretation": "A fixed-antenna-gain free-space frequency-normalized link-budget proxy. It is not a measured distance or terrain propagation prediction.",
+      "pareto_caution": "A rate-versus-normalized-budget frontier omits bandwidth occupancy, spectrum scarcity, power consumption, latency, interference and actual packet goodput. A frontier of this dataset is a frontier of selected settings only."
+    }
+  },
+  "wifi_metadata": {
+    "purpose": "Illustrative conducted PHY operating points for a normalized link-budget/rate frontier. Not measured mesh goodput, field range, or hardware recommendations.",
+    "data_date": "2026-10-28",
+    "representative_frequency_mhz": {
+      "halow": 915,
+      "wifi_24": 2437,
+      "wifi_5": 5800
+    },
+    "frequency_note": "Requested representative band centers, not a claim that each channel width uses exactly this legal center. Use the actual permitted channel in implementation.",
+    "sources": [
+      {
+        "chip": "MM8108-MF15457",
+        "source_url": "https://www.morsemicro.com/resources/datasheets/modules/MM8108-MF15457_Data_Sheet.pdf",
+        "revision": "v4",
+        "tables": "11 and 12, PDF pp 26-27"
+      },
+      {
+        "chip": "CYW43455",
+        "source_url": "https://www.infineon.com/assets/row/public/documents/30/49/infineon-cyw43455-datasheet-en.pdf",
+        "revision": "002-15051 Rev *O, 2019-03-22, current hosted PDF retrieved 2026-10-28",
+        "tables": "34,35,36,37, PDF pp 80,83,84,85,88"
+      }
+    ],
+    "tests": {
+      "halow_256B_10pct": "10% packet error rate, 256-byte packets, VBAT=VBAT_TX=3.3 V, 25 C; receiver table does not explicitly state guard interval. All plotted rates deliberately use long GI.",
+      "wifi_4096B_10pct": "10% packet error rate, 4096-octet PSDU, 800 ns GI, non-STBC, typical chip-port sensitivity; normal non-LDPC-specific table chosen."
+    },
+    "caveats": [
+      "PHY rates exclude preambles, headers, contention, acknowledgements, retransmissions, routing overhead and half-duplex forwarding.",
+      "HaLow and Wi-Fi receiver test packet lengths differ. Their nominal sensitivity figures are not a common-PER/common-packet controlled comparison.",
+      "HaLow TX values are measured at the module antenna pin and explicitly do not include regional or band-edge regulatory backoffs.",
+      "Wi-Fi values are at the chip port and exclude external front-end/board losses. Section 15.1 identifies WLAN RF values as design goals subject to characterization; typical values are not guaranteed limits.",
+      "Wi-Fi TX values are modulation/MCS examples, not a full per-channel power table. Mapping the generic OFDM BPSK power to HT/VHT MCS0 is an explicit model assumption; no TX maxima are invented for omitted MCS1-6 or MCS8.",
+      "Not every supported width/MCS can be independently switched on every packet in every mesh implementation. Rate adaptation operates within negotiated/configured radio and peer capabilities; changing the BSS operating channel/primary channel requires coordination.",
+      "Single stream, equal antenna gain, no implementation loss or fade margin assumed for a normalized comparison. No distance is guaranteed.",
+      "CYW43455 is an illustrative PHY comparator, not a recommendation that a particular module/driver supports 802.11s or simultaneous 2.4/5 GHz operation.",
+      "HaLow long-GI rates are calculated exactly from 24/52/108/234 data subcarriers and 40 us OFDM symbol duration. The manufacturer's printed PHY-rate column is rounded and mostly reflects short GI; its RX/TX matrices are retained by mode.",
+      "Raw source contains no band-specific frequency sensitivity sweep; representative centers do not imply characterization at those exact centers."
+    ]
+  },
+  "five_mile_reference": {
+    "miles": 5,
+    "free_space_loss_915_db": 109.79079967207684,
+    "reserve_db": 15,
+    "required_budget_db": 124.79079967207684,
+    "caution": "Illustrative unobstructed free-space geometry with 0 dBi antennas and no additional loss. Not a range guarantee, propagation survey or radio-horizon model."
+  }
+}

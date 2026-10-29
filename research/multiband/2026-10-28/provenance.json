@@ -1,0 +1,51 @@
+{
+  "recovered_on": "2026-10-29",
+  "source_archive": {
+    "filename": "radio-profile-analysis.zip",
+    "bytes": 281688,
+    "sha256": "ddb7d5f6cd7adb18daa08ff6e649ee2cea6b7a6a22e42899c99f288a2079d205"
+  },
+  "status": "original analysis files preserved byte-for-byte; planning calculations, not physical measurements",
+  "files": [
+    {
+      "filename": "packet-radio-points.json",
+      "bytes": 31242,
+      "sha256": "f4737e085273ff7804102527477d8d842f4d0ae62641841c7a6d628919476c9a"
+    },
+    {
+      "filename": "wifi-radio-points.json",
+      "bytes": 39455,
+      "sha256": "243db4be64981d9267ab39f710a975c8dc9df411a2dfa1e3bad064ce4ec930e8"
+    },
+    {
+      "filename": "build-radio-comparison.py",
+      "bytes": 7702,
+      "sha256": "a68ff5feae817648bffe1fe2a9c757f6dbefc4bd0fa2078609daab5c10bfa55d"
+    },
+    {
+      "filename": "radio-profile-data.csv",
+      "bytes": 33768,
+      "sha256": "e4eb02ac3ff8faa243e968ea19dd6afa32a6a3e2d9c7cac5c3f767fe55d9b5e5"
+    },
+    {
+      "filename": "radio-profile-assumptions.json",
+      "bytes": 8669,
+      "sha256": "821932bea3658cfc8afb552349cf3f9635383871aa24a5de921899c9cf5d5866"
+    },
+    {
+      "filename": "radio-profile-summary.json",
+      "bytes": 8670,
+      "sha256": "a1320f3b30dc10df63090235fd103d33c4346770a7831b420d76412b2ca1650f"
+    },
+    {
+      "filename": "radio-comparison-notes.txt",
+      "bytes": 7102,
+      "sha256": "8b36aee34836328e8422377ab8ee86bdd0ccd0d59285ff3d7c6c70061638e36b"
+    },
+    {
+      "filename": "radio-range-rate-comparison.png",
+      "bytes": 285635,
+      "sha256": "f85e8aac47fd770207f29ef7d3392154709bc733db2480b334c14ecdc3b2929e"
+    }
+  ]
+}

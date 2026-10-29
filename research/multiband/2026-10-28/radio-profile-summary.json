@@ -1,0 +1,355 @@
+{
+  "points": 90,
+  "family_frontiers": {
+    "5 GHz Wi-Fi": [
+      {
+        "mode": "802.11ac 80 MHz MCS9, 1SS, 800 ns GI, non-STBC",
+        "rate_kbps": 390000,
+        "budget_db": 63.56
+      },
+      {
+        "mode": "802.11ac 80 MHz MCS7, 1SS, 800 ns GI, non-STBC",
+        "rate_kbps": 292500,
+        "budget_db": 72.16
+      },
+      {
+        "mode": "802.11ac 40 MHz MCS7, 1SS, 800 ns GI, non-STBC",
+        "rate_kbps": 135000,
+        "budget_db": 75.56
+      },
+      {
+        "mode": "802.11ac 20 MHz MCS7, 1SS, 800 ns GI, non-STBC",
+        "rate_kbps": 65000,
+        "budget_db": 78.06
+      },
+      {
+        "mode": "802.11ac 80 MHz MCS0, 1SS, 800 ns GI, non-STBC",
+        "rate_kbps": 29250,
+        "budget_db": 94.46
+      },
+      {
+        "mode": "802.11ac 40 MHz MCS0, 1SS, 800 ns GI, non-STBC",
+        "rate_kbps": 13500,
+        "budget_db": 97.76
+      },
+      {
+        "mode": "802.11ac 20 MHz MCS0, 1SS, 800 ns GI, non-STBC",
+        "rate_kbps": 6500,
+        "budget_db": 99.66
+      }
+    ],
+    "2.4 GHz Wi-Fi": [
+      {
+        "mode": "802.11n 20 MHz MCS7, 1SS, 800 ns GI, non-STBC",
+        "rate_kbps": 65000,
+        "budget_db": 85.19
+      },
+      {
+        "mode": "802.11n 20 MHz MCS0, 1SS, 800 ns GI, non-STBC",
+        "rate_kbps": 6500,
+        "budget_db": 106.29
+      }
+    ],
+    "2.4 GHz FLRC": [
+      {
+        "mode": "FLRC 1950 kbps effective (2600 kbps raw), CR3/4",
+        "rate_kbps": 1950.0,
+        "budget_db": 102.62
+      },
+      {
+        "mode": "FLRC 975 kbps effective (1300 kbps raw), CR3/4",
+        "rate_kbps": 975.0,
+        "budget_db": 105.12
+      },
+      {
+        "mode": "FLRC 390 kbps effective (520 kbps raw), CR3/4",
+        "rate_kbps": 390.0,
+        "budget_db": 108.62
+      },
+      {
+        "mode": "FLRC 195 kbps effective (260 kbps raw), CR3/4",
+        "rate_kbps": 195.0,
+        "budget_db": 112.12
+      }
+    ],
+    "2.4 GHz LoRa": [
+      {
+        "mode": "LoRa SF5 BW1000 kHz CR4/5",
+        "rate_kbps": 125.0,
+        "budget_db": 113.62
+      },
+      {
+        "mode": "LoRa SF5 BW500 kHz CR4/5",
+        "rate_kbps": 62.5,
+        "budget_db": 116.12
+      },
+      {
+        "mode": "LoRa SF5 BW400 kHz CR4/5",
+        "rate_kbps": 50.0,
+        "budget_db": 117.62
+      },
+      {
+        "mode": "LoRa SF7 BW1000 kHz CR4/5",
+        "rate_kbps": 43.75,
+        "budget_db": 119.12
+      },
+      {
+        "mode": "LoRa SF5 BW200 kHz CR4/5",
+        "rate_kbps": 25.0,
+        "budget_db": 120.62
+      },
+      {
+        "mode": "LoRa SF7 BW500 kHz CR4/5",
+        "rate_kbps": 21.875,
+        "budget_db": 122.12
+      },
+      {
+        "mode": "LoRa SF7 BW400 kHz CR4/5",
+        "rate_kbps": 17.5,
+        "budget_db": 123.12
+      },
+      {
+        "mode": "LoRa SF9 BW1000 kHz CR4/5",
+        "rate_kbps": 14.0625,
+        "budget_db": 125.12
+      },
+      {
+        "mode": "LoRa SF7 BW200 kHz CR4/5",
+        "rate_kbps": 8.75,
+        "budget_db": 126.62
+      },
+      {
+        "mode": "LoRa SF9 BW500 kHz CR4/5",
+        "rate_kbps": 7.03125,
+        "budget_db": 127.62
+      },
+      {
+        "mode": "LoRa SF9 BW400 kHz CR4/5",
+        "rate_kbps": 5.625,
+        "budget_db": 129.12
+      },
+      {
+        "mode": "LoRa SF9 BW200 kHz CR4/5",
+        "rate_kbps": 2.8125,
+        "budget_db": 132.12
+      },
+      {
+        "mode": "LoRa SF12 BW1000 kHz CR4/5",
+        "rate_kbps": 2.34375,
+        "budget_db": 133.12
+      },
+      {
+        "mode": "LoRa SF12 BW500 kHz CR4/5",
+        "rate_kbps": 1.171875,
+        "budget_db": 136.12
+      },
+      {
+        "mode": "LoRa SF12 BW400 kHz CR4/5",
+        "rate_kbps": 0.9375,
+        "budget_db": 137.62
+      },
+      {
+        "mode": "LoRa SF12 BW200 kHz CR4/5",
+        "rate_kbps": 0.46875,
+        "budget_db": 140.62
+      }
+    ],
+    "915 MHz HaLow": [
+      {
+        "mode": "802.11ah 8 MHz MCS9, 1SS, 8 us GI",
+        "rate_kbps": 39000,
+        "budget_db": 90.0
+      },
+      {
+        "mode": "802.11ah 8 MHz MCS8, 1SS, 8 us GI",
+        "rate_kbps": 35100,
+        "budget_db": 95.0
+      },
+      {
+        "mode": "802.11ah 8 MHz MCS7, 1SS, 8 us GI",
+        "rate_kbps": 29250,
+        "budget_db": 100.0
+      },
+      {
+        "mode": "802.11ah 8 MHz MCS6, 1SS, 8 us GI",
+        "rate_kbps": 26325,
+        "budget_db": 101.5
+      },
+      {
+        "mode": "802.11ah 8 MHz MCS5, 1SS, 8 us GI",
+        "rate_kbps": 23400,
+        "budget_db": 104.5
+      },
+      {
+        "mode": "802.11ah 8 MHz MCS4, 1SS, 8 us GI",
+        "rate_kbps": 17550,
+        "budget_db": 109.0
+      },
+      {
+        "mode": "802.11ah 8 MHz MCS3, 1SS, 8 us GI",
+        "rate_kbps": 11700,
+        "budget_db": 112.0
+      },
+      {
+        "mode": "802.11ah 8 MHz MCS2, 1SS, 8 us GI",
+        "rate_kbps": 8775,
+        "budget_db": 115.0
+      },
+      {
+        "mode": "802.11ah 8 MHz MCS1, 1SS, 8 us GI",
+        "rate_kbps": 5850,
+        "budget_db": 117.0
+      },
+      {
+        "mode": "802.11ah 4 MHz MCS2, 1SS, 8 us GI",
+        "rate_kbps": 4050,
+        "budget_db": 119.5
+      },
+      {
+        "mode": "802.11ah 8 MHz MCS0, 1SS, 8 us GI",
+        "rate_kbps": 2925,
+        "budget_db": 120.5
+      },
+      {
+        "mode": "802.11ah 4 MHz MCS1, 1SS, 8 us GI",
+        "rate_kbps": 2700,
+        "budget_db": 121.5
+      },
+      {
+        "mode": "802.11ah 2 MHz MCS2, 1SS, 8 us GI",
+        "rate_kbps": 1950,
+        "budget_db": 124.0
+      },
+      {
+        "mode": "802.11ah 4 MHz MCS0, 1SS, 8 us GI",
+        "rate_kbps": 1350,
+        "budget_db": 124.5
+      },
+      {
+        "mode": "802.11ah 2 MHz MCS1, 1SS, 8 us GI",
+        "rate_kbps": 1300,
+        "budget_db": 126.0
+      },
+      {
+        "mode": "802.11ah 1 MHz MCS2, 1SS, 8 us GI",
+        "rate_kbps": 900,
+        "budget_db": 127.5
+      },
+      {
+        "mode": "802.11ah 2 MHz MCS0, 1SS, 8 us GI",
+        "rate_kbps": 650,
+        "budget_db": 128.0
+      },
+      {
+        "mode": "802.11ah 1 MHz MCS1, 1SS, 8 us GI",
+        "rate_kbps": 600,
+        "budget_db": 129.5
+      },
+      {
+        "mode": "802.11ah 1 MHz MCS0, 1SS, 8 us GI",
+        "rate_kbps": 300,
+        "budget_db": 131.5
+      },
+      {
+        "mode": "802.11ah 1 MHz MCS10, 1SS, 8 us GI",
+        "rate_kbps": 150,
+        "budget_db": 132.5
+      }
+    ],
+    "915 MHz FLRC": [
+      {
+        "mode": "FLRC 1950 kbps effective (2600 kbps raw), CR3/4",
+        "rate_kbps": 1950.0,
+        "budget_db": 122.5
+      },
+      {
+        "mode": "FLRC 975 kbps effective (1300 kbps raw), CR3/4",
+        "rate_kbps": 975.0,
+        "budget_db": 126.5
+      },
+      {
+        "mode": "FLRC 390 kbps effective (520 kbps raw), CR3/4",
+        "rate_kbps": 390.0,
+        "budget_db": 130.5
+      },
+      {
+        "mode": "FLRC 195 kbps effective (260 kbps raw), CR3/4",
+        "rate_kbps": 195.0,
+        "budget_db": 133.0
+      }
+    ],
+    "915 MHz LoRa": [
+      {
+        "mode": "LoRa SF5 BW1000 kHz CR4/5",
+        "rate_kbps": 125.0,
+        "budget_db": 134.5
+      },
+      {
+        "mode": "LoRa SF5 BW500 kHz CR4/5",
+        "rate_kbps": 62.5,
+        "budget_db": 138.0
+      },
+      {
+        "mode": "LoRa SF7 BW1000 kHz CR4/5",
+        "rate_kbps": 43.75,
+        "budget_db": 140.0
+      },
+      {
+        "mode": "LoRa SF5 BW250 kHz CR4/5",
+        "rate_kbps": 31.25,
+        "budget_db": 141.0
+      },
+      {
+        "mode": "LoRa SF7 BW500 kHz CR4/5",
+        "rate_kbps": 21.875,
+        "budget_db": 144.0
+      },
+      {
+        "mode": "LoRa SF9 BW1000 kHz CR4/5",
+        "rate_kbps": 14.0625,
+        "budget_db": 145.0
+      },
+      {
+        "mode": "LoRa SF7 BW250 kHz CR4/5",
+        "rate_kbps": 10.9375,
+        "budget_db": 146.5
+      },
+      {
+        "mode": "LoRa SF9 BW500 kHz CR4/5",
+        "rate_kbps": 7.03125,
+        "budget_db": 149.5
+      },
+      {
+        "mode": "LoRa SF9 BW250 kHz CR4/5",
+        "rate_kbps": 3.515625,
+        "budget_db": 152.0
+      },
+      {
+        "mode": "LoRa SF12 BW1000 kHz CR4/5",
+        "rate_kbps": 2.34375,
+        "budget_db": 153.0
+      },
+      {
+        "mode": "LoRa SF9 BW125 kHz CR4/5",
+        "rate_kbps": 1.7578125,
+        "budget_db": 155.0
+      },
+      {
+        "mode": "LoRa SF12 BW500 kHz CR4/5",
+        "rate_kbps": 1.171875,
+        "budget_db": 157.5
+      },
+      {
+        "mode": "LoRa SF12 BW250 kHz CR4/5",
+        "rate_kbps": 0.5859375,
+        "budget_db": 160.5
+      },
+      {
+        "mode": "LoRa SF12 BW125 kHz CR4/5",
+        "rate_kbps": 0.29296875,
+        "budget_db": 163.5
+      }
+    ]
+  },
+  "ideal_5mi_reference_db": 124.79079967207684
+}
