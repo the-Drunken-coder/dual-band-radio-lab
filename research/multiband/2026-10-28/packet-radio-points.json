@@ -1,0 +1,889 @@
+{
+  "metadata": {
+    "schema_version": 1,
+    "title": "Selected verified LR2021 LoRa and FLRC operating points",
+    "manufacturer": "Semtech",
+    "document": {
+      "title": "LR2021/LR2022/LR2012 Datasheet",
+      "revision": "2.1",
+      "date": "2026-04-13",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "provenance": "Semtech-authored datasheet hosted by DigiKey",
+      "version_caveat": "The current Semtech product page lists revision 2.2; these numerical points were verified against the accessible revision 2.1."
+    },
+    "scope": {
+      "description": "All points from the previously reported verified sample matrices, not the complete supported configuration space.",
+      "lora_spreading_factors": [
+        5,
+        7,
+        9,
+        12
+      ],
+      "lora_915_bandwidths_khz": [
+        125,
+        250,
+        500,
+        1000
+      ],
+      "lora_2400_bandwidths_khz": [
+        200,
+        400,
+        500,
+        1000
+      ],
+      "flrc_effective_rates_kbps": [
+        195,
+        390,
+        975,
+        1950
+      ],
+      "point_count": 40,
+      "lora_2400_missing_bandwidths_note": "No inferred sensitivities for 125 or 250 kHz at 2.4 GHz. Use the actual tabulated bandwidths in this dataset."
+    },
+    "rate_assumptions": {
+      "lora_coding_rate": "4/5",
+      "lora_rate_formula": "rate_kbps = SF * bandwidth_khz / 2**SF * (4/5)",
+      "lora_rate_interpretation": "Nominal bitrate, not measured payload throughput. Preamble, header, CRC, finite-packet effects, low-data-rate optimization (LDRO), MAC scheduling, acknowledgements and retransmissions are excluded.",
+      "flrc_coding_rate": "3/4",
+      "flrc_rate_formula": "effective_rate_kbps = raw_rate_kbps * (3/4)",
+      "flrc_rate_interpretation": "Coding-adjusted PHY rate before packet and MAC overhead. The advertised 2.6 Mbps maximum uses CR=1; that uncoded configuration is not included here."
+    },
+    "sensitivity_test_criteria": {
+      "general": "Manufacturer reference-design typical sensitivity, with G13 and rx_boost=7 where tabulated. Not measured end-to-end application thresholds.",
+      "general_rf_conditions": "Datasheet general conditions specify the LF reference design around 915/869 MHz and HF around 2.45 GHz, SIMO power and no RF shield. Dataset labels 915 and 2400 MHz identify the intended bands.",
+      "lora_915": "Table 3-17: 1% packet error rate, 64-byte payload; CR4/5, G13, rx_boost=7.",
+      "lora_2400": "Table 3-18 title specifies 64-byte payload, but adjacent introductory text inconsistently says both 64B and 20 Bytes at 1% PER. This ambiguity is retained rather than silently resolved. G13, rx_boost=7.",
+      "flrc_915": "Table 3-12: 1% packet error rate; CR3/4, G13, rx_boost=7. The table introduction does not specify a packet length.",
+      "flrc_2400": "Table 3-13: 1% packet error rate, 31-byte packets; CR3/4, G13, rx_boost=7.",
+      "cross_mode_comparison_caution": "Packet lengths and test criteria are not perfectly uniform across these tables or across other radio manufacturers."
+    },
+    "power_and_bandwidth_assumptions": {
+      "tx_dbm_interpretation": "Maximum listed bare-chip transmit capability: +22 dBm sub-GHz and +12 dBm at 2.4 GHz. These are scenario assumptions, not a determination of permitted EIRP or module output.",
+      "antenna_and_system_losses": "Antenna gain, feed loss, implementation loss, interference and fade margin are not included.",
+      "flrc_bandwidth_caveat": "Use revised modem bandwidths from Table 18-1 (307/571/1333/2666 kHz). The sensitivity tables retain older rounded bandwidth labels for some settings. These are modem configuration bandwidths, not guaranteed occupied-spectrum widths or channel separation rules."
+    },
+    "plot_guidance": {
+      "normalized_budget_formula": "tx_dbm - sensitivity_dbm - 20*log10(frequency_mhz/915)",
+      "interpretation": "A fixed-antenna-gain free-space frequency-normalized link-budget proxy. It is not a measured distance or terrain propagation prediction.",
+      "pareto_caution": "A rate-versus-normalized-budget frontier omits bandwidth occupancy, spectrum scarcity, power consumption, latency, interference and actual packet goodput. A frontier of this dataset is a frontier of selected settings only."
+    }
+  },
+  "points": [
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 15.625,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -122,
+      "tx_dbm": 22,
+      "bandwidth_khz": 125,
+      "mode": "LoRa SF5 BW125 kHz CR4/5",
+      "spreading_factor": 5,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        58,
+        59,
+        60
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 31.25,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -119,
+      "tx_dbm": 22,
+      "bandwidth_khz": 250,
+      "mode": "LoRa SF5 BW250 kHz CR4/5",
+      "spreading_factor": 5,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        58,
+        59,
+        60
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 62.5,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -116,
+      "tx_dbm": 22,
+      "bandwidth_khz": 500,
+      "mode": "LoRa SF5 BW500 kHz CR4/5",
+      "spreading_factor": 5,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        58,
+        59,
+        60
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 125.0,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -112.5,
+      "tx_dbm": 22,
+      "bandwidth_khz": 1000,
+      "mode": "LoRa SF5 BW1000 kHz CR4/5",
+      "spreading_factor": 5,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        58,
+        59,
+        60
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 5.46875,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -127.5,
+      "tx_dbm": 22,
+      "bandwidth_khz": 125,
+      "mode": "LoRa SF7 BW125 kHz CR4/5",
+      "spreading_factor": 7,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        58,
+        59,
+        60
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 10.9375,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -124.5,
+      "tx_dbm": 22,
+      "bandwidth_khz": 250,
+      "mode": "LoRa SF7 BW250 kHz CR4/5",
+      "spreading_factor": 7,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        58,
+        59,
+        60
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 21.875,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -122,
+      "tx_dbm": 22,
+      "bandwidth_khz": 500,
+      "mode": "LoRa SF7 BW500 kHz CR4/5",
+      "spreading_factor": 7,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        58,
+        59,
+        60
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 43.75,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -118,
+      "tx_dbm": 22,
+      "bandwidth_khz": 1000,
+      "mode": "LoRa SF7 BW1000 kHz CR4/5",
+      "spreading_factor": 7,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        58,
+        59,
+        60
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 1.7578125,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -133,
+      "tx_dbm": 22,
+      "bandwidth_khz": 125,
+      "mode": "LoRa SF9 BW125 kHz CR4/5",
+      "spreading_factor": 9,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        58,
+        59,
+        60
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 3.515625,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -130,
+      "tx_dbm": 22,
+      "bandwidth_khz": 250,
+      "mode": "LoRa SF9 BW250 kHz CR4/5",
+      "spreading_factor": 9,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        58,
+        59,
+        60
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 7.03125,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -127.5,
+      "tx_dbm": 22,
+      "bandwidth_khz": 500,
+      "mode": "LoRa SF9 BW500 kHz CR4/5",
+      "spreading_factor": 9,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        58,
+        59,
+        60
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 14.0625,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -123,
+      "tx_dbm": 22,
+      "bandwidth_khz": 1000,
+      "mode": "LoRa SF9 BW1000 kHz CR4/5",
+      "spreading_factor": 9,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        58,
+        59,
+        60
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 0.29296875,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -141.5,
+      "tx_dbm": 22,
+      "bandwidth_khz": 125,
+      "mode": "LoRa SF12 BW125 kHz CR4/5",
+      "spreading_factor": 12,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        58,
+        59,
+        60
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 0.5859375,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -138.5,
+      "tx_dbm": 22,
+      "bandwidth_khz": 250,
+      "mode": "LoRa SF12 BW250 kHz CR4/5",
+      "spreading_factor": 12,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        58,
+        59,
+        60
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 1.171875,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -135.5,
+      "tx_dbm": 22,
+      "bandwidth_khz": 500,
+      "mode": "LoRa SF12 BW500 kHz CR4/5",
+      "spreading_factor": 12,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        58,
+        59,
+        60
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 2.34375,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -131,
+      "tx_dbm": 22,
+      "bandwidth_khz": 1000,
+      "mode": "LoRa SF12 BW1000 kHz CR4/5",
+      "spreading_factor": 12,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        58,
+        59,
+        60
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 25.0,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -117,
+      "tx_dbm": 12,
+      "bandwidth_khz": 200,
+      "mode": "LoRa SF5 BW200 kHz CR4/5",
+      "spreading_factor": 5,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        63,
+        64
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 50.0,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -114,
+      "tx_dbm": 12,
+      "bandwidth_khz": 400,
+      "mode": "LoRa SF5 BW400 kHz CR4/5",
+      "spreading_factor": 5,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        63,
+        64
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 62.5,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -112.5,
+      "tx_dbm": 12,
+      "bandwidth_khz": 500,
+      "mode": "LoRa SF5 BW500 kHz CR4/5",
+      "spreading_factor": 5,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        63,
+        64
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 125.0,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -110,
+      "tx_dbm": 12,
+      "bandwidth_khz": 1000,
+      "mode": "LoRa SF5 BW1000 kHz CR4/5",
+      "spreading_factor": 5,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        63,
+        64
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 8.75,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -123,
+      "tx_dbm": 12,
+      "bandwidth_khz": 200,
+      "mode": "LoRa SF7 BW200 kHz CR4/5",
+      "spreading_factor": 7,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        63,
+        64
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 17.5,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -119.5,
+      "tx_dbm": 12,
+      "bandwidth_khz": 400,
+      "mode": "LoRa SF7 BW400 kHz CR4/5",
+      "spreading_factor": 7,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        63,
+        64
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 21.875,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -118.5,
+      "tx_dbm": 12,
+      "bandwidth_khz": 500,
+      "mode": "LoRa SF7 BW500 kHz CR4/5",
+      "spreading_factor": 7,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        63,
+        64
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 43.75,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -115.5,
+      "tx_dbm": 12,
+      "bandwidth_khz": 1000,
+      "mode": "LoRa SF7 BW1000 kHz CR4/5",
+      "spreading_factor": 7,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        63,
+        64
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 2.8125,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -128.5,
+      "tx_dbm": 12,
+      "bandwidth_khz": 200,
+      "mode": "LoRa SF9 BW200 kHz CR4/5",
+      "spreading_factor": 9,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        63,
+        64
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 5.625,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -125.5,
+      "tx_dbm": 12,
+      "bandwidth_khz": 400,
+      "mode": "LoRa SF9 BW400 kHz CR4/5",
+      "spreading_factor": 9,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        63,
+        64
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 7.03125,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -124,
+      "tx_dbm": 12,
+      "bandwidth_khz": 500,
+      "mode": "LoRa SF9 BW500 kHz CR4/5",
+      "spreading_factor": 9,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        63,
+        64
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 14.0625,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -121.5,
+      "tx_dbm": 12,
+      "bandwidth_khz": 1000,
+      "mode": "LoRa SF9 BW1000 kHz CR4/5",
+      "spreading_factor": 9,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        63,
+        64
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 0.46875,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -137,
+      "tx_dbm": 12,
+      "bandwidth_khz": 200,
+      "mode": "LoRa SF12 BW200 kHz CR4/5",
+      "spreading_factor": 12,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        63,
+        64
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 0.9375,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -134,
+      "tx_dbm": 12,
+      "bandwidth_khz": 400,
+      "mode": "LoRa SF12 BW400 kHz CR4/5",
+      "spreading_factor": 12,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        63,
+        64
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 1.171875,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -132.5,
+      "tx_dbm": 12,
+      "bandwidth_khz": 500,
+      "mode": "LoRa SF12 BW500 kHz CR4/5",
+      "spreading_factor": 12,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        63,
+        64
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "LoRa",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 2.34375,
+      "rate_basis": "calculated nominal LoRa bitrate; excludes packet overhead and LDRO payload-rate reduction",
+      "sensitivity_dbm": -129.5,
+      "tx_dbm": 12,
+      "bandwidth_khz": 1000,
+      "mode": "LoRa SF12 BW1000 kHz CR4/5",
+      "spreading_factor": 12,
+      "coding_rate": "4/5",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        63,
+        64
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "FLRC",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 195.0,
+      "raw_rate_kbps": 260,
+      "rate_basis": "coding-adjusted PHY bitrate at CR3/4; excludes packet and MAC overhead",
+      "sensitivity_dbm": -111,
+      "tx_dbm": 22,
+      "bandwidth_khz": 307,
+      "mode": "FLRC 195 kbps effective (260 kbps raw), CR3/4",
+      "coding_rate": "3/4",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        50,
+        51
+      ],
+      "bandwidth_and_rate_source_printed_pages": [
+        203,
+        204,
+        205
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "FLRC",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 390.0,
+      "raw_rate_kbps": 520,
+      "rate_basis": "coding-adjusted PHY bitrate at CR3/4; excludes packet and MAC overhead",
+      "sensitivity_dbm": -108.5,
+      "tx_dbm": 22,
+      "bandwidth_khz": 571,
+      "mode": "FLRC 390 kbps effective (520 kbps raw), CR3/4",
+      "coding_rate": "3/4",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        50,
+        51
+      ],
+      "bandwidth_and_rate_source_printed_pages": [
+        203,
+        204,
+        205
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "FLRC",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 975.0,
+      "raw_rate_kbps": 1300,
+      "rate_basis": "coding-adjusted PHY bitrate at CR3/4; excludes packet and MAC overhead",
+      "sensitivity_dbm": -104.5,
+      "tx_dbm": 22,
+      "bandwidth_khz": 1333,
+      "mode": "FLRC 975 kbps effective (1300 kbps raw), CR3/4",
+      "coding_rate": "3/4",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        50,
+        51
+      ],
+      "bandwidth_and_rate_source_printed_pages": [
+        203,
+        204,
+        205
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "FLRC",
+      "chip": "LR2021",
+      "frequency_mhz": 915,
+      "rate_kbps": 1950.0,
+      "raw_rate_kbps": 2600,
+      "rate_basis": "coding-adjusted PHY bitrate at CR3/4; excludes packet and MAC overhead",
+      "sensitivity_dbm": -100.5,
+      "tx_dbm": 22,
+      "bandwidth_khz": 2666,
+      "mode": "FLRC 1950 kbps effective (2600 kbps raw), CR3/4",
+      "coding_rate": "3/4",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        50,
+        51
+      ],
+      "bandwidth_and_rate_source_printed_pages": [
+        203,
+        204,
+        205
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "FLRC",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 195.0,
+      "raw_rate_kbps": 260,
+      "rate_basis": "coding-adjusted PHY bitrate at CR3/4; excludes packet and MAC overhead",
+      "sensitivity_dbm": -108.5,
+      "tx_dbm": 12,
+      "bandwidth_khz": 307,
+      "mode": "FLRC 195 kbps effective (260 kbps raw), CR3/4",
+      "coding_rate": "3/4",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        52,
+        53
+      ],
+      "bandwidth_and_rate_source_printed_pages": [
+        203,
+        204,
+        205
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "FLRC",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 390.0,
+      "raw_rate_kbps": 520,
+      "rate_basis": "coding-adjusted PHY bitrate at CR3/4; excludes packet and MAC overhead",
+      "sensitivity_dbm": -105,
+      "tx_dbm": 12,
+      "bandwidth_khz": 571,
+      "mode": "FLRC 390 kbps effective (520 kbps raw), CR3/4",
+      "coding_rate": "3/4",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        52,
+        53
+      ],
+      "bandwidth_and_rate_source_printed_pages": [
+        203,
+        204,
+        205
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "FLRC",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 975.0,
+      "raw_rate_kbps": 1300,
+      "rate_basis": "coding-adjusted PHY bitrate at CR3/4; excludes packet and MAC overhead",
+      "sensitivity_dbm": -101.5,
+      "tx_dbm": 12,
+      "bandwidth_khz": 1333,
+      "mode": "FLRC 975 kbps effective (1300 kbps raw), CR3/4",
+      "coding_rate": "3/4",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        52,
+        53
+      ],
+      "bandwidth_and_rate_source_printed_pages": [
+        203,
+        204,
+        205
+      ],
+      "sensitivity_type": "tabulated typical"
+    },
+    {
+      "family": "FLRC",
+      "chip": "LR2021",
+      "frequency_mhz": 2400,
+      "rate_kbps": 1950.0,
+      "raw_rate_kbps": 2600,
+      "rate_basis": "coding-adjusted PHY bitrate at CR3/4; excludes packet and MAC overhead",
+      "sensitivity_dbm": -99,
+      "tx_dbm": 12,
+      "bandwidth_khz": 2666,
+      "mode": "FLRC 1950 kbps effective (2600 kbps raw), CR3/4",
+      "coding_rate": "3/4",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8924/600_62785538.LR20xxDatasheet_V2_1.pdf",
+      "source_printed_pages": [
+        52,
+        53
+      ],
+      "bandwidth_and_rate_source_printed_pages": [
+        203,
+        204,
+        205
+      ],
+      "sensitivity_type": "tabulated typical"
+    }
+  ]
+}

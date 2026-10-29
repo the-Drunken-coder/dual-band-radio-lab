@@ -1,0 +1,2 @@
+# Preserve the recovered CSV bytes and its original CRLF record endings.
+radio-profile-data.csv -text whitespace=cr-at-eol

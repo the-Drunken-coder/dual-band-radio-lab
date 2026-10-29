@@ -1,0 +1,307 @@
+{
+  "recovered_on": "2026-10-29",
+  "status": "historical RP2040-Plus-M design, not current ESP32 design; unreleased",
+  "outer_handoff": {
+    "filename": "Dual_LR2021_AI_AGENT_HANDOFF.zip",
+    "bytes": 2209664,
+    "sha256": "ab675794b84542296f8c14c5c7c2f8deefcafbcfaf04dd33585ef0c59907838f"
+  },
+  "source_member": "Dual_LR2021_AI_AGENT_HANDOFF/original_archive/Dual_LR2021_Carrier_RevA_REVIEW_PACKAGE.zip",
+  "preserved_archive": {
+    "filename": "Dual_LR2021_Carrier_RevA_REVIEW_PACKAGE.zip",
+    "bytes": 1006372,
+    "sha256": "fd3cf81a0f237c9d0dd5d47b819551a4084b31651b4e19fbfb4382be8c0431d4"
+  },
+  "integrity_checks": {
+    "zip_crc": "passed",
+    "embedded_sha256_manifest": "passed"
+  },
+  "engineering_validation": "not rerun; original native KiCad/electrical/physical gates remain open",
+  "contents": [
+    {
+      "path": "Dual_LR2021_Carrier_RevA/README_FIRST.md",
+      "bytes": 3030,
+      "sha256": "abf9d115ef93e98c4c45deaab596d2d328d8604a99d5f628d14937e675827210"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/SHA256SUMS.txt",
+      "bytes": 5520,
+      "sha256": "fe1aec595106f8639c19ad5a0f6ac2d5d74c1e57db2d2750d7608cc4fdf86755"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/assembly/BOM_carrier.csv",
+      "bytes": 1703,
+      "sha256": "12c2f3189970772051bd4d0a106ed60a7f7b908481711a7ec414031512a5fa33"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/assembly/RFQ_to_assembler.txt",
+      "bytes": 2096,
+      "sha256": "a4fe2a8f4a2491a3087fa4e903e97aed82c23b91cd817910472b625b88b66f4b"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/assembly/assembly_drawing.pdf",
+      "bytes": 121495,
+      "sha256": "c3d5bb02a15b5fb7198652d7213db3270f5b6f2f89164ec0d9239b0b0a896259"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/assembly/modules_optional_turnkey.csv",
+      "bytes": 567,
+      "sha256": "a104a35217e814c0b102ec025b5b16376af5c1b9109981e82c54453aed9bae8f"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/assembly/placements_SMT_only.csv",
+      "bytes": 1605,
+      "sha256": "a9f2971e9abf338638c2df3fa8f3af87325683239c62bdc438a29d8d0728d304"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/assembly/placements_THT_only.csv",
+      "bytes": 652,
+      "sha256": "4eac2b97af813664e12197d7be1fd777cdd2b19884a56c32dd71f28d4540428b"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/assembly/placements_all.csv",
+      "bytes": 2161,
+      "sha256": "cb05eec98e748bb0e091a649dd92526b4d5efc59fbc954cfbb4e769295965f4e"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/docs/Engineering_and_Order_Packet.pdf",
+      "bytes": 18681,
+      "sha256": "b4079af04872efbe5408c089ca071ce27223b5d9c27a4aa691f697a83e01e5d8"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/docs/PCB_top_preview.png",
+      "bytes": 114858,
+      "sha256": "4e2fc55e577e79dbe63ea6c21d35c07a1c15bff2254f4239a1e7e36e76c59244"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/docs/SOURCES.md",
+      "bytes": 2239,
+      "sha256": "f8ba0e63daa9d1a4b17fdc291d7802e5d43ef57dd160c9af1825b2f0388296e2"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/docs/board_layers.pdf",
+      "bytes": 373644,
+      "sha256": "53101cc05dd95a23baca2f833e082ede3b7b2bcb398d1a3ea7038372a581357d"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/docs/full_pin_mapping.csv",
+      "bytes": 3925,
+      "sha256": "ff03c979da2dcfdce119ea217b9efcecc4648f7706e47caff4e30026cd3311fd"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/docs/schematic.pdf",
+      "bytes": 9786,
+      "sha256": "30fc9dc60f1df2dfb84f03c9ae2ed56abc88a0773e65cc9a5fbcde0bd33fe10d"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/firmware/README.md",
+      "bytes": 707,
+      "sha256": "4910a12cd0af836839346892d7770a4336729650d742a9ff54849a5b9d5399cd"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/firmware/pinmap.h",
+      "bytes": 762,
+      "sha256": "a105e6d67b9a7137600e2d8e27fa8c0dfcdac7f2619a1a147dd91a3f8189800c"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/manufacturing/DO_NOT_ORDER_WITHOUT_REVIEW.txt",
+      "bytes": 264,
+      "sha256": "998bbd5cf3bf71187a092711a51a878d871211649738e55dd741ef2a04238bcd"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/manufacturing/fabrication_requirements.txt",
+      "bytes": 1636,
+      "sha256": "59ca6bbec2f52e03d62eb4fd13aa925512d4ab4c58c89dd7a601fc412f0d12dc"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/manufacturing/gerbers/Dual_LR2021-RevA-B_Cu.gbr",
+      "bytes": 131268,
+      "sha256": "8333722e4726f4180a161559f548400a9e970543dde9569a18c564d341118701"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/manufacturing/gerbers/Dual_LR2021-RevA-B_Mask.gbr",
+      "bytes": 2200,
+      "sha256": "cf5c2384d554b7932987d26f44c0f0cf1ed5c9b0564cc42a3890597b9d63446e"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/manufacturing/gerbers/Dual_LR2021-RevA-Edge_Cuts.gbr",
+      "bytes": 241,
+      "sha256": "49c3396df4fc4409c1eb6ba9f0fa82c644305ab43e0efa9739f67a4eab025c14"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/manufacturing/gerbers/Dual_LR2021-RevA-F_Cu.gbr",
+      "bytes": 12986,
+      "sha256": "6b53a6ef863d37adea1db157a8f09c1af63c80ee8a247a6fac13d7e7c94c2c54"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/manufacturing/gerbers/Dual_LR2021-RevA-F_Mask.gbr",
+      "bytes": 3843,
+      "sha256": "0edec5d3a9db22db134fc880e774516bffb8c9903221f6e639bf2f2deb8addee"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/manufacturing/gerbers/Dual_LR2021-RevA-F_Paste.gbr",
+      "bytes": 1534,
+      "sha256": "d6e482f56e02f528f694e0dcaadd4e47ca06162283180b7a02715a3a0aa98394"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/manufacturing/gerbers/Dual_LR2021-RevA-F_SilkS.gbr",
+      "bytes": 165367,
+      "sha256": "7d60dd42b4341aeab2bf9572c57b0aa47f1367711d99a83ba6f161c439fd4747"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/manufacturing/gerbers/Dual_LR2021-RevA-In1_Cu.gbr",
+      "bytes": 131268,
+      "sha256": "951bdeca2ec0c30b46e3a71545c65288b1af38ab2d3a652ccfee7bc35ccdbc8c"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/manufacturing/gerbers/Dual_LR2021-RevA-In2_Cu.gbr",
+      "bytes": 7820,
+      "sha256": "1347a33117e2ff7c403eb52d02586f906e34844ff807586f5d923b41d1287420"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/manufacturing/gerbers/Dual_LR2021-RevA-NPTH.drl",
+      "bytes": 132,
+      "sha256": "de29bd535d7931b677195540ddd39ae9c0af284766b2dc07ef15c26daead5f70"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/manufacturing/gerbers/Dual_LR2021-RevA-PTH.drl",
+      "bytes": 1764,
+      "sha256": "5480a33141c1eb36ff4aaf00f12b92a47b9a464d5dfefdda4d443b532ffb6f39"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/Carrier.kicad_sym",
+      "bytes": 9310,
+      "sha256": "c78e68be0e9908452fae00409c3b237a5988f616f15bcb64dfde54015bdd02d0"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/Carrier.pretty/C_0805_2012.kicad_mod",
+      "bytes": 748,
+      "sha256": "403a8c3f54d73aecb746e6badab192d432a94a72c05b11d6ea860df97024f00c"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/Carrier.pretty/R_0805_2012.kicad_mod",
+      "bytes": 743,
+      "sha256": "3dfebe48f263fc52d041029006830a07675e89efa89f9f92d7304733349d50c7"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/Carrier.pretty/SC70_6_DCK0006A.kicad_mod",
+      "bytes": 1126,
+      "sha256": "76759efdb21bb26a1a6edb4aba91efebf4c48a207e58af27896ec6f8e7f644b1"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/Carrier.pretty/SSW_1x08_P2.54_Vertical.kicad_mod",
+      "bytes": 1400,
+      "sha256": "9d6156a61d457886773515467e54656b4329270593fde0701af15ef8708f51b9"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/Carrier.pretty/SSW_1x20_P2.54_Vertical.kicad_mod",
+      "bytes": 2579,
+      "sha256": "11d470bc097f0294f187b6dfe2059b9d46becf9aafba418696dee70d114d3bb0"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/Carrier.pretty/TestPad_D1.4.kicad_mod",
+      "bytes": 459,
+      "sha256": "b25c548bfe68de7e8f6ccfadf6ec7b88659f8538d4c74d4d76a4c08897c6a5f2"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/Dual_LR2021_Carrier.kicad_pcb",
+      "bytes": 2025765,
+      "sha256": "6363c371d39e494219a98cef8337d7c987adf0c7ab10981a34d617864d3f6f70"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/Dual_LR2021_Carrier.kicad_pro",
+      "bytes": 701,
+      "sha256": "cc06e31f9d02fe00e69b202d82a921f7d12736526cd2cd8691630094c40c8691"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/Dual_LR2021_Carrier.kicad_sch",
+      "bytes": 71640,
+      "sha256": "f80c0af089b0c20eb8815fea98d380ffeb555dc8396b12f097ce623903879c5a"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/Dual_LR2021_Carrier.net",
+      "bytes": 10644,
+      "sha256": "ece4646ab195a901be997b350de1ac050e65e06b8462363b176751d8a9ce25a7"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/build_design.py",
+      "bytes": 34719,
+      "sha256": "aab36188761636a9958786230eda853ab1a40a123ff4b87033c453b51dcbe6ce"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/build_package.py",
+      "bytes": 54428,
+      "sha256": "305cd3787e86b0a8223fbf8799f28f75a1f48f5e426f7b3b7c5188ff6a2231f8"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/check_exports.py",
+      "bytes": 12154,
+      "sha256": "26dc667011e13d729c1331d58da8668a4b376803cb919ae4ddabd24fbfb6fbc1"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/design_model.json",
+      "bytes": 140548,
+      "sha256": "d46dff4397849d8b435180dbf79a7a564fe3c84286adbc039ac6c47ba83bc889"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/fp-lib-table",
+      "bytes": 184,
+      "sha256": "8bff49546ad632d3c7c683d4b36e88970a4ccf828d79d453528ced4229e3b564"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/planes.json",
+      "bytes": 376394,
+      "sha256": "67c08bb77a197a6181faf543ce34245f326c1b8a36365bf5965f7e79a2ce6d34"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/requirements.txt",
+      "bytes": 50,
+      "sha256": "c0f4e80a56bfa51d94702a8607e45d572f82309d9a6bb7dd6e15e56fb2e55aaa"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/routed_geometry.json",
+      "bytes": 41131,
+      "sha256": "eb605d444bc71ce81b125dd9d94f2621241ca567fc616f454816e73707ab4227"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/silkscreen.wkt",
+      "bytes": 148124,
+      "sha256": "78ecfdbcb1e95e697a0d18ff97eccef1f4f357872a219227f499fa93ab34b3d9"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/source/sym-lib-table",
+      "bytes": 148,
+      "sha256": "2f85ddcc20384ec62048b405272d3b481aff6ec719633bac06b8c9b5fa59932a"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/verification/README.md",
+      "bytes": 1734,
+      "sha256": "5eb8abf39c6b081c339c1d9326b9e5170ab692096eb3e7642da5c0b8bb341abf"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/verification/RELEASE_GATES.md",
+      "bytes": 1169,
+      "sha256": "b85bcabd8a6e47208f9ca24bc064896a5e61e2eccdc0c2aff5ed38f95dfcb76f"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/verification/export_readback.json",
+      "bytes": 2225,
+      "sha256": "5d0792b619a208c5fcf3d9ee5c96816d69c741d74f70d525c0a9ef3269462e9b"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/verification/geometric_check.json",
+      "bytes": 5562,
+      "sha256": "67081ee5c74340989fc19ea28fb4b412a46d1cf5115ee4516f3c01034393b556"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/verification/package_manifest.json",
+      "bytes": 8725,
+      "sha256": "34ad52327c36d1d65b8db15065a892b5dd61431269c0956ff8073f2922edf19a"
+    },
+    {
+      "path": "Dual_LR2021_Carrier_RevA/verification/pdf_check.json",
+      "bytes": 320,
+      "sha256": "c90dd56cba6b82cb716e63dd5becf46fbfc836d837c66d4ac1dec10bcd6f7e7e"
+    }
+  ]
+}
